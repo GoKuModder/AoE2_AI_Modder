@@ -16,7 +16,8 @@ from src.writers.python_writer import write_python_module
 # Resolve project root (assuming this file is in src/builds/)
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 UGC_ATTRIBUTES_URL = "https://ugc.aoe2.rocks/general/attributes/attributes/"
-UGC_EFFECTS_URL = "https://ugc.aoe2.rocks/scenarios/triggers/effects/effects/"
+UGC_EFFECTS_JSON_URL = "https://raw.githubusercontent.com/Divy1211/AoE2DE_UGC_Guide/main/docs/scenarios/triggers/effects/effects.json"
+
 OUT_DIR = PROJECT_ROOT / "docs" / "trigger_knowledge"
 CACHE_DIR = OUT_DIR / "_cache"
 
@@ -114,11 +115,20 @@ def run_attributes_pipeline(force_fail: bool = False) -> bool:
 def run_effects_pipeline(force_fail: bool = False) -> bool:
     print("Building Effects Knowledge...")
     try:
-        html = http_get(UGC_EFFECTS_URL, CACHE_DIR / "ugc_effects.html")
+        # Fetch JSON raw text
+        json_text = http_get(UGC_EFFECTS_JSON_URL, CACHE_DIR / "ugc_effects.json")
+        try:
+             ugc_json_data = json.loads(json_text)
+        except json.JSONDecodeError as e:
+             # Fallback if cache was corrupted or HTML text in file
+             print(f"[WARN] Failed to parse JSON, re-fetching... Error: {e}")
+             # In real usage, usually we'd clear cache and retry
+             raise
+             
         aoe2_methods = introspect_aoe2sp_effects()
-        dataset_deps = introspect_dataset_dependencies() # New
+        dataset_deps = introspect_dataset_dependencies()
         
-        merged_dict = build_effects_knowledge(html, aoe2_methods, dataset_deps)
+        merged_dict = build_effects_knowledge(ugc_json_data, aoe2_methods, dataset_deps)
         
         # Write Python
         write_python_module(OUT_DIR / "effects_knowledge.py", "EFFECTS", merged_dict)
@@ -132,7 +142,7 @@ def run_effects_pipeline(force_fail: bool = False) -> bool:
                 f"`{row_data['method']}`",
                 f"`{row_data['signature']}`",
                 str(row_data.get("ugc_name") or ""),
-                str(row_data.get("ugc_description") or ""), # New column
+                str(row_data.get("ugc_description") or ""), 
                 fields
             ])
             

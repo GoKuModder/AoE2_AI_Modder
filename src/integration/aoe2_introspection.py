@@ -2,6 +2,7 @@ from typing import Any, Dict, List
 import inspect
 import pkgutil
 import importlib
+import re
 
 def introspect_aoe2sp_effects() -> Dict[str, Any]:
     """
@@ -101,16 +102,16 @@ def introspect_dataset_dependencies() -> Dict[str, List[Dict[str, str]]]:
                 doc = inspect.getdoc(cls_obj)
                 if doc:
                     # Heuristic parsing for "Used in the 'X' effect"
-                    # We look for "Used in the '" and extraction
-                    lower_doc = doc.lower()
+                    # Normalize docstring whitespace globally to handle line breaks in the middle of phrases
+                    doc_norm = re.sub(r'\s+', ' ', doc)
+                    lower_doc = doc_norm.lower()
+                    
                     if "used in the '" in lower_doc:
                         start_idx = lower_doc.find("used in the '") + len("used in the '")
                         end_idx = lower_doc.find("'", start_idx)
                         if end_idx != -1:
-                            effect_name_raw = doc[start_idx:end_idx] # Keep case for now?
-                            # Simplify to match method names (snake_case)
-                            # effect_name_raw is usually Title Case "Change Color Mood"
-                            effect_key = effect_name_raw.lower().replace(" ", "_")
+                            effect_name = doc_norm[start_idx:end_idx].strip()
+                            effect_key = effect_name.lower().replace(" ", "_")
                             
                             if effect_key not in dependencies:
                                 dependencies[effect_key] = []
