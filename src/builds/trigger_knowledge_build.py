@@ -120,40 +120,92 @@ def run_effects_pipeline(force_fail: bool = False) -> bool:
         try:
              ugc_json_data = json.loads(json_text)
         except json.JSONDecodeError as e:
-             # Fallback if cache was corrupted or HTML text in file
              print(f"[WARN] Failed to parse JSON, re-fetching... Error: {e}")
-             # In real usage, usually we'd clear cache and retry
              raise
              
         aoe2_methods = introspect_aoe2sp_effects()
         dataset_deps = introspect_dataset_dependencies()
         
-        merged_dict = build_effects_knowledge(ugc_json_data, aoe2_methods, dataset_deps)
+        # Build List of Data
+        effects_list = build_effects_knowledge(ugc_json_data, aoe2_methods, dataset_deps)
         
-        # Write Python
-        write_python_module(OUT_DIR / "effects_knowledge.py", "EFFECTS", merged_dict)
+        # 1. Write Python (Legacy format or New?)
+        # Legacy writer expects Dict[str, val]. building a dict for it.
+        legacy_dict = {
+            item["internal_name"]: {
+                "method": item["internal_name"],
+                "signature": item["signature"], 
+                "params": [p["name"] for p in item["parameters"]], # Simplify param format for legacy
+                "ugc_name": item["display_name"],
+                "ugc_description": item["description"],
+                "ugc_config_fields": [p["name"] for p in item["parameters"]], # Approximately correct
+            } for item in effects_list
+        }
+        write_python_module(OUT_DIR / "effects_knowledge.py", "EFFECTS", legacy_dict)
         
-        # Write Markdown
-        headers = ["AoE2SP Method", "Signature", "UGC Name", "UGC Description", "UGC Fields"]
-        rows = []
-        for row_data in merged_dict.values():
-            fields = ", ".join(row_data.get("ugc_config_fields") or [])
-            rows.append([
-                f"`{row_data['method']}`",
-                f"`{row_data['signature']}`",
-                str(row_data.get("ugc_name") or ""),
-                str(row_data.get("ugc_description") or ""), 
-                fields
-            ])
-            
-        md_content = (
-            "# Trigger Knowledge: Effects\n"
-            "Generated file. Do not hand-edit; run tools/build_trigger_knowledge.py.\n"
-            + generate_table(headers, rows)
+        # 2. Write Canonical JSON
+        (OUT_DIR / "effects_knowledge.json").write_text(
+            json.dumps(effects_list, indent=2), encoding="utf-8"
         )
-        (OUT_DIR / "effects_knowledge.md").write_text(md_content, encoding="utf-8")
+        
+        # 3. Write Markdown (Section Based)
+        md_lines = [
+            "# Trigger Knowledge: Effects",
+            "Generated file. Do not hand-edit; run tools/build_trigger_knowledge.py.", 
+            "Data source: canonical `effects_knowledge.json`.",
+            "",
+            "## Index",
+            "| ID | Name | Method |",
+            "|---|---|---|",
+        ]
+        
+        # Index Table
+        for entry in effects_list:
+            eid = entry["effect_id"]
+            name = entry["display_name"]
+            method = entry["internal_name"]
+            anchor = name.lower().replace(" ", "-").replace("(", "").replace(")", "") # Basic GitHub slugify
+            md_lines.append(f"| {eid} | [{name}](#{anchor}) | `{method}` |")
+            
+        md_lines.append("")
+        
+        # Sections
+        for entry in effects_list:
+            eid = entry["effect_id"]
+            name = entry["display_name"]
+            desc = entry["description"] or "*No description provided.*"
+            sig = entry["signature"]
+            params = entry["parameters"]
+            
+            md_lines.append(f"## {eid}. {name}")
+            md_lines.append(f"`{sig}`\n")
+            md_lines.append(f"{desc}\n")
+            
+            if params:
+                md_lines.append("**Parameters:**")
+                for p in params:
+                    p_name = p["name"]
+                    p_type = p["type"] or "Any"
+                    p_ds = p.get("dataset")
+                    
+                    line = f"- `{p_name}` ({p_type})"
+                    if p_ds:
+                        # Linkify dataset if we knew the base URL, but for now just text
+                        ds_name = p_ds["name"]
+                        line += f" -> **Dataset: {ds_name}**"
+                    
+                    md_lines.append(line)
+            else:
+                 md_lines.append("*No parameters.*")
+                 
+            md_lines.append("") # Spacer
+            
+        (OUT_DIR / "effects_knowledge.md").write_text("\n".join(md_lines), encoding="utf-8")
 
         print("[OK] Effects knowledge generated")
+        print(f"  - {OUT_DIR / 'effects_knowledge.json'} (Canonical)")
+        print(f"  - {OUT_DIR / 'effects_knowledge.md'}")
+        
         return True
     except Exception as e:
         print(f"[FAIL] Effects knowledge failed: {e}")

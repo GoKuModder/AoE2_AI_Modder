@@ -1,0 +1,4923 @@
+[
+  {
+    "effect_id": "1",
+    "internal_name": "change_diplomacy",
+    "display_name": "Change Diplomacy",
+    "description": "This effect can be used to change the diplomacy stance of the soruce players with the target player",
+    "signature": "change_diplomacy(self, diplomacy: 'int | None' = None, source_player: 'int | None' = None, target_player: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "diplomacy",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "target_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "2",
+    "internal_name": "research_technology",
+    "display_name": "Research Technology",
+    "description": "This effect can automatically research a technology for the specified player.",
+    "signature": "research_technology(self, source_player: 'int | None' = None, technology: 'int | None' = None, force_research_technology: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "force_research_technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "3",
+    "internal_name": "send_chat",
+    "display_name": "Send Chat",
+    "description": "This effect can be used to display messages in chat",
+    "signature": "send_chat(self, source_player: 'int | None' = None, string_id: 'int | None' = None, message: 'str | None' = None, sound_name: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "sound_name",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "4",
+    "internal_name": "play_sound",
+    "display_name": "Play Sound",
+    "description": "This effect can be used to play a specified sound",
+    "signature": "play_sound(self, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, location_object_reference: 'int | None' = None, sound_name: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_object_reference",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "sound_name",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "5",
+    "internal_name": "tribute",
+    "display_name": "Tribute",
+    "description": "This effect can be used to tribute resources from one player to another",
+    "signature": "tribute(self, quantity: 'int | None' = None, tribute_list: 'int | None' = None, source_player: 'int | None' = None, target_player: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "tribute_list",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "target_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "6",
+    "internal_name": "unlock_gate",
+    "display_name": "Unlock Gate",
+    "description": "This effect can be used to unlock a locked gate",
+    "signature": "unlock_gate(self, selected_object_ids: 'int | List[int] | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "7",
+    "internal_name": "lock_gate",
+    "display_name": "Lock Gate",
+    "description": "This effect can be used to lock an unlocked gate",
+    "signature": "lock_gate(self, selected_object_ids: 'int | List[int] | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "8",
+    "internal_name": "activate_trigger",
+    "display_name": "Activate Trigger",
+    "description": "This effect can be used to activate a trigger",
+    "signature": "activate_trigger(self, trigger_id: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "trigger_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9",
+    "internal_name": "deactivate_trigger",
+    "display_name": "Deactivate Trigger",
+    "description": "This effect can be used to activate a trigger",
+    "signature": "deactivate_trigger(self, trigger_id: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "trigger_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "10",
+    "internal_name": "ai_script_goal",
+    "display_name": "AI Script Goal",
+    "description": "This effect is used to communicate with the AI. An AI Trigger NUMBER set with this effect can be detected in an AI script using `event-detected trigger NUMBER`",
+    "signature": "ai_script_goal(self, ai_script_goal: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "ai_script_goal",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "11",
+    "internal_name": "create_object",
+    "display_name": "Create Object",
+    "description": "This effect can be used to create a unit or building for the specified player",
+    "signature": "create_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, facet: 'int | None' = None, disable_sound: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "facet",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "disable_sound",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "12",
+    "internal_name": "task_object",
+    "display_name": "Task Object",
+    "description": "This effect can be used to task certain units of the specified player to (it basically simulates a right click at the specified location or unit) move to a specified locaiton, or perform an action on another unit. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "task_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, location_object_reference: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, action_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, disable_garrison_unload_sound: 'int | None' = None, max_units_affected: 'int | None' = None, issue_group_command: 'int | None' = None, queue_action: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_object_reference",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "action_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "disable_garrison_unload_sound",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "issue_group_command",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "queue_action",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "13",
+    "internal_name": "declare_victory",
+    "display_name": "Declare Victory",
+    "description": "This effect can be used to grant victory or defeat to a specifed player",
+    "signature": "declare_victory(self, source_player: 'int | None' = None, enabled: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "enabled",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "14",
+    "internal_name": "kill_object",
+    "display_name": "Kill Object",
+    "description": "This effect can be used to kill certain units of the specified player. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "kill_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "15",
+    "internal_name": "remove_object",
+    "display_name": "Remove Object",
+    "description": "This effect can be used to remove certain units of the specified player from the map. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "remove_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, object_state: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_state",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "16",
+    "internal_name": "change_view",
+    "display_name": "Change View",
+    "description": "This effect can be used to move the camera of the player to a specified location",
+    "signature": "change_view(self, quantity: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, scroll: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "scroll",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "17",
+    "internal_name": "unload",
+    "display_name": "Unload",
+    "description": "This effect can be used to ungarisson objects from a unit or building. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "unload(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, location_object_reference: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_object_reference",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "18",
+    "internal_name": "change_ownership",
+    "display_name": "Change Ownership",
+    "description": "This effect can be used to convert units of the source player to the target player. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_ownership(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, target_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, flash_object: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "target_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "flash_object",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "19",
+    "internal_name": "patrol",
+    "display_name": "Patrol",
+    "description": "This effect can be used to make units of a specified player patrol from one location to another. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "patrol(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "20",
+    "internal_name": "display_instructions",
+    "display_name": "Display Instructions",
+    "description": "This effect can be used to display instructions on the screen. An icon of a unit may also be displayed along with the instructions",
+    "signature": "display_instructions(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, string_id: 'int | None' = None, display_time: 'int | None' = None, instruction_panel_position: 'int | None' = None, play_sound: 'int | None' = None, message: 'str | None' = None, sound_name: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "display_time",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "instruction_panel_position",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "play_sound",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "sound_name",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "21",
+    "internal_name": "clear_instructions",
+    "display_name": "Clear Instructions",
+    "description": "This effect can be used to clear instructions on the screen before the timer for that instruction is up.",
+    "signature": "clear_instructions(self, instruction_panel_position: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "instruction_panel_position",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "22",
+    "internal_name": "freeze_object",
+    "display_name": "Freeze Object",
+    "description": "This effect does not actually freeze the objects but sets them to a no attack stance. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "freeze_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "23",
+    "internal_name": "use_advanced_buttons",
+    "display_name": "Use Advanced Buttons",
+    "description": "Enables Advanced Buttons",
+    "signature": "use_advanced_buttons(self) -> 'Effect'",
+    "parameters": []
+  },
+  {
+    "effect_id": "24",
+    "internal_name": "damage_object",
+    "display_name": "Damage Object",
+    "description": "This effect can be used to deal damage to units of a given player. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "damage_object(self, quantity: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "25",
+    "internal_name": "place_foundation",
+    "display_name": "Place Foundation",
+    "description": "This effect can be used to automatically place down a building foundation for a specific player",
+    "signature": "place_foundation(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "26",
+    "internal_name": "change_object_name",
+    "display_name": "Change Object Name",
+    "description": "This effect can be used to change the names of existing units of a given player to the specified name. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_name(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, string_id: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, message: 'str | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "27",
+    "internal_name": "change_object_hp",
+    "display_name": "Change Object HP",
+    "description": "This effect can be used to change the max HP of existing units of a given player to the specified value. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_hp(self, quantity: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, operation: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "28",
+    "internal_name": "change_object_attack",
+    "display_name": "Change Object Attack",
+    "description": "This effect can be used to change the attack of existing units of a given player to the specified value. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_attack(self, armour_attack_quantity: 'int | None' = None, armour_attack_class: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, operation: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "armour_attack_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "29",
+    "internal_name": "stop_object",
+    "display_name": "Stop Object",
+    "description": "This effect can be used to stop units of a given player. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "stop_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "30",
+    "internal_name": "attack_move",
+    "display_name": "Attack Move",
+    "description": "This effect can be used to command units of a given player to attack move to a location. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "attack_move(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, location_object_reference: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_object_reference",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "31",
+    "internal_name": "change_object_armor",
+    "display_name": "Change Object Armor",
+    "description": "This effect can be used to change the armour of existing units of a given player to the specified value. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_armor(self, armour_attack_quantity: 'int | None' = None, armour_attack_class: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, operation: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "armour_attack_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "32",
+    "internal_name": "change_object_range",
+    "display_name": "Change Object Range",
+    "description": "This effect can be used to change the range of existing units of a given player to the specified value. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_range(self, quantity: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, operation: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "33",
+    "internal_name": "change_object_speed",
+    "display_name": "Change Object Speed",
+    "description": "This effect can be used to change the speed of existing units of a given player to the specified value. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_speed(self, quantity: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "34",
+    "internal_name": "heal_object",
+    "display_name": "Heal Object",
+    "description": "This effect can be used to heal existing units of a given player by the specifed HP amount. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "heal_object(self, quantity: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "35",
+    "internal_name": "teleport_object",
+    "display_name": "Teleport Object",
+    "description": "This effect can be used to teleport units of a player from one area of the map to another location on the map. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "teleport_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "36",
+    "internal_name": "change_object_stance",
+    "display_name": "Change Object Stance",
+    "description": "This effect can be used to change the stance of units of a given player to the given stance. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_stance(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, attack_stance: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "attack_stance",
+        "type": "int | None",
+        "description": "",
+        "dataset": {
+          "name": "AttackStance",
+          "module": "attack_stance"
+        }
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "37",
+    "internal_name": "display_timer",
+    "display_name": "Display Timer",
+    "description": "This effect can be used to display a timer on screen",
+    "signature": "display_timer(self, string_id: 'int | None' = None, display_time: 'int | None' = None, time_unit: 'int | None' = None, timer: 'int | None' = None, reset_timer: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "display_time",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "time_unit",
+        "type": "int | None",
+        "description": "",
+        "dataset": {
+          "name": "TimeUnit",
+          "module": "time_unit"
+        }
+      },
+      {
+        "name": "timer",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "reset_timer",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "38",
+    "internal_name": "enable_disable_object",
+    "display_name": "Enable Disable Object",
+    "description": "This effect can be used to enable/disable any unit for a specific player. Note that sometimes, simply enabling a unit wont allow you to train them, because if it is not a default unit, the game doesn't know which building to train the unit in. Thus, A train location and a train button ([Change Train Location](./<effect_id_ref 46> \"Jump to: Change Train Location\")), a cost ([Change Object Cost](./<effect_id_ref 40> \"Jump to: Change Object Cost\")), and optionally a discription ([Change Object Description](./<effect_id_ref 44> \"Jump to: Change Object Description\")), of the unit are needed to also be set using additional effects to allow training the enabled unit.",
+    "signature": "enable_disable_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, enabled: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "enabled",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "39",
+    "internal_name": "enable_disable_technology",
+    "display_name": "Enable Disable Technology",
+    "description": "This effect can be used to enable/disable any technology for a specific player. Similar to units, when a non default technology is enabled, its train location and button ([Change Research Location](./<effect_id_ref 47> \"Jump to: Change Research Location\")), costs ([Change Technology Cost](./<effect_id_ref 63> \"Jump to: Change Technology Cost\")), and optionally a description ([Change Technology Description](./<effect_id_ref 66> \"Jump to: Change Technology Description\")), must be set using additional effects for someone to research it.",
+    "signature": "enable_disable_technology(self, source_player: 'int | None' = None, technology: 'int | None' = None, enabled: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "enabled",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "40",
+    "internal_name": "change_object_cost",
+    "display_name": "Change Object Cost",
+    "description": "This effect can be used to change the cost of a specifed unit for a particular player",
+    "signature": "change_object_cost(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, resource_1: 'int | None' = None, resource_1_quantity: 'int | None' = None, resource_2: 'int | None' = None, resource_2_quantity: 'int | None' = None, resource_3: 'int | None' = None, resource_3_quantity: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_1_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_2_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_3",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_3_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "41",
+    "internal_name": "set_player_visibility",
+    "display_name": "Set Player Visibility",
+    "description": "This trigger sets the visibility of the target player for the source player",
+    "signature": "set_player_visibility(self, source_player: 'int | None' = None, target_player: 'int | None' = None, visibility_state: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "target_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "visibility_state",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "42",
+    "internal_name": "change_object_icon",
+    "display_name": "Change Object Icon",
+    "description": "This effect can be used to change the icon of existing units of a given player to the 2nd unit's icon. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_icon(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, object_list_unit_id_2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "43",
+    "internal_name": "replace_object",
+    "display_name": "Replace Object",
+    "description": "This effect can be used to replace existing units of a given player with another unit. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "replace_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, target_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, object_list_unit_id_2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, facet2: 'int | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "target_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "facet2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "44",
+    "internal_name": "change_object_description",
+    "display_name": "Change Object Description",
+    "description": "This effect can be used to change the description of a specifed unit for a particular player",
+    "signature": "change_object_description(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, string_id: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "45",
+    "internal_name": "change_player_name",
+    "display_name": "Change Player Name",
+    "description": "This effect can be used to change the name of a player to any desired name",
+    "signature": "change_player_name(self, source_player: 'int | None' = None, string_id: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "46",
+    "internal_name": "change_train_location",
+    "display_name": "Change Train Location",
+    "description": "This effect can be used to change the train location of a specifed unit for a particular player to another unit. The train location of Archers is Archery Range",
+    "signature": "change_train_location(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, object_list_unit_id_2: 'int | None' = None, button_location: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "button_location",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "47",
+    "internal_name": "change_research_location",
+    "display_name": "Change Research Location",
+    "description": "This effect can be used to change the research location of a specifed technology for a particular player to another unit. The research location of Loom is the Town Centre",
+    "signature": "change_research_location(self, source_player: 'int | None' = None, technology: 'int | None' = None, object_list_unit_id_2: 'int | None' = None, button_location: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "button_location",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "48",
+    "internal_name": "change_civilization_name",
+    "display_name": "Change Civilization Name",
+    "description": "This effect can be used to change the name of the civilization of a player to any desired name",
+    "signature": "change_civilization_name(self, source_player: 'int | None' = None, string_id: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "49",
+    "internal_name": "create_garrisoned_object",
+    "display_name": "Create Garrisoned Object",
+    "description": "This effect creates the unit chosen in the 2nd list inside the selected object or the unit chosen in the 1st list. The unit that the created unit is garrisoned inside does not need to be of the same player.",
+    "signature": "create_garrisoned_object(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_list_unit_id_2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None, disable_sound: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "disable_sound",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "50",
+    "internal_name": "acknowledge_ai_signal",
+    "display_name": "Acknowledge AI Signal",
+    "description": "When `set-signal` is used in an AI file, this effect is used to unset it so it can be reused. This only works in Single Player games. Refer to the [Acknowledge Multiplayer AI Signal](./<effect_id_ref 69> \"Jump to: Acknowledge Multiplayer AI Signal\") effect for the multiplayer version of this effect",
+    "signature": "acknowledge_ai_signal(self, ai_signal_value: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "ai_signal_value",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "51",
+    "internal_name": "modify_attribute",
+    "display_name": "Modify Attribute",
+    "description": "This effect can be used to modify any attribute of a specified unit. Note that this effects the unit itself, not just existing units. This means that even new units created will have the modified attribute. Refer to the [Attributes](../../../../general/attributes \"Jump to: Game Mechanics > Attributes\") section of the guide to see a list of modifiable attributes and what each of them does",
+    "signature": "modify_attribute(self, quantity: 'int | None' = None, armour_attack_quantity: 'int | None' = None, armour_attack_class: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, operation: 'int | None' = None, object_attributes: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_attributes",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "52",
+    "internal_name": "modify_resource",
+    "display_name": "Modify Resource",
+    "description": "This effect can be used to modify the resource amounts of a particular player by specified amounts. Refer to the [Resources](../../../../general/resources/resources \"Jump to: Game Mechanics > Resources\") section of the guide to see all the resources that can be modified and their purposes",
+    "signature": "modify_resource(self, quantity: 'int | None' = None, tribute_list: 'int | None' = None, source_player: 'int | None' = None, operation: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "tribute_list",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "53",
+    "internal_name": "modify_resource_by_variable",
+    "display_name": "Modify Resource By Variable",
+    "description": "This effect can be used to modify the resource amounts of a particular player by the value of another variable. Refer to the [Resources](../../../../general/resources/resources \"Jump to: Game Mechanics > Resources\") section of the guide to see all the resources that can be modified and their purposes",
+    "signature": "modify_resource_by_variable(self, tribute_list: 'int | None' = None, source_player: 'int | None' = None, operation: 'int | None' = None, variable: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "tribute_list",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "54",
+    "internal_name": "set_building_gather_point",
+    "display_name": "Set Building Gather Point",
+    "description": "This effect can be used to set a gather point for specified buildings of a given player. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "set_building_gather_point(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "55",
+    "internal_name": "script_call",
+    "display_name": "Script Call",
+    "description": "This effect allows us to write or call functions from an XS Script. While the script call effect can be used to both call functions and write small scripts, it is advised to always use a function call and never use this effect for writing scripts. Refer to the [XS Scripting](../../../../general/xs/beginner/ \"Jump to: XS Scripting: A Beginner's Guide\")",
+    "signature": "script_call(self, string_id: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "56",
+    "internal_name": "change_variable",
+    "display_name": "Change Variable",
+    "description": "This effect can be used to change the value of a variable.",
+    "signature": "change_variable(self, quantity: 'int | None' = None, operation: 'int | None' = None, variable: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "57",
+    "internal_name": "clear_timer",
+    "display_name": "Clear Timer",
+    "description": "This effect can be used to remove a displayed timer from the screen",
+    "signature": "clear_timer(self, timer: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "timer",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "58",
+    "internal_name": "change_object_player_color",
+    "display_name": "Change Object Player Color",
+    "description": "This effect can be used to change the colour of specified objects of a given player. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_player_color(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, player_color: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "player_color",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "59",
+    "internal_name": "change_object_civilization_name",
+    "display_name": "Change Object Civilization Name",
+    "description": "This effect can be used to change the civilization name of specified objects of a given player. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_civilization_name(self, source_player: 'int | None' = None, string_id: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, message: 'str | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "60",
+    "internal_name": "change_object_player_name",
+    "display_name": "Change Object Player Name",
+    "description": "This effect can be used to change the player name of specified objects of a given player. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "change_object_player_name(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, string_id: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, message: 'str | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "61",
+    "internal_name": "disable_unit_targeting",
+    "display_name": "Disable Unit Targeting",
+    "description": "This effect makes it so that the specified units of the given player cannot be targeted (basically, you can't perform any right click actions from another unit on these units anymore) by other units. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "disable_unit_targeting(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "62",
+    "internal_name": "enable_unit_targeting",
+    "display_name": "Enable Unit Targeting",
+    "description": "This effect makes it so that the specified units of the given player can be targeted by other units. Refer to the [Disable Unit Targeting](./<effect_id_ref 61> \"Jump to: Disable Unit Targeting\") effect. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "enable_unit_targeting(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "63",
+    "internal_name": "change_technology_cost",
+    "display_name": "Change Technology Cost",
+    "description": "This effect can be used to change a technology's cost for a particular player",
+    "signature": "change_technology_cost(self, source_player: 'int | None' = None, technology: 'int | None' = None, resource_1: 'int | None' = None, resource_1_quantity: 'int | None' = None, resource_2: 'int | None' = None, resource_2_quantity: 'int | None' = None, resource_3: 'int | None' = None, resource_3_quantity: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_1_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_2_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_3",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "resource_3_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "64",
+    "internal_name": "change_technology_research_time",
+    "display_name": "Change Technology Research Time",
+    "description": "This effect can be used to change a technology's research time for a particular player",
+    "signature": "change_technology_research_time(self, quantity: 'int | None' = None, source_player: 'int | None' = None, technology: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "65",
+    "internal_name": "change_technology_name",
+    "display_name": "Change Technology Name",
+    "description": "This effect can be used to change a technology's name for a particular player",
+    "signature": "change_technology_name(self, source_player: 'int | None' = None, technology: 'int | None' = None, string_id: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "66",
+    "internal_name": "change_technology_description",
+    "display_name": "Change Technology Description",
+    "description": "This effect can be used to change a technology's Description for a particular player",
+    "signature": "change_technology_description(self, source_player: 'int | None' = None, technology: 'int | None' = None, string_id: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "67",
+    "internal_name": "enable_technology_stacking",
+    "display_name": "Enable Technology Stacking",
+    "description": "This effect enables 256x tech mode for the specified technology and player",
+    "signature": "enable_technology_stacking(self, source_player: 'int | None' = None, technology: 'int | None' = None, quantity: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "68",
+    "internal_name": "disable_technology_stacking",
+    "display_name": "Disable Technology Stacking",
+    "description": "This effect disables 256x tech mode for the specified technology and player. Refer to the [Enable Technology Stacking](./<effect_id_ref 67> \"Jump to: Enable Technology Stacking\") effect",
+    "signature": "disable_technology_stacking(self, source_player: 'int | None' = None, technology: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "69",
+    "internal_name": "acknowledge_multiplayer_ai_signal",
+    "display_name": "Acknowledge Multiplayer AI Signal",
+    "description": "When `set-signal` is used in an AI file, this effect is used to unset it so it can be reused. This only works in Multiplayer games. Refer to the [Acknowledge AI Signal](./<effect_id_ref 50> \"Jump to: Acknowledge AI Signal\") effect for the single player version of this effect.",
+    "signature": "acknowledge_multiplayer_ai_signal(self, ai_signal_value: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "ai_signal_value",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "70",
+    "internal_name": "disable_object_selection",
+    "display_name": "Disable Object Selection",
+    "description": "This effect makes specified units of the given player unselectable. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "disable_object_selection(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "71",
+    "internal_name": "enable_object_selection",
+    "display_name": "Enable Object Selection",
+    "description": "This effect makes specified units of the given player selectable. Refer to the [Disable Object Selection](./<effect_id_ref 70> \"Jump to: Disable Object Selection\") effect. The units affected by this effect are determined by the configurations of the effect",
+    "signature": "enable_object_selection(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "72",
+    "internal_name": "change_color_mood",
+    "display_name": "Change Color Mood",
+    "description": "This effect can change the colour mood of the map",
+    "signature": "change_color_mood(self, quantity: 'int | None' = None, color_mood: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "color_mood",
+        "type": "int | None",
+        "description": "",
+        "dataset": {
+          "name": "ColorMood",
+          "module": "color_mood"
+        }
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "add_train_location",
+    "display_name": "add_train_location",
+    "description": "",
+    "signature": "add_train_location(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, object_list_unit_id_2: 'int | None' = None, button_location: 'int | None' = None, train_time: 'int | None' = None, hotkey: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "button_location",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "train_time",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "hotkey",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_object_caption",
+    "display_name": "change_object_caption",
+    "description": "",
+    "signature": "change_object_caption(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, string_id: 'int | None' = None, message: 'str | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_object_visibility",
+    "display_name": "change_object_visibility",
+    "description": "",
+    "signature": "change_object_visibility(self, source_player: 'int | None' = None, target_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, visibility_state: 'int | None' = None, max_units_affected: 'int | None' = None, selected_object_ids: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "target_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "visibility_state",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_player_color",
+    "display_name": "change_player_color",
+    "description": "",
+    "signature": "change_player_color(self, source_player: 'int | None' = None, player_color: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "player_color",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_hotkey",
+    "display_name": "change_technology_hotkey",
+    "description": "",
+    "signature": "change_technology_hotkey(self, technology: 'int | None' = None, source_player: 'int | None' = None, quantity: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_icon",
+    "display_name": "change_technology_icon",
+    "description": "",
+    "signature": "change_technology_icon(self, technology: 'int | None' = None, source_player: 'int | None' = None, quantity: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_location",
+    "display_name": "change_technology_location",
+    "description": "",
+    "signature": "change_technology_location(self, source_player: 'int | None' = None, technology: 'int | None' = None, object_list_unit_id_2: 'int | None' = None, button_location: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "button_location",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "count_units_into_variable",
+    "display_name": "count_units_into_variable",
+    "description": "",
+    "signature": "count_units_into_variable(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, variable2: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "variable2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_decision",
+    "display_name": "create_decision",
+    "description": "",
+    "signature": "create_decision(self, decision_id: 'int | None' = None, string_id: 'int | None' = None, message: 'str | None' = None, string_id_option1: 'int | None' = None, message_option1: 'str | None' = None, string_id_option2: 'int | None' = None, message_option2: 'str | None' = None)",
+    "parameters": [
+      {
+        "name": "decision_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id_option1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message_option1",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "string_id_option2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message_option2",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_object_armor",
+    "display_name": "create_object_armor",
+    "description": "",
+    "signature": "create_object_armor(self, armour_attack_quantity: 'int | None' = None, armour_attack_class: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, operation: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "armour_attack_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_object_attack",
+    "display_name": "create_object_attack",
+    "description": "",
+    "signature": "create_object_attack(self, armour_attack_quantity: 'int | None' = None, armour_attack_class: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, operation: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "armour_attack_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "delete_key",
+    "display_name": "delete_key",
+    "description": "",
+    "signature": "delete_key(self, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "disable_object_deletion",
+    "display_name": "disable_object_deletion",
+    "description": "",
+    "signature": "disable_object_deletion(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "disable_unit_attackable",
+    "display_name": "disable_unit_attackable",
+    "description": "",
+    "signature": "disable_unit_attackable(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "enable_object_deletion",
+    "display_name": "enable_object_deletion",
+    "description": "",
+    "signature": "enable_object_deletion(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "enable_unit_attackable",
+    "display_name": "enable_unit_attackable",
+    "description": "",
+    "signature": "enable_unit_attackable(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "initiate_research",
+    "display_name": "initiate_research",
+    "description": "",
+    "signature": "initiate_research(self, source_player: 'int | None' = None, technology: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None)",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "load_key_value",
+    "display_name": "load_key_value",
+    "description": "",
+    "signature": "load_key_value(self, variable: 'int | None' = None, message: 'str | None' = None, quantity: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_attribute_by_variable",
+    "display_name": "modify_attribute_by_variable",
+    "description": "",
+    "signature": "modify_attribute_by_variable(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, operation: 'int | None' = None, object_attributes: 'int | None' = None, variable: 'int | None' = None, message: 'str | None' = None, armour_attack_class: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_attributes",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_attribute_for_class",
+    "display_name": "modify_attribute_for_class",
+    "description": "",
+    "signature": "modify_attribute_for_class(self, object_group2: 'int | None' = None, object_type2: 'int | None' = None, source_player: 'int | None' = None, object_attributes: 'int | None' = None, message: 'int | None' = None, operation: 'int | None' = None, quantity: 'int | float | None' = None, armour_attack_quantity: 'int | None' = None, armour_attack_class: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_group2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_type2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_attributes",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "quantity",
+        "type": "int | float | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_object_attribute",
+    "display_name": "modify_object_attribute",
+    "description": "",
+    "signature": "modify_object_attribute(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, object_attributes: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, operation: 'int | None' = None, message: 'str | None' = None, quantity: 'int | float | None' = None, armour_attack_quantity: 'int | None' = None, armour_attack_class: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_attributes",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "quantity",
+        "type": "int | float | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_object_attribute_by_variable",
+    "display_name": "modify_object_attribute_by_variable",
+    "description": "",
+    "signature": "modify_object_attribute_by_variable(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, object_attributes: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, operation: 'int | None' = None, message: 'str | None' = None, variable: 'int | None' = None, armour_attack_class: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_attributes",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_attribute",
+    "display_name": "modify_variable_by_attribute",
+    "description": "",
+    "signature": "modify_variable_by_attribute(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, operation: 'int | None' = None, object_attributes: 'int | None' = None, variable: 'int | None' = None, message: 'str | None' = None, armour_attack_class: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_attributes",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "armour_attack_class",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_resource",
+    "display_name": "modify_variable_by_resource",
+    "description": "",
+    "signature": "modify_variable_by_resource(self, tribute_list: 'int | None' = None, source_player: 'int | None' = None, operation: 'int | None' = None, variable: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "tribute_list",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_variable",
+    "display_name": "modify_variable_by_variable",
+    "description": "",
+    "signature": "modify_variable_by_variable(self, variable: 'int | None' = None, operation: 'int | None' = None, variable2: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "operation",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "variable2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "none",
+    "display_name": "none",
+    "description": "",
+    "signature": "none(self) -> 'Effect'",
+    "parameters": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "research_local_technology",
+    "display_name": "research_local_technology",
+    "description": "",
+    "signature": "research_local_technology(self, local_technology: 'int | None' = None, source_player: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_list_unit_id_2: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "local_technology",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id_2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "set_object_cost",
+    "display_name": "set_object_cost",
+    "description": "",
+    "signature": "set_object_cost(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, quantity: 'int | None' = None, tribute_list: 'int | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "tribute_list",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "store_key_value",
+    "display_name": "store_key_value",
+    "description": "",
+    "signature": "store_key_value(self, variable: 'int | None' = None, message: 'str | None' = None) -> 'Effect'",
+    "parameters": [
+      {
+        "name": "variable",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "message",
+        "type": "str | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "train_unit",
+    "display_name": "train_unit",
+    "description": "",
+    "signature": "train_unit(self, quantity: 'int | None' = None, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "object_list_unit_id",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_x",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "location_y",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "selected_object_ids",
+        "type": "int | List[int] | None",
+        "description": "",
+        "dataset": null
+      },
+      {
+        "name": "max_units_affected",
+        "type": "int | None",
+        "description": "",
+        "dataset": null
+      }
+    ]
+  }
+]

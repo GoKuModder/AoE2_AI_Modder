@@ -19,8 +19,31 @@ def introspect_aoe2sp_effects() -> Dict[str, Any]:
     for name, fn in inspect.getmembers(NewEffectSupport, predicate=inspect.isfunction):
         if name.startswith("_"):
             continue
-        sig = str(inspect.signature(fn))
-        params = [p.name for p in inspect.signature(fn).parameters.values() if p.name != "self"]
+        sig_obj = inspect.signature(fn)
+        sig = str(sig_obj)
+        params = []
+        for p in sig_obj.parameters.values():
+            if p.name == "self":
+                continue
+            
+            # Extract type annotation if available
+            type_str = ""
+            if p.annotation != inspect.Parameter.empty:
+                # Handle string annotations vs type objects
+                if isinstance(p.annotation, str):
+                    type_str = p.annotation
+                else:
+                    try:
+                        type_str = p.annotation.__name__
+                    except AttributeError:
+                        type_str = str(p.annotation)
+
+            params.append({
+                "name": p.name,
+                "type": type_str,
+                "default": str(p.default) if p.default != inspect.Parameter.empty else None
+            })
+
         methods[name] = {"name": name, "signature": f"{name}{sig}", "params": params}
     return methods
 
