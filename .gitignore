@@ -55,3 +55,14 @@ _cache/
 .env
 .env.*
 secrets.*
+
+
+# Antigravity / generated
+knowledge/cache/
+knowledge/**/*.html
+knowledge/**/*.tmp
+knowledge/**/*.raw
+
+# Large generated data
+*.jsonl
+*.parquet
