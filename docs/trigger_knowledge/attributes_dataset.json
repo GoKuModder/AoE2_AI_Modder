@@ -1,0 +1,1472 @@
+{
+  "0": {
+    "description": "ID: 0 This attribute refers to the health of the units",
+    "id": 0,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.HIT_POINTS",
+    "parser_enum_name": "HIT_POINTS",
+    "parser_enum_value": 0,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Hit Points",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.HIT_POINTS"
+  },
+  "1": {
+    "description": "ID: 1 This is the distance a unit can see around itself",
+    "id": 1,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.LINE_OF_SIGHT",
+    "parser_enum_name": "LINE_OF_SIGHT",
+    "parser_enum_value": 1,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Line of Sight",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.LINE_OF_SIGHT"
+  },
+  "2": {
+    "description": "ID: 2 This is the amount of units that can garrison inside another unit",
+    "id": 2,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.GARRISON_CAPACITY",
+    "parser_enum_name": "GARRISON_CAPACITY",
+    "parser_enum_value": 2,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Garrison Capacity",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.GARRISON_CAPACITY"
+  },
+  "3": {
+    "description": "ID: 3 This determines the x-size of the unit's collision hitbox (width of the unit)",
+    "id": 3,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.UNIT_SIZE_X",
+    "parser_enum_name": "UNIT_SIZE_X",
+    "parser_enum_value": 3,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Unit Size X",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.UNIT_SIZE_X"
+  },
+  "4": {
+    "description": "ID: 4 This determines the y-size of the unit's collision hitbox (length of the unit)",
+    "id": 4,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.UNIT_SIZE_Y",
+    "parser_enum_name": "UNIT_SIZE_Y",
+    "parser_enum_value": 4,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Unit Size Y",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.UNIT_SIZE_Y"
+  },
+  "5": {
+    "description": "ID: 5 This is the movement speed of a unit, measured in tiles per second",
+    "id": 5,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MOVEMENT_SPEED",
+    "parser_enum_name": "MOVEMENT_SPEED",
+    "parser_enum_value": 5,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Movement Speed",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MOVEMENT_SPEED"
+  },
+  "6": {
+    "description": "ID: 6 This is the rate at which units can rotate, measured in seconds per frame (this many seconds must pass before the object can switch to the next rotation frame). For example, for a trebuchet to start attacking a building facing the opposite direction, it has to rotate to face that way first",
+    "id": 6,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ROTATION_SPEED",
+    "parser_enum_name": "ROTATION_SPEED",
+    "parser_enum_value": 6,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Rotation Speed",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ROTATION_SPEED"
+  },
+  "8": {
+    "description": "ID: 8 This is the quantity of armour a unit has on any of its Armour Classes . If you do not know what an Armour Class is, refer to the Damage Calculation section of this guide. Note that changing the armour through this option will show it as being added to the base armour amount. (for example: 4+4)",
+    "id": 8,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ARMOR",
+    "parser_enum_name": "ARMOR",
+    "parser_enum_value": 8,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Armor",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ARMOR"
+  },
+  "9": {
+    "description": "ID: 9 This is the quantity of attack a unit has on any of its Attack Classes . If you do not know what an Attack Class is, refer to the Damage Calculation section of this guide. Note that changing the attack through this option will show it as being added to the base attack amount. (for example: 6+2)",
+    "id": 9,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ATTACK",
+    "parser_enum_name": "ATTACK",
+    "parser_enum_value": 9,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Attack",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ATTACK"
+  },
+  "10": {
+    "description": "ID: 10 This is the minimum time that must pass before a unit is able to fire another shot. For melee units it is the minimum time between two successive hits that they can do",
+    "id": 10,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ATTACK_RELOAD_TIME",
+    "parser_enum_name": "ATTACK_RELOAD_TIME",
+    "parser_enum_value": 10,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Attack Reload Time",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ATTACK_RELOAD_TIME"
+  },
+  "11": {
+    "description": "ID: 11 This determines how accurately a unit can aim at another unit This accuracy is the accuracy of a unit to fire at the exact centre of its target. If the shot fired is not aimed at the exact centre of the target, it may still hit the target if its not off by too much since it can still land within the hitbox of the target, just not at the exact centre Thus, bigger targets are actually easier to hit, which explains why buildings are an easier target to hit for trebuchets than small units In this image, you can see that shots that were fired in the red area in the 2 nd scenario would've hit if the target had been closer like in the first scenario, but since the target is far away, they actually miss More technically, the visual angle of an object of the same size that is farther away is smaller, thus giving a smaller room for error for the shot in terms of the range of angles that will make the shot hit The chance of a unit getting converted by a monk is also determined by its accuracy If you modify an onager to have a big blast radius and give it a small accuracy, then attack a lot of units bunched together, the accuracy determines what percentage of units take damage from the blast of the onager! This is the reason why warwolf trebuchets get 100% accuracy because otherwise the blast wouldn't damage all of the units. Another interesting consequence of this is the delete trick with onagers and mangonels. This is where a mangonel is deleted immediately after it fires its shot and because a dead unit doesn't have an accuracy, it defaults to 100% and thus deals more damage to all the units in the blast radius Note: There are two other factors that play a role in determining the damage from the shot fired by the deleted mangonel The damage from a mangonel's shot is decreased over distance when moving outward from the centre of the blast (the targeted point). However, when the mangonel is deleted, this decrease over distance doesn't happen, and the projectile deals the full 100% damage to all the units in the blast radius! A shot that is fired from lower elevation would normally deal only 75% of its normal damage due to the elevation damage reduction. deleting a mangonel in this case also makes the damage the full 100% as if there was no elevation difference",
+    "id": 11,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ACCURACY_PERCENT",
+    "parser_enum_name": "ACCURACY_PERCENT",
+    "parser_enum_value": 11,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Accuracy Percent",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ACCURACY_PERCENT"
+  },
+  "12": {
+    "description": "ID: 12 This is the maximum range of a unit. Note that to be able to shoot at a target, it must be visible to the unit via its own line of sight or from another unit's line of sight",
+    "id": 12,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MAXIMUM_RANGE",
+    "parser_enum_name": "MAXIMUM_RANGE",
+    "parser_enum_value": 12,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Maximum Range",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MAXIMUM_RANGE"
+  },
+  "13": {
+    "description": "ID: 13 This is the work rate for any unit that can do work. Villagers, Fishing Ships, Serjeants",
+    "id": 13,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.WORK_RATE",
+    "parser_enum_name": "WORK_RATE",
+    "parser_enum_value": 13,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Work Rate",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.WORK_RATE"
+  },
+  "14": {
+    "description": "ID: 14 This is the carry capacity of Villagers",
+    "id": 14,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CARRY_CAPACITY",
+    "parser_enum_name": "CARRY_CAPACITY",
+    "parser_enum_value": 14,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Carry Capacity",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CARRY_CAPACITY"
+  },
+  "15": {
+    "description": "ID: 15 This is the quantity of base armour a unit has on any of its Armour Classes . If you do not know what an Armour Class is, refer to the Damage Calculation section of this guide. Note that changing the armour through this option will show it as the base armour itself, and it will not be added to the regular amount",
+    "id": 15,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.BASE_ARMOR",
+    "parser_enum_name": "BASE_ARMOR",
+    "parser_enum_value": 15,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Base Armor",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.BASE_ARMOR"
+  },
+  "16": {
+    "description": "ID: 16 This is the ID of the projectile that a unit fires",
+    "id": 16,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_UNIT",
+    "parser_enum_name": "PROJECTILE_UNIT",
+    "parser_enum_value": 16,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Unit",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_UNIT"
+  },
+  "17": {
+    "description": "ID: 17 The functionality of this attribute is unknown as it doesn't always behave certainly. If you know what this attribute does, please let the authors of this guide know!",
+    "id": 17,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.BUILDING_ICON_OVERRIDE",
+    "parser_enum_name": "BUILDING_ICON_OVERRIDE",
+    "parser_enum_value": 17,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Building Icon Override",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.BUILDING_ICON_OVERRIDE"
+  },
+  "18": {
+    "description": "ID: 18 Unknown... What does this attribute do?",
+    "id": 18,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TERRAIN_DEFENSE_BONUS",
+    "parser_enum_name": "TERRAIN_DEFENSE_BONUS",
+    "parser_enum_value": 18,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Terrain Defense Bonus",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TERRAIN_DEFENSE_BONUS"
+  },
+  "19": {
+    "description": "ID: 19 This is a combinable bit field. Controls the following two behaviours for projectiles: For example, if we set this property of the projectile used by an archer to 1 , it will have ballistics. (This is exactly what researching ballistics does in the first place). If we set this property to 2 , a missed projectile that hits another unit will deal its full damage instead of the 50% that it would normally do What if we want to enable both properties at once? This is achieved by adding the flag values for both of them together. Setting this property to 3 enables both effects Property Flag Value No Ballistics 0 Has Ballistics 1 Deals full damage on missed hit 2",
+    "id": 19,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_SMART_MODE",
+    "parser_enum_name": "PROJECTILE_SMART_MODE",
+    "parser_enum_value": 19,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Smart Mode",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_SMART_MODE"
+  },
+  "20": {
+    "description": "ID: 20 The minimum distance a unit must be from an attacking unit for the attacking unit to be able to fire its projectile",
+    "id": 20,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MINIMUM_RANGE",
+    "parser_enum_name": "MINIMUM_RANGE",
+    "parser_enum_value": 20,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Minimum Range",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MINIMUM_RANGE"
+  },
+  "21": {
+    "description": "ID: 21 This is the amount of 1 st resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit",
+    "id": 21,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.AMOUNT_OF_1ST_RESOURCE_STORAGE",
+    "parser_enum_name": "AMOUNT_OF_1ST_RESOURCE_STORAGE",
+    "parser_enum_value": 21,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Amount of 1 st Resource Storage",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.AMOUNT_OF_1ST_RESOURCE_STORAGE"
+  },
+  "22": {
+    "description": "ID: 22 All enemy units inside this radius take damage from an attacking unit. This is used by elephants, Druzhina Halberdiers, and Logistica Cataphracts",
+    "id": 22,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.BLAST_WIDTH",
+    "parser_enum_name": "BLAST_WIDTH",
+    "parser_enum_value": 22,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Blast Width",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.BLAST_WIDTH"
+  },
+  "23": {
+    "description": "ID: 23 The maximum distance at which a unit can detect and auto attack enemy units",
+    "id": 23,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SEARCH_RADIUS",
+    "parser_enum_name": "SEARCH_RADIUS",
+    "parser_enum_value": 23,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Search Radius",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SEARCH_RADIUS"
+  },
+  "24": {
+    "description": "ID: 24 Used by Sicilians for the 33% bonus damage resistance. Set to 0.33 for all Sicilian land military units except siege Do not make it greater than 1",
+    "id": 24,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.BONUS_DAMAGE_RESISTANCE",
+    "parser_enum_name": "BONUS_DAMAGE_RESISTANCE",
+    "parser_enum_value": 24,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Bonus Damage Resistance",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.BONUS_DAMAGE_RESISTANCE"
+  },
+  "25": {
+    "description": "ID: 25 The ID of the icon that you want a unit to show",
+    "id": 25,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ICON_ID",
+    "parser_enum_name": "ICON_ID",
+    "parser_enum_value": 25,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Icon ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ICON_ID"
+  },
+  "26": {
+    "description": "ID: 26 This is the amount of 2 nd resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit",
+    "id": 26,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.AMOUNT_OF_2ND_RESOURCE_STORAGE",
+    "parser_enum_name": "AMOUNT_OF_2ND_RESOURCE_STORAGE",
+    "parser_enum_value": 26,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Amount of 2 nd Resource Storage",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.AMOUNT_OF_2ND_RESOURCE_STORAGE"
+  },
+  "27": {
+    "description": "ID: 27 This is the amount of 3 rd resource contained in any unit. Refer to A.G.E. to see which resource this is for each unit",
+    "id": 27,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.AMOUNT_OF_3RD_RESOURCE_STORAGE",
+    "parser_enum_name": "AMOUNT_OF_3RD_RESOURCE_STORAGE",
+    "parser_enum_value": 27,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Amount of 3 rd Resource Storage",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.AMOUNT_OF_3RD_RESOURCE_STORAGE"
+  },
+  "28": {
+    "description": "ID: 28 Controls visibility of a unit through the fog of war Property Flag Value Not Visible 0 Always Visible 1 Visible If Alive 2 Inverted Visibility 3 Check Doppelganger 4",
+    "id": 28,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.FOG_VISIBILITY",
+    "parser_enum_name": "FOG_VISIBILITY",
+    "parser_enum_value": 28,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Fog Visibility",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.FOG_VISIBILITY"
+  },
+  "29": {
+    "description": "ID: 29 This is a combinable bit field. Controls the outlines of units as seen through other units Property Flag Value No outline 0 Display outline when behind other units that have flag 2 1 Other units' outlines are rendered when they are behind this unit 2 Display outline on this unit's foundation when behind other units that have flag 2 4",
+    "id": 29,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.OCCLUSION_MODE",
+    "parser_enum_name": "OCCLUSION_MODE",
+    "parser_enum_value": 29,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Occlusion Mode",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.OCCLUSION_MODE"
+  },
+  "30": {
+    "description": "ID: 30 This is a combinable bit field. Controls which units are able to garrison in a building. A unit needs to have the garrison in building task to be able to garrison in a building to begin with Property Flag Value Villagers 1 Infantry 2 Cavalry 4 Monks 8 Herdables 16 Siege 32 Ships 64",
+    "id": 30,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.GARRISON_TYPE",
+    "parser_enum_name": "GARRISON_TYPE",
+    "parser_enum_value": 30,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Garrison Type",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.GARRISON_TYPE"
+  },
+  "32": {
+    "description": "ID: 32 This determines the z-size of the unit's collision hitbox (height of the unit) Setting this to 0 allows other units to walk over this unit Does this still control the HP bar location as specified in A.G.E.?",
+    "id": 32,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.UNIT_SIZE_Z",
+    "parser_enum_name": "UNIT_SIZE_Z",
+    "parser_enum_value": 32,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Unit Size Z",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.UNIT_SIZE_Z"
+  },
+  "33": {
+    "description": "ID: 33 Determines if a building foundation can be placed on top of a unit Property Flag Value Disallow unit to be built on. This is the value for almost all units 0 Allow unit to be built on. This is the value for corpses, rubble, eye candy 1",
+    "id": 33,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CAN_BE_BUILT_ON",
+    "parser_enum_name": "CAN_BE_BUILT_ON",
+    "parser_enum_value": 33,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Can Be Built On",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CAN_BE_BUILT_ON"
+  },
+  "34": {
+    "description": "ID: 34 This is the ID of the terrain created under a building when its construction is finished Only affects units of Type 80 (Building) Property Flag Value No terrain change -1",
+    "id": 34,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.FOUNDATION_TERRAIN",
+    "parser_enum_name": "FOUNDATION_TERRAIN",
+    "parser_enum_value": 34,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Foundation Terrain",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.FOUNDATION_TERRAIN"
+  },
+  "40": {
+    "description": "ID: 40 This is a combinable bit field. Controls the following properties: For example, if we set the hero status of a knight to 2, a monk will not be able to convert it. If we set the hero status of a militia to 4, it will regenerate HP automatically What if we want to enable multiple properties at once? This is achieved by adding the flag values for those properties together and setting the hero status to that value. For example, if we want to make a paladin both unconvertable and regenerate HP automatically, we can set its hero status to 2+4 = 6. This means that the hero status of a unit can take on any values in the range 1-63. If you set it to any other value, it does not have any effect on the unit This works because notice that there is one and only one way to add different flag values together to obtain a particular value for the hero status! For example, if we have a value of 20 for the hero status of a unit, the only way to make 20 from the above flag values is to add 4 and 16. Thus, we know that the properties corresponding to the flag values 4 (self regeneration) and 16 (protected formation by default) must be enabled for that unit This is a consequence of the fact that every number can be represented as a unique sum of powers of two (binary numbers) Property Flag Value Full Hero Status 1 Cannot be Converted 2 Self Regeneration (30 HP/min) 4 Defensive Stance by Default 8 Protected Formation by Default 16 Safe Delete Confirmation 32 Hero Glow 64 Invert All Flags (except flag 1) 128",
+    "id": 40,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.HERO_STATUS",
+    "parser_enum_name": "HERO_STATUS",
+    "parser_enum_value": 40,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Hero Status",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.HERO_STATUS"
+  },
+  "41": {
+    "description": "ID: 41 The amount of delay between the point when the attacking animation starts and the actual hit happening for military units. This is what makes Cavalry Archers annoying to micro",
+    "id": 41,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.FRAME_DELAY",
+    "parser_enum_name": "FRAME_DELAY",
+    "parser_enum_value": 41,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Frame Delay",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.FRAME_DELAY"
+  },
+  "42": {
+    "description": "ID: 42 The ID of the unit that trains any given unit. Barracks train Militia, so the train location of a Militia is the ID of the Barracks",
+    "id": 42,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIN_LOCATION",
+    "parser_enum_name": "TRAIN_LOCATION",
+    "parser_enum_value": 42,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Train Location",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAIN_LOCATION"
+  },
+  "43": {
+    "description": "ID: 43 The button used for training any given unit. For example, Militia are trained by using the first button, hence the Button Location of Militia is 1. This number ranges from 0-15",
+    "id": 43,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIN_BUTTON",
+    "parser_enum_name": "TRAIN_BUTTON",
+    "parser_enum_value": 43,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Train Button",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAIN_BUTTON"
+  },
+  "44": {
+    "description": "ID: 44 A unit deals blast damage to other units with equal or higher Blast Defense Level that are in its blast radius. For example, while mangonels (blast attack: 2) can damage your own units (blast defense of all player owned units is always 2), scorpions (blast attack: 3) cannot do the same One of the flags 0-3 can be combined with the combinable flags 4 to 128 by adding the two values Property Flag Value Damage resources, nearby allied units and tress 0 Damage trees, nearby allied units 1 Damage nearby and allied units 2 Damage targeted unit only 3 Damage enemy units only 4 Ignore friendly fire 8 Unused 16 Unused 32 Attenuate damage as distance from the centre of attack increases (infantry only) 64 Blast damage is dealt along the direction the unit is facing only. This area is a very narrow cone 128",
+    "id": 44,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.BLAST_ATTACK_LEVEL",
+    "parser_enum_name": "BLAST_ATTACK_LEVEL",
+    "parser_enum_value": 44,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Blast Attack Level",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.BLAST_ATTACK_LEVEL"
+  },
+  "45": {
+    "description": "ID: 45 A unit feels the blast damage from other units with equal or lower Blast Attack Level and if it is inside the attacker's blast radius. For example, while onagers (blast attack: 1) can cut trees (blast defense 1), mangonels (blast attack: 2) cannot do the same Property Flag Value damage resources, nearby allied units and tress 0 damage trees, nearby allied units 1 damage nearby allied units 2 damage targeted unit only 3",
+    "id": 45,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.BLAST_DEFENSE_LEVEL",
+    "parser_enum_name": "BLAST_DEFENSE_LEVEL",
+    "parser_enum_value": 45,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Blast Defense Level",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.BLAST_DEFENSE_LEVEL"
+  },
+  "46": {
+    "description": "ID: 46 The amount of attack that is displayed as a unit's attack (may not actually be the true attack)",
+    "id": 46,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SHOWN_ATTACK",
+    "parser_enum_name": "SHOWN_ATTACK",
+    "parser_enum_value": 46,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Shown Attack",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SHOWN_ATTACK"
+  },
+  "47": {
+    "description": "ID: 47 The quantity that is displayed as a unit's attack ingame (may not actually be the true attack)",
+    "id": 47,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SHOWN_RANGE",
+    "parser_enum_name": "SHOWN_RANGE",
+    "parser_enum_value": 47,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Shown Range",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SHOWN_RANGE"
+  },
+  "48": {
+    "description": "ID: 48 The quantity that is displayed as a unit's melee armour ingame (may not actually be the true armour)",
+    "id": 48,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SHOWN_MELEE_ARMOR",
+    "parser_enum_name": "SHOWN_MELEE_ARMOR",
+    "parser_enum_value": 48,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Shown Melee Armor",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SHOWN_MELEE_ARMOR"
+  },
+  "49": {
+    "description": "ID: 49 The quantity that is displayed as a unit's pierce armour ingame (may not actually be the true armour)",
+    "id": 49,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SHOWN_PIERCE_ARMOR",
+    "parser_enum_name": "SHOWN_PIERCE_ARMOR",
+    "parser_enum_value": 49,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Shown Pierce Armor",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SHOWN_PIERCE_ARMOR"
+  },
+  "50": {
+    "description": "ID: 50 The string ID to use for the name of an object. A string ID is used for refering to strings that the game recognises by default. It can be used to automatically set names by using a value that the game recognises. Trying out the value 1 on a unit and seeing what happens is left as an excersise for the reader",
+    "id": 50,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.OBJECT_NAME_ID",
+    "parser_enum_name": "OBJECT_NAME_ID",
+    "parser_enum_value": 50,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Object Name ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.OBJECT_NAME_ID"
+  },
+  "51": {
+    "description": "ID: 51 The string ID for the Short Description of an object. A string ID is used for refering to strings that the game recognises by default. It can be used to automatically set a Short Description by using a value that the game recognises. Trying out the value 1 on a unit and seeing what happens is left as an excersise for the reader",
+    "id": 51,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SHORT_DESCRIPTION_ID",
+    "parser_enum_name": "SHORT_DESCRIPTION_ID",
+    "parser_enum_value": 51,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Short Description ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SHORT_DESCRIPTION_ID"
+  },
+  "53": {
+    "description": "ID: 53 This number determines how a unit interacts with terrains and which terrains it can walk on Property Flag Value All 0 Land And Shallows 1 Beach 2 Water Small Trail 3 Land 4 Nothing 5 Water No Trail 6 All Except Water 7 Land Except Farm 8 Nothing 2 9 Land And Beach 10 Land Except Farm 2 11 All Except Water Bridge Cannon 12 Water Medium Trail 13 All Except Water Bridge Arrow 14 Water Large Trail 15 Grass And Beach 16 Water And Bridge Except Beach 17 All Except Water Bridge Spear 18 Only Water And Ice 19 All Except Water Wheel 20 Shallow Water 21 All Dart 22 All Arrow Fire 23 All Cannon Fire 24 All Spear Fire 25 All Dart Fire 26 All Laser 27 All Except Water Cavalry 28 All Except Water Packet Trebuchet 29 Water Smallest Trail 30",
+    "id": 53,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TERRAIN_RESTRICTION_ID",
+    "parser_enum_name": "TERRAIN_RESTRICTION_ID",
+    "parser_enum_value": 53,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Terrain Restriction ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TERRAIN_RESTRICTION_ID"
+  },
+  "54": {
+    "description": "ID: 54 This is a combinable bit field. Controls the following properties: See Also: Trait Piece Property Flag Value Garrison Unit 1 Ship Unit 2 Build Another Building (Serjeants) [See Special Ability: Mode 7] 4 Transform Into Another Unit (Ratha) 8 Auto Scout Unit 16",
+    "id": 54,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.UNIT_TRAIT",
+    "parser_enum_name": "UNIT_TRAIT",
+    "parser_enum_value": 54,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Unit Trait",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.UNIT_TRAIT"
+  },
+  "56": {
+    "description": "ID: 56 This can be set to the ID of a unit that is used along with some of the Unit Traits See Also: Unit Trait Property Flag Value Unused 1 Unused 2 Build Unit 4 Transform Unit 8 Unused 16",
+    "id": 56,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIT_PIECE",
+    "parser_enum_name": "TRAIT_PIECE",
+    "parser_enum_value": 56,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Trait Piece",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAIT_PIECE"
+  },
+  "57": {
+    "description": "ID: 57 This is the ID of the unit to spawn after the current unit dies. This is whats used to make the dismounted konniks possible",
+    "id": 57,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DEAD_UNIT_ID",
+    "parser_enum_name": "DEAD_UNIT_ID",
+    "parser_enum_value": 57,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Dead Unit ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DEAD_UNIT_ID"
+  },
+  "58": {
+    "description": "ID: 58 This number determines which hotkey is assigned to a unit",
+    "id": 58,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.HOTKEY_ID",
+    "parser_enum_name": "HOTKEY_ID",
+    "parser_enum_value": 58,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Hotkey ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.HOTKEY_ID"
+  },
+  "59": {
+    "description": "ID: 59 The maximum amount of charge that a unit can hold",
+    "id": 59,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MAXIMUM_CHARGE",
+    "parser_enum_name": "MAXIMUM_CHARGE",
+    "parser_enum_value": 59,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Maximum Charge",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MAXIMUM_CHARGE"
+  },
+  "60": {
+    "description": "ID: 60 The rate of charge regeneration per second",
+    "id": 60,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.RECHARGE_RATE",
+    "parser_enum_name": "RECHARGE_RATE",
+    "parser_enum_value": 60,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Recharge Rate",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.RECHARGE_RATE"
+  },
+  "61": {
+    "description": "ID: 61 This action depletes the unit's charge Property Flag Value 1 - Deplete charge, 0 - Keep charge Charge Type one of 1 , 2 , or 3 Max range modifier Charge Type one of 6 , or 7 0 - Transform unit until one attack, -1 - perform attack ground on it's location Charge Type is -1 0 - Transform unit until one attack Charge Type is -2 Aura task duration Charge Type is -3 Conversion range (maybe overridden by conversion tasks) Charge Type is -4",
+    "id": 61,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CHARGE_EVENT",
+    "parser_enum_name": "CHARGE_EVENT",
+    "parser_enum_value": 61,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Charge Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CHARGE_EVENT"
+  },
+  "62": {
+    "description": "ID: 62 The type of charge that a unit holds Property Flag Value Spawn Building on top of the unit (Uses unit set in Trait Piece) -5 Conversion ability (Needs task 104). Charge Target defines the conversion percent chance -4 Active aura ability (Needs task 155 with unused flag 8 set) -3 Active targetted transform (Uses unit set in Trait Piece). If charge target = -1, use attack ground targetting -2 Active temporary transform (Uses unit set in Trait Piece) -1 Attack charge 1 ??? charge 2 Area attack charge 3 Agility charge 4 Ignore Melee Attack 5 Fire only Charge projectiles, sets Total Projectiles to the value of Max Total Projectiles (Lou Chuan) 6 Fires 1 Charge projectile and additional Secondary Projectiles, sets Total Projectiles to the value of Max Total Projectiles 7",
+    "id": 62,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CHARGE_TYPE",
+    "parser_enum_name": "CHARGE_TYPE",
+    "parser_enum_value": 62,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Charge Type",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CHARGE_TYPE"
+  },
+  "63": {
+    "description": "ID: 63 Combinable bit field. Controls several attacking behaviours for units Property Flag Value Ignore melee and pierce armours of the targeted unit 1 Resist armour-ignoring attacks 2 Damage the targeted unit's melee and pierce armors by 1, for a minimum of 0 (Obuch) 4 Attack ground ability 8 Bulk volley release (kipchak/siege weapons) 16 Enable aura ability (task 155) (Stronghold castle/Caravanserai/Centurion) 32 Invert aura ability (task 155) to boost self (Monaspa) - Auto Search = 1 needed for multiple tasks 64 Activate stringer ability (task 157) 128",
+    "id": 63,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.COMBAT_ABILITY",
+    "parser_enum_name": "COMBAT_ABILITY",
+    "parser_enum_value": 63,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Combat Ability",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.COMBAT_ABILITY"
+  },
+  "64": {
+    "description": "ID: 64 Half of the radius from the target unit in which missed projectiles fired by this unit can land in",
+    "id": 64,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ATTACK_DISPERSION",
+    "parser_enum_name": "ATTACK_DISPERSION",
+    "parser_enum_value": 64,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Attack Dispersion",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ATTACK_DISPERSION"
+  },
+  "65": {
+    "description": "ID: 65 This is the ID of the secondary projectile that a unit fires (Chu Ko Nu)",
+    "id": 65,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SECONDARY_PROJECTILE_UNIT",
+    "parser_enum_name": "SECONDARY_PROJECTILE_UNIT",
+    "parser_enum_value": 65,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Secondary Projectile Unit",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SECONDARY_PROJECTILE_UNIT"
+  },
+  "66": {
+    "description": "ID: 66 This is the ID of a secondary unit to spawn after the current unit dies. This could potentially be used along with dead unit ID to spawn two units after a single unit dies",
+    "id": 66,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.BLOOD_UNIT",
+    "parser_enum_name": "BLOOD_UNIT",
+    "parser_enum_value": 66,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Blood Unit",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.BLOOD_UNIT"
+  },
+  "67": {
+    "description": "ID: 67 Controls how a projectile collides with units in the path of its target. Currently changing this through XS has no effect Property Flag Value Collide only with the targeted unit 0 Collide with any damage-able units in the path to the targetted unit 1 Collide with any unit in the path to the targetted unit 2",
+    "id": 67,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_HIT_MODE",
+    "parser_enum_name": "PROJECTILE_HIT_MODE",
+    "parser_enum_value": 67,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Hit Mode",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_HIT_MODE"
+  },
+  "68": {
+    "description": "ID: 68 Controls if a projectile passes through or disappears on impact. Currently changing this through XS has no effect Property Flag Value Disappear on first impact 0 Pass through 1 Always spawn a dead unit 2",
+    "id": 68,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_VANISH_MODE",
+    "parser_enum_name": "PROJECTILE_VANISH_MODE",
+    "parser_enum_value": 68,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Vanish Mode",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_VANISH_MODE"
+  },
+  "69": {
+    "description": "ID: 69 Controls the maximum height of the fired projectile",
+    "id": 69,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_ARC",
+    "parser_enum_name": "PROJECTILE_ARC",
+    "parser_enum_value": 69,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Arc",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_ARC"
+  },
+  "70": {
+    "description": "ID: 70 Controls the Attack Graphic",
+    "id": 70,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ATTACK_GRAPHIC",
+    "parser_enum_name": "ATTACK_GRAPHIC",
+    "parser_enum_value": 70,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Attack Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ATTACK_GRAPHIC"
+  },
+  "71": {
+    "description": "ID: 71 The sprite animation shown when a unit is idle Units randomly choose between this or Standing Graphic 2",
+    "id": 71,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.STANDING_GRAPHIC",
+    "parser_enum_name": "STANDING_GRAPHIC",
+    "parser_enum_value": 71,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Standing Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.STANDING_GRAPHIC"
+  },
+  "72": {
+    "description": "ID: 72 The sprite animation shown when a unit is idle Units randomly choose between this or Standing Graphic",
+    "id": 72,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.STANDING_GRAPHIC_2",
+    "parser_enum_name": "STANDING_GRAPHIC_2",
+    "parser_enum_value": 72,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Standing Graphic 2",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.STANDING_GRAPHIC_2"
+  },
+  "73": {
+    "description": "ID: 73 The sprite animation shown when a unit dies",
+    "id": 73,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DYING_GRAPHIC",
+    "parser_enum_name": "DYING_GRAPHIC",
+    "parser_enum_value": 73,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Dying Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DYING_GRAPHIC"
+  },
+  "74": {
+    "description": "ID: 74 This graphic is shown after a unit's dying animation instead of replacing it with its dead unit if its \"Undead Mode\" is set to 1 . Used to assign decay graphic to units without \"Undead Mode\" set to 1. Overrides the standing graphic of the object's dead unit Depends on Undead Mode flag",
+    "id": 74,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.UNDEAD_GRAPHIC",
+    "parser_enum_name": "UNDEAD_GRAPHIC",
+    "parser_enum_value": 74,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Undead Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.UNDEAD_GRAPHIC"
+  },
+  "75": {
+    "description": "ID: 75 The sprite animation shown when a unit is walking",
+    "id": 75,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.WALKING_GRAPHIC",
+    "parser_enum_name": "WALKING_GRAPHIC",
+    "parser_enum_value": 75,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Walking Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.WALKING_GRAPHIC"
+  },
+  "76": {
+    "description": "ID: 76 The sprite animation shown when a unit is running A unit runs when it is issued an attack command, or when a unit is fleeing (deer-like units) Most units do not have a running graphic A graphic can multiply the speed of the unit it is applied to This is used for deer, wolves, boars, etc. when they are issued an attack command",
+    "id": 76,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.RUNNING_GRAPHIC",
+    "parser_enum_name": "RUNNING_GRAPHIC",
+    "parser_enum_value": 76,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Running Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.RUNNING_GRAPHIC"
+  },
+  "77": {
+    "description": "ID: 77 This sprite animation is shown when a unit uses one of \"Block\", \"Charge\", or \"Counter Charge\" special abilities Special abilities are an unused feature in AoE2, they were planned but never made it into AoK",
+    "id": 77,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SPECIAL_GRAPHIC",
+    "parser_enum_name": "SPECIAL_GRAPHIC",
+    "parser_enum_value": 77,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Special Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SPECIAL_GRAPHIC"
+  },
+  "78": {
+    "description": "ID: 78 Controls unit outline and collision Property Flag Value Square outline, and passable 0 Same as 0 1 Solid square outline, and has collision box 2 Square outline, and has collision box 3 No outline, and passable 4 Round outline, and has collision box 5 Same as 2, but designed for mountains 10 Consider the selection size of a radius entirely as opposed to the actual defined collision size 11 Ignore hard obstructions entirely and just consider the space occupied with no obstruction at all 12 Consider the selection radius when placing other objects, but use the original obstruction size for hard obstructions 13",
+    "id": 78,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.OBSTRUCTION_TYPE",
+    "parser_enum_name": "OBSTRUCTION_TYPE",
+    "parser_enum_value": 78,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Obstruction Type",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.OBSTRUCTION_TYPE"
+  },
+  "79": {
+    "description": "ID: 79 Controls unit blockage class Property Flag Value Forces default obstruction type 0 Resource 1 Unit 2 Building 3 Wall 4 Gate, allows trespassing 5 Cliff, blocks walling 6",
+    "id": 79,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.BLOCKAGE_CLASS",
+    "parser_enum_name": "BLOCKAGE_CLASS",
+    "parser_enum_value": 79,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Blockage Class",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.BLOCKAGE_CLASS"
+  },
+  "80": {
+    "description": "ID: 80 Controls unit hit point bar and outline Property Flag Value Has hit point bar 0 Has hit point bar, and outline 1 No hit point bar, or outline 2 No hit point bar, but has outline 3",
+    "id": 80,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SELECTION_EFFECT",
+    "parser_enum_name": "SELECTION_EFFECT",
+    "parser_enum_value": 80,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Selection Effect",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SELECTION_EFFECT"
+  },
+  "81": {
+    "description": "ID: 81 Enables certain special abilities Property Flag Value Enable charge attack ability (task 133) 3",
+    "id": 81,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SPECIAL_ABILITY",
+    "parser_enum_name": "SPECIAL_ABILITY",
+    "parser_enum_value": 81,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Special Ability",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SPECIAL_ABILITY"
+  },
+  "82": {
+    "description": "ID: 82 TODO",
+    "id": 82,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.IDLE_ATTACK_GRAPHIC",
+    "parser_enum_name": "IDLE_ATTACK_GRAPHIC",
+    "parser_enum_value": 82,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Idle Attack Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.IDLE_ATTACK_GRAPHIC"
+  },
+  "83": {
+    "description": "ID: 83 TODO",
+    "id": 83,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.HERO_GLOW_GRAPHIC",
+    "parser_enum_name": "HERO_GLOW_GRAPHIC",
+    "parser_enum_value": 83,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Hero Glow Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.HERO_GLOW_GRAPHIC"
+  },
+  "84": {
+    "description": "ID: 84 TODO",
+    "id": 84,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.GARRISON_GRAPHIC",
+    "parser_enum_name": "GARRISON_GRAPHIC",
+    "parser_enum_value": 84,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Garrison Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.GARRISON_GRAPHIC"
+  },
+  "85": {
+    "description": "ID: 85 TODO",
+    "id": 85,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CONSTRUCTION_GRAPHIC",
+    "parser_enum_name": "CONSTRUCTION_GRAPHIC",
+    "parser_enum_value": 85,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Construction Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CONSTRUCTION_GRAPHIC"
+  },
+  "86": {
+    "description": "ID: 86 TODO",
+    "id": 86,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SNOW_GRAPHIC",
+    "parser_enum_name": "SNOW_GRAPHIC",
+    "parser_enum_value": 86,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Snow Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SNOW_GRAPHIC"
+  },
+  "87": {
+    "description": "ID: 87 TODO",
+    "id": 87,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DESTRUCTION_GRAPHIC",
+    "parser_enum_name": "DESTRUCTION_GRAPHIC",
+    "parser_enum_value": 87,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Destruction Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DESTRUCTION_GRAPHIC"
+  },
+  "88": {
+    "description": "ID: 88 TODO",
+    "id": 88,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DESTRUCTION_RUBBLE_GRAPHIC",
+    "parser_enum_name": "DESTRUCTION_RUBBLE_GRAPHIC",
+    "parser_enum_value": 88,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Destruction Rubble Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DESTRUCTION_RUBBLE_GRAPHIC"
+  },
+  "89": {
+    "description": "ID: 89 TODO",
+    "id": 89,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.RESEARCHING_GRAPHIC",
+    "parser_enum_name": "RESEARCHING_GRAPHIC",
+    "parser_enum_value": 89,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Researching Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.RESEARCHING_GRAPHIC"
+  },
+  "90": {
+    "description": "ID: 90 TODO",
+    "id": 90,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.RESEARCH_COMPLETED_GRAPHIC",
+    "parser_enum_name": "RESEARCH_COMPLETED_GRAPHIC",
+    "parser_enum_value": 90,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Research Completed Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.RESEARCH_COMPLETED_GRAPHIC"
+  },
+  "91": {
+    "description": "ID: 91 TODO",
+    "id": 91,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DAMAGE_GRAPHIC",
+    "parser_enum_name": "DAMAGE_GRAPHIC",
+    "parser_enum_value": 91,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Damage Graphic",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DAMAGE_GRAPHIC"
+  },
+  "92": {
+    "description": "ID: 92 TODO",
+    "id": 92,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SELECTION_SOUND",
+    "parser_enum_name": "SELECTION_SOUND",
+    "parser_enum_value": 92,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Selection Sound",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SELECTION_SOUND"
+  },
+  "93": {
+    "description": "ID: 93 TODO",
+    "id": 93,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.SELECTION_SOUND_EVENT",
+    "parser_enum_name": "SELECTION_SOUND_EVENT",
+    "parser_enum_value": 93,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Selection Sound Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.SELECTION_SOUND_EVENT"
+  },
+  "94": {
+    "description": "ID: 94 TODO",
+    "id": 94,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DYING_SOUND",
+    "parser_enum_name": "DYING_SOUND",
+    "parser_enum_value": 94,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Dying Sound",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DYING_SOUND"
+  },
+  "95": {
+    "description": "ID: 95 TODO",
+    "id": 95,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DYING_SOUND_EVENT",
+    "parser_enum_name": "DYING_SOUND_EVENT",
+    "parser_enum_value": 95,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Dying Sound Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DYING_SOUND_EVENT"
+  },
+  "96": {
+    "description": "ID: 96 TODO",
+    "id": 96,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIN_SOUND",
+    "parser_enum_name": "TRAIN_SOUND",
+    "parser_enum_value": 96,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Train Sound",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAIN_SOUND"
+  },
+  "97": {
+    "description": "ID: 97 TODO",
+    "id": 97,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIN_SOUND_EVENT",
+    "parser_enum_name": "TRAIN_SOUND_EVENT",
+    "parser_enum_value": 97,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Train Sound Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAIN_SOUND_EVENT"
+  },
+  "98": {
+    "description": "ID: 98 TODO",
+    "id": 98,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DAMAGE_SOUND",
+    "parser_enum_name": "DAMAGE_SOUND",
+    "parser_enum_value": 98,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Damage Sound",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DAMAGE_SOUND"
+  },
+  "99": {
+    "description": "ID: 99 TODO",
+    "id": 99,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DAMAGE_SOUND_EVENT",
+    "parser_enum_name": "DAMAGE_SOUND_EVENT",
+    "parser_enum_value": 99,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Damage Sound Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DAMAGE_SOUND_EVENT"
+  },
+  "100": {
+    "description": "ID: 100 Refers to the first resource cost of a unit. Refer to A.G.E. to see which resource cost that is",
+    "id": 100,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.RESOURCE_COSTS",
+    "parser_enum_name": "RESOURCE_COSTS",
+    "parser_enum_value": 100,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Resource Costs",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.RESOURCE_COSTS"
+  },
+  "101": {
+    "description": "ID: 101 This is the amount of time it takes to create a unit",
+    "id": 101,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIN_TIME",
+    "parser_enum_name": "TRAIN_TIME",
+    "parser_enum_value": 101,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Train Time",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAIN_TIME"
+  },
+  "102": {
+    "description": "ID: 102 This is the number of projectiles a unit fires. The Chu Ko Nu fires 3 and the Elite Chu Ko Nu fires 5",
+    "id": 102,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TOTAL_MISSILES",
+    "parser_enum_name": "TOTAL_MISSILES",
+    "parser_enum_value": 102,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Total Missiles",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TOTAL_MISSILES"
+  },
+  "103": {
+    "description": "ID: 103 The food cost of a unit",
+    "id": 103,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.FOOD_COSTS",
+    "parser_enum_name": "FOOD_COSTS",
+    "parser_enum_value": 103,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Food Costs",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.FOOD_COSTS"
+  },
+  "104": {
+    "description": "ID: 104 The wood cost of a unit",
+    "id": 104,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.WOOD_COSTS",
+    "parser_enum_name": "WOOD_COSTS",
+    "parser_enum_value": 104,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Wood Costs",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.WOOD_COSTS"
+  },
+  "105": {
+    "description": "ID: 105 The gold cost of a unit",
+    "id": 105,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.GOLD_COSTS",
+    "parser_enum_name": "GOLD_COSTS",
+    "parser_enum_value": 105,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Gold Costs",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.GOLD_COSTS"
+  },
+  "106": {
+    "description": "ID: 106 The stone cost of a unit",
+    "id": 106,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.STONE_COSTS",
+    "parser_enum_name": "STONE_COSTS",
+    "parser_enum_value": 106,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Stone Costs",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.STONE_COSTS"
+  },
+  "107": {
+    "description": "ID: 107 The maximum number of projectiles a unit can fire when other units are garrisoned inside of it. A castle fires 5 projectiles by default but can fire more if units are garrisoned inside it. This attribute controls the maximum number of those",
+    "id": 107,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MAXIMUM_TOTAL_MISSILES",
+    "parser_enum_name": "MAXIMUM_TOTAL_MISSILES",
+    "parser_enum_value": 107,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Maximum Total Missiles",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MAXIMUM_TOTAL_MISSILES"
+  },
+  "108": {
+    "description": "ID: 108 The rate measured in HP/s at which garissoned units are healed inside a given building",
+    "id": 108,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.GARRISON_HEAL_RATE",
+    "parser_enum_name": "GARRISON_HEAL_RATE",
+    "parser_enum_value": 108,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Garrison Heal Rate",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.GARRISON_HEAL_RATE"
+  },
+  "109": {
+    "description": "ID: 109 The rate measured in HP/minute at which units heal themselves. This value is overridden to 30 HP/minute if the flag for Self Regeneration is set in the Hero Status of a unit",
+    "id": 109,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.REGENERATION_RATE",
+    "parser_enum_name": "REGENERATION_RATE",
+    "parser_enum_value": 109,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Regeneration Rate",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.REGENERATION_RATE"
+  },
+  "110": {
+    "description": "ID: 110 Modifies the population headroom storage of a unit. Negative values = require population (units), positive values = give population (houses). This is not a real attribute that exists in A.G.E., just seems like a way to edit the population heardroom provided by a unit",
+    "id": 110,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.POPULATION",
+    "parser_enum_name": "POPULATION",
+    "parser_enum_value": 110,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Population",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.POPULATION"
+  },
+  "111": {
+    "description": "ID: 111 Adds to the minimum time required to convert the unit By default, units have a 4 monk second minimum conversion time The overall minimum conversion time for all units is also affected by Convert Resist Min Adjustment",
+    "id": 111,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MINIMUM_CONVERSION_TIME_MODIFIER",
+    "parser_enum_name": "MINIMUM_CONVERSION_TIME_MODIFIER",
+    "parser_enum_value": 111,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Minimum Conversion Time Modifier",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MINIMUM_CONVERSION_TIME_MODIFIER"
+  },
+  "112": {
+    "description": "ID: 112 Adds to the maximum time after which a unit conversion is forced By default, units have a 10 monk second maximum conversion time The overall maximum conversion time for all units is also affected by Convert Resist Max Adjustment",
+    "id": 112,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MAXIMUM_CONVERSION_TIME_MODIFIER",
+    "parser_enum_name": "MAXIMUM_CONVERSION_TIME_MODIFIER",
+    "parser_enum_value": 112,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Maximum Conversion Time Modifier",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MAXIMUM_CONVERSION_TIME_MODIFIER"
+  },
+  "113": {
+    "description": "ID: 113 The probability of conversion every monk second is divided by this value for the unit The overall conversion probability for all units is also affected by Conversion Resistance",
+    "id": 113,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CONVERSION_CHANCE_MODIFIER",
+    "parser_enum_name": "CONVERSION_CHANCE_MODIFIER",
+    "parser_enum_value": 113,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Conversion Chance Modifier",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CONVERSION_CHANCE_MODIFIER"
+  },
+  "114": {
+    "description": "ID: 114 Control where the units in formation Property Flag Value Not using formation 0 Mobile 1 Body 2 Ranged 3 Long Ranged 4 Protected 5",
+    "id": 114,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.FORMATION_CATEGORY",
+    "parser_enum_name": "FORMATION_CATEGORY",
+    "parser_enum_value": 114,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Formation Category",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.FORMATION_CATEGORY"
+  },
+  "115": {
+    "description": "ID: 115 Blast damage multiplier to non directly targeted units. Blast damage to non directly targeted units is a fixed value if this is negative",
+    "id": 115,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.AREA_DAMAGE",
+    "parser_enum_name": "AREA_DAMAGE",
+    "parser_enum_value": 115,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Area Damage",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.AREA_DAMAGE"
+  },
+  "118": {
+    "description": "ID: 118 Damage percentage of the received damage to be reflected on the attacker (only for melee damage)",
+    "id": 118,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DAMAGE_REFLECTION",
+    "parser_enum_name": "DAMAGE_REFLECTION",
+    "parser_enum_value": 118,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Damage Reflection",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DAMAGE_REFLECTION"
+  },
+  "119": {
+    "description": "ID: 119 Blast damage multiplier to non directly targeted units. Blast damage to non directly targeted units is a fixed value if this is negative",
+    "id": 119,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.FRIENDLY_FIRE_DAMAGE",
+    "parser_enum_name": "FRIENDLY_FIRE_DAMAGE",
+    "parser_enum_value": 119,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Friendly Fire Damage",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.FRIENDLY_FIRE_DAMAGE"
+  },
+  "120": {
+    "description": "ID: 120 Percentage of the unit\u2019s max HP that is regenerated over a minute",
+    "id": 120,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.REGENERATION_HP_PERCENT",
+    "parser_enum_name": "REGENERATION_HP_PERCENT",
+    "parser_enum_value": 120,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Regeneration HP Percent",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.REGENERATION_HP_PERCENT"
+  },
+  "121": {
+    "description": "ID: 121 Override for Transform/Active Ability Icon. Uses ID from Materials.json",
+    "id": 121,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ABILITY_BUTTON_ICON_ID",
+    "parser_enum_name": "ABILITY_BUTTON_ICON_ID",
+    "parser_enum_value": 121,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Ability Button Icon ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ABILITY_BUTTON_ICON_ID"
+  },
+  "122": {
+    "description": "ID: 122 Override for Transform/Active Ability Short Tooltip",
+    "id": 122,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ABILITY_SHORT_TOOLTIP_ID",
+    "parser_enum_name": "ABILITY_SHORT_TOOLTIP_ID",
+    "parser_enum_value": 122,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Ability Short Tooltip ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ABILITY_SHORT_TOOLTIP_ID"
+  },
+  "123": {
+    "description": "ID: 123 Override for Transform/Active Ability Long Tooltip",
+    "id": 123,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ABILITY_EXTENDED_TOOLTIP_ID",
+    "parser_enum_name": "ABILITY_EXTENDED_TOOLTIP_ID",
+    "parser_enum_value": 123,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Ability Extended Tooltip ID",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ABILITY_EXTENDED_TOOLTIP_ID"
+  },
+  "124": {
+    "description": "ID: 124 button_action_list when pressing button/hotkey for the ability or transformation",
+    "id": 124,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ABILITY_HOTKEY_ACTION",
+    "parser_enum_name": "ABILITY_HOTKEY_ACTION",
+    "parser_enum_value": 124,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Ability Hotkey Action",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ABILITY_HOTKEY_ACTION"
+  },
+  "125": {
+    "description": "ID: 125 Blast damage multiplier to non directly targeted units. Blast damage to non directly targeted units is a fixed value if this is negative",
+    "id": 125,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CHARGE_PROJECTILE_UNIT",
+    "parser_enum_name": "CHARGE_PROJECTILE_UNIT",
+    "parser_enum_value": 125,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Charge Projectile Unit",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CHARGE_PROJECTILE_UNIT"
+  },
+  "126": {
+    "description": "ID: 126 When Disabled flag 2 or 4 is set, sets value for number of trainable unit. Will use units paired in LinkedUnits.json to count them together",
+    "id": 126,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.AVAILABLE_UNIT_FLAG",
+    "parser_enum_name": "AVAILABLE_UNIT_FLAG",
+    "parser_enum_value": 126,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Available Unit Flag",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.AVAILABLE_UNIT_FLAG"
+  },
+  "127": {
+    "description": "ID: 127 Enable/Disable a unit Property Flag Value Disabled 1 Limited training. Cannot be retrained after death 2 Limited training. Can be retrained after death 4",
+    "id": 127,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DISABLED_UNIT_FLAG",
+    "parser_enum_name": "DISABLED_UNIT_FLAG",
+    "parser_enum_value": 127,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Disabled Unit Flag",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DISABLED_UNIT_FLAG"
+  },
+  "128": {
+    "description": "ID: 128 Defines what type of target the unit will prioritize Property Flag Value Units > Buildings 1 Buildings > Units 2 Buildings only 3",
+    "id": 128,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ATTACK_PRIORITY",
+    "parser_enum_name": "ATTACK_PRIORITY",
+    "parser_enum_value": 128,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Attack Priority",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ATTACK_PRIORITY"
+  },
+  "129": {
+    "description": "ID: 129 Sets an HP threshold after which a unit no longer receives damage when attacked Property Flag Value Multiplier of Base HP > 0 Fixed value of HP < 0",
+    "id": 129,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.INVULNERABILITY_LEVEL",
+    "parser_enum_name": "INVULNERABILITY_LEVEL",
+    "parser_enum_value": 129,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Invulnerability Level",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.INVULNERABILITY_LEVEL"
+  },
+  "130": {
+    "description": "ID: 130 Adds to the damage of the unit to calculate the number of garrison arrows to fire Property Flag Value Acts as multiplier > 0 Flat dps value added to the unit\u2019s dps < 0",
+    "id": 130,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.GARRISON_FIREPOWER",
+    "parser_enum_name": "GARRISON_FIREPOWER",
+    "parser_enum_value": 130,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Garrison Firepower",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.GARRISON_FIREPOWER"
+  },
+  "131": {
+    "description": "ID: 131 Second attack graphic of the unit; alternates with the first attack graphic when assigned",
+    "id": 131,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.ATTACK_GRAPHIC_2",
+    "parser_enum_name": "ATTACK_GRAPHIC_2",
+    "parser_enum_value": 131,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Attack Graphic 2",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.ATTACK_GRAPHIC_2"
+  },
+  "132": {
+    "description": "ID: 132 TODO",
+    "id": 132,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.COMMAND_SOUND",
+    "parser_enum_name": "COMMAND_SOUND",
+    "parser_enum_value": 132,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Command Sound",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.COMMAND_SOUND"
+  },
+  "133": {
+    "description": "ID: 133 TODO",
+    "id": 133,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.COMMAND_SOUND_EVENT",
+    "parser_enum_name": "COMMAND_SOUND_EVENT",
+    "parser_enum_value": 133,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Command Sound Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.COMMAND_SOUND_EVENT"
+  },
+  "134": {
+    "description": "ID: 134 TODO",
+    "id": 134,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MOVE_SOUND",
+    "parser_enum_name": "MOVE_SOUND",
+    "parser_enum_value": 134,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Move Sound",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MOVE_SOUND"
+  },
+  "135": {
+    "description": "ID: 135 TODO",
+    "id": 135,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MOVE_SOUND_EVENT",
+    "parser_enum_name": "MOVE_SOUND_EVENT",
+    "parser_enum_value": 135,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Move Sound Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MOVE_SOUND_EVENT"
+  },
+  "136": {
+    "description": "ID: 136 TODO",
+    "id": 136,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CONSTRUCTION_SOUND",
+    "parser_enum_name": "CONSTRUCTION_SOUND",
+    "parser_enum_value": 136,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Construction Sound",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CONSTRUCTION_SOUND"
+  },
+  "137": {
+    "description": "ID: 137 TODO",
+    "id": 137,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.CONSTRUCTION_SOUND_EVENT",
+    "parser_enum_name": "CONSTRUCTION_SOUND_EVENT",
+    "parser_enum_value": 137,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Construction Sound Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.CONSTRUCTION_SOUND_EVENT"
+  },
+  "138": {
+    "description": "ID: 138 TODO",
+    "id": 138,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRANSFORM_SOUND",
+    "parser_enum_name": "TRANSFORM_SOUND",
+    "parser_enum_value": 138,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Transform Sound",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRANSFORM_SOUND"
+  },
+  "139": {
+    "description": "ID: 139 TODO",
+    "id": 139,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRANSFORM_SOUND_EVENT",
+    "parser_enum_name": "TRANSFORM_SOUND_EVENT",
+    "parser_enum_value": 139,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Transform Sound Event",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRANSFORM_SOUND_EVENT"
+  },
+  "140": {
+    "description": "ID: 140 TODO",
+    "id": 140,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.RUN_PATTERN",
+    "parser_enum_name": "RUN_PATTERN",
+    "parser_enum_value": 140,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Run Pattern",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.RUN_PATTERN"
+  },
+  "141": {
+    "description": "ID: 141 TODO",
+    "id": 141,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.INTERFACE_KIND",
+    "parser_enum_name": "INTERFACE_KIND",
+    "parser_enum_value": 141,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Interface Kind",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.INTERFACE_KIND"
+  },
+  "142": {
+    "description": "ID: 142 TODO",
+    "id": 142,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.COMBAT_LEVEL",
+    "parser_enum_name": "COMBAT_LEVEL",
+    "parser_enum_value": 142,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Combat Level",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.COMBAT_LEVEL"
+  },
+  "143": {
+    "description": "ID: 143 TODO",
+    "id": 143,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.INTERACTION_MODE",
+    "parser_enum_name": "INTERACTION_MODE",
+    "parser_enum_value": 143,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Interaction Mode",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.INTERACTION_MODE"
+  },
+  "144": {
+    "description": "ID: 144 TODO",
+    "id": 144,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.MINIMAP_MODE",
+    "parser_enum_name": "MINIMAP_MODE",
+    "parser_enum_value": 144,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Minimap Mode",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.MINIMAP_MODE"
+  },
+  "145": {
+    "description": "ID: 145 TODO",
+    "id": 145,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAILING_UNIT",
+    "parser_enum_name": "TRAILING_UNIT",
+    "parser_enum_value": 145,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Trailing Unit",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAILING_UNIT"
+  },
+  "146": {
+    "description": "ID: 146 TODO",
+    "id": 146,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIL_MODE",
+    "parser_enum_name": "TRAIL_MODE",
+    "parser_enum_value": 146,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Trail Mode",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAIL_MODE"
+  },
+  "147": {
+    "description": "ID: 147 TODO",
+    "id": 147,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIL_DENSITY",
+    "parser_enum_name": "TRAIL_DENSITY",
+    "parser_enum_value": 147,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Trail Density",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TRAIL_DENSITY"
+  },
+  "148": {
+    "description": "ID: 148 TODO",
+    "id": 148,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_GRAPHIC_DISPLACEMENT_X",
+    "parser_enum_name": "PROJECTILE_GRAPHIC_DISPLACEMENT_X",
+    "parser_enum_value": 148,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Graphic Displacement X",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_GRAPHIC_DISPLACEMENT_X"
+  },
+  "149": {
+    "description": "ID: 149 TODO",
+    "id": 149,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_GRAPHIC_DISPLACEMENT_Y",
+    "parser_enum_name": "PROJECTILE_GRAPHIC_DISPLACEMENT_Y",
+    "parser_enum_value": 149,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Graphic Displacement Y",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_GRAPHIC_DISPLACEMENT_Y"
+  },
+  "150": {
+    "description": "ID: 150 TODO",
+    "id": 150,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_GRAPHIC_DISPLACEMENT_Z",
+    "parser_enum_name": "PROJECTILE_GRAPHIC_DISPLACEMENT_Z",
+    "parser_enum_value": 150,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Graphic Displacement Z",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_GRAPHIC_DISPLACEMENT_Z"
+  },
+  "151": {
+    "description": "ID: 151 TODO",
+    "id": 151,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_SPAWNING_AREA_WIDTH",
+    "parser_enum_name": "PROJECTILE_SPAWNING_AREA_WIDTH",
+    "parser_enum_value": 151,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Spawning Area Width",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_SPAWNING_AREA_WIDTH"
+  },
+  "152": {
+    "description": "ID: 152 TODO",
+    "id": 152,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_SPAWNING_AREA_LENGTH",
+    "parser_enum_name": "PROJECTILE_SPAWNING_AREA_LENGTH",
+    "parser_enum_value": 152,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Spawning Area Length",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_SPAWNING_AREA_LENGTH"
+  },
+  "153": {
+    "description": "ID: 153 TODO",
+    "id": 153,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.PROJECTILE_SPAWNING_AREA_RANDOMNESS",
+    "parser_enum_name": "PROJECTILE_SPAWNING_AREA_RANDOMNESS",
+    "parser_enum_value": 153,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Projectile Spawning Area Randomness",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.PROJECTILE_SPAWNING_AREA_RANDOMNESS"
+  },
+  "154": {
+    "description": "ID: 154 TODO",
+    "id": 154,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DAMAGE_GRAPHICS_ENTRY_MOD",
+    "parser_enum_name": "DAMAGE_GRAPHICS_ENTRY_MOD",
+    "parser_enum_value": 154,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Damage Graphics Entry Mod",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DAMAGE_GRAPHICS_ENTRY_MOD"
+  },
+  "155": {
+    "description": "ID: 155 TODO",
+    "id": 155,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DAMAGE_GRAPHICS_TOTAL_NUM",
+    "parser_enum_name": "DAMAGE_GRAPHICS_TOTAL_NUM",
+    "parser_enum_value": 155,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Damage Graphics Total Num",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DAMAGE_GRAPHICS_TOTAL_NUM"
+  },
+  "156": {
+    "description": "ID: 156 TODO",
+    "id": 156,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DAMAGE_GRAPHIC_PERCENT",
+    "parser_enum_name": "DAMAGE_GRAPHIC_PERCENT",
+    "parser_enum_value": 156,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Damage Graphic Percent",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DAMAGE_GRAPHIC_PERCENT"
+  },
+  "157": {
+    "description": "ID: 157 TODO Was this page helpful? Thanks for your feedback! Thanks for your feedback! Help us improve this page by using our feedback form .",
+    "id": 157,
+    "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.DAMAGE_GRAPHIC_APPLY_MODE",
+    "parser_enum_name": "DAMAGE_GRAPHIC_APPLY_MODE",
+    "parser_enum_value": 157,
+    "source_url": "https://ugc.aoe2.rocks/general/attributes/attributes/",
+    "ugc_name": "Damage Graphic Apply Mode",
+    "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.DAMAGE_GRAPHIC_APPLY_MODE"
+  }
+}
