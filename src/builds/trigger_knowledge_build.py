@@ -6,7 +6,7 @@ from typing import Any, Dict, List
 
 # Import our modular components
 from src.common.web_client import http_get
-from src.integration.aoe2_introspection import introspect_aoe2sp_effects, introspect_object_attributes_enum, introspect_genie_datasets
+from src.integration.aoe2_introspection import introspect_aoe2sp_effects, introspect_object_attributes_enum, introspect_genie_datasets, introspect_dataset_dependencies
 from src.knowledge_builders.attributes_builder import build_attributes_knowledge
 from src.knowledge_builders.effects_builder import build_effects_knowledge
 from src.knowledge_builders.genie_registry_builder import build_genie_registry
@@ -116,14 +116,15 @@ def run_effects_pipeline(force_fail: bool = False) -> bool:
     try:
         html = http_get(UGC_EFFECTS_URL, CACHE_DIR / "ugc_effects.html")
         aoe2_methods = introspect_aoe2sp_effects()
+        dataset_deps = introspect_dataset_dependencies() # New
         
-        merged_dict = build_effects_knowledge(html, aoe2_methods)
+        merged_dict = build_effects_knowledge(html, aoe2_methods, dataset_deps)
         
         # Write Python
         write_python_module(OUT_DIR / "effects_knowledge.py", "EFFECTS", merged_dict)
         
         # Write Markdown
-        headers = ["AoE2SP Method", "Signature", "UGC Name", "UGC Fields"]
+        headers = ["AoE2SP Method", "Signature", "UGC Name", "UGC Description", "UGC Fields"]
         rows = []
         for row_data in merged_dict.values():
             fields = ", ".join(row_data.get("ugc_config_fields") or [])
@@ -131,6 +132,7 @@ def run_effects_pipeline(force_fail: bool = False) -> bool:
                 f"`{row_data['method']}`",
                 f"`{row_data['signature']}`",
                 str(row_data.get("ugc_name") or ""),
+                str(row_data.get("ugc_description") or ""), # New column
                 fields
             ])
             
