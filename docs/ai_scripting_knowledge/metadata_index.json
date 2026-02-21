@@ -1,0 +1,588 @@
+{
+  "commands": [
+    {
+      "command": "acknowledge-taunt",
+      "description": "consume taunt so it does not re-fire repeatedly.",
+      "examples": [
+        {
+          "snippet": "(acknowledge-taunt this-any-player 1)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/interaction_taunt_router.per"
+        }
+      ],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "and",
+      "description": "logic composition.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "attack-now",
+      "description": "trigger attack phase.",
+      "examples": [
+        {
+          "snippet": "(attack-now)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/military_attack_controller.per"
+        }
+      ],
+      "section": "A3. Military control",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "attack-soldier-count",
+      "description": "attack readiness gate.",
+      "examples": [],
+      "section": "A3. Military control",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "chat-local-to-self",
+      "description": "",
+      "examples": [
+        {
+          "snippet": "(chat-local-to-self \"land attack\")",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/military_attack_controller.per"
+        }
+      ],
+      "section": "A5. Debug and observability",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "chat-to-all",
+      "description": "broadcast message.",
+      "examples": [
+        {
+          "snippet": "(chat-to-all \"Choice 1 accepted\")",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/interaction_taunt_router.per"
+        }
+      ],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "chat-to-allies",
+      "description": "ally-only message.",
+      "examples": [],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "chat-to-enemies",
+      "description": "enemy-only message.",
+      "examples": [],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "chat-to-player",
+      "description": "send message to one player.",
+      "examples": [],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "defconst",
+      "description": "constants.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "defend-soldier-count",
+      "description": "readiness/defense gate.",
+      "examples": [
+        {
+          "snippet": "(defend-soldier-count g:>= gl-land-attack-requirement)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/military_attack_controller.per"
+        }
+      ],
+      "section": "A3. Military control",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "defrule",
+      "description": "rule container.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "disable-timer",
+      "description": "timing control.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "do-nothing",
+      "description": "explicit no-op branch.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "enable-timer",
+      "description": "timing control.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "goal",
+      "description": "local state machine.",
+      "examples": [
+        {
+          "snippet": "(goal gl-dialogue-state 10)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/interaction_taunt_router.per"
+        },
+        {
+          "snippet": "(goal gl-scout-active 0)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/map_movement_duc.per"
+        },
+        {
+          "snippet": "(goal gl-land-attack-delay 0)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/military_attack_controller.per"
+        }
+      ],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "log",
+      "description": "",
+      "examples": [],
+      "section": "A5. Debug and observability",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "log-trace",
+      "description": "",
+      "examples": [],
+      "section": "A5. Debug and observability",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "not",
+      "description": "logic composition.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "or",
+      "description": "logic composition.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "players-stance",
+      "description": "read diplomacy relation.",
+      "examples": [],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "set-goal",
+      "description": "local state machine.",
+      "examples": [
+        {
+          "snippet": "(set-goal gl-dialogue-choice 1)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/interaction_taunt_router.per"
+        },
+        {
+          "snippet": "(set-goal gl-scout-active 1)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/map_movement_duc.per"
+        },
+        {
+          "snippet": "(set-goal gl-land-attack-delay 900)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/military_attack_controller.per"
+        }
+      ],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "set-shared-goal",
+      "description": "shared state.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "set-stance",
+      "description": "change diplomacy stance.",
+      "examples": [],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "set-strategic-number",
+      "description": "controlled behavior tuning.",
+      "examples": [],
+      "section": "A3. Military control",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "shared-goal",
+      "description": "shared state.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "stance-toward",
+      "description": "read diplomacy relation.",
+      "examples": [],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "taunt",
+      "description": "AI sends taunt value.",
+      "examples": [],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "taunt-detected",
+      "description": "detect player taunt input.",
+      "examples": [
+        {
+          "snippet": "(taunt-detected any-player 1)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/interaction_taunt_router.per"
+        }
+      ],
+      "section": "A1. Player interaction",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "timer-triggered",
+      "description": "timing control.",
+      "examples": [],
+      "section": "A2. State and logic",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "town-under-attack",
+      "description": "defense panic trigger.",
+      "examples": [
+        {
+          "snippet": "(town-under-attack)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/military_attack_controller.per"
+        }
+      ],
+      "section": "A3. Military control",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-bound-point",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-clean-search",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-create-group",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-find-local",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-find-player",
+      "description": "",
+      "examples": [
+        {
+          "snippet": "(up-find-player enemy find-closest temporary-goal)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/map_movement_duc.per"
+        }
+      ],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-find-remote",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-get-point",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-group-size",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-path-distance",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-point-distance",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-point-explored",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-point-terrain",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-reset-group",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-retreat-now",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-set-attack-stance",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-set-defense-priority",
+      "description": "",
+      "examples": [
+        {
+          "snippet": "(up-set-defense-priority 100)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/military_attack_controller.per"
+        }
+      ],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-set-group",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-set-offense-priority",
+      "description": "",
+      "examples": [
+        {
+          "snippet": "(up-set-offense-priority 0)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/military_attack_controller.per"
+        }
+      ],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-set-target-point",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-target-objects",
+      "description": "",
+      "examples": [],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "up-target-point",
+      "description": "",
+      "examples": [
+        {
+          "snippet": "(up-target-point position-self-x action-move -1 -1)",
+          "template": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/templates/map_movement_duc.per"
+        }
+      ],
+      "section": "A4. DUC and movement (UP style)",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "warboat-count",
+      "description": "naval readiness gate.",
+      "examples": [],
+      "section": "A3. Military control",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "allowed"
+    },
+    {
+      "command": "build",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    },
+    {
+      "command": "build-forward",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    },
+    {
+      "command": "build-gate",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    },
+    {
+      "command": "build-wall",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    },
+    {
+      "command": "can-research",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    },
+    {
+      "command": "research",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    },
+    {
+      "command": "research-available",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    },
+    {
+      "command": "research-completed",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    },
+    {
+      "command": "train",
+      "description": "",
+      "examples": [],
+      "section": "B",
+      "source_file": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md",
+      "status": "blocked"
+    }
+  ],
+  "counts": {
+    "allowed": 53,
+    "blocked": 9,
+    "total": 62
+  },
+  "schema_version": 1,
+  "source": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide/06_LLM_COMMAND_ALLOWLIST.md"
+}

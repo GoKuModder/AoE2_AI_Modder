@@ -1,0 +1,44 @@
+[
+  {
+    "dataset_id": "trigger_attributes",
+    "path": "docs/trigger_knowledge/attributes_dataset.json",
+    "record_count": 147,
+    "primary_key": "id",
+    "notes": "Mappings for Age of Empires 2 trigger attributes, including parser enums and UGC names."
+  },
+  {
+    "dataset_id": "trigger_effects",
+    "path": "docs/trigger_knowledge/effects_knowledge.json",
+    "record_count": 102,
+    "primary_key": "effect_id",
+    "notes": "Knowledge base for scenario editor trigger effects with signatures and parameters."
+  },
+  {
+    "dataset_id": "genie_objects",
+    "path": "docs/trigger_knowledge/genie_registry.json",
+    "record_count": 1282,
+    "primary_key": "genie_id",
+    "notes": "Unified registry of game objects (units, buildings, heroes) with metadata and facets."
+  },
+{
+    "dataset_id": "ai_metadata",
+    "path": "docs/ai_scripting_knowledge/metadata_index.json",
+    "record_count": 62,
+    "primary_key": "command",
+    "notes": "Index of AI scripting commands, categorized by functionality with examples and status."
+  },
+  {
+    "dataset_id": "xs_functions",
+    "path": "docs/agent_database/xs_functions_catalog.json",
+    "record_count": 172,
+    "primary_key": "name",
+    "notes": "Catalog of XS scripting functions with signatures, parameters, return types and categories."
+  },
+  {
+    "dataset_id": "xs_constants",
+    "path": "docs/agent_database/xs_constants_catalog.json",
+    "record_count": 761,
+    "primary_key": "name",
+    "notes": "Catalog of XS scripting constants organized by category with values and descriptions."
+  }
+]

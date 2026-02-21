@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "document_store": "document_store.jsonl",
+    "metadata_index": "metadata_index.json",
+    "retrieval_manifest": "retrieval_manifest.json"
+  },
+  "checksums": {
+    "chunk_store_sha256": "a030febd46997ba8edc9e2b547a9583fedf1f7541ddf5abc85cdefd20ec38e2b",
+    "metadata_index_sha256": "713e6c55a7ec6ea4afe5d859b282e3f1c78fc3d42173d11463474e220e153fb2"
+  },
+  "counts": {
+    "chunks_total": 3030,
+    "source_documents": 58
+  },
+  "dataset": "xs_knowledge",
+  "schema_version": 1,
+  "sources": {
+    "source_index": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/XS_Training/SOURCE_PAGE_INDEX.md",
+    "source_root": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/XS_Training"
+  }
+}

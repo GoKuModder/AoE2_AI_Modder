@@ -1,0 +1,415 @@
+{
+  "counts": {
+    "source_documents": 58
+  },
+  "dataset": "xs_knowledge",
+  "documents": [
+    {
+      "id": "doc::external_refs/ageofempires.fandom.com/Genie_Editor.md",
+      "kind": "markdown",
+      "relative_path": "external_refs/ageofempires.fandom.com/Genie_Editor.md",
+      "sha256": "9dc161d412c988aa3b34848745af125d7c967d779b299b08fb3b074d22626ce3",
+      "source_url": "https://ageofempires.fandom.com/wiki/Genie_Editor"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/README.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/README.md",
+      "sha256": "2181c34757f8531fb55cd75d4b9fe4a77a0cb745edd06faac138a56e3f2485fe",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/README.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/ai/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/ai/index.md",
+      "sha256": "90e03be5ac28d6a7e13f15abe93ddd28df5b9f8db32af6e35f31bfa6621e48ba",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/ai/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/audio/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/audio/index.md",
+      "sha256": "8a44754eb9c2ca08d4501eae1aa5f30bef80cc600bb89bfffd201129abf8063b",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/audio/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/attributes/attributes.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/attributes/attributes.md",
+      "sha256": "00600d9159f7949aea2154700275669c5af57a0a8d43168967b30266478e83ba",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/attributes/attributes.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/damage_calculation.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/damage_calculation.md",
+      "sha256": "8d03cb7b4f3de5e3bdc64acb5b110f376fc2f86b833c8b44db58a6ec8c63e7c8",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/damage_calculation.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/hotkeys/hotkeys.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/hotkeys/hotkeys.md",
+      "sha256": "4c0acf12f27b899c436bbf8a5527eef699b1a0424d7394b2009b3592b7ac0feb",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/hotkeys/hotkeys.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/index.md",
+      "sha256": "970117dc5ca6d0396b19dc41da63aa4fd5213e1feea519932c784f6cf810f750",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/resources/resources.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/resources/resources.md",
+      "sha256": "abb43407b47fe58f52c4396e912afbafa8ec7f7877ab9833ba213dfacbd9fe97",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/resources/resources.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/beginner.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/beginner.md",
+      "sha256": "d9fb6c8bf744c877f32fbb53f56df2c969a614369134f8f8d75b4c978ad1092d",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/beginner.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Chat Data.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Chat Data.md",
+      "sha256": "76cf865ca7ae25a906a622445fdca673c2e66791b9732de6a90f3ceeb5cd70cf",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Chat"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Crashes.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Crashes.md",
+      "sha256": "0969f52fc19c9470953d4700ebca052632e16479787670bb20344b8c83a7b7af",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Crashes.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Editor.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Editor.md",
+      "sha256": "bb8812eb7aff36ae0bfee01ea587474be39ddfbb1455dc14d34462dffa505abb",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Editor.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Effect Amount.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Effect Amount.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Effect"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Fixed.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Fixed.md",
+      "sha256": "24dcc0710c6ee56f9ee6ccbe74e7c0e9e7b79a885e76def3a99f4ffb1d5dd9f8",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Fixed.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Important.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Important.md",
+      "sha256": "0e4f7311845621b0add3de6e85813f46abe78afdb64a68d75c21f648efdbc45f",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Important.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Individual Tech Modifiers.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Individual Tech Modifiers.md",
+      "sha256": "417a5c24b260e939a35600d84b8abf2f765fe81139e4da503959bf9de0779922",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Individual"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Language Syntax.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Language Syntax.md",
+      "sha256": "2e3f7f6fc8138f8345086a7b3c9d9c4f3493e239455833bdb36a5050fc865734",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Language"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Task.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/Task.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/Task.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/bugs/index.md",
+      "sha256": "9806a1da663648429afd4e24d7787ae61eb6f12656f9dfa695fb336f5f5bc275",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/bugs/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/constants.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/constants.md",
+      "sha256": "ecba0f56989604341c638c0c0fbac9a99cd7143d3374108f363cd59451863820",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/constants.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/functions.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/functions.md",
+      "sha256": "577db6603188593a5ba5a88c6f4b0d3bb5b73a50b883432cb7f983d31a216e5b",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/functions.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/index.md",
+      "sha256": "932915077b18d7fbfa50305647033f3a03febd7d8bc045378e4b6362078bc7e1",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/programmer.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/programmer.md",
+      "sha256": "22808e73b4442fdbf35e46e4c87afc404a6fe10796356bb92ae0a319b32b7e03",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/programmer.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/tricks.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/tricks.md",
+      "sha256": "aab88d50ce0aec5483193bdef1e9f89e4cb6bf3be06d19a5964f18b2a12d9391",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/tricks.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/useful.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/general/xs/useful.md",
+      "sha256": "dadc429bb1eb47ca6c02fd859dd77d2ec1a68a6dc31e3d3935ca529b8a6a4504",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/general/xs/useful.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/index.md",
+      "sha256": "b5ac0dadb1d89cdbb826a068f91c6de1d1a31350208cb23c175126ee51fb6e58",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/mods/age/basics.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/mods/age/basics.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/mods/age/basics.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/mods/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/mods/index.md",
+      "sha256": "619abfa8e616dd7b93f4681db5693b772115d1ea2e97e8c3f030d6e87bb5dfcf",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/mods/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/publishing_ugc/publish.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/publishing_ugc/publish.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/publishing_ugc/publish.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/rms/basics.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/rms/basics.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/rms/basics.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/rms/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/rms/index.md",
+      "sha256": "527efc989a469097545d0adce2cdad9758d3497a48ffbedd6d9e4b4d4b028251",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/rms/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/advanced/byte_structure.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/advanced/byte_structure.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/advanced/byte_structure.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/index.md",
+      "sha256": "f5c676f28e7a080ed395a494985b200b189a737eaa76e3ce50d371c3bcfda03f",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/tricks.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/tricks.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/tricks.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/triggers/conditions/conditions.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/triggers/conditions/conditions.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/triggers/conditions/conditions.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/triggers/effects/effects.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/triggers/effects/effects.md",
+      "sha256": "95a94ce66b2fa9b9053a79ec37ee0c24dd3421e48f3f10c7fcde34c17ac144ee",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/triggers/effects/effects.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/triggers/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/triggers/index.md",
+      "sha256": "3fcffdbb2170e076b1bdde2d3bb5f8d34c4584fc30ad29e0f19a7deefa55f84f",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/triggers/index.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/triggers/variables.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/triggers/variables.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/triggers/variables.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/useful_tools/age/unhide.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/useful_tools/age/unhide.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/useful_tools/age/unhide.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/useful_tools/age/uses.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/useful_tools/age/uses.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/useful_tools/age/uses.md"
+    },
+    {
+      "id": "doc::github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/useful_tools/parser/index.md",
+      "kind": "markdown",
+      "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/useful_tools/parser/index.md",
+      "sha256": "71478ea51bee9d395e5200abf4b4bb444c92c06c7c27f71de6c2668505467f25",
+      "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/useful_tools/parser/index.md"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/beginner/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/beginner/index.md",
+      "sha256": "6dc63419ef7a5e038d17f0d70750d3ac167e7299739f510dbe0202e442abba0b",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/beginner/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/Chat%20Data/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/Chat%20Data/index.md",
+      "sha256": "2c4721f6e27c0feeaf2d2d81df24087c70684413761b7cec456e024b558ed3dc",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/Chat%20Data/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/Crashes/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/Crashes/index.md",
+      "sha256": "c7c54278e439ff4941fba8451533f9014dffccc1f617f7db5d2fc9fa774e954b",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/Crashes/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/Editor/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/Editor/index.md",
+      "sha256": "dc1aa8346861c3bac04991d1b30231f75e5d268185423eb1c2da4eae416a2d64",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/Editor/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/Effect%20Amount/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/Effect%20Amount/index.md",
+      "sha256": "a8f5bfe8b836b1a8bffd6bb30ad5608d8ac603668025474f46bf78997f723a49",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/Effect%20Amount/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/Important/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/Important/index.md",
+      "sha256": "1ae1779cb93335332fcb56f8b0a17cb9b7dd76fcb244e60a0aa80c3e1c32f325",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/Important/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/Individual%20Tech%20Modifiers/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/Individual%20Tech%20Modifiers/index.md",
+      "sha256": "ee2fde3a84d2db07e79fc947ef6cc0f8aa962bef35593922343237ece8c9c27d",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/Individual%20Tech%20Modifiers/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/Language%20Syntax/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/Language%20Syntax/index.md",
+      "sha256": "6cbe87d6a56affa10dc1cdb50f18976454811288bed2cb6ab075abe4c01bc791",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/Language%20Syntax/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/Task/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/Task/index.md",
+      "sha256": "3b0fc3dc5abc7bafaa7c012367c3d011f63e2e4f85184c22ea1a061f91a08c71",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/Task/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/bugs/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/bugs/index.md",
+      "sha256": "3022960b83ef0868d900718d8f401c7b5d8f32e6f2e3ccba40ed1a1dc70d7b98",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/bugs/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/constants/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/constants/index.md",
+      "sha256": "f7ad118021b10c5e834a9cb7092ee4e705c31229f85f8fb401ea503a5f263e0d",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/constants/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/functions/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/functions/index.md",
+      "sha256": "4d40a7592db3a1e31f2619e19b1a6925bc57789966146523e3362ab296bb2c71",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/functions/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/index.md",
+      "sha256": "bd80753da8d9a423ca8add5d3f89689c48b82626d902384e552ab6ef51184bd3",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/programmer/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/programmer/index.md",
+      "sha256": "5755bc0df3fcb4d49abfb93800aa992976da10f491cdc10d4c6745ffa0f122d6",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/programmer/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/tricks/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/tricks/index.md",
+      "sha256": "d416cfb4f061934ff106f2f61cede21232d02e6fa3f324098a41effb34069666",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/tricks/"
+    },
+    {
+      "id": "doc::ugc.aoe2.rocks/general/xs/useful/index.md",
+      "kind": "markdown",
+      "relative_path": "ugc.aoe2.rocks/general/xs/useful/index.md",
+      "sha256": "66eb9aa913f122df674ff87eefd14449e5b14a32fe381dd54db8f514a65e82f5",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/useful/"
+    }
+  ],
+  "schema_version": 1
+}

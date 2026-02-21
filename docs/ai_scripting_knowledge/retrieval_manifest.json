@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "document_store": "document_store.jsonl",
+    "metadata_index": "metadata_index.json",
+    "retrieval_manifest": "retrieval_manifest.json"
+  },
+  "counts": {
+    "commands_allowed": 53,
+    "commands_blocked": 9,
+    "commands_total": 62,
+    "document_chunks": 59
+  },
+  "dataset": "ai_scripting_knowledge",
+  "generated_at": "2026-02-15T16:14:47+00:00",
+  "schema_version": 1,
+  "sources": {
+    "doc_count": 12,
+    "guide_dir": "C:/AoE2DE Modding/Code/AoE2_AI_Modder/AoE2_AI_Scripting_Guide",
+    "template_count": 3
+  }
+}

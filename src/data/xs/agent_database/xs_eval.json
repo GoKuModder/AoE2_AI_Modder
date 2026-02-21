@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "description": "Golden set for XS retrieval evaluation. Includes answerable and miss scenarios.",
+  "cases": [
+    {
+      "id": "answerable-function-rule-priority",
+      "kind": "answerable",
+      "query": "xsSetRulePriority",
+      "expected_any": [
+        "functions"
+      ]
+    },
+    {
+      "id": "answerable-function-array-create",
+      "kind": "answerable",
+      "query": "xsArrayCreateInt",
+      "expected_any": [
+        "functions"
+      ]
+    },
+    {
+      "id": "answerable-constant-age",
+      "kind": "answerable",
+      "query": "cDarkAge",
+      "expected_any": [
+        "constants"
+      ]
+    },
+    {
+      "id": "miss-nonexistent-token-1",
+      "kind": "miss",
+      "query": "qzxjkvwplmn987654"
+    },
+    {
+      "id": "miss-nonexistent-token-2",
+      "kind": "miss",
+      "query": "plmoknijbuhvygctfxrdzeswaq"
+    }
+  ]
+}
