@@ -1,0 +1,5501 @@
+[
+  {
+    "effect_id": "1",
+    "internal_name": "change_diplomacy",
+    "display_name": "Change Diplomacy",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 11,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 10,
+        "representative_paths": [
+          "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+          "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+          "Diplomacy\\Actions\\Non_Aggression_Pact\\Helper_Functions\\form_non_aggression_pact.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 1,
+        "representative_paths": [
+          "Setup\\Diplomacy\\apply_diplomacy_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+        "line_number": 40,
+        "code": "adding_effect = Form_Alliance_Trigger.new_effect.change_diplomacy("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+        "line_number": 45,
+        "code": "adding_effect = Form_Alliance_Trigger.new_effect.change_diplomacy("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+        "line_number": 43,
+        "code": "adding_effect = Form_Neutral_Trigger.new_effect.change_diplomacy("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+        "line_number": 48,
+        "code": "adding_effect = Form_Neutral_Trigger.new_effect.change_diplomacy("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Non_Aggression_Pact\\Helper_Functions\\form_non_aggression_pact.py",
+        "line_number": 40,
+        "code": "adding_effect = Form_NonAggressionPact_Trigger.new_effect.change_diplomacy("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Non_Aggression_Pact\\Helper_Functions\\form_non_aggression_pact.py",
+        "line_number": 45,
+        "code": "adding_effect = Form_NonAggressionPact_Trigger.new_effect.change_diplomacy("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+        "line_number": 55,
+        "code": "adding_effect = Form_War_Trigger.new_effect.change_diplomacy("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+        "line_number": 60,
+        "code": "adding_effect = Form_War_Trigger.new_effect.change_diplomacy("
+      }
+    ]
+  },
+  {
+    "effect_id": "2",
+    "internal_name": "research_technology",
+    "display_name": "Research Technology",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 1,
+        "representative_paths": [
+          "main\\Medieval_Europe_1200_AD.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "main\\main_code.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 2,
+        "representative_paths": [
+          "Setup\\Player_Setup\\apply_player_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "main\\Medieval_Europe_1200_AD.py",
+        "line_number": 189,
+        "code": "cartography.new_effect.research_technology("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "main\\main_code.py",
+        "line_number": 668,
+        "code": "convert_trigger.new_effect.research_technology("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "main\\main_code.py",
+        "line_number": 679,
+        "code": "convert_trigger.new_effect.research_technology("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 670,
+        "code": "economy.new_effect.research_technology("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 675,
+        "code": "economy.new_effect.research_technology("
+      }
+    ]
+  },
+  {
+    "effect_id": "3",
+    "internal_name": "send_chat",
+    "display_name": "Send Chat",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 40,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 18,
+        "representative_paths": [
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Alliance\\Helper_Functions\\any_state_to_alliance.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 17,
+        "representative_paths": [
+          "Bosses\\Boss_System.py",
+          "Player_Progression\\Class_Picking\\player_class_initializer.py",
+          "Player_Progression\\Leveling\\leveling.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 5,
+        "representative_paths": [
+          "Objectives\\Car\\Objective_Requirement\\apply_fuel_detection.py",
+          "Objectives\\Lighthouse\\Objective_Requirement\\apply_lighthouse_fill.py",
+          "Objectives\\Lighthouse\\Objective_Requirement\\apply_supply_detection.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 264,
+        "code": "adding_effect = Max_One_Cleric_In_Area.new_effect.send_chat("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 93,
+        "code": "press_ability.new_effect.send_chat("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 138,
+        "code": "ability_effect.new_effect.send_chat("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\any_state_to_alliance.py",
+        "line_number": 46,
+        "code": "adding_effect = Any_State_to_Alliance_Trigger.new_effect.send_chat("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\any_state_to_defensive_pact.py",
+        "line_number": 46,
+        "code": "adding_effect = Any_State_to_DefensivePact_Trigger.new_effect.send_chat("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\no_defensive_pact.py",
+        "line_number": 57,
+        "code": "adding_effect = Defensive_Pact_Trigger.new_effect.send_chat("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\no_standing_offer.py",
+        "line_number": 71,
+        "code": "adding_effect = Standing_Offer_Trigger.new_effect.send_chat("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\required_reputation.py",
+        "line_number": 42,
+        "code": "adding_effect = No_Reputation_Trigger.new_effect.send_chat("
+      }
+    ]
+  },
+  {
+    "effect_id": "4",
+    "internal_name": "play_sound",
+    "display_name": "Play Sound",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 77,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 61,
+        "representative_paths": [
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Court_Actions\\court_actions.py",
+          "cut_scenes.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 13,
+        "representative_paths": [
+          "Bosses\\Boss_System.py",
+          "NPC\\Quests\\quests.py",
+          "Player_Progression\\Class_Picking\\pick_class.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 3,
+        "representative_paths": [
+          "Abilities\\Hunter\\close_scare.py",
+          "custom_functions.py",
+          "Setup\\Ambience\\apply_ambient_sounds.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 233,
+        "code": "adding_effect = Cleric_Invis.new_effect.play_sound("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 97,
+        "code": "press_ability.new_effect.play_sound("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 134,
+        "code": "ability_effect.new_effect.play_sound("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 713,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.play_sound("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\apply_alliance.py",
+        "line_number": 180,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.play_sound("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\apply_alliance.py",
+        "line_number": 185,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.play_sound("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\any_state_to_alliance.py",
+        "line_number": 51,
+        "code": "Any_State_to_Alliance_Trigger.new_effect.play_sound("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+        "line_number": 88,
+        "code": "adding_effect = Form_Alliance_Trigger.new_effect.play_sound("
+      }
+    ]
+  },
+  {
+    "effect_id": "5",
+    "internal_name": "tribute",
+    "display_name": "Tribute",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 4,
+        "representative_paths": [
+          "Player_Progression\\Leveling\\leveling.py",
+          "Upgrade_Store\\Scenario_Triggers\\Item_Shop\\equip-unequip logic.py",
+          "Upgrade_Store\\Scenario_Triggers\\Item_Shop\\item_shop_buy.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Leveling\\leveling.py",
+        "line_number": 192,
+        "code": "kill_experience_gold_trigger.new_effect.tribute("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Leveling\\leveling.py",
+        "line_number": 205,
+        "code": "kill_experience_gold_trigger.new_effect.tribute("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Upgrade_Store\\Scenario_Triggers\\Item_Shop\\equip-unequip logic.py",
+        "line_number": 141,
+        "code": "trigger.new_effect.tribute("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Upgrade_Store\\Scenario_Triggers\\Item_Shop\\item_shop_buy.py",
+        "line_number": 199,
+        "code": "trigger.new_effect.tribute("
+      }
+    ]
+  },
+  {
+    "effect_id": "6",
+    "internal_name": "unlock_gate",
+    "display_name": "Unlock Gate",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 3,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+          "NPC\\Quests\\Estea\\Elder_Beltherin\\The_Path_to_Ethoridar\\kill_mounted_bandits.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 1,
+        "representative_paths": [
+          "Setup\\World\\apply_world_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+        "line_number": 31,
+        "code": "trigger_1.new_effect.unlock_gate("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\Elder_Beltherin\\The_Path_to_Ethoridar\\kill_mounted_bandits.py",
+        "line_number": 20,
+        "code": "trigger.new_effect.unlock_gate("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\World\\apply_world_setup.py",
+        "line_number": 60,
+        "code": "open_trigger.new_effect.unlock_gate(selected_object_ids=gate_refs)"
+      }
+    ]
+  },
+  {
+    "effect_id": "7",
+    "internal_name": "lock_gate",
+    "display_name": "Lock Gate",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 1,
+    "used_in_projects": [
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 1,
+        "representative_paths": [
+          "Setup\\World\\apply_world_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\World\\apply_world_setup.py",
+        "line_number": 17,
+        "code": "seal.new_effect.lock_gate(selected_object_ids=gate_refs)"
+      }
+    ]
+  },
+  {
+    "effect_id": "8",
+    "internal_name": "activate_trigger",
+    "display_name": "Activate Trigger",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 216,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 113,
+        "representative_paths": [
+          "Clerical_Actions\\Actions\\Adopt_Population\\effect.py",
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Court_Actions\\court_actions.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 91,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Abilities\\Abilities_ClassOLD.py",
+          "Abilities\\old\\Abilities.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 12,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Abilities\\Survivor\\apply_survivor_spells.py",
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Actions\\Adopt_Population\\effect.py",
+        "line_number": 28,
+        "code": "ability_effect.new_effect.activate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 270,
+        "code": "adding_effect = Max_One_Cleric_In_Area.new_effect.activate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 43,
+        "code": "press_ability.new_effect.activate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 46,
+        "code": "press_ability.new_effect.activate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 58,
+        "code": "end_ability.new_effect.activate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 114,
+        "code": "press_ability.new_effect.activate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 734,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.activate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\apply_alliance.py",
+        "line_number": 84,
+        "code": "adding_effect = Send_Alliance_Offer.new_effect.activate_trigger("
+      }
+    ]
+  },
+  {
+    "effect_id": "9",
+    "internal_name": "deactivate_trigger",
+    "display_name": "Deactivate Trigger",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 77,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 46,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Actions\\Adopt_Population\\effect.py",
+          "Court_Actions\\court_actions.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 23,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Abilities\\Abilities_ClassOLD.py",
+          "Abilities\\old\\Class_Abilities.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 8,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Abilities\\Survivor\\apply_survivor_spells.py",
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 233,
+        "code": "adding_effect = pick_character_trigger.new_effect.deactivate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Actions\\Adopt_Population\\effect.py",
+        "line_number": 31,
+        "code": "end_ability.new_effect.deactivate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 49,
+        "code": "press_ability.new_effect.deactivate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 61,
+        "code": "end_ability.new_effect.deactivate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 64,
+        "code": "end_ability.new_effect.deactivate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 749,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.deactivate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 753,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.deactivate_trigger("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 768,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.deactivate_trigger("
+      }
+    ]
+  },
+  {
+    "effect_id": "10",
+    "internal_name": "ai_script_goal",
+    "display_name": "AI Script Goal",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "11",
+    "internal_name": "create_object",
+    "display_name": "Create Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 25,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 11,
+        "representative_paths": [
+          "cut_scenes.py",
+          "Lords\\lords_start.py",
+          "main\\Lords_of_Diplomacy.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 9,
+        "representative_paths": [
+          "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+          "NPC\\Quests\\quests.py",
+          "Player_Progression\\Leveling\\leveling.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 5,
+        "representative_paths": [
+          "old_code\\game.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 66,
+        "code": "adding_effect = Initialize_cut_scenes.new_effect.create_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 129,
+        "code": "trigger.new_effect.create_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 158,
+        "code": "trigger.new_effect.create_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 216,
+        "code": "trigger.new_effect.create_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "main\\Lords_of_Diplomacy.py",
+        "line_number": 213,
+        "code": "trigger.new_effect.create_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "main\\Medieval_Europe_1200_AD.py",
+        "line_number": 231,
+        "code": "trigger.new_effect.create_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\Capture_From_GAIA\\Capture_Province_gaia\\capture_successfull.py",
+        "line_number": 150,
+        "code": "trigger.new_effect.create_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\Capture_From_GAIA\\Capture_Province_gaia\\start_capture_process.py",
+        "line_number": 83,
+        "code": "base_trigger.new_effect.create_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "12",
+    "internal_name": "task_object",
+    "display_name": "Task Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 13,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 5,
+        "representative_paths": [
+          "cut_scenes.py",
+          "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+          "Lords\\lords_start.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 8,
+        "representative_paths": [
+          "Abilities\\Hotkeys_Class.py",
+          "NPC\\Tasks_Manager\\TaskMove\\MoveObject.py",
+          "NPC\\Tasks_Manager\\TaskWork\\task_work.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 519,
+        "code": "adding_effect = Activate_Tutorial_scene_trigger.new_effect.task_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+        "line_number": 114,
+        "code": "adding_effect = Keep_Gate_Opened_Trigger.new_effect.task_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+        "line_number": 141,
+        "code": "adding_effect = Disable_Open_Gate_Trigger.new_effect.task_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 100,
+        "code": "trigger.new_effect.task_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 113,
+        "code": "trigger.new_effect.task_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Hotkeys_Class.py",
+        "line_number": 116,
+        "code": "apply_hotkey_trigger.new_effect.task_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Tasks_Manager\\TaskMove\\MoveObject.py",
+        "line_number": 25,
+        "code": "trigger.new_effect.task_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Tasks_Manager\\TaskWork\\task_work.py",
+        "line_number": 228,
+        "code": "trigger.new_effect.task_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "13",
+    "internal_name": "declare_victory",
+    "display_name": "Declare Victory",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 6,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 2,
+        "representative_paths": [
+          "game_initialization.py",
+          "Kingdom_Resources\\Fame\\fame_victory.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 4,
+        "representative_paths": [
+          "Round_End\\Victory\\apply_victory_conditions.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 409,
+        "code": "adding_effect = Player_Defeated_Trigger.new_effect.declare_victory("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Fame\\fame_victory.py",
+        "line_number": 125,
+        "code": "trigger.new_effect.declare_victory("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Round_End\\Victory\\apply_victory_conditions.py",
+        "line_number": 37,
+        "code": "trigger.new_effect.declare_victory(source_player=player_number)"
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Round_End\\Victory\\apply_victory_conditions.py",
+        "line_number": 76,
+        "code": "trigger.new_effect.declare_victory(source_player=player_number)"
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Round_End\\Victory\\apply_victory_conditions.py",
+        "line_number": 102,
+        "code": "trigger.new_effect.declare_victory(source_player=player_number)"
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Round_End\\Victory\\apply_victory_conditions.py",
+        "line_number": 130,
+        "code": "trigger.new_effect.declare_victory(source_player=player_number)"
+      }
+    ]
+  },
+  {
+    "effect_id": "14",
+    "internal_name": "kill_object",
+    "display_name": "Kill Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 9,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 8,
+        "representative_paths": [
+          "Abilities\\Arcanist\\Active_Ability_1\\thunderstorm.py",
+          "Abilities\\Arcanist\\Active_Ability_2\\pulse_eruption.py",
+          "NPC\\Quests\\Estea\\Captain_Jorand\\Clearing_The_Depths\\apply_quest.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 1,
+        "representative_paths": [
+          "Objectives\\Gate\\Main_Objective\\apply_gate_operation.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Arcanist\\Active_Ability_1\\thunderstorm.py",
+        "line_number": 58,
+        "code": "trigger.new_effect.kill_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Arcanist\\Active_Ability_2\\pulse_eruption.py",
+        "line_number": 40,
+        "code": "trigger.new_effect.kill_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\Captain_Jorand\\Clearing_The_Depths\\apply_quest.py",
+        "line_number": 48,
+        "code": "dialogue_last_trigger.new_effect.kill_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\Captain_Jorand\\Forest_Cleanup\\apply_quest.py",
+        "line_number": 37,
+        "code": "dialogue_last_trigger.new_effect.kill_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\Elder_Beltherin\\The_Path_to_Ethoridar\\apply_quest.py",
+        "line_number": 38,
+        "code": "dialogue_last_trigger.new_effect.kill_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Class_Picking\\pick_classOLD.py",
+        "line_number": 162,
+        "code": "trigger2.new_effect.kill_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Classes_Skill_Tree\\Arcanist\\Active\\Active_Ability_3\\electric_vortex.py",
+        "line_number": 81,
+        "code": "arcanist_spell_ends_REMOVE_trigger.new_effect.kill_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Classes_Skill_Tree\\Arcanist\\Active\\Active_Ability_3\\electric_vortex.py",
+        "line_number": 86,
+        "code": "arcanist_spell_ends_REMOVE_trigger.new_effect.kill_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "15",
+    "internal_name": "remove_object",
+    "display_name": "Remove Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 66,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 35,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Court_Actions\\court_actions.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 17,
+        "representative_paths": [
+          "Abilities\\Hotkeys_Class.py",
+          "Abilities\\old\\Class_Abilities.py",
+          "Abilities\\Ranger\\Active_Ability_2\\soul_siphon.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 14,
+        "representative_paths": [
+          "Abilities\\Hunter\\Active_Ability_1\\blood_thirst.py",
+          "Objectives\\Lighthouse\\Objective_Requirement\\apply_supply_detection.py",
+          "Objectives\\Pillars\\apply_pillar_control.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 159,
+        "code": "adding_effect = pick_character_trigger.new_effect.remove_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 259,
+        "code": "adding_effect = Max_One_Cleric_In_Area.new_effect.remove_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 103,
+        "code": "press_ability.new_effect.remove_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 436,
+        "code": "adding_effect = Activate_Tutorial_scene_trigger.new_effect.remove_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 444,
+        "code": "adding_effect = Activate_Tutorial_scene_trigger.new_effect.remove_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\apply_alliance.py",
+        "line_number": 190,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.remove_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Defensive_Pact\\apply_defensive_pact.py",
+        "line_number": 188,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.remove_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Neutral\\apply_neutral.py",
+        "line_number": 198,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.remove_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "16",
+    "internal_name": "change_view",
+    "display_name": "Change View",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 22,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 7,
+        "representative_paths": [
+          "cut_scenes.py",
+          "Lords\\lords_start.py",
+          "Lords\\Unused\\ship_view.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 11,
+        "representative_paths": [
+          "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+          "NPC\\Quests\\Estea\\Captain_Jorand\\Clearing_The_Depths\\apply_quest.py",
+          "NPC\\Quests\\Estea\\Captain_Jorand\\Forest_Cleanup\\apply_quest.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 4,
+        "representative_paths": [
+          "old_code\\game.py",
+          "Setup\\Camera\\apply_camera_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 92,
+        "code": "adding_effect = Initialize_cut_scenes.new_effect.change_view("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 500,
+        "code": "adding_effect = PICK_HERO_AREA_LOOPING_Trigger.new_effect.change_view("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 718,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.change_view("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 726,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.change_view("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 756,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.change_view("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 140,
+        "code": "trigger.new_effect.change_view("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\Unused\\ship_view.py",
+        "line_number": 21,
+        "code": "trigger.new_effect.change_view("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+        "line_number": 50,
+        "code": "trigger_1.new_effect.change_view("
+      }
+    ]
+  },
+  {
+    "effect_id": "17",
+    "internal_name": "unload",
+    "display_name": "Unload",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "18",
+    "internal_name": "change_ownership",
+    "display_name": "Change Ownership",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 29,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 5,
+        "representative_paths": [
+          "Lords\\lords_start.py",
+          "Provinces\\Capture_From_GAIA\\Capture_Province_gaia\\capture_successfull.py",
+          "Provinces\\Capture_Province\\capture_successfull.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 4,
+        "representative_paths": [
+          "Player_Progression\\Class_Picking\\pick_classOLD.py",
+          "Skill_Tree\\old\\old_code_that_worked.py",
+          "Skill_Tree\\old\\Skill_Tree_Main_Parser.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 20,
+        "representative_paths": [
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py",
+          "Objectives\\Car\\Objective_Requirement\\apply_fuel_detection.py",
+          "Objectives\\Gate\\Main_Objective\\apply_gate_operation.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 208,
+        "code": "control_province.new_effect.change_ownership("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\Capture_From_GAIA\\Capture_Province_gaia\\capture_successfull.py",
+        "line_number": 92,
+        "code": "trigger.new_effect.change_ownership("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\Capture_Province\\capture_successfull.py",
+        "line_number": 78,
+        "code": "trigger.new_effect.change_ownership("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\OLD_conquer_province.py",
+        "line_number": 280,
+        "code": "trigger.new_effect.change_ownership("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Scratch\\oakenlix code.py",
+        "line_number": 93,
+        "code": "trigger.new_effect.change_ownership("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Class_Picking\\pick_classOLD.py",
+        "line_number": 90,
+        "code": "trigger.new_effect.change_ownership("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\old\\old_code_that_worked.py",
+        "line_number": 267,
+        "code": "adding_effect = All_Abilities_Gaia_Trigger.new_effect.change_ownership("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\old\\Skill_Tree_Main_Parser.py",
+        "line_number": 113,
+        "code": "adding_effect = Class_Ability_Tree_Graphics_Trigger.new_effect.change_ownership("
+      }
+    ]
+  },
+  {
+    "effect_id": "19",
+    "internal_name": "patrol",
+    "display_name": "Patrol",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "20",
+    "internal_name": "display_instructions",
+    "display_name": "Display Instructions",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 32,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 17,
+        "representative_paths": [
+          "cut_scenes.py",
+          "Kingdom_Resources\\Fame\\fame_victory.py",
+          "main\\Lords_of_Diplomacy.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+          "World\\Instructions_Manager\\instructions_manager.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 13,
+        "representative_paths": [
+          "Abilities\\Hunter\\Active_Ability_1\\blood_thirst.py",
+          "Objectives\\Gate\\Main_Objective\\apply_gate_operation.py",
+          "Objectives\\Pillars\\apply_pillar_control.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 680,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.display_instructions(**args_panel0)"
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 695,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.display_instructions(**args_panel1)"
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 710,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.display_instructions(**args_panel2)"
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Fame\\fame_victory.py",
+        "line_number": 63,
+        "code": "trigger.new_effect.display_instructions("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Fame\\fame_victory.py",
+        "line_number": 117,
+        "code": "trigger.new_effect.display_instructions("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Fame\\fame_victory.py",
+        "line_number": 161,
+        "code": "trigger.new_effect.display_instructions("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "main\\Lords_of_Diplomacy.py",
+        "line_number": 164,
+        "code": "display_instructions.new_effect.display_instructions("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "main\\Lords_of_Diplomacy.py",
+        "line_number": 171,
+        "code": "display_instructions.new_effect.display_instructions("
+      }
+    ]
+  },
+  {
+    "effect_id": "21",
+    "internal_name": "clear_instructions",
+    "display_name": "Clear Instructions",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 2,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 1,
+        "representative_paths": [
+          "cut_scenes.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 1,
+        "representative_paths": [
+          "World\\Instructions_Manager\\instructions_manager.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 620,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.clear_instructions("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "World\\Instructions_Manager\\instructions_manager.py",
+        "line_number": 69,
+        "code": "trigger.new_effect.clear_instructions("
+      }
+    ]
+  },
+  {
+    "effect_id": "22",
+    "internal_name": "freeze_object",
+    "display_name": "Freeze Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 7,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 7,
+        "representative_paths": [
+          "main\\main_code.py",
+          "NPC\\Quests\\Estea\\initialize_names.py",
+          "NPC\\Tasks_Manager\\TaskWork\\task_work.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "main\\main_code.py",
+        "line_number": 199,
+        "code": "p5_p6_hp_bar_trigger.new_effect.freeze_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\initialize_names.py",
+        "line_number": 37,
+        "code": "trigger.new_effect.freeze_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\initialize_names.py",
+        "line_number": 40,
+        "code": "trigger.new_effect.freeze_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Tasks_Manager\\TaskWork\\task_work.py",
+        "line_number": 161,
+        "code": "trigger.new_effect.freeze_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Tasks_Manager\\TaskWork\\task_work.py",
+        "line_number": 216,
+        "code": "trigger.new_effect.freeze_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Tasks_Manager\\TaskWork\\task_work.py",
+        "line_number": 219,
+        "code": "trigger.new_effect.freeze_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Class_Picking\\pick_classOLD.py",
+        "line_number": 86,
+        "code": "trigger.new_effect.freeze_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "23",
+    "internal_name": "use_advanced_buttons",
+    "display_name": "Use Advanced Buttons",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 1,
+    "used_in_projects": [
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 1,
+        "representative_paths": [
+          "Setup\\Player_Setup\\apply_player_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 669,
+        "code": "economy.new_effect.use_advanced_buttons()"
+      }
+    ]
+  },
+  {
+    "effect_id": "24",
+    "internal_name": "damage_object",
+    "display_name": "Damage Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 12,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 8,
+        "representative_paths": [
+          "Espionage\\Actions\\Poison_Enemy_Army\\apply_poison_enemy_army.py",
+          "Kingdom_Resources\\Kingdom_Faith\\kingdom_faith.py",
+          "Kingdom_Resources\\Kingdom_Faith\\new_faith.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "Abilities\\Crusader\\Active_Ability_2\\heavenly_bastion.py",
+          "World\\Binary_Tree_Damage\\binary_tree_damage.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 2,
+        "representative_paths": [
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py",
+          "old_code\\game.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Poison_Enemy_Army\\apply_poison_enemy_army.py",
+        "line_number": 102,
+        "code": "adding_effect = Esponiage_Poison_Enemy_Army_Action.new_effect.damage_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Poison_Enemy_Army\\apply_poison_enemy_army.py",
+        "line_number": 107,
+        "code": "adding_effect = Esponiage_Poison_Enemy_Army_Action.new_effect.damage_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Poison_Enemy_Army\\apply_poison_enemy_army.py",
+        "line_number": 112,
+        "code": "adding_effect = Esponiage_Poison_Enemy_Army_Action.new_effect.damage_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Poison_Enemy_Army\\apply_poison_enemy_army.py",
+        "line_number": 117,
+        "code": "adding_effect = Esponiage_Poison_Enemy_Army_Action.new_effect.damage_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Kingdom_Faith\\kingdom_faith.py",
+        "line_number": 90,
+        "code": "adding_effect = Monk_With_Relic_HP_Decay_Triggers.new_effect.damage_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Kingdom_Faith\\kingdom_faith.py",
+        "line_number": 111,
+        "code": "adding_effect = WarriorPriest_With_Relic_HP_Decay_Triggers.new_effect.damage_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Kingdom_Faith\\new_faith.py",
+        "line_number": 95,
+        "code": "adding_effect = Monk_With_Relic_HP_Decay_Triggers.new_effect.damage_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Kingdom_Faith\\new_faith.py",
+        "line_number": 116,
+        "code": "adding_effect = WarriorPriest_With_Relic_HP_Decay_Triggers.new_effect.damage_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "25",
+    "internal_name": "place_foundation",
+    "display_name": "Place Foundation",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "26",
+    "internal_name": "change_object_name",
+    "display_name": "Change Object Name",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 24,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 16,
+        "representative_paths": [
+          "characters.py",
+          "cut_scenes.py",
+          "esponiage_system.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 8,
+        "representative_paths": [
+          "NPC\\Names\\npc_names.py",
+          "NPC\\Quests\\Estea\\initialize_names.py",
+          "Player_Progression\\Class_Picking\\pick_classOLD.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 185,
+        "code": "adding_effect = pick_character_trigger.new_effect.change_object_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 57,
+        "code": "adding_effect = Initialize_cut_scenes.new_effect.change_object_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "esponiage_system.py",
+        "line_number": 25,
+        "code": "relic_trigger = Spy_Initialization_Trigger.new_effect.change_object_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 156,
+        "code": "relic_name = Initialization_Trigger.new_effect.change_object_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 166,
+        "code": "diplomacy_main_building = Initialization_Trigger.new_effect.change_object_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 175,
+        "code": "diplomacy_offer_building = Initialization_Trigger.new_effect.change_object_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 184,
+        "code": "relic_name = Initialization_Trigger.new_effect.change_object_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 194,
+        "code": "diplomacy_main_building = Initialization_Trigger.new_effect.change_object_name("
+      }
+    ]
+  },
+  {
+    "effect_id": "27",
+    "internal_name": "change_object_hp",
+    "display_name": "Change Object HP",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 2,
+    "used_in_projects": [
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 2,
+        "representative_paths": [
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py",
+          "old_code\\game.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Objectives\\Car\\Main_Objective\\apply_car_spawning.py",
+        "line_number": 92,
+        "code": "trigger.new_effect.change_object_hp("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "old_code\\game.py",
+        "line_number": 208,
+        "code": "random_start.new_effect.change_object_hp("
+      }
+    ]
+  },
+  {
+    "effect_id": "28",
+    "internal_name": "change_object_attack",
+    "display_name": "Change Object Attack",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "29",
+    "internal_name": "stop_object",
+    "display_name": "Stop Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 6,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 5,
+        "representative_paths": [
+          "Bosses\\Boss_System.py",
+          "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+          "Skill_Tree\\Classes_Skill_Tree\\Cleric\\Active\\Active_Ability_3\\guardians_embrace.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 1,
+        "representative_paths": [
+          "Abilities\\Survivor\\Active_Ability_2\\stun.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Boss_System.py",
+        "line_number": 164,
+        "code": "trigger.new_effect.stop_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Boss_System.py",
+        "line_number": 189,
+        "code": "trigger.new_effect.stop_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+        "line_number": 100,
+        "code": "trigger_3.new_effect.stop_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Classes_Skill_Tree\\Cleric\\Active\\Active_Ability_3\\guardians_embrace.py",
+        "line_number": 296,
+        "code": "cast_trigger.new_effect.stop_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Upgrade_Store\\Scenario_Triggers\\Item_Shop\\item_shop_access.py",
+        "line_number": 145,
+        "code": "trigger.new_effect.stop_object("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Abilities\\Survivor\\Active_Ability_2\\stun.py",
+        "line_number": 8,
+        "code": "activation_trigger.new_effect.stop_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "30",
+    "internal_name": "attack_move",
+    "display_name": "Attack Move",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "31",
+    "internal_name": "change_object_armor",
+    "display_name": "Change Object Armor",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "32",
+    "internal_name": "change_object_range",
+    "display_name": "Change Object Range",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "33",
+    "internal_name": "change_object_speed",
+    "display_name": "Change Object Speed",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 1,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 1,
+        "representative_paths": [
+          "cut_scenes.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 134,
+        "code": "adding_effect = Start_Ship_Buff_Trigger.new_effect.change_object_speed("
+      }
+    ]
+  },
+  {
+    "effect_id": "34",
+    "internal_name": "heal_object",
+    "display_name": "Heal Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 2,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "Bosses\\Boss_System.py",
+          "World\\Binary_Tree_Heal\\binary_tree_heal.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Boss_System.py",
+        "line_number": 257,
+        "code": "trigger.new_effect.heal_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "World\\Binary_Tree_Heal\\binary_tree_heal.py",
+        "line_number": 62,
+        "code": "binary_trigger.new_effect.heal_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "35",
+    "internal_name": "teleport_object",
+    "display_name": "Teleport Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 4,
+        "representative_paths": [
+          "Bosses\\Boss_System.py",
+          "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+          "World\\Teleport\\teleport_system.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Boss_System.py",
+        "line_number": 160,
+        "code": "trigger.new_effect.teleport_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Boss_System.py",
+        "line_number": 185,
+        "code": "trigger.new_effect.teleport_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py",
+        "line_number": 93,
+        "code": "trigger_3.new_effect.teleport_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "World\\Teleport\\teleport_system.py",
+        "line_number": 328,
+        "code": "trigger.new_effect.teleport_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "36",
+    "internal_name": "change_object_stance",
+    "display_name": "Change Object Stance",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 11,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 11,
+        "representative_paths": [
+          "Bosses\\Boss_System.py",
+          "Mobs\\Region\\Ethoridar\\Castle_Dungeon\\abilities.py",
+          "Mobs\\Region\\Ethoridar\\Mines_Dungeon\\abilities.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Boss_System.py",
+        "line_number": 110,
+        "code": "trigger.new_effect.change_object_stance("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Boss_System.py",
+        "line_number": 152,
+        "code": "trigger.new_effect.change_object_stance("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Mobs\\Region\\Ethoridar\\Castle_Dungeon\\abilities.py",
+        "line_number": 147,
+        "code": "trigger.new_effect.change_object_stance("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Mobs\\Region\\Ethoridar\\Castle_Dungeon\\abilities.py",
+        "line_number": 155,
+        "code": "trigger.new_effect.change_object_stance("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Mobs\\Region\\Ethoridar\\Mines_Dungeon\\abilities.py",
+        "line_number": 127,
+        "code": "trigger.new_effect.change_object_stance("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Mobs\\unit_balancing.py",
+        "line_number": 166,
+        "code": "trigger.new_effect.change_object_stance("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Tasks_Manager\\TaskWork\\task_work.py",
+        "line_number": 208,
+        "code": "trigger.new_effect.change_object_stance("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Tasks_Manager\\TaskWork\\task_work.py",
+        "line_number": 212,
+        "code": "trigger.new_effect.change_object_stance("
+      }
+    ]
+  },
+  {
+    "effect_id": "37",
+    "internal_name": "display_timer",
+    "display_name": "Display Timer",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 29,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 18,
+        "representative_paths": [
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+          "Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\defensive_pact_timer.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "NPC\\Quests\\quests.py",
+          "Player_Progression\\Class_Picking\\pick_class.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 9,
+        "representative_paths": [
+          "Objectives\\Gate\\Main_Objective\\apply_gate_operation.py",
+          "Objectives\\Pillars\\apply_pillar_control.py",
+          "Objectives\\Shared\\objective_helpers.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 143,
+        "code": "ability_effect.new_effect.display_timer("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+        "line_number": 104,
+        "code": "Form_Alliance_Trigger.new_effect.display_timer("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\defensive_pact_timer.py",
+        "line_number": 47,
+        "code": "Defensive_Pact_Time_Limit.new_effect.display_timer("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\form_defensive_pact.py",
+        "line_number": 95,
+        "code": "Form_Defensive_Pact_Trigger.new_effect.display_timer("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+        "line_number": 121,
+        "code": "Form_Neutral_Trigger.new_effect.display_timer("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Non_Aggression_Pact\\Helper_Functions\\form_non_aggression_pact.py",
+        "line_number": 102,
+        "code": "Form_NonAggressionPact_Trigger.new_effect.display_timer("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+        "line_number": 137,
+        "code": "Form_War_Trigger.new_effect.display_timer("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+        "line_number": 154,
+        "code": "Form_War_Trigger.new_effect.display_timer("
+      }
+    ]
+  },
+  {
+    "effect_id": "38",
+    "internal_name": "enable_disable_object",
+    "display_name": "Enable Disable Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 20,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 14,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "cut_scenes.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "Player_Progression\\Class_Picking\\pick_class.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 4,
+        "representative_paths": [
+          "Setup\\Player_Setup\\apply_player_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 66,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.enable_disable_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 166,
+        "code": "adding_effect = pick_character_trigger.new_effect.enable_disable_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 175,
+        "code": "adding_effect = pick_character_trigger.new_effect.enable_disable_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 19,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.enable_disable_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 743,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.enable_disable_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomat_and_building.py",
+        "line_number": 18,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.enable_disable_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_spy.py",
+        "line_number": 19,
+        "code": "adding_effect = Initialization_Players_Spy_Trigger.new_effect.enable_disable_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\initialize_lords.py",
+        "line_number": 59,
+        "code": "trigger.new_effect.enable_disable_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "39",
+    "internal_name": "enable_disable_technology",
+    "display_name": "Enable Disable Technology",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 5,
+        "representative_paths": [
+          "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Helper_Functions\\display_offer.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+        "line_number": 31,
+        "code": "adding_effect = trigger.new_effect.enable_disable_technology("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 174,
+        "code": "trigger.new_effect.enable_disable_technology("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\display_offer.py",
+        "line_number": 43,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.enable_disable_technology("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomacy_techs.py",
+        "line_number": 27,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.enable_disable_technology("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_techs.py",
+        "line_number": 28,
+        "code": "adding_effect = Initialization_Espionage_Techs.new_effect.enable_disable_technology("
+      }
+    ]
+  },
+  {
+    "effect_id": "40",
+    "internal_name": "change_object_cost",
+    "display_name": "Change Object Cost",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 9,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 6,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Diplomacy\\Intializations\\initialize_diplomat_and_building.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 3,
+        "representative_paths": [
+          "Player_Progression\\Class_Picking\\pick_class.py",
+          "Skill_Tree\\Classes_Skill_Tree\\Arcanist\\Active\\Active_Ability_3\\electric_vortex.py",
+          "Skill_Tree\\Classes_Skill_Tree\\Crusader\\Active\\Active_Ability_3\\sword_of_sanctity.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 91,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.change_object_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 77,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.change_object_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomat_and_building.py",
+        "line_number": 46,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.change_object_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_spy.py",
+        "line_number": 77,
+        "code": "adding_effect = Initialization_Players_Spy_Trigger.new_effect.change_object_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\initialize_lords.py",
+        "line_number": 79,
+        "code": "trigger.new_effect.change_object_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\Unused\\old_apply_lords.py",
+        "line_number": 61,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.change_object_cost("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Class_Picking\\pick_class.py",
+        "line_number": 76,
+        "code": "trigger.new_effect.change_object_cost("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Classes_Skill_Tree\\Arcanist\\Active\\Active_Ability_3\\electric_vortex.py",
+        "line_number": 175,
+        "code": "trigger.new_effect.change_object_cost("
+      }
+    ]
+  },
+  {
+    "effect_id": "41",
+    "internal_name": "set_player_visibility",
+    "display_name": "Set Player Visibility",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 11,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 10,
+        "representative_paths": [
+          "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+          "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+          "Diplomacy\\Actions\\Non_Aggression_Pact\\Helper_Functions\\form_non_aggression_pact.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 1,
+        "representative_paths": [
+          "main\\main_code.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+        "line_number": 50,
+        "code": "adding_effect = Form_Alliance_Trigger.new_effect.set_player_visibility("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+        "line_number": 55,
+        "code": "adding_effect = Form_Alliance_Trigger.new_effect.set_player_visibility("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+        "line_number": 53,
+        "code": "adding_effect = Form_Neutral_Trigger.new_effect.set_player_visibility("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+        "line_number": 58,
+        "code": "adding_effect = Form_Neutral_Trigger.new_effect.set_player_visibility("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Non_Aggression_Pact\\Helper_Functions\\form_non_aggression_pact.py",
+        "line_number": 50,
+        "code": "adding_effect = Form_NonAggressionPact_Trigger.new_effect.set_player_visibility("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Non_Aggression_Pact\\Helper_Functions\\form_non_aggression_pact.py",
+        "line_number": 55,
+        "code": "adding_effect = Form_NonAggressionPact_Trigger.new_effect.set_player_visibility("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+        "line_number": 65,
+        "code": "adding_effect = Form_War_Trigger.new_effect.set_player_visibility("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+        "line_number": 70,
+        "code": "adding_effect = Form_War_Trigger.new_effect.set_player_visibility("
+      }
+    ]
+  },
+  {
+    "effect_id": "42",
+    "internal_name": "change_object_icon",
+    "display_name": "Change Object Icon",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "43",
+    "internal_name": "replace_object",
+    "display_name": "Replace Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 26,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 4,
+        "representative_paths": [
+          "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+          "game_initialization.py",
+          "World\\diplo_fish.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 16,
+        "representative_paths": [
+          "Abilities\\Cleric\\Active_Ability_1\\sacred_restoration.py",
+          "Abilities\\Cleric\\Active_Ability_2\\divine_push.py",
+          "Player_Progression\\Class_Picking\\pick_classOLD.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 6,
+        "representative_paths": [
+          "Abilities\\Survivor\\Active_Ability_1\\exit_hide.py",
+          "Objectives\\Car\\Objective_Requirement\\apply_fuel_detection.py",
+          "Objectives\\Lighthouse\\Objective_Requirement\\apply_supply_detection.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+        "line_number": 92,
+        "code": "adding_effect = Replace_Gates_With_unlocked_Trigger.new_effect.replace_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+        "line_number": 146,
+        "code": "adding_effect = Disable_Open_Gate_Trigger.new_effect.replace_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 258,
+        "code": "adding_effect = Initialize_Fish.new_effect.replace_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "World\\diplo_fish.py",
+        "line_number": 13,
+        "code": "adding_effect = Initialize_Fish.new_effect.replace_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Cleric\\Active_Ability_1\\sacred_restoration.py",
+        "line_number": 25,
+        "code": "trigger.new_effect.replace_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Cleric\\Active_Ability_1\\sacred_restoration.py",
+        "line_number": 31,
+        "code": "trigger.new_effect.replace_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Cleric\\Active_Ability_1\\sacred_restoration.py",
+        "line_number": 55,
+        "code": "trigger.new_effect.replace_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Cleric\\Active_Ability_1\\sacred_restoration.py",
+        "line_number": 61,
+        "code": "trigger.new_effect.replace_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "44",
+    "internal_name": "change_object_description",
+    "display_name": "Change Object Description",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 15,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 6,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Diplomacy\\Intializations\\initialize_diplomat_and_building.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 6,
+        "representative_paths": [
+          "Player_Progression\\Class_Picking\\Class_Description\\class_description.py",
+          "Skill_Tree\\Classes_Skill_Tree\\Arcanist\\Active\\Active_Ability_3\\electric_vortex.py",
+          "Skill_Tree\\Classes_Skill_Tree\\Crusader\\Active\\Active_Ability_3\\sword_of_sanctity.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 3,
+        "representative_paths": [
+          "Abilities\\Hunter\\Build_Ability_1\\portal.py",
+          "Setup\\Player_Setup\\apply_player_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 80,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.change_object_description("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 40,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.change_object_description("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomat_and_building.py",
+        "line_number": 38,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.change_object_description("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_spy.py",
+        "line_number": 40,
+        "code": "adding_effect = Initialization_Players_Spy_Trigger.new_effect.change_object_description("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\initialize_lords.py",
+        "line_number": 68,
+        "code": "trigger.new_effect.change_object_description("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\Unused\\old_apply_lords.py",
+        "line_number": 50,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.change_object_description("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Class_Picking\\Class_Description\\class_description.py",
+        "line_number": 37,
+        "code": "trigger.new_effect.change_object_description("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Classes_Skill_Tree\\Arcanist\\Active\\Active_Ability_3\\electric_vortex.py",
+        "line_number": 189,
+        "code": "trigger.new_effect.change_object_description("
+      }
+    ]
+  },
+  {
+    "effect_id": "45",
+    "internal_name": "change_player_name",
+    "display_name": "Change Player Name",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "46",
+    "internal_name": "change_train_location",
+    "display_name": "Change Train Location",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 7,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 6,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Diplomacy\\Intializations\\initialize_diplomat_and_building.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 1,
+        "representative_paths": [
+          "Player_Progression\\Class_Picking\\pick_class.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 85,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.change_train_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 33,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.change_train_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomat_and_building.py",
+        "line_number": 31,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.change_train_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_spy.py",
+        "line_number": 33,
+        "code": "adding_effect = Initialization_Players_Spy_Trigger.new_effect.change_train_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\initialize_lords.py",
+        "line_number": 73,
+        "code": "trigger.new_effect.change_train_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\Unused\\old_apply_lords.py",
+        "line_number": 55,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.change_train_location("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Class_Picking\\pick_class.py",
+        "line_number": 69,
+        "code": "trigger.new_effect.change_train_location("
+      }
+    ]
+  },
+  {
+    "effect_id": "47",
+    "internal_name": "change_research_location",
+    "display_name": "Change Research Location",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "48",
+    "internal_name": "change_civilization_name",
+    "display_name": "Change Civilization Name",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 3,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 3,
+        "representative_paths": [
+          "characters.py",
+          "Lords\\pick_lords.py",
+          "Lords\\Unused\\old_apply_lords.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 180,
+        "code": "adding_effect = pick_character_trigger.new_effect.change_civilization_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\pick_lords.py",
+        "line_number": 118,
+        "code": "adding_effect = trigger.new_effect.change_civilization_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\Unused\\old_apply_lords.py",
+        "line_number": 150,
+        "code": "adding_effect = pick_character_trigger.new_effect.change_civilization_name("
+      }
+    ]
+  },
+  {
+    "effect_id": "49",
+    "internal_name": "create_garrisoned_object",
+    "display_name": "Create Garrisoned Object",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 15,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 6,
+        "representative_paths": [
+          "Lords\\lords_start.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 7,
+        "representative_paths": [
+          "Abilities\\Abilities_ClassOLD.py",
+          "Abilities\\Hotkeys_Class.py",
+          "Scratch\\test_maselia_code.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 2,
+        "representative_paths": [
+          "Objectives\\Car\\Objective_Requirement\\apply_fuel_detection.py",
+          "Objectives\\Lighthouse\\Objective_Requirement\\apply_supply_detection.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 75,
+        "code": "trigger.new_effect.create_garrisoned_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 80,
+        "code": "trigger.new_effect.create_garrisoned_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 85,
+        "code": "trigger.new_effect.create_garrisoned_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 90,
+        "code": "trigger.new_effect.create_garrisoned_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 95,
+        "code": "trigger.new_effect.create_garrisoned_object("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Lords\\lords_start.py",
+        "line_number": 108,
+        "code": "trigger.new_effect.create_garrisoned_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Abilities_ClassOLD.py",
+        "line_number": 313,
+        "code": "reenable.new_effect.create_garrisoned_object("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Abilities_ClassOLD.py",
+        "line_number": 357,
+        "code": "main_trigger.new_effect.create_garrisoned_object("
+      }
+    ]
+  },
+  {
+    "effect_id": "50",
+    "internal_name": "acknowledge_ai_signal",
+    "display_name": "Acknowledge AI Signal",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "51",
+    "internal_name": "modify_attribute",
+    "display_name": "Modify Attribute",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 390,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 109,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "custom_functions.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 189,
+        "representative_paths": [
+          "Abilities\\Abilities_ClassOLD.py",
+          "Abilities\\Arcanist\\Active_Ability_1\\thunderstorm.py",
+          "Abilities\\Arcanist\\Active_Ability_2\\pulse_eruption.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 92,
+        "representative_paths": [
+          "Abilities\\Hunter\\Active_Ability_2\\roar.py",
+          "Abilities\\Hunter\\Build_Ability_1\\portal.py",
+          "Characters\\Bonuses\\ash_williams\\apply.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 101,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.modify_attribute("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 112,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.modify_attribute("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 191,
+        "code": "adding_effect = pick_character_trigger.new_effect.modify_attribute("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 197,
+        "code": "adding_effect = pick_character_trigger.new_effect.modify_attribute("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 47,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.modify_attribute("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 54,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.modify_attribute("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 61,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.modify_attribute("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 68,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.modify_attribute("
+      }
+    ]
+  },
+  {
+    "effect_id": "52",
+    "internal_name": "modify_resource",
+    "display_name": "Modify Resource",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 85,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 31,
+        "representative_paths": [
+          "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+          "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+          "game_initialization.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 42,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Abilities\\Abilities_ClassOLD.py",
+          "Leveling_System.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 12,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Characters\\Bonuses\\nancy_wheeler\\apply.py",
+          "Setup\\Player_Setup\\apply_player_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+        "line_number": 66,
+        "code": "adding_effect = Form_Neutral_Trigger.new_effect.modify_resource("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py",
+        "line_number": 72,
+        "code": "adding_effect = Form_Neutral_Trigger.new_effect.modify_resource("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+        "line_number": 78,
+        "code": "adding_effect = Form_War_Trigger.new_effect.modify_resource("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py",
+        "line_number": 84,
+        "code": "adding_effect = Form_War_Trigger.new_effect.modify_resource("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 279,
+        "code": "adding_effect = Initialize_Fishtwo.new_effect.modify_resource("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 292,
+        "code": "adding_effect = Initialize_Fishtwo.new_effect.modify_resource("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\helper_function.py",
+        "line_number": 49,
+        "code": "adding_effect = Kingdom_Security_inc.new_effect.modify_resource("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\helper_function.py",
+        "line_number": 76,
+        "code": "adding_effect = Kingdom_Security_dec.new_effect.modify_resource("
+      }
+    ]
+  },
+  {
+    "effect_id": "53",
+    "internal_name": "modify_resource_by_variable",
+    "display_name": "Modify Resource By Variable",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 12,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 5,
+        "representative_paths": [
+          "game_initialization.py",
+          "Kingdom_Resources\\helper_function.py",
+          "Kingdom_Resources\\Merchant_Opinion\\merchant_opinion.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 7,
+        "representative_paths": [
+          "Abilities\\Ranger\\Active_Ability_2\\soul_siphon.py",
+          "Leveling_System.py",
+          "main\\main_code.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "game_initialization.py",
+        "line_number": 233,
+        "code": "adding_effect = temporary_trigger.new_effect.modify_resource_by_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\helper_function.py",
+        "line_number": 92,
+        "code": "adding_effect = temporary_trigger.new_effect.modify_resource_by_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Merchant_Opinion\\merchant_opinion.py",
+        "line_number": 180,
+        "code": "adding_effect = Display_Merchant_Opinion.new_effect.modify_resource_by_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Test_Diplomacy_Standalone.py",
+        "line_number": 259,
+        "code": "adding_effect = temporary_trigger.new_effect.modify_resource_by_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "World\\display_stats.py",
+        "line_number": 29,
+        "code": "adding_effect = temporary_trigger.new_effect.modify_resource_by_variable("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Ranger\\Active_Ability_2\\soul_siphon.py",
+        "line_number": 103,
+        "code": "trigger.new_effect.modify_resource_by_variable("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Leveling_System.py",
+        "line_number": 94,
+        "code": "Display_Variables_Trigger.new_effect.modify_resource_by_variable("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Leveling_System.py",
+        "line_number": 110,
+        "code": "Display_Variables_Trigger.new_effect.modify_resource_by_variable("
+      }
+    ]
+  },
+  {
+    "effect_id": "54",
+    "internal_name": "set_building_gather_point",
+    "display_name": "Set Building Gather Point",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "55",
+    "internal_name": "script_call",
+    "display_name": "Script Call",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 159,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 75,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+          "Court_Actions\\court_actions.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 66,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Abilities\\Abilities_ClassOLD.py",
+          "Abilities\\Berserker\\Active_Ability_2\\bloodlust_frenzy.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 18,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Abilities\\Hunter\\Build_Ability_1\\portal.py",
+          "Abilities\\Survivor\\Active_Ability_3\\speed_burst.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 225,
+        "code": "adding_effect = pick_character_trigger.new_effect.script_call("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+        "line_number": 78,
+        "code": "adding_effect = trigger.new_effect.script_call("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 222,
+        "code": "trigger.new_effect.script_call("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "custom_functions.py",
+        "line_number": 262,
+        "code": "trigger.new_effect.script_call("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "custom_functions.py",
+        "line_number": 278,
+        "code": "trigger.new_effect.script_call("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "custom_functions.py",
+        "line_number": 300,
+        "code": "trigger.new_effect.script_call("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 73,
+        "code": "adding_effect = Initialize_cut_scenes.new_effect.script_call("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 82,
+        "code": "adding_effect = Initialize_cut_scenes.new_effect.script_call("
+      }
+    ]
+  },
+  {
+    "effect_id": "56",
+    "internal_name": "change_variable",
+    "display_name": "Change Variable",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 128,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 63,
+        "representative_paths": [
+          "characters.py",
+          "Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\defensive_pact_autowar.py",
+          "Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\defensive_pact_cost.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 23,
+        "representative_paths": [
+          "Leveling_System.py",
+          "main\\main_code.py",
+          "NPC\\Quests\\quests.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 42,
+        "representative_paths": [
+          "Abilities\\Hunter\\close_scare.py",
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py",
+          "Objectives\\Car\\Objective_Requirement\\apply_fuel_detection.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 203,
+        "code": "adding_effect = pick_character_trigger.new_effect.change_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 207,
+        "code": "adding_effect = pick_character_trigger.new_effect.change_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 211,
+        "code": "adding_effect = pick_character_trigger.new_effect.change_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 215,
+        "code": "adding_effect = pick_character_trigger.new_effect.change_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 219,
+        "code": "adding_effect = pick_character_trigger.new_effect.change_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 254,
+        "code": "adding_effect = Initialize_Diplomacy_Variables.new_effect.change_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 264,
+        "code": "adding_effect = Initialize_Diplomacy_Variables.new_effect.change_variable("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 268,
+        "code": "adding_effect = Initialize_Diplomacy_Variables.new_effect.change_variable("
+      }
+    ]
+  },
+  {
+    "effect_id": "57",
+    "internal_name": "clear_timer",
+    "display_name": "Clear Timer",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 2,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 1,
+        "representative_paths": [
+          "Kingdom_Resources\\Fame\\fame_victory.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 1,
+        "representative_paths": [
+          "NPC\\Quests\\quests.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Kingdom_Resources\\Fame\\fame_victory.py",
+        "line_number": 169,
+        "code": "trigger.new_effect.clear_timer("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\quests.py",
+        "line_number": 203,
+        "code": "satisfy_quest_trigger.new_effect.clear_timer("
+      }
+    ]
+  },
+  {
+    "effect_id": "58",
+    "internal_name": "change_object_player_color",
+    "display_name": "Change Object Player Color",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "59",
+    "internal_name": "change_object_civilization_name",
+    "display_name": "Change Object Civilization Name",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 3,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 3,
+        "representative_paths": [
+          "NPC\\Names\\npc_names.py",
+          "Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_shop_description.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Names\\npc_names.py",
+        "line_number": 142,
+        "code": "trigger.new_effect.change_object_civilization_name("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_shop_description.py",
+        "line_number": 97,
+        "code": "trigger.new_effect.change_object_civilization_name("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_shop_description.py",
+        "line_number": 106,
+        "code": "trigger.new_effect.change_object_civilization_name("
+      }
+    ]
+  },
+  {
+    "effect_id": "60",
+    "internal_name": "change_object_player_name",
+    "display_name": "Change Object Player Name",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 1,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 1,
+        "representative_paths": [
+          "Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_shop_description.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_shop_description.py",
+        "line_number": 88,
+        "code": "trigger.new_effect.change_object_player_name("
+      }
+    ]
+  },
+  {
+    "effect_id": "61",
+    "internal_name": "disable_unit_targeting",
+    "display_name": "Disable Unit Targeting",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 33,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 14,
+        "representative_paths": [
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Diplomacy\\Diplomacy_Panel\\base_units\\deploy_units.py",
+          "Diplomacy\\Intializations\\diplomacy_spawn_initializations.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 8,
+        "representative_paths": [
+          "Abilities\\Crusader\\Active_Ability_1\\valors_call.py",
+          "Bosses\\Boss_System.py",
+          "Mobs\\Region\\Ethoridar\\Castle_Dungeon\\abilities.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 11,
+        "representative_paths": [
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py",
+          "Objectives\\Pillars\\apply_pillar_control.py",
+          "old_code\\game.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 24,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.disable_unit_targeting("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 140,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.disable_unit_targeting("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Diplomacy_Panel\\base_units\\deploy_units.py",
+        "line_number": 93,
+        "code": "trigger.new_effect.disable_unit_targeting("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\diplomacy_spawn_initializations.py",
+        "line_number": 68,
+        "code": "adding_effect = Diplomat_Invis.new_effect.disable_unit_targeting("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomat_and_building.py",
+        "line_number": 23,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.disable_unit_targeting("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomat_and_building.py",
+        "line_number": 147,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.disable_unit_targeting("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_offers_building.py",
+        "line_number": 21,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.disable_unit_targeting("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_spy.py",
+        "line_number": 24,
+        "code": "adding_effect = Initialization_Players_Spy_Trigger.new_effect.disable_unit_targeting("
+      }
+    ]
+  },
+  {
+    "effect_id": "62",
+    "internal_name": "enable_unit_targeting",
+    "display_name": "Enable Unit Targeting",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 4,
+        "representative_paths": [
+          "Abilities\\Crusader\\Active_Ability_1\\valors_call.py",
+          "Bosses\\Boss_System.py",
+          "Skill_Tree\\Skill_Tree_Ability.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Crusader\\Active_Ability_1\\valors_call.py",
+        "line_number": 34,
+        "code": "trigger.new_effect.enable_unit_targeting("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Boss_System.py",
+        "line_number": 114,
+        "code": "trigger.new_effect.enable_unit_targeting("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Skill_Tree_Ability.py",
+        "line_number": 146,
+        "code": "trigger.new_effect.enable_unit_targeting("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Skill_Tree_Ability.py",
+        "line_number": 220,
+        "code": "init_trigger.new_effect.enable_unit_targeting("
+      }
+    ]
+  },
+  {
+    "effect_id": "63",
+    "internal_name": "change_technology_cost",
+    "display_name": "Change Technology Cost",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 7,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 5,
+        "representative_paths": [
+          "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Helper_Functions\\display_offer.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 1,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 1,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+        "line_number": 62,
+        "code": "adding_effect = trigger.new_effect.change_technology_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 205,
+        "code": "trigger.new_effect.change_technology_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\display_offer.py",
+        "line_number": 73,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.change_technology_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomacy_techs.py",
+        "line_number": 65,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.change_technology_cost("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_techs.py",
+        "line_number": 59,
+        "code": "adding_effect = Initialization_Espionage_Techs.new_effect.change_technology_cost("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Abilities_Class.py",
+        "line_number": 631,
+        "code": "trigger.new_effect.change_technology_cost("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Abilities\\Abilities_Class.py",
+        "line_number": 749,
+        "code": "trigger.new_effect.change_technology_cost("
+      }
+    ]
+  },
+  {
+    "effect_id": "64",
+    "internal_name": "change_technology_research_time",
+    "display_name": "Change Technology Research Time",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 5,
+        "representative_paths": [
+          "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Helper_Functions\\display_offer.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+        "line_number": 57,
+        "code": "adding_effect = trigger.new_effect.change_technology_research_time("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 200,
+        "code": "trigger.new_effect.change_technology_research_time("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\display_offer.py",
+        "line_number": 68,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.change_technology_research_time("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomacy_techs.py",
+        "line_number": 60,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.change_technology_research_time("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_techs.py",
+        "line_number": 54,
+        "code": "adding_effect = Initialization_Espionage_Techs.new_effect.change_technology_research_time("
+      }
+    ]
+  },
+  {
+    "effect_id": "65",
+    "internal_name": "change_technology_name",
+    "display_name": "Change Technology Name",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 5,
+        "representative_paths": [
+          "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Helper_Functions\\display_offer.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+        "line_number": 46,
+        "code": "adding_effect = trigger.new_effect.change_technology_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 189,
+        "code": "trigger.new_effect.change_technology_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\display_offer.py",
+        "line_number": 58,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.change_technology_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomacy_techs.py",
+        "line_number": 42,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.change_technology_name("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_techs.py",
+        "line_number": 43,
+        "code": "adding_effect = Initialization_Espionage_Techs.new_effect.change_technology_name("
+      }
+    ]
+  },
+  {
+    "effect_id": "66",
+    "internal_name": "change_technology_description",
+    "display_name": "Change Technology Description",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 4,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 4,
+        "representative_paths": [
+          "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Helper_Functions\\display_offer.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+        "line_number": 51,
+        "code": "adding_effect = trigger.new_effect.change_technology_description("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 194,
+        "code": "trigger.new_effect.change_technology_description("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\display_offer.py",
+        "line_number": 63,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.change_technology_description("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_techs.py",
+        "line_number": 48,
+        "code": "adding_effect = Initialization_Espionage_Techs.new_effect.change_technology_description("
+      }
+    ]
+  },
+  {
+    "effect_id": "67",
+    "internal_name": "enable_technology_stacking",
+    "display_name": "Enable Technology Stacking",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 5,
+        "representative_paths": [
+          "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Helper_Functions\\display_offer.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+        "line_number": 36,
+        "code": "adding_effect = trigger.new_effect.enable_technology_stacking("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 179,
+        "code": "trigger.new_effect.enable_technology_stacking("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\display_offer.py",
+        "line_number": 48,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.enable_technology_stacking("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomacy_techs.py",
+        "line_number": 32,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.enable_technology_stacking("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Initializations\\initialize_techs.py",
+        "line_number": 33,
+        "code": "adding_effect = Initialization_Espionage_Techs.new_effect.enable_technology_stacking("
+      }
+    ]
+  },
+  {
+    "effect_id": "68",
+    "internal_name": "disable_technology_stacking",
+    "display_name": "Disable Technology Stacking",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "69",
+    "internal_name": "acknowledge_multiplayer_ai_signal",
+    "display_name": "Acknowledge Multiplayer AI Signal",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "70",
+    "internal_name": "disable_object_selection",
+    "display_name": "Disable Object Selection",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 32,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 10,
+        "representative_paths": [
+          "cut_scenes.py",
+          "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+          "main\\Lords_of_Diplomacy.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 8,
+        "representative_paths": [
+          "Abilities\\Hotkeys_Class.py",
+          "Mobs\\Region\\Ethoridar\\Castle_Dungeon\\abilities.py",
+          "Player_Progression\\Class_Picking\\pick_class.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 14,
+        "representative_paths": [
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py",
+          "Objectives\\Gate\\Main_Objective\\apply_gate_operation.py",
+          "Objectives\\Lighthouse\\Main_Objective\\apply_lighthouse_operation.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 115,
+        "code": "adding_effect = Lock_Units_Trigger.new_effect.disable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+        "line_number": 98,
+        "code": "adding_effect = Replace_Gates_With_unlocked_Trigger.new_effect.disable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "main\\Lords_of_Diplomacy.py",
+        "line_number": 185,
+        "code": "display_instructions.new_effect.disable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "main\\Medieval_Europe_1200_AD.py",
+        "line_number": 161,
+        "code": "display_instructions.new_effect.disable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\Capture_From_GAIA\\Capture_Province_gaia\\capture_successfull.py",
+        "line_number": 98,
+        "code": "trigger.new_effect.disable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\Capture_Province\\capture_successfull.py",
+        "line_number": 84,
+        "code": "trigger.new_effect.disable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\initialize_provinces.py",
+        "line_number": 40,
+        "code": "trigger.new_effect.disable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Provinces\\Levels\\initialize_level_graphics.py",
+        "line_number": 56,
+        "code": "trigger.new_effect.disable_object_selection("
+      }
+    ]
+  },
+  {
+    "effect_id": "71",
+    "internal_name": "enable_object_selection",
+    "display_name": "Enable Object Selection",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 13,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 4,
+        "representative_paths": [
+          "cut_scenes.py",
+          "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 4,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Abilities\\Abilities_ClassOLD.py",
+          "Skill_Tree\\Classes_Skill_Tree\\Cleric\\Active\\Active_Ability_3\\guardians_embrace.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 5,
+        "representative_paths": [
+          "Abilities\\Abilities_Class.py",
+          "Objectives\\Gate\\Main_Objective\\apply_gate_operation.py",
+          "Objectives\\Lighthouse\\Main_Objective\\apply_lighthouse_operation.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 118,
+        "code": "adding_effect = Lock_Units_Trigger.new_effect.enable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 431,
+        "code": "adding_effect = Activate_Tutorial_scene_trigger.new_effect.enable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "cut_scenes.py",
+        "line_number": 763,
+        "code": "adding_effect = Tutorial_Part_Trigger.new_effect.enable_object_selection("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py",
+        "line_number": 137,
+        "code": "adding_effect = Disable_Open_Gate_Trigger.new_effect.enable_object_selection("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Abilities_Class.py",
+        "line_number": 673,
+        "code": "trigger.new_effect.enable_object_selection("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Abilities_ClassOLD.py",
+        "line_number": 673,
+        "code": "trigger.new_effect.enable_object_selection("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Classes_Skill_Tree\\Cleric\\Active\\Active_Ability_3\\guardians_embrace.py",
+        "line_number": 185,
+        "code": "selection_trigger.new_effect.enable_object_selection("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "World\\Respawn\\respawn_system.py",
+        "line_number": 270,
+        "code": "unblock_respawn.new_effect.enable_object_selection("
+      }
+    ]
+  },
+  {
+    "effect_id": "72",
+    "internal_name": "change_color_mood",
+    "display_name": "Change Color Mood",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 4,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 2,
+        "representative_paths": [
+          "main\\remove_resources.py",
+          "Seasons\\apply_seasons.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 2,
+        "representative_paths": [
+          "Abilities\\Hunter\\Active_Ability_1\\blood_thirst.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "main\\remove_resources.py",
+        "line_number": 48,
+        "code": "color_mood.new_effect.change_color_mood("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Seasons\\apply_seasons.py",
+        "line_number": 26,
+        "code": "adding_effect = current_trigger.new_effect.change_color_mood("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Abilities\\Hunter\\Active_Ability_1\\blood_thirst.py",
+        "line_number": 50,
+        "code": "activation_trigger.new_effect.change_color_mood("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Abilities\\Hunter\\Active_Ability_1\\blood_thirst.py",
+        "line_number": 67,
+        "code": "deactivation_trigger.new_effect.change_color_mood("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "add_train_location",
+    "display_name": "add_train_location",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_object_caption",
+    "display_name": "change_object_caption",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 17,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 6,
+        "representative_paths": [
+          "Bosses\\Dialogue\\boss_dialogue.py",
+          "NPC\\Dialogue\\npc_dialogue.py",
+          "Player_Progression\\Leveling\\leveling.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 11,
+        "representative_paths": [
+          "Objectives\\Car\\Main_Objective\\apply_car_fill.py",
+          "Objectives\\Car\\Main_Objective\\apply_car_spawning.py",
+          "Objectives\\Gate\\Main_Objective\\apply_gate_operation.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Bosses\\Dialogue\\boss_dialogue.py",
+        "line_number": 90,
+        "code": "trigger.new_effect.change_object_caption("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Dialogue\\npc_dialogue.py",
+        "line_number": 113,
+        "code": "trigger.new_effect.change_object_caption("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Leveling\\leveling.py",
+        "line_number": 294,
+        "code": "trigger.new_effect.change_object_caption("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Sound_Manager\\caption_manager.py",
+        "line_number": 125,
+        "code": "caption_trigger.new_effect.change_object_caption("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Sound_Manager\\caption_manager.py",
+        "line_number": 146,
+        "code": "clear_trigger.new_effect.change_object_caption("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "World\\Fountain_Heal\\fountain_heal.py",
+        "line_number": 87,
+        "code": "trigger.new_effect.change_object_caption("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Objectives\\Car\\Main_Objective\\apply_car_fill.py",
+        "line_number": 74,
+        "code": "caption_trigger.new_effect.change_object_caption("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Objectives\\Car\\Main_Objective\\apply_car_fill.py",
+        "line_number": 106,
+        "code": "ready_trigger.new_effect.change_object_caption("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_object_visibility",
+    "display_name": "change_object_visibility",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 4,
+        "representative_paths": [
+          "NPC\\Quests\\Estea\\Captain_Jorand\\Clearing_The_Depths\\apply_quest.py",
+          "NPC\\Quests\\Estea\\Captain_Jorand\\Forest_Cleanup\\apply_quest.py",
+          "NPC\\Quests\\Estea\\Elder_Beltherin\\Speak_to_Captain_Jorand\\apply_quest.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\Captain_Jorand\\Clearing_The_Depths\\apply_quest.py",
+        "line_number": 52,
+        "code": "dialogue_last_trigger.new_effect.change_object_visibility("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\Captain_Jorand\\Forest_Cleanup\\apply_quest.py",
+        "line_number": 41,
+        "code": "dialogue_last_trigger.new_effect.change_object_visibility("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\Elder_Beltherin\\Speak_to_Captain_Jorand\\apply_quest.py",
+        "line_number": 29,
+        "code": "dialogue_last_trigger.new_effect.change_object_visibility("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "NPC\\Quests\\Estea\\Elder_Beltherin\\The_Path_to_Ethoridar\\apply_quest.py",
+        "line_number": 42,
+        "code": "dialogue_last_trigger.new_effect.change_object_visibility("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_player_color",
+    "display_name": "change_player_color",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_hotkey",
+    "display_name": "change_technology_hotkey",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_icon",
+    "display_name": "change_technology_icon",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_location",
+    "display_name": "change_technology_location",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 15,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 15,
+        "representative_paths": [
+          "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+          "Court_Actions\\court_actions.py",
+          "Diplomacy\\Actions\\Alliance\\apply_alliance.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py",
+        "line_number": 40,
+        "code": "adding_effect = trigger.new_effect.change_technology_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Court_Actions\\court_actions.py",
+        "line_number": 183,
+        "code": "trigger.new_effect.change_technology_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\apply_alliance.py",
+        "line_number": 251,
+        "code": "adding_effect = Accept_Alliance_Offer_Trigger.new_effect.change_technology_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py",
+        "line_number": 97,
+        "code": "adding_effect = Form_Alliance_Trigger.new_effect.change_technology_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Defensive_Pact\\apply_defensive_pact.py",
+        "line_number": 258,
+        "code": "adding_effect = Accept_DefensivePact_Offer_Trigger.new_effect.change_technology_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\form_defensive_pact.py",
+        "line_number": 89,
+        "code": "adding_effect = Form_Defensive_Pact_Trigger.new_effect.change_technology_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\disable_tech_timer.py",
+        "line_number": 57,
+        "code": "adding_effect = Disable_Offer_Trigger.new_effect.change_technology_location("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Actions\\Helper_Functions\\display_offer.py",
+        "line_number": 52,
+        "code": "adding_effect = Display_Offer_Trigger.new_effect.change_technology_location("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "count_units_into_variable",
+    "display_name": "count_units_into_variable",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_decision",
+    "display_name": "create_decision",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_object_armor",
+    "display_name": "create_object_armor",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_object_attack",
+    "display_name": "create_object_attack",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "delete_key",
+    "display_name": "delete_key",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "disable_object_deletion",
+    "display_name": "disable_object_deletion",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 29,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "project_priority": 1,
+        "usage_count": 16,
+        "representative_paths": [
+          "characters.py",
+          "Clerical_Actions\\Initializations\\initialize_cleric.py",
+          "Diplomacy\\Diplomacy_Panel\\base_units\\deploy_units.py"
+        ]
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 4,
+        "representative_paths": [
+          "Skill_Tree\\Classes_Skill_Tree\\Arcanist\\Passive\\Passive_Ability_2\\static_charge.py",
+          "Skill_Tree\\Skill_Tree_Ability.py",
+          "Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_character_ui.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 9,
+        "representative_paths": [
+          "Objectives\\Pillars\\apply_pillar_control.py",
+          "Setup\\Player_Setup\\apply_player_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "characters.py",
+        "line_number": 71,
+        "code": "adding_effect = Initialize_Characters_Trigger.new_effect.disable_object_deletion("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 28,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.disable_object_deletion("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Clerical_Actions\\Initializations\\initialize_cleric.py",
+        "line_number": 144,
+        "code": "adding_effect = Initialization_Players_Cleric_Trigger.new_effect.disable_object_deletion("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Diplomacy_Panel\\base_units\\deploy_units.py",
+        "line_number": 89,
+        "code": "trigger.new_effect.disable_object_deletion("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\diplomacy_spawn_initializations.py",
+        "line_number": 72,
+        "code": "adding_effect = Diplomat_Invis.new_effect.disable_object_deletion("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomat_and_building.py",
+        "line_number": 27,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.disable_object_deletion("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_diplomat_and_building.py",
+        "line_number": 151,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.disable_object_deletion("
+      },
+      {
+        "project_id": "lords_of_diplomacy_easy_mode",
+        "project_title": "LordsOfDiplomacy - Easy Mode",
+        "path": "Diplomacy\\Intializations\\initialize_offers_building.py",
+        "line_number": 25,
+        "code": "adding_effect = Initialization_Players_Diplo_Trigger.new_effect.disable_object_deletion("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "disable_unit_attackable",
+    "display_name": "disable_unit_attackable",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 12,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 3,
+        "representative_paths": [
+          "Skill_Tree\\Classes_Skill_Tree\\Cleric\\Active\\Active_Ability_3\\guardians_embrace.py",
+          "Skill_Tree\\Skill_Tree_Ability.py"
+        ]
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 9,
+        "representative_paths": [
+          "Objectives\\Car\\Objective_Requirement\\apply_fuel_detection.py",
+          "Objectives\\Pillars\\apply_pillar_control.py",
+          "Setup\\Player_Setup\\apply_player_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Classes_Skill_Tree\\Cleric\\Active\\Active_Ability_3\\guardians_embrace.py",
+        "line_number": 324,
+        "code": "cast_trigger.new_effect.disable_unit_attackable("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Skill_Tree_Ability.py",
+        "line_number": 203,
+        "code": "init_trigger.new_effect.disable_unit_attackable("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Skill_Tree_Ability.py",
+        "line_number": 298,
+        "code": "trigger.new_effect.disable_unit_attackable("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Objectives\\Car\\Objective_Requirement\\apply_fuel_detection.py",
+        "line_number": 18,
+        "code": "trigger.new_effect.disable_unit_attackable("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Objectives\\Pillars\\apply_pillar_control.py",
+        "line_number": 127,
+        "code": "trigger.new_effect.disable_unit_attackable("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Objectives\\Pillars\\apply_pillar_control.py",
+        "line_number": 151,
+        "code": "trigger.new_effect.disable_unit_attackable("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Objectives\\Pillars\\apply_pillar_control.py",
+        "line_number": 175,
+        "code": "trigger.new_effect.disable_unit_attackable("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Objectives\\Pillars\\apply_pillar_control.py",
+        "line_number": 199,
+        "code": "trigger.new_effect.disable_unit_attackable("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "enable_object_deletion",
+    "display_name": "enable_object_deletion",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "enable_unit_attackable",
+    "display_name": "enable_unit_attackable",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 2,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "Skill_Tree\\Skill_Tree_Ability.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Skill_Tree_Ability.py",
+        "line_number": 149,
+        "code": "trigger.new_effect.enable_unit_attackable("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Skill_Tree_Ability.py",
+        "line_number": 223,
+        "code": "init_trigger.new_effect.enable_unit_attackable("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "initiate_research",
+    "display_name": "initiate_research",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "load_key_value",
+    "display_name": "load_key_value",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_attribute_by_variable",
+    "display_name": "modify_attribute_by_variable",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 1,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 1,
+        "representative_paths": [
+          "Leveling_System.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Leveling_System.py",
+        "line_number": 162,
+        "code": "Mana_Regen_Trigger.new_effect.modify_attribute_by_variable("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_attribute_for_class",
+    "display_name": "modify_attribute_for_class",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_object_attribute",
+    "display_name": "modify_object_attribute",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 2,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "Skill_Tree\\Skill_Tree_Ability.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Skill_Tree_Ability.py",
+        "line_number": 96,
+        "code": "trigger.new_effect.modify_object_attribute("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Skill_Tree_Ability.py",
+        "line_number": 187,
+        "code": "init_trigger.new_effect.modify_object_attribute("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_object_attribute_by_variable",
+    "display_name": "modify_object_attribute_by_variable",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_attribute",
+    "display_name": "modify_variable_by_attribute",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 4,
+        "representative_paths": [
+          "Abilities\\Berserker\\Active_Ability_2\\bloodlust_frenzy.py",
+          "Abilities\\Ranger\\Active_Ability_2\\soul_siphon.py",
+          "Leveling_System.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Berserker\\Active_Ability_2\\bloodlust_frenzy.py",
+        "line_number": 96,
+        "code": "trigger.new_effect.modify_variable_by_attribute("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Abilities\\Ranger\\Active_Ability_2\\soul_siphon.py",
+        "line_number": 63,
+        "code": "trigger.new_effect.modify_variable_by_attribute("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Leveling_System.py",
+        "line_number": 171,
+        "code": "Mana_Regen_Trigger.new_effect.modify_variable_by_attribute("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Skill_Tree\\Classes_Skill_Tree\\Berserker\\Passive\\Passive_Ability_2\\blood_feast.py",
+        "line_number": 78,
+        "code": "life_steal_trigger.new_effect.modify_variable_by_attribute("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_resource",
+    "display_name": "modify_variable_by_resource",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 2,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "project_priority": 3,
+        "usage_count": 2,
+        "representative_paths": [
+          "Player_Progression\\Attributes\\balance_mana.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Attributes\\balance_mana.py",
+        "line_number": 78,
+        "code": "Mana_Regen_Trigger.new_effect.modify_variable_by_resource("
+      },
+      {
+        "project_id": "goku_rpg_project",
+        "project_title": "GoKu RPG Project",
+        "path": "Player_Progression\\Attributes\\balance_mana.py",
+        "line_number": 112,
+        "code": "Mana_Regen_Trigger.new_effect.modify_variable_by_resource("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_variable",
+    "display_name": "modify_variable_by_variable",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "none",
+    "display_name": "none",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "research_local_technology",
+    "display_name": "research_local_technology",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "set_object_cost",
+    "display_name": "set_object_cost",
+    "usage_status": "used_in_reference_projects",
+    "usage_count": 8,
+    "used_in_projects": [
+      "hide_and_seek"
+    ],
+    "project_summaries": [
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "project_priority": 4,
+        "usage_count": 8,
+        "representative_paths": [
+          "Setup\\Player_Setup\\apply_player_setup.py"
+        ]
+      }
+    ],
+    "examples": [
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 700,
+        "code": "economy.new_effect.set_object_cost("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 706,
+        "code": "economy.new_effect.set_object_cost("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 712,
+        "code": "economy.new_effect.set_object_cost("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 718,
+        "code": "economy.new_effect.set_object_cost("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 724,
+        "code": "economy.new_effect.set_object_cost("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 730,
+        "code": "economy.new_effect.set_object_cost("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 736,
+        "code": "economy.new_effect.set_object_cost("
+      },
+      {
+        "project_id": "hide_and_seek",
+        "project_title": "Hide_and_Seek",
+        "path": "Setup\\Player_Setup\\apply_player_setup.py",
+        "line_number": 742,
+        "code": "economy.new_effect.set_object_cost("
+      }
+    ]
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "store_key_value",
+    "display_name": "store_key_value",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "train_unit",
+    "display_name": "train_unit",
+    "usage_status": "not_observed_in_reference_projects",
+    "usage_count": 0,
+    "used_in_projects": [],
+    "project_summaries": [],
+    "examples": []
+  }
+]

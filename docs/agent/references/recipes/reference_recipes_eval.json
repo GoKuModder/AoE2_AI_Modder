@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "description": "Golden implementation queries for compact recipe datasets.",
+  "cases": [
+    {
+      "id": "recipe-global-events",
+      "query": "How should I build recurring global event announcements for all players?",
+      "expected_any": ["global_event_notifications"]
+    },
+    {
+      "id": "recipe-quest-system",
+      "query": "How should I structure a multi-stage NPC quest system?",
+      "expected_any": ["quest_system_flow"]
+    },
+    {
+      "id": "recipe-teleport-system",
+      "query": "How do I build a teleport pad system in a scenario project?",
+      "expected_any": ["teleport_system"]
+    },
+    {
+      "id": "parser-cleanup",
+      "query": "How do I clear existing units from source map regions before setup?",
+      "expected_any": ["unit_manager_cleanup_regions"]
+    },
+    {
+      "id": "parser-terrain",
+      "query": "How do I place blockers on black terrain tiles?",
+      "expected_any": ["map_manager_terrain_scan"]
+    },
+    {
+      "id": "genie-linked-unit",
+      "query": "How do I create a new unit and link it to a custom graphic in GenieWorkspace?",
+      "expected_any": ["create_unit_with_linked_graphic"]
+    },
+    {
+      "id": "genie-dead-unit-chain",
+      "query": "How do I link a main unit, dead unit, and graphics in a dat mod?",
+      "expected_any": ["link_main_and_dead_units"]
+    }
+  ]
+}

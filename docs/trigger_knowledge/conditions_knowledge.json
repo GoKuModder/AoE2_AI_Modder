@@ -1,0 +1,1338 @@
+[
+  {
+    "condition_id": 0,
+    "internal_name": "none",
+    "source_internal_name": "none",
+    "display_name": "None",
+    "description": "... It's called none... What parameters do **you** think it has?! <3",
+    "signature": "none(self) -> 'Condition'",
+    "parameters": [],
+    "notes": [
+      "... It's called none... What parameters do **you** think it has?! <3"
+    ]
+  },
+  {
+    "condition_id": 1,
+    "internal_name": "bring_object_to_area",
+    "source_internal_name": "bring_object_to_area",
+    "display_name": "Bring Object To Area",
+    "description": "Parser condition for Bring Object To Area.",
+    "signature": "bring_object_to_area(self, unit_object: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 2,
+    "internal_name": "bring_object_to_object",
+    "source_internal_name": "bring_object_to_object",
+    "display_name": "Bring Object To Object",
+    "description": "Parser condition for Bring Object To Object.",
+    "signature": "bring_object_to_object(self, unit_object: 'int | None' = None, next_object: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "next_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 3,
+    "internal_name": "own_objects",
+    "source_internal_name": "own_objects",
+    "display_name": "Own Objects",
+    "description": "Parser condition for Own Objects.",
+    "signature": "own_objects(self, quantity: 'int | None' = None, object_list: 'int | None' = None, source_player: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, include_changeable_weapon_objects: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_list",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "include_changeable_weapon_objects",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 4,
+    "internal_name": "own_fewer_objects",
+    "source_internal_name": "own_fewer_objects",
+    "display_name": "Own Fewer Objects",
+    "description": "Parser condition for Own Fewer Objects.",
+    "signature": "own_fewer_objects(self, quantity: 'int | None' = None, object_list: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, include_changeable_weapon_objects: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_list",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "include_changeable_weapon_objects",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 5,
+    "internal_name": "objects_in_area",
+    "source_internal_name": "object_in_area",
+    "display_name": "Objects In Area",
+    "description": "Parser condition for Objects In Area.",
+    "signature": "objects_in_area(self, quantity: 'int | None' = None, object_list: 'int | None' = None, source_player: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, inverted: 'int | None' = None, object_state: 'int | None' = None, include_changeable_weapon_objects: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_list",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_state",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "include_changeable_weapon_objects",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 6,
+    "internal_name": "destroy_object",
+    "source_internal_name": "destroy_object",
+    "display_name": "Destroy Object",
+    "description": "Parser condition for Destroy Object.",
+    "signature": "destroy_object(self, unit_object: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 7,
+    "internal_name": "capture_object",
+    "source_internal_name": "capture_object",
+    "display_name": "Capture Object",
+    "description": "Parser condition for Capture Object.",
+    "signature": "capture_object(self, unit_object: 'int | None' = None, source_player: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 8,
+    "internal_name": "accumulate_attribute",
+    "source_internal_name": "accumulate_attribute",
+    "display_name": "Accumulate Attribute",
+    "description": "Parser condition for Accumulate Attribute.",
+    "signature": "accumulate_attribute(self, quantity: 'int | None' = None, attribute: 'int | None' = None, source_player: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "attribute",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 9,
+    "internal_name": "research_technology",
+    "source_internal_name": "research_technology",
+    "display_name": "Research Technology",
+    "description": "Parser condition for Research Technology.",
+    "signature": "research_technology(self, source_player: 'int | None' = None, technology: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 10,
+    "internal_name": "timer",
+    "source_internal_name": "timer",
+    "display_name": "Timer",
+    "description": "Parser condition for Timer.",
+    "signature": "timer(self, timer: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "timer",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 11,
+    "internal_name": "object_selected",
+    "source_internal_name": "object_selected",
+    "display_name": "Object Selected",
+    "description": "Parser condition for Object Selected.",
+    "signature": "object_selected(self, unit_object: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 12,
+    "internal_name": "ai_signal",
+    "source_internal_name": "ai_signal",
+    "display_name": "AI Signal",
+    "description": "Parser condition for AI Signal.",
+    "signature": "ai_signal(self, ai_signal: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "ai_signal",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 13,
+    "internal_name": "player_defeated",
+    "source_internal_name": "player_defeated",
+    "display_name": "Player Defeated",
+    "description": "Parser condition for Player Defeated.",
+    "signature": "player_defeated(self, source_player: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 14,
+    "internal_name": "object_has_target",
+    "source_internal_name": "object_has_target",
+    "display_name": "Object Has Target",
+    "description": "Parser condition for Object Has Target.",
+    "signature": "object_has_target(self, unit_object: 'int | None' = None, next_object: 'int | None' = None, object_list: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "next_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_list",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 15,
+    "internal_name": "object_visible",
+    "source_internal_name": "object_visible",
+    "display_name": "Object Visible",
+    "description": "Parser condition for Object Visible.",
+    "signature": "object_visible(self, unit_object: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 16,
+    "internal_name": "object_not_visible",
+    "source_internal_name": "object_not_visible",
+    "display_name": "Object Not Visible",
+    "description": "Parser condition for Object Not Visible.",
+    "signature": "object_not_visible(self, unit_object: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 17,
+    "internal_name": "researching_tech",
+    "source_internal_name": "researching_tech",
+    "display_name": "Researching Tech",
+    "description": "Parser condition for Researching Tech.",
+    "signature": "researching_tech(self, source_player: 'int | None' = None, technology: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 18,
+    "internal_name": "units_garrisoned",
+    "source_internal_name": "units_garrisoned",
+    "display_name": "Units Garrisoned",
+    "description": "Parser condition for Units Garrisoned.",
+    "signature": "units_garrisoned(self, quantity: 'int | None' = None, unit_object: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 19,
+    "internal_name": "difficulty_level",
+    "source_internal_name": "difficulty_level",
+    "display_name": "Difficulty Level",
+    "description": "Parser condition for Difficulty Level.",
+    "signature": "difficulty_level(self, quantity: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "condition_type",
+        "type": "",
+        "default": null,
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 20,
+    "internal_name": "chance",
+    "source_internal_name": "chance",
+    "display_name": "Chance",
+    "description": "Parser condition for Chance.",
+    "signature": "chance(self, quantity: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 21,
+    "internal_name": "technology_state",
+    "source_internal_name": "technology_state",
+    "display_name": "Technology State",
+    "description": "Parser condition for Technology State.",
+    "signature": "technology_state(self, quantity: 'int | None' = None, source_player: 'int | None' = None, technology: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "technology",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 22,
+    "internal_name": "variable_value",
+    "source_internal_name": "variable_value",
+    "display_name": "Variable Value",
+    "description": "Parser condition for Variable Value.",
+    "signature": "variable_value(self, quantity: 'int | None' = None, inverted: 'int | None' = None, variable: 'int | None' = None, comparison: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "variable",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "comparison",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 23,
+    "internal_name": "object_hp",
+    "source_internal_name": "object_hp",
+    "display_name": "Object HP",
+    "description": "Parser condition for Object HP.",
+    "signature": "object_hp(self, quantity: 'int | None' = None, unit_object: 'int | None' = None, inverted: 'int | None' = None, comparison: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "comparison",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 24,
+    "internal_name": "diplomacy_state",
+    "source_internal_name": "diplomacy_state",
+    "display_name": "Diplomacy State",
+    "description": "Parser condition for Diplomacy State.",
+    "signature": "diplomacy_state(self, quantity: 'int | None' = None, source_player: 'int | None' = None, inverted: 'int | None' = None, target_player: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "target_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": []
+  },
+  {
+    "condition_id": 25,
+    "internal_name": "script_call",
+    "source_internal_name": "script_call",
+    "display_name": "Script Call",
+    "description": "This condition was added in: 1.40",
+    "signature": "script_call(self, xs_function: 'str | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "xs_function",
+        "type": "str | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.40"
+    ]
+  },
+  {
+    "condition_id": 26,
+    "internal_name": "object_selected_multiplayer",
+    "source_internal_name": "object_selected_multiplayer",
+    "display_name": "Object Selected Multiplayer",
+    "description": "This condition was added in: 1.40",
+    "signature": "object_selected_multiplayer(self, unit_object: 'int | None' = None, source_player: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.40"
+    ]
+  },
+  {
+    "condition_id": 27,
+    "internal_name": "object_visible_multiplayer",
+    "source_internal_name": "object_visible_multiplayer",
+    "display_name": "Object Visible Multiplayer",
+    "description": "This condition was added in: 1.40",
+    "signature": "object_visible_multiplayer(self, unit_object: 'int | None' = None, source_player: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.40"
+    ]
+  },
+  {
+    "condition_id": 28,
+    "internal_name": "object_has_action",
+    "source_internal_name": "object_has_action",
+    "display_name": "Object Has Action",
+    "description": "This condition was added in: 1.40",
+    "signature": "object_has_action(self, unit_object: 'int | None' = None, next_object: 'int | None' = None, object_list: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, inverted: 'int | None' = None, unit_ai_action: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "next_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_list",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "unit_ai_action",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.40"
+    ]
+  },
+  {
+    "condition_id": 29,
+    "internal_name": "or_",
+    "source_internal_name": "or_",
+    "display_name": "Or",
+    "description": "The **OR** condition does not have any attributes This condition was added in: 1.40",
+    "signature": "or_(self) -> 'Condition'",
+    "parameters": [],
+    "notes": [
+      "The **OR** condition does not have any attributes",
+      "This condition was added in: 1.40"
+    ]
+  },
+  {
+    "condition_id": 30,
+    "internal_name": "ai_signal_multiplayer",
+    "source_internal_name": "ai_signal_multiplayer",
+    "display_name": "AI Signal Multiplayer",
+    "description": "This condition was added in: 1.40",
+    "signature": "ai_signal_multiplayer(self, ai_signal: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "ai_signal",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.40"
+    ]
+  },
+  {
+    "condition_id": 54,
+    "internal_name": "building_is_trading",
+    "source_internal_name": "building_is_trading",
+    "display_name": "Building Is Trading",
+    "description": "This condition was added in: 1.46",
+    "signature": "building_is_trading(self, unit_object: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.46"
+    ]
+  },
+  {
+    "condition_id": 55,
+    "internal_name": "display_timer_triggered",
+    "source_internal_name": "display_timer_triggered",
+    "display_name": "Display Timer Triggered",
+    "description": "This condition was added in: 1.46",
+    "signature": "display_timer_triggered(self, timer_id: 'int | None' = None, inverted: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "timer_id",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.46"
+    ]
+  },
+  {
+    "condition_id": 56,
+    "internal_name": "victory_timer",
+    "source_internal_name": "victory_timer",
+    "display_name": "Victory Timer",
+    "description": "This condition was added in: 1.46",
+    "signature": "victory_timer(self, quantity: 'int | None' = None, source_player: 'int | None' = None, inverted: 'int | None' = None, comparison: 'int | None' = None, victory_timer_type: 'int | None' = None) -> 'Condition'",
+    "parameters": [
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "comparison",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "victory_timer_type",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.46"
+    ]
+  },
+  {
+    "condition_id": 57,
+    "internal_name": "and_",
+    "source_internal_name": "and_",
+    "display_name": "And",
+    "description": "The **AND** condition does not have any attributes This condition was added in: 1.46",
+    "signature": "and_(self) -> 'Condition'",
+    "parameters": [],
+    "notes": [
+      "The **AND** condition does not have any attributes",
+      "This condition was added in: 1.46"
+    ]
+  },
+  {
+    "condition_id": 75,
+    "internal_name": "decision_triggered",
+    "source_internal_name": "decision_triggered",
+    "display_name": "Decision Triggered",
+    "description": "This condition was added in: 1.54 (Trigger version 4.1)",
+    "signature": "decision_triggered(self, inverted: 'int | None' = None, decision_id: 'int | None' = None, decision_option: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "decision_id",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "decision_option",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.54 (Trigger version 4.1)"
+    ]
+  },
+  {
+    "condition_id": 76,
+    "internal_name": "object_attacked",
+    "source_internal_name": "object_attacked",
+    "display_name": "Object Attacked",
+    "description": "This condition was added in: 1.54 (Trigger version 4.1)",
+    "signature": "object_attacked(self, object_list: 'int | None' = None, quantity: 'int | None' = None, source_player: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, unit_object: 'int | None' = None, inverted: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "object_list",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_group",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "object_type",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.54 (Trigger version 4.1)"
+    ]
+  },
+  {
+    "condition_id": 77,
+    "internal_name": "hero_power_cast",
+    "source_internal_name": "hero_power_cast",
+    "display_name": "Hero Power Cast",
+    "description": "This condition was added in: 1.54 (Trigger version 4.1)",
+    "signature": "hero_power_cast(self, source_player: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.54 (Trigger version 4.1)"
+    ]
+  },
+  {
+    "condition_id": 78,
+    "internal_name": "compare_variables",
+    "source_internal_name": "compare_variables",
+    "display_name": "Compare Variables",
+    "description": "This condition was added in: 1.54 (Trigger version 4.1)",
+    "signature": "compare_variables(self, inverted: 'int | None' = None, variable: 'int | None' = None, comparison: 'int | None' = None, variable2: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "variable",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "comparison",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "variable2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.54 (Trigger version 4.1)"
+    ]
+  },
+  {
+    "condition_id": 79,
+    "internal_name": "trigger_active",
+    "source_internal_name": "trigger_active",
+    "display_name": "Trigger Active",
+    "description": "This condition was added in: 1.54 (Trigger version 4.1)",
+    "signature": "trigger_active(self, trigger_id: 'int | None' = None, inverted: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "trigger_id",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.54 (Trigger version 4.1)"
+    ]
+  },
+  {
+    "condition_id": 80,
+    "internal_name": "local_tech_researched",
+    "source_internal_name": "local_tech_researched",
+    "display_name": "Local Tech Researched",
+    "description": "This condition was added in: 1.55 (Trigger version 4.5)",
+    "signature": "local_tech_researched(self, local_technology: 'int | None' = None, source_player: 'int | None' = None, unit_object: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, inverted: 'int | None' = None, quantity: 'int | None' = None)",
+    "parameters": [
+      {
+        "name": "local_technology",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "source_player",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "unit_object",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_x1",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_y1",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_x2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "area_y2",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "inverted",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      },
+      {
+        "name": "quantity",
+        "type": "int | None",
+        "default": "None",
+        "description": ""
+      }
+    ],
+    "notes": [
+      "This condition was added in: 1.55 (Trigger version 4.5)"
+    ]
+  }
+]

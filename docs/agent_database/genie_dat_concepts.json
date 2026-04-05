@@ -1,0 +1,579 @@
+[
+  {
+    "id": "genie_workspace_manager_ownership",
+    "name": "GenieWorkspace",
+    "display_name": "GenieWorkspace Manager Ownership",
+    "category": "workspace_orchestration",
+    "summary": "Load one GenieWorkspace, keep manager ownership explicit, and route each mutation through the manager that owns that asset surface.",
+    "why_it_matters": "A mature .dat project is not one giant mutable blob. The workspace is the entrypoint, while unit_manager, graphic_manager, sound_manager, tech_manager, civ_manager, and effect_manager own different edit surfaces.",
+    "owners": [
+      "workspace",
+      "unit_manager",
+      "graphic_manager",
+      "sound_manager",
+      "tech_manager",
+      "civ_manager",
+      "effect_manager"
+    ],
+    "exact_terms": [
+      "GenieWorkspace",
+      "unit_manager",
+      "graphic_manager",
+      "sound_manager",
+      "tech_manager",
+      "civ_manager",
+      "effect_manager"
+    ],
+    "aliases": [
+      "workspace managers",
+      "genie managers",
+      "manager ownership"
+    ],
+    "related_fields": [
+      "workspace.save",
+      "workspace.save_registry"
+    ],
+    "how_it_works": "The project loads the base dat once in main/main.py, acquires managers once, applies high-level systems, and saves at the end. Cross-asset features should compose several managers inside one feature apply_ module instead of blurring ownership in the root entrypoint.",
+    "project_evidence": [
+      "GoKu RPG Genie Code/main/main.py loads the workspace once, gets the managers once, then calls class, world, character, inventory, and skill-tree systems.",
+      "apply_items.py uses graphic_manager, unit_manager, civ_manager, effect_manager, and tech_manager together inside one feature workflow."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "pitfalls": [
+      "Do not repeatedly load and save the workspace in leaf modules.",
+      "Do not explain a feature as if every manager can mutate every asset type."
+    ],
+    "query_terms": [
+      "GenieWorkspace managers",
+      "which manager edits graphics",
+      "dat manager ownership",
+      "workspace orchestration"
+    ]
+  },
+  {
+    "id": "unit_creation_from_base_asset",
+    "name": "base_unit_id",
+    "display_name": "Unit Creation From A Stable Base Asset",
+    "category": "unit_creation",
+    "summary": "New units in this project are usually created from a known base unit, then narrowed by mutating only the fields that matter for the feature.",
+    "why_it_matters": "Copying from a stable base keeps hidden engine defaults intact while letting the project control identity, footprint, selection, and linkage fields explicitly.",
+    "owners": [
+      "unit_manager"
+    ],
+    "exact_terms": [
+      "base_unit_id",
+      "unit_manager.create",
+      "unit.name",
+      "radius_x",
+      "radius_y",
+      "radius_z",
+      "selection_effect"
+    ],
+    "aliases": [
+      "copy base unit",
+      "clone unit from template",
+      "unit creation template"
+    ],
+    "related_fields": [
+      "standing_sprite_id1",
+      "standing_sprite_id2",
+      "dead_unit_id"
+    ],
+    "how_it_works": "The project uses ws.unit_manager.create(name=..., base_unit_id=...) to copy a known game unit, then mutates identity and gameplay fields. Pick Class copies TENT_C, while inventory items copy OUTPOST so the new unit inherits a safe starting shape before radius and selection fields are reset.",
+    "project_evidence": [
+      "Character_General/Pick_Class/pick_class_unit.py creates Pick Class from BuildingInfo.TENT_C.ID.",
+      "Inventory_System/Items/unit.py creates item units from BuildingInfo.OUTPOST.ID and then clears radius and selection behavior."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/references/recipes/genie_recipes.json",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "pitfalls": [
+      "Do not mutate the original base unit in place when the feature needs a distinct unit id.",
+      "Do not skip identity and footprint cleanup when the copied base unit carries unwanted defaults."
+    ],
+    "query_terms": [
+      "create unit from base_unit_id",
+      "unit_manager create from template",
+      "copy outpost for custom item",
+      "copy tent for pick class"
+    ]
+  },
+  {
+    "id": "unit_sprite_link_fields",
+    "name": "standing_sprite_id1",
+    "display_name": "Unit Sprite Link Fields",
+    "category": "unit_graphic_linking",
+    "summary": "standing_sprite_id1, standing_sprite_id2, and dead_unit_id are the core unit-side linkage fields used throughout the project to connect units to graphics and secondary units.",
+    "why_it_matters": "Most visual dat features only work once the unit-side ids are wired explicitly. Creating the asset is not enough; the unit must point to the right graphic or dead-unit component.",
+    "owners": [
+      "unit_manager",
+      "graphic_manager"
+    ],
+    "exact_terms": [
+      "standing_sprite_id1",
+      "standing_sprite_id2",
+      "dead_unit_id"
+    ],
+    "aliases": [
+      "standing sprite fields",
+      "unit graphic ids",
+      "dead unit linkage"
+    ],
+    "related_fields": [
+      "graphic.id",
+      "unit.id"
+    ],
+    "how_it_works": "The project creates graphics and units separately, then assigns graphic.id into standing_sprite_id1 or both standing_sprite_id1 and standing_sprite_id2. Multi-part features also assign a created secondary unit into dead_unit_id so the main unit points to a dead-state asset chain.",
+    "project_evidence": [
+      "apply_pick_class.py links unit.standing_sprite_id1 = graphic.id.",
+      "apply_potions.py links potion graphics through standing_sprite_id1 and standing_sprite_id2.",
+      "Heavenly_Bastion/link_components.py links the dead unit graphic first, then assigns heavenly_bastion_unit.dead_unit_id = heavenly_bastion_dead_unit.id."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/references/recipes/genie_recipes.json",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "pitfalls": [
+      "Do not create a custom graphic and forget the unit-side sprite link.",
+      "Do not set dead_unit_id before the secondary unit exists."
+    ],
+    "query_terms": [
+      "standing_sprite_id1",
+      "standing_sprite_id2",
+      "dead_unit_id",
+      "link unit to graphic",
+      "link main unit dead unit"
+    ]
+  },
+  {
+    "id": "graphic_non_particle_fields",
+    "name": "file_name",
+    "display_name": "Non-Particle Graphic Core Fields",
+    "category": "graphics",
+    "summary": "Non-particle graphics in the project are created through graphic_manager.add_graphic and then configured with file_name, layer, transparent_selection, replay_delay, frame_count, animation_duration, sequence_type, and angle_count.",
+    "why_it_matters": "These are the recurring sprite-side fields that make a new static or standard animated dat graphic behave correctly when attached to a unit.",
+    "owners": [
+      "graphic_manager"
+    ],
+    "exact_terms": [
+      "file_name",
+      "layer",
+      "transparent_selection",
+      "replay_delay",
+      "frame_count",
+      "animation_duration",
+      "sequence_type",
+      "angle_count"
+    ],
+    "aliases": [
+      "graphic fields",
+      "non-particle graphic template",
+      "sprite core fields"
+    ],
+    "related_fields": [
+      "standing_sprite_id1"
+    ],
+    "how_it_works": "The project uses add_graphic(name) to create the graphic row, then fills the core visual fields. Pick Class and Pick Difficulty graphics show the standard non-particle template: one file_name, one layer, one frame, and one angle for a static object marker.",
+    "project_evidence": [
+      "Character_General/Pick_Class/pick_class_graphics.py sets file_name, layer, transparent_selection, replay_delay, frame_count, animation_duration, sequence_type, and angle_count.",
+      "Mana bar graphics use the same base field family before adding wrapper deltas."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "pitfalls": [
+      "Do not assume add_graphic(name) alone is enough for a working in-game graphic row.",
+      "Do not mix sprite configuration with unrelated unit or tech edits when teaching the workflow."
+    ],
+    "query_terms": [
+      "file_name graphic layer frame_count",
+      "non-particle graphic template",
+      "graphic_manager add_graphic fields"
+    ]
+  },
+  {
+    "id": "graphic_particle_effect_fields",
+    "name": "particle_effect_name",
+    "display_name": "Particle Effect Graphic Fields",
+    "category": "graphics",
+    "summary": "Particle-style marker graphics are normal graphics with particle_effect_name and a slightly different animation profile, then linked to a lightweight unit.",
+    "why_it_matters": "Quest markers and other world indicators often need a particle-driven visual identity rather than a plain sprite file alone.",
+    "owners": [
+      "graphic_manager",
+      "unit_manager"
+    ],
+    "exact_terms": [
+      "particle_effect_name",
+      "animation_duration",
+      "sequence_type"
+    ],
+    "aliases": [
+      "particle graphic",
+      "quest marker graphic",
+      "marker particle effect"
+    ],
+    "related_fields": [
+      "standing_sprite_id1",
+      "graphic.id"
+    ],
+    "how_it_works": "The project creates a graphic row through add_graphic, assigns particle_effect_name, and then configures layer, transparency, frame_count, animation_duration, sequence_type, and angle_count. The graphic is then linked into a marker or quest unit through the normal standing sprite linkage.",
+    "project_evidence": [
+      "Character_General/Quests/Quest_Grey/quest_grey_graphics.py sets particle_effect_name = 'question_mark_grey' and uses a particle-style animation profile."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/references/recipes/genie_recipes.json"
+    ],
+    "pitfalls": [
+      "Do not treat the particle graphic as the full gameplay object when the feature still needs a unit anchor.",
+      "Do not reuse non-particle timing defaults blindly on marker graphics."
+    ],
+    "query_terms": [
+      "particle_effect_name",
+      "quest marker dat graphic",
+      "particle marker unit graphic"
+    ]
+  },
+  {
+    "id": "graphic_wrapper_delta_pattern",
+    "name": "add_delta",
+    "display_name": "Graphic Wrapper Delta Pattern",
+    "category": "graphics",
+    "summary": "The project uses wrapper graphics with add_delta to offset or compose a base graphic instead of duplicating the underlying sprite logic everywhere.",
+    "why_it_matters": "This is the clean pattern for overlays like mana bars, where the visible asset should inherit a base graphic but render with a controlled offset.",
+    "owners": [
+      "graphic_manager"
+    ],
+    "exact_terms": [
+      "add_delta",
+      "offset_x",
+      "offset_y",
+      "display_angle"
+    ],
+    "aliases": [
+      "wrapper graphic",
+      "graphic delta",
+      "offset overlay graphic"
+    ],
+    "related_fields": [
+      "layer",
+      "frame_count"
+    ],
+    "how_it_works": "The mana bar workflow creates a base graphic from the source SLX name, then creates a second wrapper graphic and calls add_delta(graphic_id=base_graphic.id, offset_x=0, offset_y=-50, display_angle=-1). The wrapper becomes the asset that gets referenced by gameplay systems.",
+    "project_evidence": [
+      "Graphics_Making/Mana_Bar/apply_mana_bar.py builds wrapper graphics named hero_mana_bar_*_percent and adds a delta with offset_y = -50."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "pitfalls": [
+      "Do not overwrite the base graphic when the feature expects a reusable wrapper.",
+      "Do not hide the offset logic inside unrelated system orchestration."
+    ],
+    "query_terms": [
+      "add_delta graphic",
+      "wrapper graphic offset",
+      "mana bar delta pattern"
+    ]
+  },
+  {
+    "id": "civ_global_resource_slots",
+    "name": "add_resource",
+    "display_name": "Civilization Resource Slots Are Global",
+    "category": "civilizations",
+    "summary": "New resource slots are added through civ_manager and apply to every civilization, not just one local feature row.",
+    "why_it_matters": "Inventory-style systems and custom dat resources depend on understanding that civ resources are global column additions across all civilizations.",
+    "owners": [
+      "civ_manager"
+    ],
+    "exact_terms": [
+      "civ_manager.add_resource",
+      "resources",
+      "num_resources",
+      "resource accessor"
+    ],
+    "aliases": [
+      "global resource slot",
+      "civ resource columns",
+      "custom resource id"
+    ],
+    "related_fields": [
+      "resource_id",
+      "civ.resource"
+    ],
+    "how_it_works": "The item workflow allocates one new resource slot per item through civ_manager.add_resource(default_value=0.0). The underlying tooling notes that resources are global, so add/remove operations must happen for all civilizations together, while per-civ values are edited through the civ resource accessor.",
+    "project_evidence": [
+      "Inventory_System/Items/resource.py exposes add_item_resource(civ_manager) -> civ_manager.add_resource(default_value=0.0).",
+      "items_resources_data.json records each generated item resource id.",
+      "The vendored CivManager and ResourceAccessor docs in the project note that resources are global across all civilizations."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "pitfalls": [
+      "Do not describe a custom resource slot as if it exists only for one civ.",
+      "Do not hardcode resource ids in many feature files when the project already saves a shared mapping."
+    ],
+    "query_terms": [
+      "civ_manager add_resource",
+      "custom resource slot",
+      "resources are global across civilizations",
+      "items_resources_data"
+    ]
+  },
+  {
+    "id": "effect_command_unlock_chain",
+    "name": "modify_tech",
+    "display_name": "Effect Command Unlock Chains",
+    "category": "effects_and_techs",
+    "summary": "The project uses effect commands such as resource_modifier, modify_tech, and enable_disable_unit to turn resource slots and tech rows into actual gameplay unlocks.",
+    "why_it_matters": "In Genie dat work, a tech or resource row does nothing useful until an effect command chain connects it to a behavior change.",
+    "owners": [
+      "effect_manager",
+      "tech_manager"
+    ],
+    "exact_terms": [
+      "resource_modifier",
+      "modify_tech",
+      "enable_disable_unit",
+      "effect.add_command"
+    ],
+    "aliases": [
+      "effect command chain",
+      "tech enable effect",
+      "dat unlock effect"
+    ],
+    "related_fields": [
+      "effect_id",
+      "tech.effect_id",
+      "resource_id",
+      "unit_id"
+    ],
+    "how_it_works": "The item system creates one effect per item resource and then composes a separate enable effect that modifies the item tech state and enables the unit. The effect layer is where the abstract resource or tech ids become concrete gameplay changes.",
+    "project_evidence": [
+      "Inventory_System/Items/effect.py creates an effect and adds a resource_modifier command.",
+      "Inventory_System/Items/enable_techs.py adds modify_tech and enable_disable_unit commands to the enable effect."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/references/recipes/genie_recipes.json"
+    ],
+    "pitfalls": [
+      "Do not assume a created tech unlocks content without an effect command path.",
+      "Do not scatter command ids and target ids across unrelated modules."
+    ],
+    "query_terms": [
+      "modify_tech enable_disable_unit",
+      "effect add_command resource_modifier",
+      "dat tech unlock effect chain"
+    ]
+  },
+  {
+    "id": "tech_definition_and_research_location",
+    "name": "add_research_location",
+    "display_name": "Tech Definition And Research Location Fields",
+    "category": "techs",
+    "summary": "A tech needs more than a name and effect_id. The project explicitly wires required techs, min_required_techs, type, icon, repeatable flags, zeroed cost slots, and research locations.",
+    "why_it_matters": "This is the recurring dat surface for making a tech actually researchable from a specific unit or keeping it hidden until another enable path exposes it.",
+    "owners": [
+      "tech_manager"
+    ],
+    "exact_terms": [
+      "effect_id",
+      "set_required_tech",
+      "min_required_techs",
+      "type",
+      "icon_id",
+      "repeatable",
+      "set_cost",
+      "add_research_location",
+      "location_unit_id",
+      "button_id",
+      "hotkey_str_id"
+    ],
+    "aliases": [
+      "research location",
+      "tech cost fields",
+      "required tech slots"
+    ],
+    "related_fields": [
+      "tech.id",
+      "effect.id"
+    ],
+    "how_it_works": "The project uses tech_manager.add_new(name=..., effect_id=...) and then fills the rest of the tech row explicitly. create_item_technology sets one required tech slot, min_required_techs, type, icon, repeatable, three cost slots, and then adds a research location for the owning unit. The enable technology uses a hidden location_unit_id = -1 until the effect chain exposes the item techs.",
+    "project_evidence": [
+      "Inventory_System/Items/technology.py creates an item technology with effect_id, required tech, zero cost slots, and add_research_location.",
+      "Inventory_System/Items/enable_techs.py creates a hidden enabling technology with location_unit_id = -1 and no visible button."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/references/recipes/genie_recipes.json"
+    ],
+    "pitfalls": [
+      "Do not stop at tech_manager.add_new when the tech still lacks prerequisites, cost, or research-location wiring.",
+      "Do not confuse a hidden enable technology with a visible research entry."
+    ],
+    "query_terms": [
+      "add_research_location",
+      "set_required_tech",
+      "tech cost slots",
+      "hidden enable technology"
+    ]
+  },
+  {
+    "id": "item_resource_effect_tech_pipeline",
+    "name": "items_resources_data",
+    "display_name": "Resource -> Effect -> Tech -> Unit Pipeline",
+    "category": "data_driven_pipeline",
+    "summary": "The item system is a full data-driven dat pipeline: create graphic, create unit, allocate resource, create effect, create tech, enable the tech, then save the generated id mapping.",
+    "why_it_matters": "This is the clearest real project proof that the dat side should be taught as a chain of linked systems, not isolated field edits.",
+    "owners": [
+      "graphic_manager",
+      "unit_manager",
+      "civ_manager",
+      "effect_manager",
+      "tech_manager"
+    ],
+    "exact_terms": [
+      "items_resources_data.json",
+      "item_resource_id",
+      "effect_id",
+      "tech_id"
+    ],
+    "aliases": [
+      "item pipeline",
+      "resource effect tech chain",
+      "data-driven item generation"
+    ],
+    "related_fields": [
+      "standing_sprite_id1",
+      "standing_sprite_id2",
+      "resource_id",
+      "effect_id"
+    ],
+    "how_it_works": "apply_items.py loops over source art files, creates the graphic and unit, links the sprites, allocates a global resource slot, creates an effect for that resource, creates a technology for that effect, enables the technology through a shared effect, and writes items_resources_data.json so later systems can rebalance or query the generated ids without reopening code.",
+    "project_evidence": [
+      "Inventory_System/Items/apply_items.py implements the full pipeline in one coordinator.",
+      "main/items_resources_data.json stores the generated item_name -> item_resource_id mapping for later balancing and retrieval."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md",
+      "docs/agent/references/recipes/genie_recipes.json"
+    ],
+    "pitfalls": [
+      "Do not bury generated ids in transient console output when a shared JSON mapping is needed later.",
+      "Do not separate the pipeline explanation into unrelated docs without showing the full chain."
+    ],
+    "query_terms": [
+      "items_resources_data",
+      "resource effect tech unit pipeline",
+      "data-driven item generation dat"
+    ]
+  },
+  {
+    "id": "task_and_train_location_wiring",
+    "name": "task",
+    "display_name": "Task And Train-Location Wiring",
+    "category": "production_and_commands",
+    "summary": "Production and custom action features depend on task rows or train-location rows on the acting unit or producer, not only on the produced unit definition.",
+    "why_it_matters": "Agents often focus on the target unit and forget the producer-side command path that actually makes the feature reachable in-game.",
+    "owners": [
+      "unit_manager",
+      "tech_manager"
+    ],
+    "exact_terms": [
+      "task",
+      "add_build_task",
+      "train_location",
+      "location_unit_id"
+    ],
+    "aliases": [
+      "production task",
+      "build task",
+      "train location wiring"
+    ],
+    "related_fields": [
+      "unit_id",
+      "task unit id",
+      "research location"
+    ],
+    "how_it_works": "The repo already teaches this as a recipe surface: create or retrieve the actor, create or retrieve the target unit, then add the build task or train-location mapping on the producer side. In practice, this is the difference between a valid data row and an actually reachable production flow.",
+    "project_evidence": [
+      "The genie recipe layer in this repo already includes add_build_task_to_hero and wire_train_location_and_task because the GoKu workflow repeatedly depends on producer-side wiring.",
+      "create_item_technology adds a research location onto the unit side, which is the tech analogue of production-path wiring."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/references/recipes/genie_recipes.json"
+    ],
+    "pitfalls": [
+      "Do not validate only the produced unit row when the producer-side task path is missing.",
+      "Do not mix production-path edits with unrelated balance changes in one file."
+    ],
+    "query_terms": [
+      "task id",
+      "build task",
+      "train location",
+      "producer side wiring"
+    ]
+  },
+  {
+    "id": "balance_registry_and_output_policy",
+    "name": "config/ids.py",
+    "display_name": "Balance Registry And Output Policy",
+    "category": "project_structure",
+    "summary": "Global ids should live in a shared registry, balance mappings should live in data files, and the output dat path should come from config or the user instead of a hardcoded machine path.",
+    "why_it_matters": "This keeps the dat project maintainable, makes balance passes cheap, and prevents agents from inventing local output paths when they generalize your project structure.",
+    "owners": [
+      "config layer",
+      "workspace"
+    ],
+    "exact_terms": [
+      "config/ids.py",
+      "workspace.save",
+      "workspace.save_registry",
+      "items_resources_data.json"
+    ],
+    "aliases": [
+      "shared id registry",
+      "balance data file",
+      "dat output path"
+    ],
+    "related_fields": [
+      "graphic ids",
+      "resource ids"
+    ],
+    "how_it_works": "The project centralizes stable graphic ids in config/ids.py, writes generated item resource mappings to JSON, and saves the built dat plus a registry artifact at the end of main/main.py. General repo guidance should preserve that structure but ask the user where to write the final dat if the target project does not already define an output path.",
+    "project_evidence": [
+      "config/ids.py stores shared graphics and world object ids.",
+      "main/main.py saves the modified dat and save_registry output.",
+      "main/items_resources_data.json is the explicit balance-facing mapping file."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "pitfalls": [
+      "Do not hardcode one developer PC mod folder as the default output answer.",
+      "Do not scatter shared ids and balance data across unrelated feature files."
+    ],
+    "query_terms": [
+      "config ids py",
+      "items_resources_data json",
+      "workspace save_registry",
+      "where to save modified dat"
+    ]
+  }
+]

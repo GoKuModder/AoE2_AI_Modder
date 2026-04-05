@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "description": "Golden design-brief prompts that should retrieve a compact bundle of recipes for autonomous AoE2 feature planning.",
+  "defaults": {
+    "k": 6,
+    "min_recall": 0.9,
+    "min_mrr": 0.25,
+    "min_budget_pass_rate": 1.0,
+    "max_context_chars": 3800,
+    "max_retrieved": 4,
+    "max_steps_per_result": 6,
+    "max_best_files_per_result": 5
+  },
+  "cases": [
+    {
+      "id": "design-rpg-town-loop",
+      "query": "Design a class-based RPG town scenario idea with NPC quest givers, quest progression, class progression, and data-driven class stat scaling.",
+      "expected_all": [
+        "npc_interaction_dialogue",
+        "quest_system_flow",
+        "class_pick_and_progression",
+        "class_stat_scaling_tables"
+      ],
+      "limit": 4
+    },
+    {
+      "id": "design-boss-dungeon-loop",
+      "query": "Design a boss dungeon map idea with staged boss phases, checkpoint resets, reward tables, and boss reward payout.",
+      "expected_all": [
+        "boss_encounter_flow",
+        "fail_and_reset_flow",
+        "reward_table_resolution",
+        "boss_reward_distribution"
+      ],
+      "limit": 4
+    },
+    {
+      "id": "design-survival-arena-loop",
+      "query": "Design a survival arena scenario idea with enemy waves, recurring global announcements, reward tables, and a checkpoint fail reset flow.",
+      "expected_all": [
+        "wave_system_controller",
+        "global_event_notifications",
+        "reward_table_resolution",
+        "fail_and_reset_flow"
+      ],
+      "limit": 4
+    },
+    {
+      "id": "design-civ-tech-unit-loop",
+      "query": "Design a civilization-specific custom unit project where a tech unlocks a trained unit with its own production chain and custom resource costs.",
+      "expected_all": [
+        "tech_gated_production_chain",
+        "apply_tech_effect_unlock",
+        "civ_specific_cost_profile"
+      ],
+      "limit": 4
+    }
+  ]
+}

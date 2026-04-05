@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "aoe2-ai-modder"
 version = "0.1.0"
-description = "AoE2:DE AI scripting and trigger knowledge tooling."
+description = "AoE2:DE agent knowledge base for XS, AI scripts, scenario triggers, and genie tooling."
 requires-python = ">=3.10"
 dependencies = [
   "beautifulsoup4>=4.12.0",

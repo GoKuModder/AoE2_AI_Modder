@@ -1,0 +1,2857 @@
+[
+  {
+    "effect_id": "1",
+    "internal_name": "change_diplomacy",
+    "display_name": "Change Diplomacy",
+    "family": "diplomacy_ai",
+    "primary_role": "Change player relationships or communicate with AI-facing systems.",
+    "how_it_is_used": "Use this family for treaties, factions, scripted political actions, AI coordination, or trigger-to-AI handoffs. The effect is usually part of a dedicated diplomacy or encounter module rather than a generic combat trigger.",
+    "architecture_notes": "Keep diplomacy and AI signaling explicit. Scenarios become easier to reason about when relationship changes are grouped in one subsystem instead of hidden in many unrelated triggers.",
+    "common_pairings": [
+      "diplomacy_state",
+      "researching_tech",
+      "send_chat",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 11 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (10 uses), Hide_and_Seek (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 11,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py:40",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py:45",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py:43"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "2",
+    "internal_name": "research_technology",
+    "display_name": "Research Technology",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 5 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (1 uses), GoKu RPG Project (2 uses), Hide_and_Seek (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> main\\Medieval_Europe_1200_AD.py:189",
+      "GoKu RPG Project -> main\\main_code.py:668",
+      "GoKu RPG Project -> main\\main_code.py:679"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "3",
+    "internal_name": "send_chat",
+    "display_name": "Send Chat",
+    "family": "feedback",
+    "primary_role": "Explain system state to the player through UI, camera, text, or sound.",
+    "how_it_is_used": "Use this when a system needs explicit textual confirmation, instruction, or narrative feedback. Your reference projects use it to expose hidden scenario state to players without requiring them to understand internal variable logic. It is also useful for debugging and for player-specific communication because it can be sent to one selected player instead of to everyone.",
+    "architecture_notes": "Feedback effects should react to meaningful state changes, not replace them. A scenario stays readable when feedback follows a real system event rather than becoming the event itself.",
+    "common_pairings": [
+      "activate_trigger",
+      "change_variable",
+      "objects_in_area",
+      "researching_tech"
+    ],
+    "real_project_usage_summary": "Observed 40 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (18 uses), GoKu RPG Project (17 uses), Hide_and_Seek (5 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 40,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:264",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:93",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:138"
+    ],
+    "audience_scope": "selected_player_only",
+    "attention_strength": "low",
+    "recommended_frequency": "debug_or_player_specific",
+    "best_use": "Best for debugging, private player hints, or low-priority player-specific communication that does not need to be broadcast to everyone."
+  },
+  {
+    "effect_id": "4",
+    "internal_name": "play_sound",
+    "display_name": "Play Sound",
+    "family": "feedback",
+    "primary_role": "Explain system state to the player through UI, camera, text, or sound.",
+    "how_it_is_used": "This is the audio confirmation layer for trigger systems. It is used when abilities fire, interactions succeed, cutscenes advance, or warnings need to feel immediate. In modular designs it usually sits at the end of a successful state transition, not at the front of the check.",
+    "architecture_notes": "Feedback effects should react to meaningful state changes, not replace them. A scenario stays readable when feedback follows a real system event rather than becoming the event itself.",
+    "common_pairings": [
+      "activate_trigger",
+      "change_variable",
+      "objects_in_area",
+      "researching_tech"
+    ],
+    "real_project_usage_summary": "Observed 77 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (61 uses), GoKu RPG Project (13 uses), Hide_and_Seek (3 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 77,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:233",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:97",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:134"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "5",
+    "internal_name": "tribute",
+    "display_name": "Tribute",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "Use these effects when the scenario behaves like a rule system with explicit state transitions. They are responsible for cooldown counters, mana-like systems, custom resources, progression markers, and any mechanic where one trigger must write a value that another trigger later reads.",
+    "architecture_notes": "Central registries and data-driven naming are critical here. Without them, a large scenario turns into a collision-prone mess of numeric IDs and unclear write paths.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "timer",
+      "activate_trigger",
+      "modify_attribute"
+    ],
+    "real_project_usage_summary": "Observed 4 times in the scanned reference projects, primarily in GoKu RPG Project (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Player_Progression\\Leveling\\leveling.py:192",
+      "GoKu RPG Project -> Player_Progression\\Leveling\\leveling.py:205",
+      "GoKu RPG Project -> Upgrade_Store\\Scenario_Triggers\\Item_Shop\\equip-unequip logic.py:141"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "6",
+    "internal_name": "unlock_gate",
+    "display_name": "Unlock Gate",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 3 times in the scanned reference projects, primarily in GoKu RPG Project (2 uses), Hide_and_Seek (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 3,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py:31",
+      "GoKu RPG Project -> NPC\\Quests\\Estea\\Elder_Beltherin\\The_Path_to_Ethoridar\\kill_mounted_bandits.py:20",
+      "Hide_and_Seek -> Setup\\World\\apply_world_setup.py:60"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "7",
+    "internal_name": "lock_gate",
+    "display_name": "Lock Gate",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 1 times in the scanned reference projects, primarily in Hide_and_Seek (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 1,
+    "used_in_projects": [
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "Hide_and_Seek -> Setup\\World\\apply_world_setup.py:17"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "8",
+    "internal_name": "activate_trigger",
+    "display_name": "Activate Trigger",
+    "family": "orchestration",
+    "primary_role": "Shape the trigger graph itself.",
+    "how_it_is_used": "This is the main orchestration handoff in your projects. It wakes the next slice of the system after the current trigger has finished checking inputs or applying one step of behavior. Large modular scenarios depend on it to keep systems readable because it lets each trigger own a single responsibility and then pass control onward.",
+    "architecture_notes": "Good trigger architecture treats orchestration as explicit. Instead of one giant trigger trying to do everything, orchestration effects move control between small, named triggers that each own one slice of behavior.",
+    "common_pairings": [
+      "timer",
+      "variable_value",
+      "and_",
+      "script_call"
+    ],
+    "real_project_usage_summary": "Observed 216 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (113 uses), GoKu RPG Project (91 uses), Hide_and_Seek (12 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 216,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Actions\\Adopt_Population\\effect.py:28",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:270",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:43"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9",
+    "internal_name": "deactivate_trigger",
+    "display_name": "Deactivate Trigger",
+    "family": "orchestration",
+    "primary_role": "Shape the trigger graph itself.",
+    "how_it_is_used": "Use this to close loops, consume one-shot buttons, and retire temporary system states. In real projects it is what prevents old guards, previous phases, or expired cooldown triggers from staying alive after the system has moved on.",
+    "architecture_notes": "Good trigger architecture treats orchestration as explicit. Instead of one giant trigger trying to do everything, orchestration effects move control between small, named triggers that each own one slice of behavior.",
+    "common_pairings": [
+      "timer",
+      "variable_value",
+      "and_",
+      "script_call"
+    ],
+    "real_project_usage_summary": "Observed 77 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (46 uses), GoKu RPG Project (23 uses), Hide_and_Seek (8 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 77,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:233",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Actions\\Adopt_Population\\effect.py:31",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:49"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "10",
+    "internal_name": "ai_script_goal",
+    "display_name": "AI Script Goal",
+    "family": "diplomacy_ai",
+    "primary_role": "Change player relationships or communicate with AI-facing systems.",
+    "how_it_is_used": "Use this family for treaties, factions, scripted political actions, AI coordination, or trigger-to-AI handoffs. The effect is usually part of a dedicated diplomacy or encounter module rather than a generic combat trigger.",
+    "architecture_notes": "Keep diplomacy and AI signaling explicit. Scenarios become easier to reason about when relationship changes are grouped in one subsystem instead of hidden in many unrelated triggers.",
+    "common_pairings": [
+      "diplomacy_state",
+      "researching_tech",
+      "send_chat",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "11",
+    "internal_name": "create_object",
+    "display_name": "Create Object",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this to materialize system state into world state. It is the spawn point for summons, markers, temporary helpers, encounter units, and other entities that only exist because the trigger system says they should.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 25 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (11 uses), GoKu RPG Project (9 uses), Hide_and_Seek (5 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 25,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:66",
+      "LordsOfDiplomacy - Easy Mode -> Lords\\lords_start.py:129",
+      "LordsOfDiplomacy - Easy Mode -> Lords\\lords_start.py:158"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "12",
+    "internal_name": "task_object",
+    "display_name": "Task Object",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "This is the core effect for scripted orders. It turns triggers into directors that can force objects toward a target, area, or action without waiting for player or AI initiative. It is especially useful in teleports, summons, escorts, and staged encounters.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 13 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (5 uses), GoKu RPG Project (8 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 13,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:519",
+      "LordsOfDiplomacy - Easy Mode -> Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py:114",
+      "LordsOfDiplomacy - Easy Mode -> Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py:141"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "13",
+    "internal_name": "declare_victory",
+    "display_name": "Declare Victory",
+    "family": "special",
+    "primary_role": "Handle niche scenario actions that do not fit the main families.",
+    "how_it_is_used": "Use these only when the scenario specifically needs their engine behavior. They are valid tools, but they should usually appear inside a narrow subsystem rather than as general-purpose building blocks.",
+    "architecture_notes": "Agents should check whether a more common family already solves the task before choosing one of these effects.",
+    "common_pairings": [
+      "send_chat",
+      "play_sound",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 6 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (2 uses), Hide_and_Seek (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 6,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> game_initialization.py:409",
+      "LordsOfDiplomacy - Easy Mode -> Kingdom_Resources\\Fame\\fame_victory.py:125",
+      "Hide_and_Seek -> Round_End\\Victory\\apply_victory_conditions.py:37"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "14",
+    "internal_name": "kill_object",
+    "display_name": "Kill Object",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 9 times in the scanned reference projects, primarily in GoKu RPG Project (8 uses), Hide_and_Seek (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 9,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Abilities\\Arcanist\\Active_Ability_1\\thunderstorm.py:58",
+      "GoKu RPG Project -> Abilities\\Arcanist\\Active_Ability_2\\pulse_eruption.py:40",
+      "GoKu RPG Project -> NPC\\Quests\\Estea\\Captain_Jorand\\Clearing_The_Depths\\apply_quest.py:48"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "15",
+    "internal_name": "remove_object",
+    "display_name": "Remove Object",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this to clean up temporary world state after an interaction, effect, summon, or scripted stage completes. In real projects it keeps the map and system state synchronized by removing entities that should no longer participate in the scenario.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 66 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (35 uses), GoKu RPG Project (17 uses), Hide_and_Seek (14 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 66,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:159",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:259",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:103"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "16",
+    "internal_name": "change_view",
+    "display_name": "Change View",
+    "family": "feedback",
+    "primary_role": "Explain system state to the player through UI, camera, text, or sound.",
+    "how_it_is_used": "Use this when the system needs to direct attention to a location or event. It is especially good as a support effect for player-specific notification because the camera move can target a chosen player and make the event harder to miss.",
+    "architecture_notes": "Feedback effects should react to meaningful state changes, not replace them. A scenario stays readable when feedback follows a real system event rather than becoming the event itself.",
+    "common_pairings": [
+      "activate_trigger",
+      "change_variable",
+      "objects_in_area",
+      "researching_tech"
+    ],
+    "real_project_usage_summary": "Observed 22 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (7 uses), GoKu RPG Project (11 uses), Hide_and_Seek (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 22,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:92",
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:500",
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:718"
+    ],
+    "audience_scope": "selected_player_or_targeted_players",
+    "attention_strength": "high",
+    "recommended_frequency": "event_driven",
+    "best_use": "Best as a targeted support effect when a player must notice where an event is happening right now."
+  },
+  {
+    "effect_id": "17",
+    "internal_name": "unload",
+    "display_name": "Unload",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "18",
+    "internal_name": "change_ownership",
+    "display_name": "Change Ownership",
+    "family": "diplomacy_ai",
+    "primary_role": "Change player relationships or communicate with AI-facing systems.",
+    "how_it_is_used": "Use this family for treaties, factions, scripted political actions, AI coordination, or trigger-to-AI handoffs. The effect is usually part of a dedicated diplomacy or encounter module rather than a generic combat trigger.",
+    "architecture_notes": "Keep diplomacy and AI signaling explicit. Scenarios become easier to reason about when relationship changes are grouped in one subsystem instead of hidden in many unrelated triggers.",
+    "common_pairings": [
+      "diplomacy_state",
+      "researching_tech",
+      "send_chat",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 29 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (5 uses), GoKu RPG Project (4 uses), Hide_and_Seek (20 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 29,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Lords\\lords_start.py:208",
+      "LordsOfDiplomacy - Easy Mode -> Provinces\\Capture_From_GAIA\\Capture_Province_gaia\\capture_successfull.py:92",
+      "LordsOfDiplomacy - Easy Mode -> Provinces\\Capture_Province\\capture_successfull.py:78"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "19",
+    "internal_name": "patrol",
+    "display_name": "Patrol",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "20",
+    "internal_name": "display_instructions",
+    "display_name": "Display Instructions",
+    "family": "feedback",
+    "primary_role": "Explain system state to the player through UI, camera, text, or sound.",
+    "how_it_is_used": "Use this for strong shared announcements that should be seen by all players without recurring constantly. It works best for lower-frequency global events, major warnings, tutorials, and milestone messages where a single strong broadcast is better than repeated notification spam.",
+    "architecture_notes": "Feedback effects should react to meaningful state changes, not replace them. A scenario stays readable when feedback follows a real system event rather than becoming the event itself.",
+    "common_pairings": [
+      "activate_trigger",
+      "change_variable",
+      "objects_in_area",
+      "researching_tech"
+    ],
+    "real_project_usage_summary": "Observed 32 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (17 uses), GoKu RPG Project (2 uses), Hide_and_Seek (13 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 32,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:680",
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:695",
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:710"
+    ],
+    "audience_scope": "all_players_visible",
+    "attention_strength": "high",
+    "recommended_frequency": "low_frequency",
+    "best_use": "Best for rare, important, shared announcements that should reach everyone without constantly flooding the screen."
+  },
+  {
+    "effect_id": "21",
+    "internal_name": "clear_instructions",
+    "display_name": "Clear Instructions",
+    "family": "feedback",
+    "primary_role": "Explain system state to the player through UI, camera, text, or sound.",
+    "how_it_is_used": "Use these effects when a trigger change should be legible to players. Real projects rely on them to teach mechanics, confirm interactions, sell class abilities, and make hidden state transitions visible without exposing internal variable logic directly.",
+    "architecture_notes": "Feedback effects should react to meaningful state changes, not replace them. A scenario stays readable when feedback follows a real system event rather than becoming the event itself.",
+    "common_pairings": [
+      "activate_trigger",
+      "change_variable",
+      "objects_in_area",
+      "researching_tech"
+    ],
+    "real_project_usage_summary": "Observed 2 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (1 uses), GoKu RPG Project (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 2,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:620",
+      "GoKu RPG Project -> World\\Instructions_Manager\\instructions_manager.py:69"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "22",
+    "internal_name": "freeze_object",
+    "display_name": "Freeze Object",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 7 times in the scanned reference projects, primarily in GoKu RPG Project (7 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 7,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> main\\main_code.py:199",
+      "GoKu RPG Project -> NPC\\Quests\\Estea\\initialize_names.py:37",
+      "GoKu RPG Project -> NPC\\Quests\\Estea\\initialize_names.py:40"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "23",
+    "internal_name": "use_advanced_buttons",
+    "display_name": "Use Advanced Buttons",
+    "family": "special",
+    "primary_role": "Handle niche scenario actions that do not fit the main families.",
+    "how_it_is_used": "Use these only when the scenario specifically needs their engine behavior. They are valid tools, but they should usually appear inside a narrow subsystem rather than as general-purpose building blocks.",
+    "architecture_notes": "Agents should check whether a more common family already solves the task before choosing one of these effects.",
+    "common_pairings": [
+      "send_chat",
+      "play_sound",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 1 times in the scanned reference projects, primarily in Hide_and_Seek (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 1,
+    "used_in_projects": [
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "Hide_and_Seek -> Setup\\Player_Setup\\apply_player_setup.py:669"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "24",
+    "internal_name": "damage_object",
+    "display_name": "Damage Object",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 12 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (8 uses), GoKu RPG Project (2 uses), Hide_and_Seek (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 12,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Espionage\\Actions\\Poison_Enemy_Army\\apply_poison_enemy_army.py:102",
+      "LordsOfDiplomacy - Easy Mode -> Espionage\\Actions\\Poison_Enemy_Army\\apply_poison_enemy_army.py:107",
+      "LordsOfDiplomacy - Easy Mode -> Espionage\\Actions\\Poison_Enemy_Army\\apply_poison_enemy_army.py:112"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "25",
+    "internal_name": "place_foundation",
+    "display_name": "Place Foundation",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "26",
+    "internal_name": "change_object_name",
+    "display_name": "Change Object Name",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 24 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (16 uses), GoKu RPG Project (8 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 24,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:185",
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:57",
+      "LordsOfDiplomacy - Easy Mode -> esponiage_system.py:25"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "27",
+    "internal_name": "change_object_hp",
+    "display_name": "Change Object HP",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 2 times in the scanned reference projects, primarily in Hide_and_Seek (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 2,
+    "used_in_projects": [
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "Hide_and_Seek -> Objectives\\Car\\Main_Objective\\apply_car_spawning.py:92",
+      "Hide_and_Seek -> old_code\\game.py:208"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "28",
+    "internal_name": "change_object_attack",
+    "display_name": "Change Object Attack",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "29",
+    "internal_name": "stop_object",
+    "display_name": "Stop Object",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 6 times in the scanned reference projects, primarily in GoKu RPG Project (5 uses), Hide_and_Seek (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 6,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Bosses\\Boss_System.py:164",
+      "GoKu RPG Project -> Bosses\\Boss_System.py:189",
+      "GoKu RPG Project -> Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py:100"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "30",
+    "internal_name": "attack_move",
+    "display_name": "Attack Move",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "31",
+    "internal_name": "change_object_armor",
+    "display_name": "Change Object Armor",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "32",
+    "internal_name": "change_object_range",
+    "display_name": "Change Object Range",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "33",
+    "internal_name": "change_object_speed",
+    "display_name": "Change Object Speed",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 1 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 1,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:134"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "34",
+    "internal_name": "heal_object",
+    "display_name": "Heal Object",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 2 times in the scanned reference projects, primarily in GoKu RPG Project (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 2,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Bosses\\Boss_System.py:257",
+      "GoKu RPG Project -> World\\Binary_Tree_Heal\\binary_tree_heal.py:62"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "35",
+    "internal_name": "teleport_object",
+    "display_name": "Teleport Object",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this when spatial repositioning itself is the mechanic. In projects with portals, scripted movement, or ability travel, teleportation is usually guarded by area or variable checks and paired with cleanup and feedback so the move feels intentional rather than abrupt.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 4 times in the scanned reference projects, primarily in GoKu RPG Project (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Bosses\\Boss_System.py:160",
+      "GoKu RPG Project -> Bosses\\Boss_System.py:185",
+      "GoKu RPG Project -> Bosses\\Regions\\Dqarn\\Dungeon\\Elephants_Dungeon\\Post_Boss_Events\\events.py:93"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "36",
+    "internal_name": "change_object_stance",
+    "display_name": "Change Object Stance",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 11 times in the scanned reference projects, primarily in GoKu RPG Project (11 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 11,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Bosses\\Boss_System.py:110",
+      "GoKu RPG Project -> Bosses\\Boss_System.py:152",
+      "GoKu RPG Project -> Mobs\\Region\\Ethoridar\\Castle_Dungeon\\abilities.py:147"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "37",
+    "internal_name": "display_timer",
+    "display_name": "Display Timer",
+    "family": "feedback",
+    "primary_role": "Explain system state to the player through UI, camera, text, or sound.",
+    "how_it_is_used": "This is the player-facing surface for time-based systems. Use it when cooldowns, objectives, waves, or phases should be visible instead of hidden inside internal timer conditions. It is also one of the best tools for high-frequency global-event notification because it is hard to miss and can keep recurring event state visible without relying on chat.",
+    "architecture_notes": "Feedback effects should react to meaningful state changes, not replace them. A scenario stays readable when feedback follows a real system event rather than becoming the event itself.",
+    "common_pairings": [
+      "activate_trigger",
+      "change_variable",
+      "objects_in_area",
+      "researching_tech"
+    ],
+    "real_project_usage_summary": "Observed 29 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (18 uses), GoKu RPG Project (2 uses), Hide_and_Seek (9 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 29,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:143",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py:104",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Defensive_Pact\\Helper_Functions\\defensive_pact_timer.py:47"
+    ],
+    "audience_scope": "all_players_visible",
+    "attention_strength": "high",
+    "recommended_frequency": "high_frequency",
+    "best_use": "Best for recurring or high-frequency global-event notification where players need a visible shared event banner or countdown-style message."
+  },
+  {
+    "effect_id": "38",
+    "internal_name": "enable_disable_object",
+    "display_name": "Enable Disable Object",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 20 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (14 uses), GoKu RPG Project (2 uses), Hide_and_Seek (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 20,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:66",
+      "LordsOfDiplomacy - Easy Mode -> characters.py:166",
+      "LordsOfDiplomacy - Easy Mode -> characters.py:175"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "39",
+    "internal_name": "enable_disable_technology",
+    "display_name": "Enable Disable Technology",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 5 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (5 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py:31",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:174",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Helper_Functions\\display_offer.py:43"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "40",
+    "internal_name": "change_object_cost",
+    "display_name": "Change Object Cost",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 9 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (6 uses), GoKu RPG Project (3 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 9,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:91",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:77",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Intializations\\initialize_diplomat_and_building.py:46"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "41",
+    "internal_name": "set_player_visibility",
+    "display_name": "Set Player Visibility",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 11 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (10 uses), GoKu RPG Project (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 11,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py:50",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Alliance\\Helper_Functions\\form_alliance.py:55",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py:53"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "42",
+    "internal_name": "change_object_icon",
+    "display_name": "Change Object Icon",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "43",
+    "internal_name": "replace_object",
+    "display_name": "Replace Object",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 26 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (4 uses), GoKu RPG Project (16 uses), Hide_and_Seek (6 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 26,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py:92",
+      "LordsOfDiplomacy - Easy Mode -> Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py:146",
+      "LordsOfDiplomacy - Easy Mode -> game_initialization.py:258"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "44",
+    "internal_name": "change_object_description",
+    "display_name": "Change Object Description",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 15 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (6 uses), GoKu RPG Project (6 uses), Hide_and_Seek (3 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 15,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:80",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:40",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Intializations\\initialize_diplomat_and_building.py:38"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "45",
+    "internal_name": "change_player_name",
+    "display_name": "Change Player Name",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "46",
+    "internal_name": "change_train_location",
+    "display_name": "Change Train Location",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 7 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (6 uses), GoKu RPG Project (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 7,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:85",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:33",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Intializations\\initialize_diplomat_and_building.py:31"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "47",
+    "internal_name": "change_research_location",
+    "display_name": "Change Research Location",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "48",
+    "internal_name": "change_civilization_name",
+    "display_name": "Change Civilization Name",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 3 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (3 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 3,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:180",
+      "LordsOfDiplomacy - Easy Mode -> Lords\\pick_lords.py:118",
+      "LordsOfDiplomacy - Easy Mode -> Lords\\Unused\\old_apply_lords.py:150"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "49",
+    "internal_name": "create_garrisoned_object",
+    "display_name": "Create Garrisoned Object",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 15 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (6 uses), GoKu RPG Project (7 uses), Hide_and_Seek (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 15,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Lords\\lords_start.py:75",
+      "LordsOfDiplomacy - Easy Mode -> Lords\\lords_start.py:80",
+      "LordsOfDiplomacy - Easy Mode -> Lords\\lords_start.py:85"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "50",
+    "internal_name": "acknowledge_ai_signal",
+    "display_name": "Acknowledge AI Signal",
+    "family": "diplomacy_ai",
+    "primary_role": "Change player relationships or communicate with AI-facing systems.",
+    "how_it_is_used": "Use this family for treaties, factions, scripted political actions, AI coordination, or trigger-to-AI handoffs. The effect is usually part of a dedicated diplomacy or encounter module rather than a generic combat trigger.",
+    "architecture_notes": "Keep diplomacy and AI signaling explicit. Scenarios become easier to reason about when relationship changes are grouped in one subsystem instead of hidden in many unrelated triggers.",
+    "common_pairings": [
+      "diplomacy_state",
+      "researching_tech",
+      "send_chat",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "51",
+    "internal_name": "modify_attribute",
+    "display_name": "Modify Attribute",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "This is one of the main gameplay mutation effects in your reference projects. It is used to turn scenario state into stat changes: buffs, debuffs, class scaling, temporary transformations, respawn adjustments, and balance-driven runtime tuning. It is the clearest example of why the trigger layer should read values from dictionaries instead of burying numbers inside long builder functions.",
+    "architecture_notes": "An agent should almost always look for the data source behind a `modify_attribute` call. The call itself is usually the endpoint of a larger data-driven design, not the place where balance truth should live.",
+    "common_pairings": [
+      "variable_value",
+      "timer",
+      "change_variable",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 390 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (109 uses), GoKu RPG Project (189 uses), Hide_and_Seek (92 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 390,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:101",
+      "LordsOfDiplomacy - Easy Mode -> characters.py:112",
+      "LordsOfDiplomacy - Easy Mode -> characters.py:191"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "52",
+    "internal_name": "modify_resource",
+    "display_name": "Modify Resource",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "Use this to implement mana-like systems, costs, custom progression currencies, and player-facing economy effects. In your projects it often works alongside variable systems so one number controls internal logic while another number is exposed to the player as a resource-like mechanic.",
+    "architecture_notes": "Central registries and data-driven naming are critical here. Without them, a large scenario turns into a collision-prone mess of numeric IDs and unclear write paths.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "timer",
+      "activate_trigger",
+      "modify_attribute"
+    ],
+    "real_project_usage_summary": "Observed 85 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (31 uses), GoKu RPG Project (42 uses), Hide_and_Seek (12 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 85,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py:66",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Neutral\\Helper_Functions\\form_neutral.py:72",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\War\\Helper_Functions\\form_war.py:78"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "53",
+    "internal_name": "modify_resource_by_variable",
+    "display_name": "Modify Resource By Variable",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "Use these effects when the scenario behaves like a rule system with explicit state transitions. They are responsible for cooldown counters, mana-like systems, custom resources, progression markers, and any mechanic where one trigger must write a value that another trigger later reads.",
+    "architecture_notes": "Central registries and data-driven naming are critical here. Without them, a large scenario turns into a collision-prone mess of numeric IDs and unclear write paths.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "timer",
+      "activate_trigger",
+      "modify_attribute"
+    ],
+    "real_project_usage_summary": "Observed 12 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (5 uses), GoKu RPG Project (7 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 12,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> game_initialization.py:233",
+      "LordsOfDiplomacy - Easy Mode -> Kingdom_Resources\\helper_function.py:92",
+      "LordsOfDiplomacy - Easy Mode -> Kingdom_Resources\\Merchant_Opinion\\merchant_opinion.py:180"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "54",
+    "internal_name": "set_building_gather_point",
+    "display_name": "Set Building Gather Point",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "55",
+    "internal_name": "script_call",
+    "display_name": "Script Call",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "This effect is the trigger-to-XS execution bridge. Your projects use it when triggers should hand off computed work, object processing, or custom logic to XS, then continue with trigger-side orchestration or presentation. It keeps heavy logic out of the trigger layer while still allowing triggers to own sequencing and player feedback.",
+    "architecture_notes": "Use this when XS is the right home for calculation or object iteration. Do not use it as a substitute for simple trigger-side work that is clearer without a bridge.",
+    "common_pairings": [
+      "script_call",
+      "variable_value",
+      "activate_trigger",
+      "deactivate_trigger",
+      "send_chat"
+    ],
+    "real_project_usage_summary": "Observed 159 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (75 uses), GoKu RPG Project (66 uses), Hide_and_Seek (18 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 159,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:225",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py:78",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:222"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "56",
+    "internal_name": "change_variable",
+    "display_name": "Change Variable",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "This is the write side of the scenario state machine. It advances quests, flips cooldown flags, stores per-player state, and records what later triggers should see through `variable_value` or other variable conditions. In practice this is one of the most important effects for keeping a scenario modular and explicit.",
+    "architecture_notes": "If the variable registry is clean, `change_variable` becomes a readable transition log for the whole scenario. If the registry is chaotic, this effect becomes a source of hidden coupling.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "activate_trigger",
+      "deactivate_trigger",
+      "modify_attribute"
+    ],
+    "real_project_usage_summary": "Observed 128 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (63 uses), GoKu RPG Project (23 uses), Hide_and_Seek (42 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 128,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:203",
+      "LordsOfDiplomacy - Easy Mode -> characters.py:207",
+      "LordsOfDiplomacy - Easy Mode -> characters.py:211"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "57",
+    "internal_name": "clear_timer",
+    "display_name": "Clear Timer",
+    "family": "orchestration",
+    "primary_role": "Shape the trigger graph itself.",
+    "how_it_is_used": "Use this family to control which trigger modules are alive at a given moment. In large scenarios these effects are the glue between systems: one trigger finishes its responsibility, then activates the next stage and deactivates the old loop or guard trigger.",
+    "architecture_notes": "Good trigger architecture treats orchestration as explicit. Instead of one giant trigger trying to do everything, orchestration effects move control between small, named triggers that each own one slice of behavior.",
+    "common_pairings": [
+      "timer",
+      "variable_value",
+      "and_",
+      "script_call"
+    ],
+    "real_project_usage_summary": "Observed 2 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (1 uses), GoKu RPG Project (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 2,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Kingdom_Resources\\Fame\\fame_victory.py:169",
+      "GoKu RPG Project -> NPC\\Quests\\quests.py:203"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "58",
+    "internal_name": "change_object_player_color",
+    "display_name": "Change Object Player Color",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "59",
+    "internal_name": "change_object_civilization_name",
+    "display_name": "Change Object Civilization Name",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 3 times in the scanned reference projects, primarily in GoKu RPG Project (3 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 3,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> NPC\\Names\\npc_names.py:142",
+      "GoKu RPG Project -> Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_shop_description.py:97",
+      "GoKu RPG Project -> Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_shop_description.py:106"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "60",
+    "internal_name": "change_object_player_name",
+    "display_name": "Change Object Player Name",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 1 times in the scanned reference projects, primarily in GoKu RPG Project (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 1,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Upgrade_Store\\Scenario_Triggers\\Initializations\\initialize_shop_description.py:88"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "61",
+    "internal_name": "disable_unit_targeting",
+    "display_name": "Disable Unit Targeting",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 33 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (14 uses), GoKu RPG Project (8 uses), Hide_and_Seek (11 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 33,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:24",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:140",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Diplomacy_Panel\\base_units\\deploy_units.py:93"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "62",
+    "internal_name": "enable_unit_targeting",
+    "display_name": "Enable Unit Targeting",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 4 times in the scanned reference projects, primarily in GoKu RPG Project (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Abilities\\Crusader\\Active_Ability_1\\valors_call.py:34",
+      "GoKu RPG Project -> Bosses\\Boss_System.py:114",
+      "GoKu RPG Project -> Skill_Tree\\Skill_Tree_Ability.py:146"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "63",
+    "internal_name": "change_technology_cost",
+    "display_name": "Change Technology Cost",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 7 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (5 uses), GoKu RPG Project (1 uses), Hide_and_Seek (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 7,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py:62",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:205",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Helper_Functions\\display_offer.py:73"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "64",
+    "internal_name": "change_technology_research_time",
+    "display_name": "Change Technology Research Time",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 5 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (5 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py:57",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:200",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Helper_Functions\\display_offer.py:68"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "65",
+    "internal_name": "change_technology_name",
+    "display_name": "Change Technology Name",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 5 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (5 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py:46",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:189",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Helper_Functions\\display_offer.py:58"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "66",
+    "internal_name": "change_technology_description",
+    "display_name": "Change Technology Description",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 4 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 4,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py:51",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:194",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Helper_Functions\\display_offer.py:63"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "67",
+    "internal_name": "enable_technology_stacking",
+    "display_name": "Enable Technology Stacking",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 5 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (5 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 5,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py:36",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:179",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Helper_Functions\\display_offer.py:48"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "68",
+    "internal_name": "disable_technology_stacking",
+    "display_name": "Disable Technology Stacking",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "69",
+    "internal_name": "acknowledge_multiplayer_ai_signal",
+    "display_name": "Acknowledge Multiplayer AI Signal",
+    "family": "diplomacy_ai",
+    "primary_role": "Change player relationships or communicate with AI-facing systems.",
+    "how_it_is_used": "Use this family for treaties, factions, scripted political actions, AI coordination, or trigger-to-AI handoffs. The effect is usually part of a dedicated diplomacy or encounter module rather than a generic combat trigger.",
+    "architecture_notes": "Keep diplomacy and AI signaling explicit. Scenarios become easier to reason about when relationship changes are grouped in one subsystem instead of hidden in many unrelated triggers.",
+    "common_pairings": [
+      "diplomacy_state",
+      "researching_tech",
+      "send_chat",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "70",
+    "internal_name": "disable_object_selection",
+    "display_name": "Disable Object Selection",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 32 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (10 uses), GoKu RPG Project (8 uses), Hide_and_Seek (14 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 32,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:115",
+      "LordsOfDiplomacy - Easy Mode -> Espionage\\Actions\\Open_Enemy_Gates\\apply_open_enemy_gates.py:98",
+      "LordsOfDiplomacy - Easy Mode -> main\\Lords_of_Diplomacy.py:185"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "71",
+    "internal_name": "enable_object_selection",
+    "display_name": "Enable Object Selection",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 13 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (4 uses), GoKu RPG Project (4 uses), Hide_and_Seek (5 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 13,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:118",
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:431",
+      "LordsOfDiplomacy - Easy Mode -> cut_scenes.py:763"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "72",
+    "internal_name": "change_color_mood",
+    "display_name": "Change Color Mood",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 4 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (2 uses), Hide_and_Seek (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 4,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> main\\remove_resources.py:48",
+      "LordsOfDiplomacy - Easy Mode -> Seasons\\apply_seasons.py:26",
+      "Hide_and_Seek -> Abilities\\Hunter\\Active_Ability_1\\blood_thirst.py:50"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "add_train_location",
+    "display_name": "add_train_location",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_object_caption",
+    "display_name": "change_object_caption",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 17 times in the scanned reference projects, primarily in GoKu RPG Project (6 uses), Hide_and_Seek (11 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 17,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Bosses\\Dialogue\\boss_dialogue.py:90",
+      "GoKu RPG Project -> NPC\\Dialogue\\npc_dialogue.py:113",
+      "GoKu RPG Project -> Player_Progression\\Leveling\\leveling.py:294"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_object_visibility",
+    "display_name": "change_object_visibility",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "Observed 4 times in the scanned reference projects, primarily in GoKu RPG Project (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> NPC\\Quests\\Estea\\Captain_Jorand\\Clearing_The_Depths\\apply_quest.py:52",
+      "GoKu RPG Project -> NPC\\Quests\\Estea\\Captain_Jorand\\Forest_Cleanup\\apply_quest.py:41",
+      "GoKu RPG Project -> NPC\\Quests\\Estea\\Elder_Beltherin\\Speak_to_Captain_Jorand\\apply_quest.py:29"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_player_color",
+    "display_name": "change_player_color",
+    "family": "identity_visibility",
+    "primary_role": "Change what players see and how objects or players are labeled.",
+    "how_it_is_used": "Use this family for polish, illusion, staged reveals, and scenario-controlled identity changes. It supports systems where the same gameplay object changes its name, caption, color, or apparent ownership based on scenario state.",
+    "architecture_notes": "Visibility and identity effects are best used as presentation layers on top of real state changes. Keep the authoritative state in variables or object data and let these effects communicate that state.",
+    "common_pairings": [
+      "change_variable",
+      "send_chat",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_hotkey",
+    "display_name": "change_technology_hotkey",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_icon",
+    "display_name": "change_technology_icon",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "change_technology_location",
+    "display_name": "change_technology_location",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Your reference projects use technology relocation as part of a custom interface pattern. The technology is not just a normal research; it becomes a positioned button or menu element inside a scenario-controlled UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "Observed 15 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (15 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 15,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Helper_Function\\UNUSED_initialize_tech.py:40",
+      "LordsOfDiplomacy - Easy Mode -> Court_Actions\\court_actions.py:183",
+      "LordsOfDiplomacy - Easy Mode -> Diplomacy\\Actions\\Alliance\\apply_alliance.py:251"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "count_units_into_variable",
+    "display_name": "count_units_into_variable",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "Use these effects when the scenario behaves like a rule system with explicit state transitions. They are responsible for cooldown counters, mana-like systems, custom resources, progression markers, and any mechanic where one trigger must write a value that another trigger later reads.",
+    "architecture_notes": "Central registries and data-driven naming are critical here. Without them, a large scenario turns into a collision-prone mess of numeric IDs and unclear write paths.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "timer",
+      "activate_trigger",
+      "modify_attribute"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_decision",
+    "display_name": "create_decision",
+    "family": "persistence",
+    "primary_role": "Store scenario-side state in key-value or decision systems.",
+    "how_it_is_used": "Use this family when the scenario wants a persistence-like or indexed-state layer that is not just one flat variable registry. It is useful for data-driven systems, loot or inventory state, and situations where triggers need to create or query structured records.",
+    "architecture_notes": "This family matters most when the rest of the project is already modular. If the data model is unclear, adding persistence effects will only make the system harder to reason about.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "create_decision",
+      "load_key_value",
+      "store_key_value"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_object_armor",
+    "display_name": "create_object_armor",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "create_object_attack",
+    "display_name": "create_object_attack",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "delete_key",
+    "display_name": "delete_key",
+    "family": "persistence",
+    "primary_role": "Store scenario-side state in key-value or decision systems.",
+    "how_it_is_used": "Use this family when the scenario wants a persistence-like or indexed-state layer that is not just one flat variable registry. It is useful for data-driven systems, loot or inventory state, and situations where triggers need to create or query structured records.",
+    "architecture_notes": "This family matters most when the rest of the project is already modular. If the data model is unclear, adding persistence effects will only make the system harder to reason about.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "create_decision",
+      "load_key_value",
+      "store_key_value"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "disable_object_deletion",
+    "display_name": "disable_object_deletion",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 29 times in the scanned reference projects, primarily in LordsOfDiplomacy - Easy Mode (16 uses), GoKu RPG Project (4 uses), Hide_and_Seek (9 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 29,
+    "used_in_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "LordsOfDiplomacy - Easy Mode -> characters.py:71",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:28",
+      "LordsOfDiplomacy - Easy Mode -> Clerical_Actions\\Initializations\\initialize_cleric.py:144"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "disable_unit_attackable",
+    "display_name": "disable_unit_attackable",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 12 times in the scanned reference projects, primarily in GoKu RPG Project (3 uses), Hide_and_Seek (9 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 12,
+    "used_in_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Skill_Tree\\Classes_Skill_Tree\\Cleric\\Active\\Active_Ability_3\\guardians_embrace.py:324",
+      "GoKu RPG Project -> Skill_Tree\\Skill_Tree_Ability.py:203",
+      "GoKu RPG Project -> Skill_Tree\\Skill_Tree_Ability.py:298"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "enable_object_deletion",
+    "display_name": "enable_object_deletion",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "enable_unit_attackable",
+    "display_name": "enable_unit_attackable",
+    "family": "interaction_control",
+    "primary_role": "Temporarily allow or forbid player interaction with units or objects.",
+    "how_it_is_used": "Use this family for cutscenes, stuns, protected summons, invulnerability windows, interface locking, or scripted sequences where players should not be able to interfere with the system at the wrong time.",
+    "architecture_notes": "Interaction locks are safest when paired with clear activation and cleanup triggers. The biggest failure mode is forgetting to re-enable the thing that was disabled.",
+    "common_pairings": [
+      "timer",
+      "activate_trigger",
+      "deactivate_trigger",
+      "play_sound"
+    ],
+    "real_project_usage_summary": "Observed 2 times in the scanned reference projects, primarily in GoKu RPG Project (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 2,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Skill_Tree\\Skill_Tree_Ability.py:149",
+      "GoKu RPG Project -> Skill_Tree\\Skill_Tree_Ability.py:223"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "initiate_research",
+    "display_name": "initiate_research",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "load_key_value",
+    "display_name": "load_key_value",
+    "family": "persistence",
+    "primary_role": "Store scenario-side state in key-value or decision systems.",
+    "how_it_is_used": "Use this family when the scenario wants a persistence-like or indexed-state layer that is not just one flat variable registry. It is useful for data-driven systems, loot or inventory state, and situations where triggers need to create or query structured records.",
+    "architecture_notes": "This family matters most when the rest of the project is already modular. If the data model is unclear, adding persistence effects will only make the system harder to reason about.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "create_decision",
+      "load_key_value",
+      "store_key_value"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_attribute_by_variable",
+    "display_name": "modify_attribute_by_variable",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 1 times in the scanned reference projects, primarily in GoKu RPG Project (1 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 1,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Leveling_System.py:162"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_attribute_for_class",
+    "display_name": "modify_attribute_for_class",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_object_attribute",
+    "display_name": "modify_object_attribute",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 2 times in the scanned reference projects, primarily in GoKu RPG Project (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 2,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Skill_Tree\\Skill_Tree_Ability.py:96",
+      "GoKu RPG Project -> Skill_Tree\\Skill_Tree_Ability.py:187"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_object_attribute_by_variable",
+    "display_name": "modify_object_attribute_by_variable",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_attribute",
+    "display_name": "modify_variable_by_attribute",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "Use these effects when the scenario behaves like a rule system with explicit state transitions. They are responsible for cooldown counters, mana-like systems, custom resources, progression markers, and any mechanic where one trigger must write a value that another trigger later reads.",
+    "architecture_notes": "Central registries and data-driven naming are critical here. Without them, a large scenario turns into a collision-prone mess of numeric IDs and unclear write paths.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "timer",
+      "activate_trigger",
+      "modify_attribute"
+    ],
+    "real_project_usage_summary": "Observed 4 times in the scanned reference projects, primarily in GoKu RPG Project (4 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 4,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Abilities\\Berserker\\Active_Ability_2\\bloodlust_frenzy.py:96",
+      "GoKu RPG Project -> Abilities\\Ranger\\Active_Ability_2\\soul_siphon.py:63",
+      "GoKu RPG Project -> Leveling_System.py:171"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_resource",
+    "display_name": "modify_variable_by_resource",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "Use these effects when the scenario behaves like a rule system with explicit state transitions. They are responsible for cooldown counters, mana-like systems, custom resources, progression markers, and any mechanic where one trigger must write a value that another trigger later reads.",
+    "architecture_notes": "Central registries and data-driven naming are critical here. Without them, a large scenario turns into a collision-prone mess of numeric IDs and unclear write paths.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "timer",
+      "activate_trigger",
+      "modify_attribute"
+    ],
+    "real_project_usage_summary": "Observed 2 times in the scanned reference projects, primarily in GoKu RPG Project (2 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 2,
+    "used_in_projects": [
+      "goku_rpg_project"
+    ],
+    "reference_examples": [
+      "GoKu RPG Project -> Player_Progression\\Attributes\\balance_mana.py:78",
+      "GoKu RPG Project -> Player_Progression\\Attributes\\balance_mana.py:112"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "modify_variable_by_variable",
+    "display_name": "modify_variable_by_variable",
+    "family": "resource_variable",
+    "primary_role": "Move numbers between scenario state, player resources, and trigger-controlled counters.",
+    "how_it_is_used": "Use these effects when the scenario behaves like a rule system with explicit state transitions. They are responsible for cooldown counters, mana-like systems, custom resources, progression markers, and any mechanic where one trigger must write a value that another trigger later reads.",
+    "architecture_notes": "Central registries and data-driven naming are critical here. Without them, a large scenario turns into a collision-prone mess of numeric IDs and unclear write paths.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "timer",
+      "activate_trigger",
+      "modify_attribute"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "none",
+    "display_name": "none",
+    "family": "special",
+    "primary_role": "Handle niche scenario actions that do not fit the main families.",
+    "how_it_is_used": "Use these only when the scenario specifically needs their engine behavior. They are valid tools, but they should usually appear inside a narrow subsystem rather than as general-purpose building blocks.",
+    "architecture_notes": "Agents should check whether a more common family already solves the task before choosing one of these effects.",
+    "common_pairings": [
+      "send_chat",
+      "play_sound",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "research_local_technology",
+    "display_name": "research_local_technology",
+    "family": "tech_edit",
+    "primary_role": "Turn technologies into a scenario-controlled interface and progression surface.",
+    "how_it_is_used": "Use these effects when technologies are serving as buttons, unlock panels, class menus, or progression displays rather than only vanilla researches. Your projects use this family to move, rename, cost, and gate technologies so the scenario can expose custom systems through the game UI.",
+    "architecture_notes": "This family is strongest when tech metadata comes from data dictionaries. That keeps UI and balancing changes out of the trigger orchestration code.",
+    "common_pairings": [
+      "researching_tech",
+      "technology_state",
+      "send_chat",
+      "display_timer",
+      "activate_trigger"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "set_object_cost",
+    "display_name": "set_object_cost",
+    "family": "stat_mutation",
+    "primary_role": "Change runtime object or class stats in response to scenario logic.",
+    "how_it_is_used": "Use this family for buffs, debuffs, scaling systems, class growth, difficulty adjustments, and temporary ability states. In your reference projects stat mutation is one of the main ways triggers turn variables and timers into visible gameplay consequences.",
+    "architecture_notes": "This family is where data-driven balancing matters most. If numbers are spread through trigger builders, later balance passes become expensive and error-prone. Keep the values in dictionaries and let trigger code only apply them.",
+    "common_pairings": [
+      "variable_value",
+      "change_variable",
+      "timer",
+      "script_call",
+      "modify_resource"
+    ],
+    "real_project_usage_summary": "Observed 8 times in the scanned reference projects, primarily in Hide_and_Seek (8 uses). Use the example paths as the first place to inspect the surrounding trigger architecture.",
+    "observed_usage_count": 8,
+    "used_in_projects": [
+      "hide_and_seek"
+    ],
+    "reference_examples": [
+      "Hide_and_Seek -> Setup\\Player_Setup\\apply_player_setup.py:700",
+      "Hide_and_Seek -> Setup\\Player_Setup\\apply_player_setup.py:706",
+      "Hide_and_Seek -> Setup\\Player_Setup\\apply_player_setup.py:712"
+    ],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "store_key_value",
+    "display_name": "store_key_value",
+    "family": "persistence",
+    "primary_role": "Store scenario-side state in key-value or decision systems.",
+    "how_it_is_used": "Use this family when the scenario wants a persistence-like or indexed-state layer that is not just one flat variable registry. It is useful for data-driven systems, loot or inventory state, and situations where triggers need to create or query structured records.",
+    "architecture_notes": "This family matters most when the rest of the project is already modular. If the data model is unclear, adding persistence effects will only make the system harder to reason about.",
+    "common_pairings": [
+      "variable_value",
+      "compare_variables",
+      "create_decision",
+      "load_key_value",
+      "store_key_value"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  },
+  {
+    "effect_id": "9999",
+    "internal_name": "train_unit",
+    "display_name": "train_unit",
+    "family": "object_control",
+    "primary_role": "Create, remove, move, or command units and objects in the world.",
+    "how_it_is_used": "Use this family when the trigger system needs to directly manipulate the playable world. It covers spawning units, issuing orders, moving objects, removing temporary entities, and forcing scripted interactions that the normal AI or player input should not own.",
+    "architecture_notes": "World-control effects become much easier to balance when the object IDs, areas, and per-level values come from data modules. Keep world mutation code thin and let configuration determine what gets spawned or moved.",
+    "common_pairings": [
+      "objects_in_area",
+      "variable_value",
+      "timer",
+      "play_sound",
+      "change_view"
+    ],
+    "real_project_usage_summary": "This parser feature is present in AoE2ScenarioParser but was not observed in the scanned local reference projects. Treat it as supported capability with no local canonical usage pattern yet.",
+    "observed_usage_count": 0,
+    "used_in_projects": [],
+    "reference_examples": [],
+    "audience_scope": "varies_by_parameters",
+    "attention_strength": "medium",
+    "recommended_frequency": "depends_on_system",
+    "best_use": "Use the effect according to its gameplay role and only treat it as a communication tool when the effect is actually player-facing."
+  }
+]

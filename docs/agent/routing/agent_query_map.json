@@ -1,0 +1,121 @@
+{
+  "intents": [
+    {
+      "intent": "find_xs_function",
+      "dataset_path": "docs/agent_database/xs_functions_catalog.json",
+      "lookup_keys": ["name", "desc"],
+      "fallback_strategy": "fuzzy_search"
+    },
+    {
+      "intent": "find_xs_constant",
+      "dataset_path": "docs/agent_database/xs_constants_catalog.json",
+      "lookup_keys": ["name", "desc"],
+      "fallback_strategy": "fuzzy_search"
+    },
+    {
+      "intent": "find_trigger_attribute",
+      "dataset_path": "docs/trigger_knowledge/attributes_dataset.json",
+      "lookup_keys": ["parser_enum_name", "ugc_name", "description"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_trigger_condition",
+      "dataset_path": "docs/trigger_knowledge/conditions_knowledge.json",
+      "lookup_keys": ["internal_name", "display_name", "description", "notes"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_trigger_effect",
+      "dataset_path": "docs/trigger_knowledge/effects_knowledge.json",
+      "lookup_keys": ["internal_name", "display_name", "description"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_trigger_condition_usage",
+      "dataset_path": "docs/trigger_knowledge/condition_project_usage.json",
+      "lookup_keys": ["internal_name", "display_name", "used_in_projects", "examples"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_trigger_condition_playbook",
+      "dataset_path": "docs/trigger_knowledge/condition_usage_playbook.json",
+      "lookup_keys": ["internal_name", "display_name", "primary_role", "how_it_is_used", "common_pairings"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_trigger_effect_usage",
+      "dataset_path": "docs/trigger_knowledge/effect_project_usage.json",
+      "lookup_keys": ["internal_name", "display_name", "used_in_projects", "examples"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_trigger_effect_playbook",
+      "dataset_path": "docs/trigger_knowledge/effect_usage_playbook.json",
+      "lookup_keys": ["internal_name", "display_name", "primary_role", "how_it_is_used", "common_pairings"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_genie_object",
+      "dataset_path": "docs/trigger_knowledge/genie_registry.json",
+      "lookup_keys": ["name", "aliases"],
+      "fallback_strategy": "fuzzy_search"
+    },
+    {
+      "intent": "find_genie_dat_concept",
+      "dataset_path": "docs/agent_database/genie_dat_concepts.json",
+      "lookup_keys": [
+        "name",
+        "display_name",
+        "category",
+        "summary",
+        "why_it_matters",
+        "owners",
+        "exact_terms",
+        "aliases",
+        "related_fields",
+        "how_it_works",
+        "project_evidence",
+        "query_terms",
+        "pitfalls"
+      ],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_ai_script_metadata",
+      "dataset_path": "docs/ai_scripting_knowledge/metadata_index.json",
+      "lookup_keys": ["command", "description"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_trigger_xs_pattern",
+      "dataset_path": "docs/agent/references/patterns/trigger_xs_patterns.json",
+      "lookup_keys": ["id", "title", "summary", "query_terms", "key_points", "implementation_steps", "agent_instructions", "path_guidance"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_genie_workflow_pattern",
+      "dataset_path": "docs/agent/references/patterns/genie_workflow_patterns.json",
+      "lookup_keys": ["id", "title", "summary", "query_terms", "key_points"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_scenario_recipe",
+      "dataset_path": "docs/agent/references/recipes/scenario_recipes.json",
+      "lookup_keys": ["id", "title", "summary", "query_terms", "steps", "when_to_use"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_parser_manager_pattern",
+      "dataset_path": "docs/agent/references/recipes/parser_manager_patterns.json",
+      "lookup_keys": ["id", "title", "summary", "query_terms", "operations", "steps"],
+      "fallback_strategy": "partial_match"
+    },
+    {
+      "intent": "find_genie_recipe",
+      "dataset_path": "docs/agent/references/recipes/genie_recipes.json",
+      "lookup_keys": ["id", "title", "summary", "query_terms", "managers", "steps"],
+      "fallback_strategy": "partial_match"
+    }
+  ]
+}
+

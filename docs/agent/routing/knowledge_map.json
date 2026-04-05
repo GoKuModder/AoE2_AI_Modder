@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "domains": [
+    {
+      "id": "xs",
+      "title": "XS",
+      "summary": "AoE2DE XS scripting knowledge with the strongest structured retrieval coverage in the repo.",
+      "open_first": [
+        "docs/agent/domains/XS_AGENT_GUIDE.md",
+        "docs/xs_knowledge/README.md",
+        "docs/agent_database/xs_functions_catalog.json"
+      ],
+      "canonical_docs": [
+        "docs/agent/domains/XS_AGENT_GUIDE.md",
+        "docs/xs_knowledge/README.md"
+      ],
+      "canonical_data": [
+        "docs/agent_database/xs_functions_catalog.json",
+        "docs/agent_database/xs_constants_catalog.json",
+        "docs/xs_knowledge/metadata_index.json",
+        "docs/xs_knowledge/document_store.jsonl",
+        "docs/agent/references/patterns/trigger_xs_patterns.json"
+      ],
+      "common_queries": [
+        "xsSetUnitPosition signature",
+        "what constant should I use in XS",
+        "how do I do arrays in XS",
+        "validate generated XS code",
+        "how do I declare extern xs variables",
+        "where should a generated xs file be written"
+      ],
+      "source_priority_order": [
+        "agent guide",
+        "structured catalogs",
+        "generated document store",
+        "raw XS training material",
+        "runtime Python modules"
+      ],
+      "related_domains": [
+        "ai_scripts",
+        "scenario_triggers",
+        "dat_genie_tooling"
+      ]
+    },
+    {
+      "id": "ai_scripts",
+      "title": "AI scripts",
+      "summary": "AoE2DE .per / .ai command knowledge, validation guidance, and AI-specific retrieval artifacts.",
+      "open_first": [
+        "docs/agent/domains/AI_SCRIPT_AGENT_GUIDE.md",
+        "docs/ai_scripting_knowledge/README.md",
+        "AoE2_AI_Scripting_Guide/README.md"
+      ],
+      "canonical_docs": [
+        "docs/agent/domains/AI_SCRIPT_AGENT_GUIDE.md",
+        "docs/ai_scripting_knowledge/README.md",
+        "AoE2_AI_Scripting_Guide/README.md"
+      ],
+      "canonical_data": [
+        "docs/ai_scripting_knowledge/metadata_index.json",
+        "docs/ai_scripting_knowledge/document_store.jsonl"
+      ],
+      "common_queries": [
+        "is this AI command allowed",
+        "defrule pattern for taunts",
+        "goal-based AI script logic",
+        "validate generated .per code"
+      ],
+      "source_priority_order": [
+        "agent guide",
+        "metadata index",
+        "generated document store",
+        "AI scripting guide corpus",
+        "runtime Python modules"
+      ],
+      "related_domains": [
+        "xs",
+        "scenario_triggers",
+        "dat_genie_tooling"
+      ]
+    },
+    {
+      "id": "scenario_triggers",
+      "title": "Scenario triggers",
+      "summary": "Trigger condition, effect, attribute, real-project usage, and genie object lookup for scenario editor and AoE2ScenarioParser-oriented tasks.",
+      "open_first": [
+        "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+        "docs/agent/domains/TRIGGER_CONDITIONS_EFFECTS_GUIDE.md",
+        "docs/trigger_knowledge/condition_usage_playbook.md",
+        "docs/trigger_knowledge/effect_usage_playbook.md",
+        "docs/trigger_knowledge/conditions_knowledge.md",
+        "docs/trigger_knowledge/effects_knowledge.md",
+        "docs/trigger_knowledge/attributes_knowledge.md",
+        "docs/trigger_knowledge/project_usage_knowledge.md"
+      ],
+      "canonical_docs": [
+        "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+        "docs/agent/domains/TRIGGER_CONDITIONS_EFFECTS_GUIDE.md",
+        "docs/trigger_knowledge/condition_usage_playbook.md",
+        "docs/trigger_knowledge/effect_usage_playbook.md",
+        "docs/trigger_knowledge/conditions_knowledge.md",
+        "docs/trigger_knowledge/effects_knowledge.md",
+        "docs/trigger_knowledge/attributes_knowledge.md",
+        "docs/trigger_knowledge/project_usage_knowledge.md"
+      ],
+      "canonical_data": [
+        "docs/trigger_knowledge/conditions_knowledge.json",
+        "docs/trigger_knowledge/effects_knowledge.json",
+        "docs/trigger_knowledge/condition_usage_playbook.json",
+        "docs/trigger_knowledge/effect_usage_playbook.json",
+        "docs/trigger_knowledge/attributes_dataset.json",
+        "docs/trigger_knowledge/genie_registry.json",
+        "docs/trigger_knowledge/condition_project_usage.json",
+        "docs/trigger_knowledge/effect_project_usage.json",
+        "docs/agent/references/patterns/trigger_xs_patterns.json",
+        "docs/agent/references/recipes/scenario_recipes.json",
+        "docs/agent/references/recipes/parser_manager_patterns.json"
+      ],
+      "common_queries": [
+        "which trigger condition checks variable values",
+        "which trigger effect changes object hp",
+        "show me a real project example of this trigger effect",
+        "what parser enum matches this trigger attribute",
+        "find object id for trigger work",
+        "how does script call relate to XS",
+        "how should I build a quest system",
+        "how do I clear scenario units in a region",
+        "how do I place blockers from terrain"
+      ],
+      "source_priority_order": [
+        "agent guide",
+        "effects and attributes datasets",
+        "genie registry",
+        "supporting scenario docs",
+        "builder and introspection code"
+      ],
+      "related_domains": [
+        "xs",
+        "ai_scripts",
+        "dat_genie_tooling"
+      ]
+    },
+    {
+      "id": "dat_genie_tooling",
+      "title": ".dat/genie tooling",
+      "summary": "Genie Editor and AoE2DE data-model knowledge with a dedicated concept dataset, compact recipes, and a focused dat retriever, but still not a full edit runtime.",
+      "open_first": [
+        "docs/agent/domains/DAT_AGENT_GUIDE.md",
+        "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+        "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+        "docs/agent_database/genie_dat_concepts.json",
+        "XS_Training/external_refs/ageofempires.fandom.com/Genie_Editor.md",
+        "XS_Training/modding_general/07_genie_editor_xs_bridge.md"
+      ],
+      "canonical_docs": [
+        "docs/agent/domains/DAT_AGENT_GUIDE.md",
+        "docs/agent/scenario_builder/DAT_LOOKUP_INDEX.md",
+        "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+        "XS_Training/modding_general/README.md",
+        "XS_Training/external_refs/ageofempires.fandom.com/Genie_Editor.md"
+      ],
+      "canonical_data": [
+        "docs/agent_database/genie_dat_concepts.json",
+        "docs/trigger_knowledge/genie_registry.json",
+        "docs/agent/references/patterns/genie_workflow_patterns.json",
+        "docs/agent/references/recipes/genie_recipes.json"
+      ],
+      "common_queries": [
+        "what is this unit or tech id",
+        "how does train location work",
+        "which task or class matters for this modding change",
+        "how do genie data changes affect XS or triggers",
+        "how do I create a unit with a linked graphic",
+        "how do I link a main unit and dead unit",
+        "what does standing_sprite_id1 do",
+        "how do custom civ resource slots work",
+        "how do tech effect chains work in the dat",
+        "where should the modified dat file be saved"
+      ],
+      "source_priority_order": [
+        "agent guide",
+        "genie registry",
+        "modding general docs",
+        "external genie editor reference"
+      ],
+      "related_domains": [
+        "xs",
+        "ai_scripts",
+        "scenario_triggers"
+      ]
+    }
+  ]
+}
+

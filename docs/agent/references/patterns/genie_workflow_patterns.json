@@ -1,0 +1,338 @@
+[
+  {
+    "id": "genie_workspace_orchestrator",
+    "title": "Use One Top-Level GenieWorkspace Orchestrator",
+    "summary": "A genie tooling project should load the workspace once, acquire managers once, call major system apply_ functions in sequence, and save outputs at the end.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\main\\main.py"
+    ],
+    "when_to_use": [
+      "planning a modular dat-editing project",
+      "explaining how to orchestrate many genie edits cleanly"
+    ],
+    "key_points": [
+      "Load the workspace once.",
+      "Call major systems from one thin entrypoint.",
+      "Save the dat file and registry at the end of orchestration."
+    ],
+    "query_terms": [
+      "GenieWorkspace load save pattern",
+      "main orchestrator for dat edits",
+      "workspace managers flow"
+    ],
+    "pitfalls": [
+      "Do not repeatedly load and save the workspace in many leaf modules.",
+      "Do not turn main.py into the whole implementation."
+    ]
+  },
+  {
+    "id": "genie_system_folder_split",
+    "title": "Split Genie Work By Gameplay Domain",
+    "summary": "Use folders such as Classes, World, Inventory_System, Skill_Tree, and Character_General to keep data-editing systems isolated and composable.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code",
+      "hide_and_seek"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Classes",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\World",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Inventory_System",
+      "C:\\AoE2DE Modding\\Code\\Hide_and_Seek\\Genie_Dat"
+    ],
+    "when_to_use": [
+      "explaining how to organize many data-editing features",
+      "deciding folder boundaries for genie mod code"
+    ],
+    "key_points": [
+      "Use folders as feature boundaries.",
+      "Keep each system independently includable.",
+      "Align folder names with gameplay concepts, not temporary implementation details."
+    ],
+    "query_terms": [
+      "genie project folder structure",
+      "organize dat tooling code",
+      "feature folders for genie edits"
+    ],
+    "pitfalls": [
+      "Do not mix world, class, and inventory edits in one folder without a boundary.",
+      "Do not let generated artifacts define the main project structure."
+    ]
+  },
+  {
+    "id": "genie_apply_hierarchy",
+    "title": "Use Hierarchical apply_ Modules For Data Edits",
+    "summary": "Large dat-editing projects should expose apply_ modules at the system level, with narrower leaf functions or modules handling concrete unit, graphic, sound, and component edits.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Classes\\Ranger\\apply_ranger_class.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\World\\Potions\\apply_potions.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Inventory_System\\apply_inventory_system.py"
+    ],
+    "when_to_use": [
+      "teaching modular dat-editing architecture",
+      "making systems callable in and out"
+    ],
+    "key_points": [
+      "Top-level apply_ modules should map to meaningful systems.",
+      "Leaf modules should create or edit specific assets.",
+      "A feature should be removable by dropping one high-level apply_ call."
+    ],
+    "query_terms": [
+      "apply hierarchy in genie project",
+      "modular dat edit pipeline",
+      "apply_ modules for units graphics"
+    ],
+    "pitfalls": [
+      "Do not hide all edits inside one leaf module.",
+      "Do not let leaf modules orchestrate unrelated domains."
+    ]
+  },
+  {
+    "id": "genie_manager_asset_ownership",
+    "title": "Use The Manager That Owns The Asset Type",
+    "summary": "A real GenieWorkspace project should route edits through the manager that owns the asset type: units through unit_manager, graphics through graphic_manager, sounds through sound_manager, techs through tech_manager, and civ-scoped edits through civ_manager.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\main\\main.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Character_General\\Pick_Class\\pick_class_unit.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Character_General\\Pick_Class\\pick_class_graphics.py"
+    ],
+    "when_to_use": [
+      "deciding which manager should implement a dat edit",
+      "explaining GenieWorkspace responsibilities",
+      "mapping a gameplay feature to unit, graphic, sound, or tech edits"
+    ],
+    "key_points": [
+      "Use the manager that owns the edited asset type.",
+      "Wrap cross-manager edits in one feature-level apply_ module.",
+      "Do not treat the workspace as one undifferentiated mutation surface."
+    ],
+    "query_terms": [
+      "GenieWorkspace managers",
+      "which manager edits graphics",
+      "unit manager graphic manager sound manager"
+    ],
+    "pitfalls": [
+      "Do not hide cross-manager asset linking inside unrelated root orchestration code.",
+      "Do not blur manager ownership when explaining how a feature is built."
+    ]
+  },
+  {
+    "id": "genie_shared_id_registry",
+    "title": "Centralize Shared IDs And Constants",
+    "summary": "Shared IDs such as graphics, world objects, and stable constants should live in one config layer so multiple systems can reuse them without duplicating magic numbers.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\config\\ids.py"
+    ],
+    "when_to_use": [
+      "explaining shared constants",
+      "avoiding duplicated graphic or unit IDs",
+      "designing global config layers"
+    ],
+    "key_points": [
+      "Use one shared config for truly global constants.",
+      "Import shared IDs instead of repeating raw numbers.",
+      "Keep project-wide IDs separate from leaf mutation logic."
+    ],
+    "query_terms": [
+      "config ids py",
+      "shared graphic id registry",
+      "central constants for genie"
+    ],
+    "pitfalls": [
+      "Do not scatter shared IDs across many feature modules.",
+      "Do not confuse global constants with per-feature temporary values."
+    ]
+  },
+  {
+    "id": "genie_json_data_separation",
+    "title": "Keep Data Files Separate From Mutation Logic",
+    "summary": "Use JSON or similar data files for mappings, item registries, and resource relationships while keeping code focused on mutation and linking behavior.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code",
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\main\\items_resources_data.json",
+      "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode\\Genie_Dat\\graphics_unit_additions.json"
+    ],
+    "when_to_use": [
+      "explaining data-driven dat tooling",
+      "showing how to separate balancing and mapping data from edit code"
+    ],
+    "key_points": [
+      "Store mappings and reusable data in JSON or config files.",
+      "Let mutation code consume those files instead of embedding large tables.",
+      "Use structured data to make retrieval and balancing easier."
+    ],
+    "query_terms": [
+      "json driven genie edits",
+      "separate data from dat code",
+      "resource mapping json"
+    ],
+    "pitfalls": [
+      "Do not bury large mapping tables inside mutation functions.",
+      "Do not force retrieval to inspect code when a data file can hold the truth."
+    ]
+  },
+  {
+    "id": "genie_template_copy_and_link",
+    "title": "Copy Base Assets, Assign New IDs, Then Link Components",
+    "summary": "Many genie edit flows work by copying a known base asset, assigning a new ID, changing selected fields, and then linking the result to graphics, sounds, or related objects.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Genie_utils_Skill_Tree\\Graphics_to_Genie.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\World\\Potions\\apply_potions.py"
+    ],
+    "when_to_use": [
+      "explaining how to create new units or graphics from existing ones",
+      "teaching template-copy mutation workflows"
+    ],
+    "key_points": [
+      "Choose a stable base object.",
+      "Assign a new unique ID before broad mutation.",
+      "Link dependent graphics, sounds, or component objects explicitly."
+    ],
+    "query_terms": [
+      "copy unit assign new id",
+      "template copy genie workflow",
+      "link graphics to new unit"
+    ],
+    "pitfalls": [
+      "Do not mutate the base template object in place.",
+      "Do not forget to update linked components after creating the new asset."
+    ]
+  },
+  {
+    "id": "genie_component_linking_workflow",
+    "title": "Link Units, Dead Units, Graphics, And Sounds Explicitly",
+    "summary": "Complex genie features are often linked component graphs. Create the component assets in a controlled order and wire IDs explicitly instead of assuming the links will emerge automatically.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Classes\\Crusader\\Heavenly_Bastion\\link_components.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\Character_General\\Pick_Class\\apply_pick_class.py"
+    ],
+    "when_to_use": [
+      "explaining linked asset creation",
+      "building a feature with main unit, dead unit, and graphics",
+      "teaching how to wire component IDs safely"
+    ],
+    "key_points": [
+      "Create component assets first, then wire IDs explicitly.",
+      "Treat dead-unit and graphic links as part of the feature design.",
+      "Keep linking logic in a dedicated helper or feature apply_ module."
+    ],
+    "query_terms": [
+      "link unit to graphics",
+      "dead unit graphic workflow",
+      "component linking in genie"
+    ],
+    "pitfalls": [
+      "Do not rely on implicit links when the project actually uses explicit ID assignment.",
+      "Do not spread component-linking logic across many unrelated files."
+    ]
+  },
+  {
+    "id": "genie_save_and_registry_outputs",
+    "title": "Save Outputs And Registries Explicitly",
+    "summary": "A mature genie tooling workflow should save the modified dat file and any generated registry or audit outputs so the changes can be inspected and reused.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\main\\main.py"
+    ],
+    "when_to_use": [
+      "teaching reproducible dat-edit workflows",
+      "explaining auditability after edits"
+    ],
+    "key_points": [
+      "Save the modified dat file explicitly.",
+      "Save a registry or log when the tooling supports it.",
+      "Treat saved outputs as part of the workflow, not just side effects."
+    ],
+    "query_terms": [
+      "save registry after dat edits",
+      "audit outputs for genie workflow",
+      "workspace save and registry"
+    ],
+    "pitfalls": [
+      "Do not rely on in-memory edits without a persistent audit artifact.",
+      "Do not leave output locations implicit when the workflow is meant to be repeatable."
+    ]
+  },
+  {
+    "id": "genie_output_path_configuration",
+    "title": "Treat .dat Output Paths As Configuration",
+    "summary": "The final .dat save location should be driven by project configuration or explicit user choice. Reusable guidance should not encode one developer PC path as the default answer.",
+    "primary_domains": [
+      "dat_genie_tooling"
+    ],
+    "reference_projects": [
+      "goku_rpg_genie_code"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code\\main\\main.py"
+    ],
+    "when_to_use": [
+      "deciding where to save the modified dat file",
+      "generalizing a local genie project into reusable guidance",
+      "teaching agents not to invent local save paths"
+    ],
+    "key_points": [
+      "Use configured paths when the project already defines them.",
+      "Ask the user where to write the modified .dat when no config exists.",
+      "Keep output-path policy separate from feature mutation logic."
+    ],
+    "query_terms": [
+      "where to save modified dat",
+      "dat output path",
+      "genie workspace save path"
+    ],
+    "pitfalls": [
+      "Do not hardcode one local mod folder path as the general answer.",
+      "Do not hide output-path decisions inside unrelated feature modules."
+    ]
+  }
+]

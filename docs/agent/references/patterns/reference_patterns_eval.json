@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "description": "Golden architecture and workflow queries for the structured reference pattern datasets.",
+  "cases": [
+    {
+      "id": "trigger-folder-structure",
+      "query": "How should I split a large scenario parser project into modular folders?",
+      "expected_any": [
+        "trigger_system_folder_split"
+      ]
+    },
+    {
+      "id": "trigger-apply-hierarchy",
+      "query": "How should apply_ functions be called in a trigger project hierarchy?",
+      "expected_any": [
+        "trigger_apply_hierarchy"
+      ]
+    },
+    {
+      "id": "aoe-variables-registry",
+      "query": "Where should I allocate and store scenario variables in aoe_variables?",
+      "expected_any": [
+        "aoe_variables_central_registry"
+      ]
+    },
+    {
+      "id": "trigger-balance-dictionaries",
+      "query": "Why should dictionary.py hold balancing data instead of trigger logic?",
+      "expected_any": [
+        "dictionary_balance_layer"
+      ]
+    },
+    {
+      "id": "xs-variable-declarations",
+      "query": "How do I declare XS variables centrally for trigger and XS bridge code?",
+      "expected_any": [
+        "xs_variable_declaration_registry"
+      ]
+    },
+    {
+      "id": "xs-file-generation-pipeline",
+      "query": "What is the right order to generate the project XS file and helper code?",
+      "expected_any": [
+        "xs_file_generation_pipeline"
+      ]
+    },
+    {
+      "id": "xs-output-destination",
+      "query": "Where should the generated XS file be written if the project does not already define the path?",
+      "expected_any": [
+        "xs_output_path_configuration"
+      ]
+    },
+    {
+      "id": "genie-main-orchestrator",
+      "query": "What is the right top-level GenieWorkspace orchestration pattern?",
+      "expected_any": [
+        "genie_workspace_orchestrator"
+      ]
+    },
+    {
+      "id": "genie-manager-ownership",
+      "query": "Which GenieWorkspace manager should own unit, graphic, and sound edits?",
+      "expected_any": [
+        "genie_manager_asset_ownership"
+      ]
+    },
+    {
+      "id": "genie-feature-folders",
+      "query": "How should I organize a genie tooling project by gameplay systems?",
+      "expected_any": [
+        "genie_system_folder_split"
+      ]
+    },
+    {
+      "id": "genie-template-copy",
+      "query": "How should I copy a base unit or graphic, assign a new ID, and link it safely?",
+      "expected_any": [
+        "genie_template_copy_and_link"
+      ]
+    },
+    {
+      "id": "genie-component-linking",
+      "query": "How should I link a main unit, dead unit, and graphics in a genie project?",
+      "expected_any": [
+        "genie_component_linking_workflow"
+      ]
+    },
+    {
+      "id": "genie-output-path",
+      "query": "Where should the modified dat file be saved if the project does not already define the output path?",
+      "expected_any": [
+        "genie_output_path_configuration"
+      ]
+    }
+  ]
+}

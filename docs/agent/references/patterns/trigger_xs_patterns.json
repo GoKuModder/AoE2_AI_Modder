@@ -1,0 +1,328 @@
+[
+  {
+    "id": "trigger_system_folder_split",
+    "title": "Split Trigger Systems Into Domain Folders",
+    "summary": "Large trigger projects should organize gameplay into system folders such as diplomacy, provinces, resources, quests, abilities, and world logic instead of keeping all trigger construction in one file.",
+    "primary_domains": [
+      "scenario_triggers",
+      "xs"
+    ],
+    "reference_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode\\Diplomacy",
+      "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode\\Provinces",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\Abilities",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\World"
+    ],
+    "when_to_use": [
+      "planning a new trigger-heavy project",
+      "refactoring a giant scenario builder into modules",
+      "explaining how to isolate gameplay systems"
+    ],
+    "key_points": [
+      "Use folders as feature boundaries.",
+      "Keep orchestration at the top and detailed logic inside each system folder.",
+      "Make it possible to reason about one gameplay system without opening unrelated logic."
+    ],
+    "query_terms": [
+      "modular trigger structure",
+      "how to organize trigger project",
+      "system folders for scenario parser"
+    ],
+    "pitfalls": [
+      "A folder per feature is not enough if each folder still contains one giant file.",
+      "Do not mix unrelated systems into one orchestration module."
+    ]
+  },
+  {
+    "id": "trigger_apply_hierarchy",
+    "title": "Use Hierarchical apply_ Functions",
+    "summary": "Trigger and XS projects scale better when one top-level entrypoint calls major apply_ functions, which then call narrower apply_ functions for sub-systems and leaf behaviors.",
+    "primary_domains": [
+      "scenario_triggers",
+      "xs"
+    ],
+    "reference_projects": [
+      "goku_rpg_project",
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\Abilities\\Crusader\\apply_crusader_spells.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\Bosses\\apply_all_bosses.py",
+      "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode\\game_initialization.py"
+    ],
+    "when_to_use": [
+      "explaining project orchestration",
+      "making systems callable in and out",
+      "decomposing large trigger builders"
+    ],
+    "key_points": [
+      "Top-level entrypoint should be thin.",
+      "System-level apply_ modules should map to meaningful gameplay domains.",
+      "Leaf modules should handle specific trigger effects, spell behavior, or region logic."
+    ],
+    "query_terms": [
+      "apply function hierarchy",
+      "how apply_ modules work",
+      "modular trigger orchestration"
+    ],
+    "pitfalls": [
+      "Do not let the top-level entrypoint become the whole implementation.",
+      "Do not call deeply unrelated systems from leaf modules."
+    ]
+  },
+  {
+    "id": "aoe_variables_central_registry",
+    "title": "Centralize Scenario Variable Allocation In aoe_variables",
+    "summary": "Use a dedicated aoe_variables layer to allocate scenario variables once, assign stable human-readable names, and expose mappings to downstream systems.",
+    "primary_domains": [
+      "scenario_triggers"
+    ],
+    "reference_projects": [
+      "goku_rpg_project"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\aoe_variables.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\dictionaries_variables.py"
+    ],
+    "when_to_use": [
+      "adding many trigger variables",
+      "explaining how to avoid variable ID collisions",
+      "designing shared registries for trigger systems"
+    ],
+    "key_points": [
+      "Create variables centrally.",
+      "Store variable IDs in shared mappings.",
+      "Let systems consume mappings instead of allocating IDs independently."
+    ],
+    "query_terms": [
+      "aoe_variables usage",
+      "central variable registry",
+      "trigger variable mapping"
+    ],
+    "pitfalls": [
+      "Do not let each feature allocate scenario variable IDs independently.",
+      "Do not hide the variable naming scheme across many unrelated files."
+    ]
+  },
+  {
+    "id": "dictionary_balance_layer",
+    "title": "Use dictionary.py As The Balance Layer",
+    "summary": "Store spell values, progression numbers, thresholds, descriptions, and other balancing data in dictionary.py files while keeping mutation logic in separate modules.",
+    "primary_domains": [
+      "scenario_triggers",
+      "xs"
+    ],
+    "reference_projects": [
+      "goku_rpg_project",
+      "lords_of_diplomacy_easy_mode"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\Abilities\\Crusader\\Active_Ability_1\\dictionary.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\Player_Progression\\Attributes\\dictionary.py",
+      "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode\\Kingdom_Resources\\War_Exhaustion\\dictionary.py"
+    ],
+    "when_to_use": [
+      "explaining data-driven balancing",
+      "refactoring hardcoded numbers out of trigger logic",
+      "teaching how to separate configuration from code"
+    ],
+    "key_points": [
+      "Use dictionary.py for tunable values and balance data.",
+      "Use logic modules for trigger construction and lifecycle handling.",
+      "Open dictionary files first when the task is balancing."
+    ],
+    "query_terms": [
+      "dictionary.py balancing",
+      "data-driven trigger programming",
+      "separate data from trigger code"
+    ],
+    "pitfalls": [
+      "Do not bury balance values directly inside long trigger-building loops.",
+      "Do not confuse balance dictionaries with the actual logic implementation."
+    ]
+  },
+  {
+    "id": "xs_variable_declaration_registry",
+    "title": "Centralize XS Variable Declaration And Naming",
+    "summary": "Projects that mix triggers and XS should declare or generate XS variables in one place, emit persistent extern definitions there, and expose semantic mappings so feature modules do not hardcode scattered variable IDs.",
+    "primary_domains": [
+      "xs",
+      "scenario_triggers"
+    ],
+    "reference_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode\\xs_scripts.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\XS_Variables.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\dictionaries_variables.py",
+      "C:\\AoE2DE Modding\\Code\\Hide_and_Seek\\XS_Variables.py"
+    ],
+    "when_to_use": [
+      "designing XS variable registries",
+      "connecting triggers to XS state",
+      "explaining extern variable declarations"
+    ],
+    "key_points": [
+      "Keep XS variable declaration centralized.",
+      "Emit persistent scenario-style XS globals with extern declarations such as extern int xsVariableN = -1;.",
+      "Map semantic names to XS variable slots in shared structures.",
+      "Only globally fixed bridge constants should be hardcoded broadly."
+    ],
+    "implementation_steps": [
+      "Create one XS-variable owner module for the project.",
+      "Generate or declare the extern int xsVariableN = -1; block there.",
+      "Store a semantic mapping from gameplay meaning to generated XS variable names.",
+      "Expose helper functions so feature modules request variables by meaning instead of by raw slot."
+    ],
+    "agent_instructions": [
+      "Keep XS globals and trigger variables conceptually separate.",
+      "Use xsTriggerVariable(...) and xsSetTriggerVariable(...) for shared trigger state, not plain XS globals."
+    ],
+    "query_terms": [
+      "declare xs variables",
+      "xs variable registry",
+      "extern int xsVariable"
+    ],
+    "pitfalls": [
+      "Do not create ad hoc XS variable names in many unrelated modules.",
+      "Do not mix trigger variable IDs and XS variable slots as if they were the same registry."
+    ]
+  },
+  {
+    "id": "xs_file_generation_pipeline",
+    "title": "Generate XS In Ordered Phases",
+    "summary": "A practical XS build pipeline writes or assembles persistent extern variable definitions first, then adds shared helper functions, then appends or assembles the feature-specific XS functions for the project.",
+    "primary_domains": [
+      "xs",
+      "scenario_triggers"
+    ],
+    "reference_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode\\xs_scripts.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\XS_Variables.py",
+      "C:\\AoE2DE Modding\\Code\\Hide_and_Seek\\Runtime\\runtime_xs.py"
+    ],
+    "when_to_use": [
+      "teaching how generated xs files are built",
+      "refactoring a single giant xs writer into phases",
+      "explaining why variable definitions, helper code, and runtime code should be separated"
+    ],
+    "key_points": [
+      "Write or assemble the extern variable block first.",
+      "Keep shared helper functions separate from feature-specific runtime functions.",
+      "Assemble runtime XS in phases instead of mixing every concern into one writer."
+    ],
+    "implementation_steps": [
+      "Generate the extern-variable definitions and semantic mapping.",
+      "Register or append shared helper functions such as compare and change-variable helpers.",
+      "Register or append feature-specific function templates.",
+      "Assemble the final runtime XS body after support content is ready."
+    ],
+    "agent_instructions": [
+      "If the project already follows a direct-write pipeline, preserve the phased order instead of collapsing everything into one loop.",
+      "If the project uses an include registry, keep include filenames relative and let the assembly step join them."
+    ],
+    "query_terms": [
+      "how to generate xs file",
+      "xs file generation pipeline",
+      "write extern variables then append functions"
+    ],
+    "pitfalls": [
+      "Do not append helper templates blindly without deduplication checks when the project already guards against duplicates.",
+      "Do not scatter XS file generation across many unrelated gameplay modules."
+    ]
+  },
+  {
+    "id": "xs_output_path_configuration",
+    "title": "Treat XS Output Destination As Configuration",
+    "summary": "The destination of the generated XS file should come from project configuration, build arguments, or an explicit user decision; reusable guidance should never hardcode a machine-specific local mod path.",
+    "primary_domains": [
+      "xs"
+    ],
+    "reference_projects": [
+      "lords_of_diplomacy_easy_mode",
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode\\xs_scripts.py",
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\XS_Variables.py",
+      "C:\\AoE2DE Modding\\Code\\Hide_and_Seek\\Runtime\\runtime_xs.py"
+    ],
+    "when_to_use": [
+      "deciding where the generated xs file should be placed",
+      "generalizing a local project into publishable guidance",
+      "teaching agents not to invent local machine paths"
+    ],
+    "key_points": [
+      "Do not hardcode a PC-specific absolute output path in reusable project guidance.",
+      "Use project config or build-time parameters for the final XS destination.",
+      "Ask the user where to place the generated .xs file when the destination is not already defined."
+    ],
+    "path_guidance": {
+      "support_include_files": "Keep generated include filenames relative inside XS, for example include \"support_variables.xs\";.",
+      "final_output_destination": "Use a project-defined mod or scenario XS output location if configured; otherwise ask the user for the exact destination before writing."
+    },
+    "agent_instructions": [
+      "Search the project for an existing XS output configuration before asking the user.",
+      "If no configuration exists, ask the user where to create the generated .xs file.",
+      "Do not substitute a guessed machine path."
+    ],
+    "query_terms": [
+      "where to place generated xs file",
+      "xs output path",
+      "where should the xs file go"
+    ],
+    "pitfalls": [
+      "Do not encode one developer PC path as if it were the general rule.",
+      "Do not confuse relative include filenames with the final absolute or project-relative destination chosen by the build."
+    ]
+  },
+  {
+    "id": "xs_validation_workflow",
+    "title": "Validate Generated XS As A Separate Workflow",
+    "summary": "Generated XS should be assembled and validated through a dedicated validation step instead of assuming that builder output is always correct.",
+    "primary_domains": [
+      "xs",
+      "scenario_triggers"
+    ],
+    "reference_projects": [
+      "goku_rpg_project",
+      "hide_and_seek"
+    ],
+    "representative_paths": [
+      "C:\\AoE2DE Modding\\Code\\GoKu RPG Project\\run_xs_validation.py",
+      "C:\\AoE2DE Modding\\Code\\Hide_and_Seek\\run_xs_validation.py"
+    ],
+    "when_to_use": [
+      "teaching XS generation workflows",
+      "separating scenario build from XS validation",
+      "explaining post-generation checks"
+    ],
+    "key_points": [
+      "Generate XS in one step and validate it in another.",
+      "Persist generated XS to a file before validation when the validator expects file input.",
+      "Treat validation as part of the development loop, not an optional afterthought."
+    ],
+    "query_terms": [
+      "validate generated xs",
+      "xs-check workflow",
+      "run xs validation"
+    ],
+    "pitfalls": [
+      "Do not rely only on visual inspection for generated XS.",
+      "Do not hide validation inside unrelated scenario generation code."
+    ]
+  }
+]

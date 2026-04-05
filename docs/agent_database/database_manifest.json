@@ -14,11 +14,53 @@
     "notes": "Knowledge base for scenario editor trigger effects with signatures and parameters."
   },
   {
+    "dataset_id": "trigger_conditions",
+    "path": "docs/trigger_knowledge/conditions_knowledge.json",
+    "record_count": 41,
+    "primary_key": "condition_id",
+    "notes": "Knowledge base for AoE2ScenarioParser trigger conditions with signatures, parameters, and parser notes."
+  },
+  {
+    "dataset_id": "trigger_condition_usage",
+    "path": "docs/trigger_knowledge/condition_project_usage.json",
+    "record_count": 41,
+    "primary_key": "condition_id",
+    "notes": "Real project usage summaries and example locations for each trigger condition scanned from the local reference projects."
+  },
+  {
+    "dataset_id": "trigger_condition_playbook",
+    "path": "docs/trigger_knowledge/condition_usage_playbook.json",
+    "record_count": 41,
+    "primary_key": "condition_id",
+    "notes": "Deep teaching playbook for every trigger condition, including role, usage patterns, pairings, and project-backed examples."
+  },
+  {
+    "dataset_id": "trigger_effect_usage",
+    "path": "docs/trigger_knowledge/effect_project_usage.json",
+    "record_count": 102,
+    "primary_key": "effect_id",
+    "notes": "Real project usage summaries and example locations for each trigger effect scanned from the local reference projects."
+  },
+  {
+    "dataset_id": "trigger_effect_playbook",
+    "path": "docs/trigger_knowledge/effect_usage_playbook.json",
+    "record_count": 102,
+    "primary_key": "effect_id",
+    "notes": "Deep teaching playbook for every trigger effect, including role, usage patterns, pairings, and project-backed examples."
+  },
+  {
     "dataset_id": "genie_objects",
     "path": "docs/trigger_knowledge/genie_registry.json",
     "record_count": 1282,
     "primary_key": "genie_id",
     "notes": "Unified registry of game objects (units, buildings, heroes) with metadata and facets."
+  },
+  {
+    "dataset_id": "genie_dat_concepts",
+    "path": "docs/agent_database/genie_dat_concepts.json",
+    "record_count": 12,
+    "primary_key": "id",
+    "notes": "Compact .dat/genie concept knowledge covering manager ownership, unit and graphic link fields, global resource slots, tech/effect chains, and output-path policy."
   },
 {
     "dataset_id": "ai_metadata",
@@ -40,5 +82,41 @@
     "record_count": 761,
     "primary_key": "name",
     "notes": "Catalog of XS scripting constants organized by category with values and descriptions."
+  },
+  {
+    "dataset_id": "trigger_xs_patterns",
+    "path": "docs/agent/references/patterns/trigger_xs_patterns.json",
+    "record_count": 8,
+    "primary_key": "id",
+    "notes": "Structured architecture and workflow patterns for projects that combine scenario triggers with XS, including variable registries, XS file generation phases, and generalized output-path guidance."
+  },
+  {
+    "dataset_id": "genie_workflow_patterns",
+    "path": "docs/agent/references/patterns/genie_workflow_patterns.json",
+    "record_count": 10,
+    "primary_key": "id",
+    "notes": "Structured architecture and workflow patterns for modular .dat and genie tooling projects, including manager ownership, component-linking order, and generalized output-path guidance."
+  },
+  {
+    "dataset_id": "scenario_recipes",
+    "path": "docs/agent/references/recipes/scenario_recipes.json",
+    "record_count": 18,
+    "primary_key": "id",
+    "notes": "Compact implementation recipes for common scenario systems such as quests, teleports, loot, world events, progression, and map setup."
+  },
+  {
+    "dataset_id": "parser_manager_patterns",
+    "path": "docs/agent/references/recipes/parser_manager_patterns.json",
+    "record_count": 6,
+    "primary_key": "id",
+    "notes": "Compact parser-manager patterns for UnitManager and MapManager usage in implementation-heavy scenario projects."
+  },
+  {
+    "dataset_id": "genie_recipes",
+    "path": "docs/agent/references/recipes/genie_recipes.json",
+    "record_count": 16,
+    "primary_key": "id",
+    "notes": "Compact GenieWorkspace implementation recipes for units, graphics, sounds, linking, and save workflows."
   }
 ]
+

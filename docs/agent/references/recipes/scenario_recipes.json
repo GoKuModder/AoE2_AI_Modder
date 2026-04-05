@@ -1,0 +1,463 @@
+[
+  {
+    "id": "global_event_notifications",
+    "title": "Global Event Notifications",
+    "summary": "Build a global event controller that uses trigger variables for state, presentation effects for player messaging, and optional XS for event selection or calculations.",
+    "primary_domains": ["scenario_triggers", "xs"],
+    "reference_projects": ["lords_of_diplomacy_easy_mode", "goku_rpg_project"],
+    "when_to_use": ["global world events", "announcements", "timed map mechanics", "shared player notifications"],
+    "inputs": ["event state variable", "start condition", "end condition", "message text", "optional event timer"],
+    "steps": [
+      "Create one event-state variable in aoe_variables or equivalent registry.",
+      "Create a start trigger gated by timer, area, or variable logic.",
+      "Use display_timer for high-frequency visible event messaging or display_instructions for low-frequency major announcements.",
+      "Use send_chat only for per-player or low-visibility communication.",
+      "Create an end or cleanup trigger that resets the shared event state."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_CONDITIONS_EFFECTS_GUIDE.md",
+      "docs/trigger_knowledge/effect_usage_playbook.md",
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["global event", "display timer", "display instructions", "event announcements", "world event controller"],
+    "pitfalls": [
+      "Do not use send_chat as the main global announcement surface when visibility matters.",
+      "Do not duplicate event detection logic across many triggers when one shared state variable can control the event."
+    ]
+  },
+  {
+    "id": "quest_system_flow",
+    "title": "Quest System Flow",
+    "summary": "Implement quests as modular trigger systems with explicit stage variables, named trigger groups, and separate data/config dictionaries for quest text and thresholds.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["goku_rpg_project"],
+    "when_to_use": ["npc quests", "multi-stage objectives", "quest rewards", "story progression"],
+    "inputs": ["quest stage variable", "quest giver objects", "completion condition", "reward definition", "quest text data"],
+    "steps": [
+      "Reserve a quest-state variable in the central variable registry.",
+      "Create a quest folder with data/config separated from trigger logic.",
+      "Split quest logic into offer, accept, progress, completion, and reward phases.",
+      "Use trigger conditions like variable_value and objects_in_area to gate progression.",
+      "Keep user-facing text and reward values outside the main trigger-building loops."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/TRIGGER_LOOKUP_INDEX.md",
+      "docs/agent/references/patterns/trigger_xs_patterns.json"
+    ],
+    "query_terms": ["quest system", "npc quest", "quest stages", "quest variables", "quest rewards"],
+    "pitfalls": [
+      "Do not hide quest stages in scattered unnamed variables.",
+      "Do not mix quest text, balancing, and trigger lifecycle logic into one long file."
+    ]
+  },
+  {
+    "id": "teleport_system",
+    "title": "Teleport System",
+    "summary": "Use parser-manager placement for teleport objects, trigger variables for teleport state, and XS only when the runtime behavior needs more complex computation than triggers should own.",
+    "primary_domains": ["scenario_triggers", "xs"],
+    "reference_projects": ["goku_rpg_project", "hide_and_seek"],
+    "when_to_use": ["teleport pads", "region travel", "interaction buildings", "player movement systems"],
+    "inputs": ["teleport object placement", "activation condition", "destination area", "ownership/player rules"],
+    "steps": [
+      "Place teleport objects or markers using parser-manager setup code.",
+      "Create trigger-side activation logic around object interaction or area checks.",
+      "Track shared teleport state with trigger variables when multiple systems depend on it.",
+      "Use XS only for calculations or repeated checks that are awkward in pure triggers.",
+      "Keep teleport placement, teleport rules, and teleport visuals in separate modules."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md",
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/XS_PROJECT_FILES_GUIDE.md"
+    ],
+    "query_terms": ["teleport system", "teleport pads", "move player between areas", "teleport building"],
+    "pitfalls": [
+      "Do not bury teleport placement and teleport runtime logic in one monolithic file.",
+      "Do not promote XS to the owner of the whole system when triggers can own the event flow."
+    ]
+  },
+  {
+    "id": "loot_and_pickup_system",
+    "title": "Loot And Pickup System",
+    "summary": "Model loot as placed or converted scenario objects plus trigger-based pickup resolution, with balance values stored separately and optional data-driven item mappings.",
+    "primary_domains": ["scenario_triggers", "dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_project", "goku_rpg_genie_code"],
+    "when_to_use": ["potions", "treasure", "pickup items", "barrel rewards"],
+    "inputs": ["loot object ids", "bonus tables", "owning player", "pickup detection", "reward mapping"],
+    "steps": [
+      "Identify or create the loot objects in the scenario or dat layer.",
+      "Store bonus values in data dictionaries or JSON rather than hardcoding them repeatedly.",
+      "Create pickup triggers gated by area, object state, or ownership rules.",
+      "Resolve the reward through shared variable updates, resource effects, or stat effects.",
+      "Keep naming and visual identity setup separate from the reward logic."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["loot system", "potions", "treasure chest", "pickup item rewards", "barrel loot"],
+    "pitfalls": [
+      "Do not mix loot visual setup and reward logic into one brittle function.",
+      "Do not bury item-to-reward mappings inside trigger loops when a data file can hold them."
+    ]
+  },
+  {
+    "id": "class_pick_and_progression",
+    "title": "Class Pick And Progression",
+    "summary": "Implement class picking and progression as layered systems: selection/setup, variable ownership, ability gating, and balance dictionaries for stats and spell values.",
+    "primary_domains": ["scenario_triggers", "xs", "dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_project", "goku_rpg_genie_code"],
+    "when_to_use": ["class selection", "rpg progression", "stat scaling", "ability trees"],
+    "inputs": ["class state variables", "class objects or UI units", "stat growth data", "ability unlock rules"],
+    "steps": [
+      "Allocate class and progression variables centrally.",
+      "Separate class definition data from class-trigger logic.",
+      "Use feature folders per class or progression domain.",
+      "Gate abilities and progression through shared variables rather than ad hoc checks.",
+      "Use dat-side support only for base units, UI units, graphics, or asset-linked class content."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/references/patterns/trigger_xs_patterns.json"
+    ],
+    "query_terms": ["class pick", "player progression", "skill tree", "class abilities", "rpg classes"],
+    "pitfalls": [
+      "Do not spread class-state ownership across unrelated modules.",
+      "Do not couple progression balance values directly to trigger implementation code."
+    ]
+  },
+  {
+    "id": "npc_names_and_roles",
+    "title": "NPC Names And Roles",
+    "summary": "Use parser-manager access to placed units, then apply modular trigger systems or helper managers for names, professions, or NPC role logic.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["goku_rpg_project"],
+    "when_to_use": ["npc professions", "npc names", "role assignment", "immersive world setup"],
+    "inputs": ["npc unit groups", "name data", "role data", "trigger data or profession registry"],
+    "steps": [
+      "Collect or filter target units through parser-manager code.",
+      "Keep naming and profession data in separate registries or helper systems.",
+      "Apply role-specific naming or state rules through a dedicated system module.",
+      "Keep NPC identity initialization separate from quests or loot logic."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md",
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["npc names", "npc professions", "assign npc roles", "name manager"],
+    "pitfalls": [
+      "Do not mix NPC naming, quests, and combat logic into one setup pass.",
+      "Do not hardcode repeated profession/name tables inside leaf trigger builders."
+    ]
+  },
+  {
+    "id": "terrain_driven_map_setup",
+    "title": "Terrain-Driven Map Setup",
+    "summary": "Use MapManager to scan terrain or regions, then place blockers, markers, or world objects through UnitManager before gameplay triggers take over.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["goku_rpg_project", "lords_of_diplomacy_easy_mode"],
+    "when_to_use": ["blockers on terrain", "terrain-scanned placement", "world markers", "region setup"],
+    "inputs": ["terrain ids", "map areas", "target object ids", "owner player"],
+    "steps": [
+      "Read terrain or regions through MapManager.",
+      "Decide which tiles or rectangles should receive world objects.",
+      "Place blockers, markers, or setup objects with UnitManager.",
+      "Keep the terrain-scan pass separate from runtime quest or combat systems."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md"
+    ],
+    "query_terms": ["terrain blockers", "scan black terrain", "map setup", "terrain-driven placement"],
+    "pitfalls": [
+      "Do not run heavy terrain-scan logic in gameplay trigger modules when one setup pass is enough.",
+      "Do not confuse parser-manager setup with runtime event handling."
+    ]
+  },
+  {
+    "id": "revealers_and_visibility_systems",
+    "title": "Revealers And Visibility Systems",
+    "summary": "Combine parser-manager unit placement with trigger-side ownership and activation logic to control map vision, revealers, and visibility-based systems.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["lords_of_diplomacy_easy_mode", "goku_rpg_project"],
+    "when_to_use": ["map revealers", "visibility markers", "vision systems", "guided exploration"],
+    "inputs": ["revealer unit id", "player ownership", "placement tiles", "activation rules"],
+    "steps": [
+      "Place revealer units in scenario setup where visibility is needed.",
+      "Assign correct player ownership and visibility intent at placement time.",
+      "Use triggers to activate, freeze, or otherwise control related gameplay state.",
+      "Keep the visual placement layer separate from event-driven reveal logic."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md",
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["revealer system", "map revealers", "visibility system", "vision objects"],
+    "pitfalls": [
+      "Do not treat revealer placement as a pure trigger problem when parser-manager setup is simpler.",
+      "Do not hide revealer ownership assumptions inside unrelated world systems."
+    ]
+  },
+  {
+    "id": "shop_system_flow",
+    "title": "Shop System Flow",
+    "summary": "Build shops as modular NPC or building interactions with item data separated from trigger logic, shared currency variables, and explicit purchase-validation triggers.",
+    "primary_domains": ["scenario_triggers", "dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_project", "goku_rpg_genie_code"],
+    "when_to_use": ["npc shops", "merchant systems", "item vendors", "class trainers"],
+    "inputs": ["shop npc or building ids", "currency variables", "item price table", "item reward mapping", "shop text data"],
+    "steps": [
+      "Store shop inventory, prices, and reward mappings in a dedicated data dictionary instead of scattering them across triggers.",
+      "Create one interaction trigger group for opening or selecting the shop entrypoint.",
+      "Validate purchase conditions through currency variables, inventory limits, or class restrictions before granting the item.",
+      "Apply the purchased reward through item-grant triggers, stat effects, or linked dat-backed items.",
+      "Keep shop presentation text and balancing data separate from the trigger-building code."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/MAP_IDEA_TO_IMPLEMENTATION.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["shop system", "merchant npc", "buy item", "vendor flow", "shop inventory prices"],
+    "pitfalls": [
+      "Do not hardcode prices and rewards in long trigger blocks when a data layer can hold them.",
+      "Do not mix shop interaction, affordability checks, and reward application into one monolithic trigger."
+    ]
+  },
+  {
+    "id": "npc_interaction_dialogue",
+    "title": "NPC Interaction And Dialogue",
+    "summary": "Treat NPC interaction as a reusable trigger system with separate dialogue data, interaction-state variables, and optional branching based on quest or class state.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["lords_of_diplomacy_easy_mode", "goku_rpg_project"],
+    "when_to_use": ["dialogue npcs", "quest givers", "tutorial guides", "merchant interactions"],
+    "inputs": ["npc object ids", "interaction area or selector", "dialogue entries", "branch conditions", "follow-up actions"],
+    "steps": [
+      "Reserve trigger variables for interaction state, current dialogue branch, or one-time completion flags.",
+      "Store dialogue text and branch metadata in a data file or dictionary rather than embedding every line in trigger construction code.",
+      "Build one reusable interaction pattern for approach, select, confirm, and exit behavior.",
+      "Gate dialogue branches with quest-stage, class, or resource conditions instead of duplicating near-identical trigger trees.",
+      "Keep follow-up actions such as rewards, teleports, or shop opens in separate modules that the dialogue system calls."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/TRIGGER_LOOKUP_INDEX.md",
+      "docs/agent/references/patterns/trigger_xs_patterns.json"
+    ],
+    "query_terms": ["npc interaction", "dialogue system", "talk to npc", "branching dialogue", "quest giver interaction"],
+    "pitfalls": [
+      "Do not mix dialogue text storage with trigger orchestration when you expect later writing or balancing passes.",
+      "Do not duplicate one-off NPC interaction code when the same trigger pattern can be parameterized."
+    ]
+  },
+  {
+    "id": "class_ability_activation",
+    "title": "Class Ability Activation",
+    "summary": "Implement class abilities as data-driven systems with separated cooldown or cost data, trigger-owned activation flow, and XS support only when targeting or calculations become too complex for pure triggers.",
+    "primary_domains": ["scenario_triggers", "xs"],
+    "reference_projects": ["goku_rpg_project", "hide_and_seek"],
+    "when_to_use": ["hero abilities", "class skills", "cooldowns", "mana or resource abilities"],
+    "inputs": ["ability id or enum", "cooldown variable", "cost values", "activation conditions", "effect payload"],
+    "steps": [
+      "Store cooldown, cost, and balance values in a dedicated data module or dictionary for the class system.",
+      "Build one activation flow that checks ownership, class state, cost, and cooldown before firing the ability.",
+      "Split the system into activate, resolve, cooldown, and cleanup phases rather than keeping the whole ability in one block.",
+      "Use XS only when target scans, repeated calculations, or runtime loops are awkward in pure triggers.",
+      "Keep visuals, gameplay effect application, and balancing data in separate modules so later balance passes are cheap."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/domains/XS_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/XS_PROJECT_FILES_GUIDE.md"
+    ],
+    "query_terms": ["class ability", "hero skill", "cooldown system", "mana cost ability", "activate spell"],
+    "pitfalls": [
+      "Do not hardcode cooldowns and costs across several modules when the class data layer should own them.",
+      "Do not push simple trigger-owned activation logic into XS unless the computation actually needs it."
+    ]
+  },
+  {
+    "id": "boss_encounter_flow",
+    "title": "Boss Encounter Flow",
+    "summary": "Treat boss fights as staged encounter controllers with encounter-state variables, separate phase data, area start logic, and isolated reward or cleanup modules.",
+    "primary_domains": ["scenario_triggers", "xs"],
+    "reference_projects": ["goku_rpg_project", "lords_of_diplomacy_easy_mode"],
+    "when_to_use": ["boss fights", "phase transitions", "arena encounters", "wave-based combat"],
+    "inputs": ["boss object ids", "encounter area", "phase thresholds", "spawn definitions", "reward tables"],
+    "steps": [
+      "Reserve encounter-state and phase variables before building the boss triggers.",
+      "Split the boss system into encounter start, active phases, transitions, fail/reset, and reward phases.",
+      "Store phase thresholds, wave definitions, and rewards in data dictionaries so the fight can be balanced without rewriting logic.",
+      "Use trigger area checks and boss-state checks for phase transitions, and call XS only when repeated scans or target selection become complex.",
+      "Keep arena setup, boss stats, summons, and reward payout in separate modules owned by the encounter controller."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/MAP_IDEA_TO_IMPLEMENTATION.md",
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/navigation/CROSS_DOMAIN_WORKFLOWS.md"
+    ],
+    "query_terms": ["boss fight", "boss encounter", "phase system", "arena battle", "boss rewards"],
+    "pitfalls": [
+      "Do not scatter phase logic across unrelated combat files with no single encounter owner.",
+      "Do not embed phase thresholds and reward values directly into trigger-building loops when they need balancing later."
+    ]
+  },
+  {
+    "id": "summon_spawn_system",
+    "title": "Summon And Spawn System",
+    "summary": "Model summons as explicit spawn workflows with source ownership, duration or cleanup variables, and separate data for spawned units, limits, and follow-up behavior.",
+    "primary_domains": ["scenario_triggers", "xs", "dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_project", "goku_rpg_genie_code", "hide_and_seek"],
+    "when_to_use": ["hero summons", "spawned helpers", "temporary minions", "spell-created units"],
+    "inputs": ["summon unit ids", "owner player", "spawn location rules", "duration data", "cleanup rules"],
+    "steps": [
+      "Store summon unit ids, durations, and per-summon limits in a data dictionary rather than hardcoding them into trigger logic.",
+      "Split the flow into cast or activation, spawn placement, active lifetime, and cleanup phases.",
+      "Use trigger variables to track summon ownership, active counts, or expiration state.",
+      "Use XS only when repeated target scans or spawn-location calculations are awkward in pure triggers.",
+      "Keep summon visuals, summon unit data, and summon cleanup rules in separate modules."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/domains/XS_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["summon system", "spawn helper units", "temporary minion", "spell summon", "spawned allies"],
+    "pitfalls": [
+      "Do not mix summon creation, duration tracking, and cleanup in one oversized trigger block.",
+      "Do not hide spawn-unit mappings inside code when they belong in data."
+    ]
+  },
+  {
+    "id": "wave_system_controller",
+    "title": "Wave System Controller",
+    "summary": "Build wave gameplay as a controller with wave-state variables, data-driven wave definitions, and separate spawn, progress, and cleanup modules.",
+    "primary_domains": ["scenario_triggers", "xs"],
+    "reference_projects": ["goku_rpg_project", "lords_of_diplomacy_easy_mode"],
+    "when_to_use": ["enemy waves", "defense maps", "arena rounds", "survival systems"],
+    "inputs": ["wave index variable", "wave data table", "spawn definitions", "completion conditions", "reward rules"],
+    "steps": [
+      "Reserve central variables for current wave, active-wave state, and completion flags.",
+      "Store wave unit compositions, spawn timing, and rewards in a separate data table or dictionary.",
+      "Split the system into wave start, spawn execution, wave completion detection, and next-wave transition logic.",
+      "Use XS only when the wave controller needs repeated scans, weighted selection, or more complex runtime calculations.",
+      "Keep wave definitions and balancing data out of the trigger-construction loops."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/MAP_IDEA_TO_IMPLEMENTATION.md",
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/domains/XS_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["wave system", "enemy wave controller", "arena rounds", "survival waves", "spawn waves"],
+    "pitfalls": [
+      "Do not hardcode each wave in a separate unstructured trigger tree when a wave data table can drive the controller.",
+      "Do not mix reward payout and wave-spawn logic into one phase."
+    ]
+  },
+  {
+    "id": "reward_table_resolution",
+    "title": "Reward Table Resolution",
+    "summary": "Treat rewards as data-driven tables that map events, quest stages, drops, or achievements to payout actions so balancing changes stay cheap.",
+    "primary_domains": ["scenario_triggers", "dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_project", "goku_rpg_genie_code"],
+    "when_to_use": ["quest rewards", "boss rewards", "loot tables", "class unlock rewards"],
+    "inputs": ["reward table ids", "event type", "reward mapping", "currency or item outputs", "eligibility rules"],
+    "steps": [
+      "Move reward values and item or currency mappings into a dedicated reward table or dictionary file.",
+      "Use one trigger-side reward resolver that reads the reward type and dispatches the correct payout behavior.",
+      "Gate reward resolution with eligibility variables so one-time rewards and repeatable rewards stay explicit.",
+      "Keep reward payout separate from the event logic that caused the reward so later balance passes only touch the data layer.",
+      "Use dat-backed items or units only through dedicated reward handlers rather than inline mutation logic."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/MAP_IDEA_TO_IMPLEMENTATION.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["reward table", "quest rewards data", "loot reward mapping", "boss reward payout", "reward resolver"],
+    "pitfalls": [
+      "Do not duplicate reward amounts across several systems when one table should own them.",
+      "Do not combine eligibility checks and payout mutations in ways that make reward balancing hard to audit."
+    ]
+  },
+  {
+    "id": "fail_and_reset_flow",
+    "title": "Fail And Reset Flow",
+    "summary": "Implement fail states and resets as a dedicated controller with checkpoint data, cleanup triggers, and restore steps so encounters can restart cleanly without rebuilding the whole scenario state by hand.",
+    "primary_domains": ["scenario_triggers", "xs"],
+    "reference_projects": ["lords_of_diplomacy_easy_mode", "goku_rpg_project"],
+    "when_to_use": ["mission fail states", "boss wipes", "checkpoint resets", "repeatable challenge rooms"],
+    "inputs": ["failure condition", "checkpoint state", "reset cleanup targets", "player restore rules", "retry messaging"],
+    "steps": [
+      "Reserve shared variables for current checkpoint, fail state, and reset-in-progress state.",
+      "Keep checkpoint data such as restored spawns, resources, or quest-stage values in a dedicated data dictionary.",
+      "Create one fail-detection trigger group that only decides when a reset should begin.",
+      "Create a reset controller that performs cleanup, restores checkpoint data, and re-enables the encounter in a fixed order.",
+      "Keep player-facing fail or retry messaging separate from the cleanup and restore operations."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/MAP_IDEA_TO_IMPLEMENTATION.md",
+      "docs/trigger_knowledge/condition_usage_playbook.md"
+    ],
+    "query_terms": ["fail state", "reset flow", "checkpoint reset", "retry encounter", "wipe recovery"],
+    "pitfalls": [
+      "Do not mix fail detection, cleanup, and checkpoint restore logic into one giant trigger.",
+      "Do not hardcode checkpoint values in reset code when the encounter needs balancing or multiple reset points later."
+    ]
+  },
+  {
+    "id": "class_stat_scaling_tables",
+    "title": "Class Stat Scaling Tables",
+    "summary": "Drive class progression from separate scaling tables or dictionaries so triggers and XS apply level-based stat changes without hardcoding every value in the implementation layer.",
+    "primary_domains": ["scenario_triggers", "xs", "dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_project", "goku_rpg_genie_code"],
+    "when_to_use": ["level scaling", "class stat growth", "balance passes", "ability scaling"],
+    "inputs": ["class id", "level variable", "scaling table", "target stats", "optional per-class overrides"],
+    "steps": [
+      "Store per-class stat growth in data dictionaries or JSON keyed by class and level rather than in trigger branches.",
+      "Let one progression or stat-scaling controller read the current class and level state from shared variables.",
+      "Apply the resolved values through trigger effects, XS stat helpers, or dat-backed support assets depending on the stat type.",
+      "Keep scaling-table ownership separate from class-pick flow and combat-resolution flow.",
+      "When balancing changes happen, update the data layer first and avoid editing the core trigger orchestration."
+    ],
+    "best_files": [
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/XS_PROJECT_FILES_GUIDE.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["class stat scaling", "level scaling table", "data driven stats", "class growth values", "balance tables"],
+    "pitfalls": [
+      "Do not hardcode every class or level branch inside trigger construction code when the values belong in data.",
+      "Do not let multiple systems own the same final stat calculation path without one scaling controller."
+    ]
+  },
+  {
+    "id": "boss_reward_distribution",
+    "title": "Boss Reward Distribution",
+    "summary": "Resolve boss rewards through a dedicated payout layer that runs after encounter completion so loot, currencies, unlocks, and follow-up progression all come from one reusable reward pipeline.",
+    "primary_domains": ["scenario_triggers", "dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_project", "goku_rpg_genie_code"],
+    "when_to_use": ["boss kills", "raid completion", "elite encounter rewards", "repeatable boss farming"],
+    "inputs": ["boss completion flag", "reward table key", "player eligibility rules", "payout actions", "optional first-clear bonuses"],
+    "steps": [
+      "Keep boss completion detection separate from the reward payout controller.",
+      "Resolve the reward payload by boss id, difficulty, or encounter stage through a shared reward-table layer.",
+      "Apply currencies, loot, unlocks, or progression changes through small payout modules rather than one long reward trigger.",
+      "Track first-clear or repeat-clear state in dedicated variables when payouts differ by attempt.",
+      "Keep boss reward data independent from boss combat tuning so balance passes do not force trigger rewrites."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/MAP_IDEA_TO_IMPLEMENTATION.md",
+      "docs/agent/domains/TRIGGER_AGENT_GUIDE.md",
+      "docs/agent/references/patterns/trigger_xs_patterns.json"
+    ],
+    "query_terms": ["boss rewards", "encounter payout", "first clear reward", "boss loot flow", "reward distribution"],
+    "pitfalls": [
+      "Do not embed reward payout rules directly inside the boss combat state machine.",
+      "Do not duplicate the same payout logic across bosses when one shared reward pipeline can parameterize it."
+    ]
+  }
+]

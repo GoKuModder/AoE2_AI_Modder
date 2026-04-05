@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "description": "Golden map-feature and exact-lookup queries for the unified low-token AoE retriever.",
+  "defaults": {
+    "k": 4,
+    "min_recall": 0.9,
+    "min_mrr": 0.75,
+    "min_budget_pass_rate": 1.0,
+    "max_context_chars": 2600,
+    "max_retrieved": 4,
+    "max_steps_per_result": 6,
+    "max_best_files_per_result": 5
+  },
+  "cases": [
+    {
+      "id": "feature-global-events",
+      "query": "How should I build recurring global event announcements for all players?",
+      "expected_any": ["global_event_notifications"]
+    },
+    {
+      "id": "feature-quest-system",
+      "query": "How should I structure a multi-stage NPC quest system?",
+      "expected_any": ["quest_system_flow"]
+    },
+    {
+      "id": "feature-teleport-system",
+      "query": "How do I build a teleport pad system in a scenario project?",
+      "expected_any": ["teleport_system"]
+    },
+    {
+      "id": "feature-parser-cleanup",
+      "query": "How do I clear existing units from source map regions before setup?",
+      "expected_any": ["unit_manager_cleanup_regions"]
+    },
+    {
+      "id": "feature-genie-linked-unit",
+      "query": "How do I create a new unit and link it to a custom graphic in GenieWorkspace?",
+      "expected_any": ["create_unit_with_linked_graphic"]
+    },
+    {
+      "id": "feature-shop-system",
+      "query": "How should I structure an NPC shop with item prices and purchase rewards?",
+      "expected_any": ["shop_system_flow"]
+    },
+    {
+      "id": "feature-npc-dialogue",
+      "query": "How do I build a branching talk-to-NPC dialogue system for quest givers?",
+      "expected_any": ["npc_interaction_dialogue"]
+    },
+    {
+      "id": "feature-boss-encounter",
+      "query": "How should I build a staged boss encounter with phase transitions and rewards?",
+      "expected_any": ["boss_encounter_flow"]
+    },
+    {
+      "id": "feature-genie-upgrade-chain",
+      "query": "How do I create an upgraded unit variant chain unlocked by a tech?",
+      "expected_any": ["create_upgrade_variant_chain"]
+    },
+    {
+      "id": "feature-summon-system",
+      "query": "How should I build a summon system for temporary helper units with cleanup?",
+      "expected_any": ["summon_spawn_system"]
+    },
+    {
+      "id": "feature-wave-system",
+      "query": "How do I structure enemy waves with progression and round rewards?",
+      "expected_any": ["wave_system_controller"]
+    },
+    {
+      "id": "feature-reward-table",
+      "query": "How should I store and resolve reward tables for quests and bosses?",
+      "expected_any": ["reward_table_resolution"]
+    },
+    {
+      "id": "feature-tech-effect-unlock",
+      "query": "How do I unlock a unit through a tech effect in the dat workflow?",
+      "expected_any": ["apply_tech_effect_unlock"]
+    },
+    {
+      "id": "feature-civ-gating",
+      "query": "How do I gate a custom unit so only one civilization can unlock it?",
+      "expected_any": ["civ_specific_unlock_gating"]
+    },
+    {
+      "id": "feature-resource-storage",
+      "query": "How do I change resource storage and cost values for a custom unit?",
+      "expected_any": ["configure_resource_storage"]
+    },
+    {
+      "id": "feature-fail-reset",
+      "query": "How should I build a checkpoint fail state and reset flow for a boss room?",
+      "expected_any": ["fail_and_reset_flow"]
+    },
+    {
+      "id": "feature-class-scaling",
+      "query": "How should I structure data-driven class stat scaling for level progression?",
+      "expected_any": ["class_stat_scaling_tables"]
+    },
+    {
+      "id": "feature-boss-reward-payout",
+      "query": "How should I build boss reward payout and first-clear reward distribution?",
+      "expected_any": ["boss_reward_distribution"]
+    },
+    {
+      "id": "feature-tech-gated-production",
+      "query": "How do I create a tech-gated production chain for a custom trained unit?",
+      "expected_any": ["tech_gated_production_chain"]
+    },
+    {
+      "id": "feature-civ-cost-profile",
+      "query": "How do I change civilization-specific resource costs for a custom unit?",
+      "expected_any": ["civ_specific_cost_profile"]
+    },
+    {
+      "id": "feature-command-task-chain",
+      "query": "How do I create a custom command and task replacement chain for a hero ability?",
+      "expected_any": ["command_task_replacement_chain"]
+    },
+    {
+      "id": "exact-xs-trigger-variable",
+      "query": "xsTriggerVariable",
+      "expected_any": ["xsTriggerVariable"]
+    },
+    {
+      "id": "exact-trigger-effect",
+      "query": "display_timer",
+      "expected_any": ["display_timer"]
+    },
+    {
+      "id": "exact-trigger-condition",
+      "query": "timer",
+      "expected_any": ["timer"]
+    },
+    {
+      "id": "exact-ai-command",
+      "query": "acknowledge-taunt",
+      "expected_any": ["acknowledge-taunt"]
+    },
+    {
+      "id": "exact-genie-object",
+      "query": "Militia",
+      "expected_any": ["Militia"]
+    },
+    {
+      "id": "exact-dat-sprite-field",
+      "query": "standing_sprite_id1",
+      "expected_any": ["unit_sprite_link_fields"]
+    },
+    {
+      "id": "exact-dat-resource-slot",
+      "query": "civ_manager.add_resource",
+      "expected_any": ["civ_global_resource_slots"]
+    },
+    {
+      "id": "exact-dat-research-location",
+      "query": "add_research_location",
+      "expected_any": ["tech_definition_and_research_location"]
+    },
+    {
+      "id": "negative-miss",
+      "query": "zzzz__aoe_rag_unmapped_token",
+      "kind": "miss"
+    }
+  ]
+}

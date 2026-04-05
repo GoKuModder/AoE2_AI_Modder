@@ -10,6 +10,7 @@ __pycache__/
 
 # Virtual environments
 .venv/
+.venv_pkg_test/
 venv/
 env/
 
@@ -41,6 +42,10 @@ dist/
 *.per
 *.dat
 *.drs
+!examples/
+!examples/**/*.ai
+!examples/**/*.xs
+!examples/**/*.per
 
 # =====================
 # Generated / Cache
@@ -48,6 +53,11 @@ dist/
 _cache/
 .cache/
 *.log
+.sisyphus/
+.mailmap-rewrite
+temp_check.xs
+XS_Training/_sources/
+docs/trigger_knowledge/conditions_knowledge.py
 
 # =====================
 # Secrets

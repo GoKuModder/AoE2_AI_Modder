@@ -15,7 +15,7 @@ from src.integration.xs_injector import (
 
 
 def main() -> int:
-    out_xs = root_dir / "XS_Scripting" / "xs_array_injection_demo_generated.xs"
+    out_xs = root_dir / "examples" / "xs" / "xs_array_injection_demo_generated.xs"
 
     snippet = build_array_create_and_get_snippet(
         array_id_var="aInjectedIds",
@@ -45,6 +45,7 @@ def main() -> int:
     indented_snippet = "\n".join("    " + line for line in snippet.strip().splitlines())
     generated = inject_xs_code(base, indented_snippet, marker="INJECT_HERE")
 
+    out_xs.parent.mkdir(parents=True, exist_ok=True)
     out_xs.write_text(generated, encoding="utf-8")
     print(str(out_xs))
     return 0

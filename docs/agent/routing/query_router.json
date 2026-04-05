@@ -1,0 +1,478 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "query_term": "xs",
+      "normalized_term": "xs",
+      "target_domains": [
+        "xs"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "xs function",
+      "normalized_term": "xs function",
+      "target_domains": [
+        "xs"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "xs constant",
+      "normalized_term": "xs constant",
+      "target_domains": [
+        "xs"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "extern int",
+      "normalized_term": "extern int",
+      "target_domains": [
+        "xs",
+        "scenario_triggers"
+      ],
+      "priority": 95,
+      "notes": "Usually about generated XS globals or trigger-plus-XS architecture."
+    },
+    {
+      "query_term": "xs variable",
+      "normalized_term": "xs variable",
+      "target_domains": [
+        "xs",
+        "scenario_triggers"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "xs output path",
+      "normalized_term": "xs output path",
+      "target_domains": [
+        "xs"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "include file",
+      "normalized_term": "include file",
+      "target_domains": [
+        "xs",
+        "scenario_triggers"
+      ],
+      "priority": 75,
+      "notes": "Route to XS when the task is about generated support files or runtime script assembly."
+    },
+    {
+      "query_term": "per",
+      "normalized_term": "per",
+      "target_domains": [
+        "ai_scripts"
+      ],
+      "priority": 100,
+      "notes": "Use for .per AI script questions, not for XS."
+    },
+    {
+      "query_term": "defrule",
+      "normalized_term": "defrule",
+      "target_domains": [
+        "ai_scripts"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "taunt",
+      "normalized_term": "taunt",
+      "target_domains": [
+        "ai_scripts"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "goal",
+      "normalized_term": "goal",
+      "target_domains": [
+        "ai_scripts",
+        "scenario_triggers"
+      ],
+      "priority": 70,
+      "notes": "AI goals often intersect with trigger-side AI effects."
+    },
+    {
+      "query_term": "trigger effect",
+      "normalized_term": "trigger effect",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "trigger condition",
+      "normalized_term": "trigger condition",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "effect usage",
+      "normalized_term": "effect usage",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "condition usage",
+      "normalized_term": "condition usage",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "attribute",
+      "normalized_term": "attribute",
+      "target_domains": [
+        "scenario_triggers",
+        "dat_genie_tooling"
+      ],
+      "priority": 80
+    },
+    {
+      "query_term": "aoe2scenarioparser",
+      "normalized_term": "aoe2scenarioparser",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "condition",
+      "normalized_term": "condition",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 85
+    },
+    {
+      "query_term": "aoe_variables",
+      "normalized_term": "aoe_variables",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "quest system",
+      "normalized_term": "quest system",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "teleport system",
+      "normalized_term": "teleport system",
+      "target_domains": [
+        "scenario_triggers",
+        "xs"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "loot system",
+      "normalized_term": "loot system",
+      "target_domains": [
+        "scenario_triggers",
+        "dat_genie_tooling"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "dictionary.py",
+      "normalized_term": "dictionary py",
+      "target_domains": [
+        "scenario_triggers",
+        "dat_genie_tooling"
+      ],
+      "priority": 85
+    },
+    {
+      "query_term": "data driven balancing",
+      "normalized_term": "data driven balancing",
+      "target_domains": [
+        "scenario_triggers",
+        "dat_genie_tooling"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "genieworkspace",
+      "normalized_term": "genieworkspace",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "graphic manager",
+      "normalized_term": "graphic manager",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "sound manager",
+      "normalized_term": "sound manager",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "tech manager",
+      "normalized_term": "tech manager",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "civ manager",
+      "normalized_term": "civ manager",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "dead unit",
+      "normalized_term": "dead unit",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "standing_sprite_id1",
+      "normalized_term": "standing sprite id1",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "standing_sprite_id2",
+      "normalized_term": "standing sprite id2",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "particle_effect_name",
+      "normalized_term": "particle effect name",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "modify_tech",
+      "normalized_term": "modify tech",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "enable_disable_unit",
+      "normalized_term": "enable disable unit",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "add_research_location",
+      "normalized_term": "add research location",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "set_required_tech",
+      "normalized_term": "set required tech",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "add_resource",
+      "normalized_term": "add resource",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "resource slot",
+      "normalized_term": "resource slot",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 95
+    },
+    {
+      "query_term": "effect command",
+      "normalized_term": "effect command",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "apply_",
+      "normalized_term": "apply",
+      "target_domains": [
+        "scenario_triggers",
+        "dat_genie_tooling"
+      ],
+      "priority": 80,
+      "notes": "Architecture-oriented query; use domain context to decide whether trigger or genie patterns are primary."
+    },
+    {
+      "query_term": "script call",
+      "normalized_term": "script call",
+      "target_domains": [
+        "scenario_triggers",
+        "xs"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "unit manager",
+      "normalized_term": "unit manager",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 95,
+      "notes": "Implementation-oriented parser-manager question; also open the scenario builder parser managers guide."
+    },
+    {
+      "query_term": "map manager",
+      "normalized_term": "map manager",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 95,
+      "notes": "Implementation-oriented parser-manager question; also open the scenario builder parser managers guide."
+    },
+    {
+      "query_term": "xs file",
+      "normalized_term": "xs file",
+      "target_domains": [
+        "xs",
+        "scenario_triggers"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "cleanup region",
+      "normalized_term": "cleanup region",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 85
+    },
+    {
+      "query_term": "terrain blockers",
+      "normalized_term": "terrain blockers",
+      "target_domains": [
+        "scenario_triggers"
+      ],
+      "priority": 85
+    },
+    {
+      "query_term": "map idea",
+      "normalized_term": "map idea",
+      "target_domains": [
+        "scenario_triggers",
+        "xs",
+        "dat_genie_tooling"
+      ],
+      "priority": 85,
+      "notes": "Start with the scenario builder workflow docs, then route into the owning domain."
+    },
+    {
+      "query_term": "dat",
+      "normalized_term": "dat",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "genie",
+      "normalized_term": "genie",
+      "target_domains": [
+        "dat_genie_tooling",
+        "scenario_triggers"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "genie editor",
+      "normalized_term": "genie editor",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 100
+    },
+    {
+      "query_term": "unit id",
+      "normalized_term": "unit id",
+      "target_domains": [
+        "dat_genie_tooling",
+        "scenario_triggers"
+      ],
+      "priority": 85
+    },
+    {
+      "query_term": "train location",
+      "normalized_term": "train location",
+      "target_domains": [
+        "dat_genie_tooling",
+        "scenario_triggers"
+      ],
+      "priority": 80
+    },
+    {
+      "query_term": "task id",
+      "normalized_term": "task id",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 90
+    },
+    {
+      "query_term": "save registry",
+      "normalized_term": "save registry",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 85
+    },
+    {
+      "query_term": "workspace.save",
+      "normalized_term": "workspace save",
+      "target_domains": [
+        "dat_genie_tooling"
+      ],
+      "priority": 85
+    }
+  ]
+}

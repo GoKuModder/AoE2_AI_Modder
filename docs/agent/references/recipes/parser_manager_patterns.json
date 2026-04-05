@@ -1,0 +1,136 @@
+[
+  {
+    "id": "unit_manager_mass_placement",
+    "title": "UnitManager Mass Placement",
+    "summary": "Use UnitManager for large batches of scenario object placement such as blockers, flags, markers, revealers, relics, tents, and world objects.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["lords_of_diplomacy_easy_mode", "goku_rpg_project"],
+    "operations": ["add_unit"],
+    "when_to_use": ["initial world setup", "region decoration", "quest markers", "blockers", "map revealers"],
+    "steps": [
+      "Load or receive unit_manager from the scenario.",
+      "Group placement logic by gameplay area or system.",
+      "Use loops for repeated tiles or player-specific copies.",
+      "Keep placement code in setup modules instead of scattered trigger logic."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md"
+    ],
+    "query_terms": ["add_unit", "place many units", "world setup placement", "unit manager placement"],
+    "pitfalls": [
+      "Do not scatter mass placement across unrelated feature modules.",
+      "Do not use trigger runtime logic for simple one-time setup placement."
+    ]
+  },
+  {
+    "id": "unit_manager_cleanup_regions",
+    "title": "UnitManager Region Cleanup",
+    "summary": "Use UnitManager area queries plus remove calls to clean source-scenario content before new systems are applied.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["goku_rpg_project"],
+    "operations": ["get_units_in_area", "remove_unit"],
+    "when_to_use": ["clear existing content", "replace source map objects", "scenario reset pass"],
+    "steps": [
+      "Define cleanup regions through trigger data or explicit coordinates.",
+      "Query the units in each region.",
+      "Remove the matched units in one dedicated cleanup pass before later setup systems run."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md"
+    ],
+    "query_terms": ["get_units_in_area", "remove_unit", "clear map area", "cleanup source scenario"],
+    "pitfalls": [
+      "Do not interleave cleanup and feature placement if you can perform cleanup first.",
+      "Do not bury cleanup regions inside unrelated class or quest code."
+    ]
+  },
+  {
+    "id": "unit_manager_filter_and_convert",
+    "title": "UnitManager Filter And Convert",
+    "summary": "Filter placed units by type or ownership, then convert or mutate them in a separate pass.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["goku_rpg_project"],
+    "operations": ["filter_units_by_const", "change_ownership", "get_player_units"],
+    "when_to_use": ["convert units between players", "initialize ownership", "target specific placed units"],
+    "steps": [
+      "Filter the scenario units by unit type and optional player ownership.",
+      "Apply ownership or state changes in a clear conversion pass.",
+      "Keep conversion logic separate from mass placement or trigger-state setup."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md"
+    ],
+    "query_terms": ["filter_units_by_const", "change_ownership", "convert scenario units", "player unit filtering"],
+    "pitfalls": [
+      "Do not mix conversion logic into unrelated trigger initialization.",
+      "Do not rely on ad hoc coordinate matching when type/ownership filters are sufficient."
+    ]
+  },
+  {
+    "id": "map_manager_terrain_scan",
+    "title": "MapManager Terrain Scan",
+    "summary": "Use MapManager terrain iteration to detect terrain-driven setup rules such as placing blockers on black tiles or region-specific world content.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["goku_rpg_project"],
+    "operations": ["terrain"],
+    "when_to_use": ["blockers on terrain", "terrain-based setup", "tile-driven world rules"],
+    "steps": [
+      "Iterate terrain through map_manager.terrain.",
+      "Match terrain ids to the setup rule.",
+      "Place corresponding setup objects through UnitManager."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md"
+    ],
+    "query_terms": ["map_manager.terrain", "scan terrain", "black tile blockers", "terrain setup"],
+    "pitfalls": [
+      "Do not merge terrain scanning with unrelated runtime gameplay logic.",
+      "Do not duplicate the same terrain pass in many systems."
+    ]
+  },
+  {
+    "id": "map_manager_region_scan",
+    "title": "MapManager Region Scan",
+    "summary": "Use MapManager square-region helpers when the scenario setup depends on tile rectangles rather than single placed objects.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["lords_of_diplomacy_easy_mode"],
+    "operations": ["get_square_2d"],
+    "when_to_use": ["inspect rectangles", "setup region content", "tile-rectangle checks"],
+    "steps": [
+      "Define the rectangular bounds for the region.",
+      "Read the region through get_square_2d or equivalent map-manager helper.",
+      "Use the tile data to drive later placement or logic setup."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md"
+    ],
+    "query_terms": ["get_square_2d", "tile rectangle", "map region scan", "map manager rectangle"],
+    "pitfalls": [
+      "Do not scan the same region repeatedly if one cached setup pass can provide the data.",
+      "Do not mix tile-geometry concerns into combat or quest lifecycle code."
+    ]
+  },
+  {
+    "id": "parser_managers_as_dependencies",
+    "title": "Pass Parser Managers Into The Systems That Need Them",
+    "summary": "Treat parser managers as explicit dependencies of setup or world systems rather than global state hidden across the whole project.",
+    "primary_domains": ["scenario_triggers"],
+    "reference_projects": ["goku_rpg_project"],
+    "operations": ["constructor injection", "system orchestration"],
+    "when_to_use": ["system classes", "world systems", "manager-heavy modules", "orchestrators"],
+    "steps": [
+      "Acquire managers once in the main scenario entrypoint.",
+      "Pass unit_manager or map_manager into the systems that truly need them.",
+      "Keep systems that do not need parser-manager access free of those dependencies."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/PARSER_MANAGERS_GUIDE.md",
+      "docs/agent/scenario_builder/MAP_IDEA_TO_IMPLEMENTATION.md"
+    ],
+    "query_terms": ["pass unit_manager", "pass map_manager", "system dependencies", "manager injection"],
+    "pitfalls": [
+      "Do not make every system depend on every manager by default.",
+      "Do not hide manager access as ambient global state when explicit dependency passing is clearer."
+    ]
+  }
+]

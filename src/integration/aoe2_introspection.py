@@ -4,6 +4,62 @@ import pkgutil
 import importlib
 import re
 
+def _parameter_type_to_string(parameter: inspect.Parameter) -> str:
+    if parameter.annotation == inspect.Parameter.empty:
+        return ""
+    if isinstance(parameter.annotation, str):
+        return parameter.annotation
+    try:
+        return parameter.annotation.__name__
+    except AttributeError:
+        return str(parameter.annotation)
+
+
+def _introspect_support_methods(support_class: Any) -> Dict[str, Any]:
+    methods: Dict[str, Any] = {}
+    for name, fn in inspect.getmembers(support_class, predicate=inspect.isfunction):
+        if name.startswith("_"):
+            continue
+
+        sig_obj = inspect.signature(fn)
+        params = []
+        for parameter in sig_obj.parameters.values():
+            if parameter.name == "self":
+                continue
+            params.append(
+                {
+                    "name": parameter.name,
+                    "type": _parameter_type_to_string(parameter),
+                    "default": (
+                        str(parameter.default)
+                        if parameter.default != inspect.Parameter.empty
+                        else None
+                    ),
+                }
+            )
+
+        methods[name] = {
+            "name": name,
+            "signature": f"{name}{sig_obj}",
+            "params": params,
+        }
+    return methods
+
+
+def introspect_aoe2sp_conditions() -> Dict[str, Any]:
+    """
+    Introspects AoE2ScenarioParser NewConditionSupport to obtain methods + signatures.
+    """
+    try:
+        from AoE2ScenarioParser.objects.support.new_condition import NewConditionSupport  # type: ignore
+    except ImportError as e:
+        raise RuntimeError(
+            "Could not import AoE2ScenarioParser. Ensure your venv/interpreter is set correctly."
+        ) from e
+
+    return _introspect_support_methods(NewConditionSupport)
+
+
 def introspect_aoe2sp_effects() -> Dict[str, Any]:
     """
     Introspects AoE2ScenarioParser NewEffectSupport to obtain methods + signatures.
@@ -15,37 +71,7 @@ def introspect_aoe2sp_effects() -> Dict[str, Any]:
             "Could not import AoE2ScenarioParser. Ensure your venv/interpreter is set correctly."
         ) from e
 
-    methods: Dict[str, Any] = {}
-    for name, fn in inspect.getmembers(NewEffectSupport, predicate=inspect.isfunction):
-        if name.startswith("_"):
-            continue
-        sig_obj = inspect.signature(fn)
-        sig = str(sig_obj)
-        params = []
-        for p in sig_obj.parameters.values():
-            if p.name == "self":
-                continue
-            
-            # Extract type annotation if available
-            type_str = ""
-            if p.annotation != inspect.Parameter.empty:
-                # Handle string annotations vs type objects
-                if isinstance(p.annotation, str):
-                    type_str = p.annotation
-                else:
-                    try:
-                        type_str = p.annotation.__name__
-                    except AttributeError:
-                        type_str = str(p.annotation)
-
-            params.append({
-                "name": p.name,
-                "type": type_str,
-                "default": str(p.default) if p.default != inspect.Parameter.empty else None
-            })
-
-        methods[name] = {"name": name, "signature": f"{name}{sig}", "params": params}
-    return methods
+    return _introspect_support_methods(NewEffectSupport)
 
 
 def introspect_object_attributes_enum() -> Dict[int, str]:

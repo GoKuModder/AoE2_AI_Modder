@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "lords_of_diplomacy_easy_mode",
+      "title": "Lords of Diplomacy",
+      "path": "C:\\AoE2DE Modding\\Code\\LordsOfDiplomacy - Easy Mode",
+      "priority": 1,
+      "role": "Primary trigger + XS workflow reference",
+      "use_for": [
+        "trigger-variable workflows",
+        "scenario initialization with AoE2ScenarioParser",
+        "hand-authored trigger + XS structure",
+        "real trigger and XS system recipes"
+      ],
+      "representative_paths": [
+        "xs_scripts.py",
+        "game_initialization.py",
+        "XS_Scripts",
+        "Genie_Dat"
+      ],
+      "avoid_for": [
+        "treating every folder as canonical",
+        "using raw project files directly instead of converting repeated patterns into this repo"
+      ]
+    },
+    {
+      "id": "goku_rpg_genie_code",
+      "title": "RPG GoKu",
+      "path": "C:\\AoE2DE Modding\\Code\\GoKu RPG Genie Code",
+      "priority": 2,
+      "role": "Primary .dat/genie tooling workflow reference",
+      "use_for": [
+        "GenieWorkspace load-edit-save workflows",
+        "module-per-system data edit patterns",
+        "item and class data editing",
+        "world and inventory data structures"
+      ],
+      "representative_paths": [
+        "main\\main.py",
+        "config",
+        "Classes",
+        "World",
+        "Inventory_System",
+        "Skill_Tree"
+      ],
+      "avoid_for": [
+        "copying project-specific naming without normalization",
+        "assuming every data pattern is already generalized"
+      ]
+    },
+    {
+      "id": "goku_rpg_project",
+      "title": "RPG GoKu",
+      "path": "C:\\AoE2DE Modding\\Code\\GoKu RPG Project",
+      "priority": 3,
+      "role": "Secondary mixed-system reference",
+      "use_for": [
+        "extra trigger + XS recipes",
+        "AI-assisted system expansion examples",
+        "XS validation workflow examples"
+      ],
+      "representative_paths": [
+        "XS_Scripts",
+        "Validate_XS",
+        "run_xs_validation.py",
+        "World",
+        "Abilities"
+      ],
+      "avoid_for": [
+        "Difficulty folder",
+        "treating generated or temporary outputs as canonical patterns"
+      ],
+      "notes": "Ignore the Difficulty folder when mining this project."
+    },
+    {
+      "id": "hide_and_seek",
+      "title": "F13 Dark Hunt",
+      "path": "C:\\AoE2DE Modding\\Code\\Hide_and_Seek",
+      "priority": 4,
+      "role": "Detailed XS reference with weaker teaching structure",
+      "use_for": [
+        "detailed XS runtime patterns",
+        "generated XS validation flows",
+        "objective and runtime decomposition ideas"
+      ],
+      "representative_paths": [
+        "PLAN.md",
+        "Builder",
+        "Runtime",
+        "Objectives",
+        "run_xs_validation.py"
+      ],
+      "avoid_for": [
+        "using its structure as the main readability model for the knowledge base"
+      ]
+    }
+  ]
+}

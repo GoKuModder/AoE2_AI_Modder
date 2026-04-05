@@ -1,0 +1,399 @@
+[
+  {
+    "id": "create_unit_with_linked_graphic",
+    "title": "Create A Unit With A Linked Graphic",
+    "summary": "Create the unit through unit_manager, create the graphic through graphic_manager, then link the unit sprite field explicitly.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "graphic_manager"],
+    "when_to_use": ["quest markers", "pick class units", "pick difficulty units", "custom world objects"],
+    "steps": [
+      "Create the graphic asset first or alongside the unit asset.",
+      "Create the new unit from a stable base unit or add a new one.",
+      "Assign identity fields such as name or file_name.",
+      "Link the unit to the created graphic through the correct sprite field."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": [
+      "create unit with graphic",
+      "create custom unit graphic",
+      "link unit graphic",
+      "genieworkspace unit graphic",
+      "standing_sprite_id1",
+      "graphic linked unit",
+      "pick class unit"
+    ],
+    "pitfalls": [
+      "Do not create the new unit and forget the sprite linkage.",
+      "Do not mutate the base template object in place when the workflow expects a copied or created asset."
+    ]
+  },
+  {
+    "id": "create_particle_marker_asset",
+    "title": "Create A Particle Marker Asset",
+    "summary": "Build marker-style assets by creating a graphic with particle-effect settings, then attach it to a lightweight marker unit.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["graphic_manager", "unit_manager"],
+    "when_to_use": ["quest markers", "labels", "floating indicators", "skill tree or shop visuals"],
+    "steps": [
+      "Create the particle or graphic asset through graphic_manager.",
+      "Set particle effect name, layer, frame count, animation duration, and sequence type.",
+      "Create the lightweight marker unit.",
+      "Link the marker unit to the new graphic."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["particle graphic", "quest marker", "label graphic", "particle effect unit"],
+    "pitfalls": [
+      "Do not treat the graphic as sufficient when the gameplay feature also needs a unit-side anchor object.",
+      "Do not mix particle-graphic configuration into unrelated root orchestration code."
+    ]
+  },
+  {
+    "id": "link_main_and_dead_units",
+    "title": "Link Main Unit, Dead Unit, And Graphics",
+    "summary": "For multi-part genie features, create the graphics, create the secondary dead unit, link the graphics to the dead unit, then connect the main unit to the dead unit.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "graphic_manager"],
+    "when_to_use": ["hero death assets", "spawned structures", "special summon units", "linked component chains"],
+    "steps": [
+      "Create the graphics used by the dead or transformed state.",
+      "Create the main unit.",
+      "Create the dead or secondary unit.",
+      "Link the dead unit to the graphic ids.",
+      "Link the main unit dead-unit field to the secondary unit id."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["dead unit linkage", "main unit dead unit graphic", "link components", "dead_unit_id"],
+    "pitfalls": [
+      "Do not wire the dead-unit chain before the component ids exist.",
+      "Do not spread the chain across unrelated modules without a clear linking helper."
+    ]
+  },
+  {
+    "id": "add_build_task_to_hero",
+    "title": "Add A Build Task To A Hero Or Unit",
+    "summary": "After creating or retrieving the hero unit and the build target unit, add a build task to the hero and point that task at the created target unit.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager"],
+    "when_to_use": ["hero spell buildings", "summons built as structures", "special construction abilities"],
+    "steps": [
+      "Create or retrieve the hero unit.",
+      "Create or retrieve the target unit that the hero should build.",
+      "Add a build task to the hero.",
+      "Point the task unit id at the created target asset.",
+      "Set work range and search behavior fields explicitly."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["build task", "hero builds structure", "add task to unit", "special construction ability"],
+    "pitfalls": [
+      "Do not configure the build task before the target unit exists.",
+      "Do not assume default task values are correct for a custom spell-building flow."
+    ]
+  },
+  {
+    "id": "shared_id_registry_usage",
+    "title": "Use The Shared ID Registry",
+    "summary": "Import truly global ids and constants from a central config layer instead of repeating raw numbers across asset modules.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["config layer"],
+    "when_to_use": ["global graphics", "world object constants", "reused ids across systems"],
+    "steps": [
+      "Identify ids that are reused by several systems.",
+      "Move those ids to config/ids.py or equivalent.",
+      "Import the shared constants from feature modules instead of repeating raw values."
+    ],
+    "best_files": [
+      "docs/agent/domains/DAT_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["config ids", "shared ids", "global graphic ids", "central constants"],
+    "pitfalls": [
+      "Do not move per-feature temporary values into the global registry unless they are genuinely shared.",
+      "Do not duplicate global ids in many feature modules."
+    ]
+  },
+  {
+    "id": "workspace_save_and_registry",
+    "title": "Save The Workspace And Registry Explicitly",
+    "summary": "Finish the dat workflow with one explicit save pass for the modified .dat and one registry or audit artifact when supported.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["workspace"],
+    "when_to_use": ["end of dat build", "repeatable mod outputs", "auditable workflow"],
+    "steps": [
+      "Apply all feature modules through the loaded workspace.",
+      "Save the modified .dat explicitly.",
+      "Save a registry or audit output if the tooling supports it.",
+      "Use configured output locations or ask the user when no path is defined."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["workspace save", "save registry", "dat output", "modified dat file"],
+    "pitfalls": [
+      "Do not rely on in-memory edits without a persistent output pass.",
+      "Do not encode one developer pc output path as the general guidance."
+    ]
+  },
+  {
+    "id": "choose_manager_by_asset_type",
+    "title": "Choose The Manager By Asset Type",
+    "summary": "Route unit edits to unit_manager, graphics to graphic_manager, sounds to sound_manager, techs to tech_manager, and civ data to civ_manager, then wrap cross-manager logic in one feature apply module.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "graphic_manager", "sound_manager", "tech_manager", "civ_manager"],
+    "when_to_use": ["new asset workflows", "feature composition", "cross-manager mod features"],
+    "steps": [
+      "Identify which asset types the feature touches.",
+      "Perform each asset mutation through the owning manager.",
+      "Wrap the combined workflow in one high-level feature apply module."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["which manager", "graphic_manager", "sound_manager", "tech_manager", "civ_manager"],
+    "pitfalls": [
+      "Do not treat the workspace as one undifferentiated object graph.",
+      "Do not blur manager ownership in the explanation of a feature workflow."
+    ]
+  },
+  {
+    "id": "link_unit_sound_graphic_bundle",
+    "title": "Link Unit Sounds And Graphics As One Bundle",
+    "summary": "When a new unit needs a coherent presentation package, wire its graphics and sound ids together in one feature module instead of configuring visuals and audio in unrelated places.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "graphic_manager", "sound_manager"],
+    "when_to_use": ["custom hero variants", "spell summons", "boss presentation", "new unit packages"],
+    "steps": [
+      "Create or copy the graphics needed for the unit's visible states.",
+      "Create or retrieve the sound assets used by the unit's key actions.",
+      "Create or copy the unit entry that will own those assets.",
+      "Assign the unit's sprite fields and the relevant sound references in the same feature workflow.",
+      "Keep the final linkage helper separate from the registry and save orchestration layer."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["link unit sounds graphics", "unit sound graphic bundle", "custom unit sound ids", "graphic_manager sound_manager unit"],
+    "pitfalls": [
+      "Do not configure graphics and sounds in distant modules with no single linkage owner.",
+      "Do not forget to keep shared sound ids in the central registry when they are reused."
+    ]
+  },
+  {
+    "id": "create_upgrade_variant_chain",
+    "title": "Create An Upgrade Variant Chain",
+    "summary": "Build promoted or upgraded units as a linked chain of base unit, upgraded unit, and optional tech or replacement wiring so progression data stays explicit.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "tech_manager", "civ_manager"],
+    "when_to_use": ["class upgrades", "unit promotions", "evolving summons", "custom tech unlocks"],
+    "steps": [
+      "Create or copy the upgraded unit from a stable source entry.",
+      "Update stats, graphics, and identifiers for the upgraded variant in its own module.",
+      "Wire the progression path through the owning upgrade mechanism, such as a tech effect, replacement mapping, or civ-specific unlock.",
+      "Keep the progression chain and its balancing data in separate data/config files.",
+      "Save and audit the resulting ids after the whole chain is linked."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["upgrade unit chain", "promoted unit variant", "class upgrade dat", "tech unlock upgraded unit", "unit progression chain"],
+    "pitfalls": [
+      "Do not mutate the base unit in place when the feature expects a distinct upgraded variant.",
+      "Do not bury upgrade-chain ids inside the feature logic when they should live in shared data."
+    ]
+  },
+  {
+    "id": "wire_train_location_and_task",
+    "title": "Wire Train Location And Production Task",
+    "summary": "When a feature introduces a new production flow, link the produced unit, the production building or actor, and the required task or train-location fields together in one place.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "tech_manager"],
+    "when_to_use": ["custom produced units", "class spawn buildings", "special construction units", "unit production chains"],
+    "steps": [
+      "Create or retrieve the produced unit and the producer unit or building.",
+      "Add or adjust the production task or train-location mapping on the producer side.",
+      "Ensure the produced unit is reachable through the intended production path and any tech gates are updated.",
+      "Keep task wiring and unit-stat edits in separate modules so production flow changes stay readable.",
+      "Verify the final producer-to-unit relationship before the workspace save pass."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["train location", "production task", "unit train location dat", "producer unit task", "spawn building production"],
+    "pitfalls": [
+      "Do not assume the producer can create the new unit without explicit task or train-location wiring.",
+      "Do not mix production-path edits with unrelated unit-balance changes in one file."
+    ]
+  },
+  {
+    "id": "apply_tech_effect_unlock",
+    "title": "Apply Tech Effect Unlocks",
+    "summary": "Use the tech and unit layers together so an unlock or upgrade effect is wired explicitly through the owning tech workflow instead of being implied by naming alone.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["tech_manager", "unit_manager", "civ_manager"],
+    "when_to_use": ["unit unlock techs", "spell unlocks", "upgrade technologies", "class progression techs"],
+    "steps": [
+      "Create or retrieve the target unit or stat change that the tech should unlock.",
+      "Create or edit the owning tech entry through tech_manager.",
+      "Add the required tech effects so the unlock or upgrade path is explicit in data.",
+      "Wire any civ or production prerequisites after the tech effect itself is stable.",
+      "Keep effect ids, affected unit ids, and balancing values in shared data rather than scattered literals."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["tech effect unlock", "unlock unit with tech", "upgrade tech effect", "tech_manager unlock", "technology unlock chain"],
+    "pitfalls": [
+      "Do not assume a new tech unlocks content without an explicit effect path.",
+      "Do not hide effect targets and amounts in unrelated setup code."
+    ]
+  },
+  {
+    "id": "civ_specific_unlock_gating",
+    "title": "Gate Content By Civilization",
+    "summary": "Apply civ-specific content by separating shared asset creation from civ gating so the unlock rules stay readable and the underlying units remain reusable.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["civ_manager", "tech_manager", "unit_manager"],
+    "when_to_use": ["civ-only units", "civilization unlocks", "regional variants", "class restrictions by civ"],
+    "steps": [
+      "Create the shared unit or tech content first without embedding civ logic into the asset definition.",
+      "Apply the civilization-specific availability through civ_manager or the relevant gating mechanism.",
+      "Keep civ gating ids, civ lists, and unlock relationships in a separate config layer.",
+      "Verify the civ-limited content through the full production or upgrade path rather than only checking the raw unit.",
+      "Keep shared content reusable so non-civ variants can still reference it cleanly."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["civ specific unlock", "civilization gating", "civ only unit", "civ_manager unlock", "regional unit gating"],
+    "pitfalls": [
+      "Do not duplicate near-identical units per civ when the real difference is only availability.",
+      "Do not mix civ gating and core asset creation in ways that make maintenance harder."
+    ]
+  },
+  {
+    "id": "configure_resource_storage",
+    "title": "Configure Resource Storage And Costs",
+    "summary": "Handle resource storage and cost changes through dedicated data edits so item, unit, or building economy behavior can be rebalanced without rewriting unrelated workflows.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "tech_manager"],
+    "when_to_use": ["inventory-style units", "resource containers", "special costs", "economy rebalance"],
+    "steps": [
+      "Identify whether the feature changes carried resources, stored resources, or creation costs.",
+      "Apply the storage or cost edits through the owning unit or tech layer instead of burying them inside feature orchestration.",
+      "Keep resource ids, storage amounts, and cost values in a shared data file or balance dictionary.",
+      "Separate the economy edit from graphics, sounds, and production-path edits so balance passes stay focused.",
+      "Verify the resulting resource behavior through the gameplay flow that consumes or grants the resource."
+    ],
+    "best_files": [
+      "docs/agent/domains/DAT_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["resource storage", "unit cost dat", "stored resource edit", "inventory resource values", "economy rebalance dat"],
+    "pitfalls": [
+      "Do not scatter cost and storage values across many modules when they belong in shared balance data.",
+      "Do not bundle economy edits with unrelated presentation changes."
+    ]
+  },
+  {
+    "id": "tech_gated_production_chain",
+    "title": "Create A Tech-Gated Production Chain",
+    "summary": "Wire a new produced unit through its producer, train task, and gating tech together so the unlock path is explicit from production source to technology requirement.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "tech_manager", "civ_manager"],
+    "when_to_use": ["tech gated production", "unlockable trained units", "class trainer buildings", "spell production chains"],
+    "steps": [
+      "Create or retrieve the produced unit and the producer building or actor.",
+      "Wire the production task or train-location path on the producer side before testing the unlock.",
+      "Create or edit the owning tech and add the effect path that exposes the produced unit.",
+      "Keep the gating tech ids, producer ids, and unit ids in shared data rather than scattered literals.",
+      "Verify the full chain from tech research to production availability rather than validating only one layer."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["tech gated production", "unlock trained unit with tech", "production chain unlock", "train location tech gate", "producer tech unlock"],
+    "pitfalls": [
+      "Do not configure the tech unlock without also wiring the producer-side train path.",
+      "Do not split production ownership and tech ownership across unrelated modules with no final linkage helper."
+    ]
+  },
+  {
+    "id": "civ_specific_cost_profile",
+    "title": "Apply A Civilization-Specific Cost Profile",
+    "summary": "Separate shared unit definitions from civilization-specific economy edits so one civ can pay different costs or use different balance values without duplicating the whole unit asset.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["civ_manager", "unit_manager", "tech_manager"],
+    "when_to_use": ["civ-specific costs", "regional balance variants", "class restrictions by civ", "economy tuning per civilization"],
+    "steps": [
+      "Create the shared unit or building asset first without embedding civ-specific cost logic into the base definition.",
+      "Store civ-specific cost values or resource-profile data in a shared balance layer keyed by civilization.",
+      "Apply the civilization-specific cost or unlock profile through the owning civ or tech workflow.",
+      "Keep the shared unit reusable so only the economy or availability layer differs by civilization.",
+      "Verify the resulting civ-specific production flow through real creation or research paths."
+    ],
+    "best_files": [
+      "docs/agent/domains/DAT_AGENT_GUIDE.md",
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md"
+    ],
+    "query_terms": ["civ specific costs", "civilization resource cost", "regional balance profile", "civ only economy values", "civ cost gating"],
+    "pitfalls": [
+      "Do not duplicate full unit assets when the only difference is economy or availability.",
+      "Do not hide civ-specific values inside orchestration code when they belong in shared balance data."
+    ]
+  },
+  {
+    "id": "command_task_replacement_chain",
+    "title": "Create A Command And Task Replacement Chain",
+    "summary": "Model custom behavior changes as an explicit command-task chain so the acting unit, target unit, and replacement or custom task path stay readable and maintainable.",
+    "primary_domains": ["dat_genie_tooling"],
+    "reference_projects": ["goku_rpg_genie_code"],
+    "managers": ["unit_manager", "tech_manager"],
+    "when_to_use": ["custom actions", "replacement tasks", "special production commands", "hero ability build chains"],
+    "steps": [
+      "Identify the acting unit and the target unit or structure that the command chain should affect.",
+      "Create or edit the needed task entries through the owning unit workflow rather than scattering task edits across modules.",
+      "Wire the command or replacement path explicitly so the gameplay action reaches the intended target asset.",
+      "Keep command ids, task ids, and target ids in shared data or feature-local dictionaries.",
+      "Verify the full gameplay path that exercises the command instead of validating only the raw data row."
+    ],
+    "best_files": [
+      "docs/agent/scenario_builder/GENIE_WORKFLOW_GUIDE.md",
+      "docs/agent/domains/DAT_AGENT_GUIDE.md"
+    ],
+    "query_terms": ["command task chain", "replacement task", "custom command path", "task replacement dat", "unit command workflow"],
+    "pitfalls": [
+      "Do not bury task ids and command ids in one-off setup code when the chain needs later balancing or reuse.",
+      "Do not validate only the target unit row when the acting unit or command path is what actually makes the feature work."
+    ]
+  }
+]
