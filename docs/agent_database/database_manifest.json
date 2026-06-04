@@ -72,7 +72,7 @@
   {
     "dataset_id": "xs_functions",
     "path": "docs/agent_database/xs_functions_catalog.json",
-    "record_count": 172,
+    "record_count": 202,
     "primary_key": "name",
     "notes": "Catalog of XS scripting functions with signatures, parameters, return types and categories."
   },

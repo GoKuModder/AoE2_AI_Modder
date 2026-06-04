@@ -165,7 +165,7 @@ class TestManifestValidation(unittest.TestCase):
         
         # Verify XS dataset details
         xs_funcs = next(e for e in manifest if e["dataset_id"] == "xs_functions")
-        self.assertEqual(xs_funcs["record_count"], 172)
+        self.assertEqual(xs_funcs["record_count"], 202)
         self.assertEqual(xs_funcs["primary_key"], "name")
         
         xs_consts = next(e for e in manifest if e["dataset_id"] == "xs_constants")

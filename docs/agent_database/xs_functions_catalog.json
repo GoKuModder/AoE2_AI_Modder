@@ -3071,5 +3071,669 @@
       }
     ],
     "desc": "A runtime event is called after all the XS code has finished executing but before rules start executing. It calls the function `functionName` given to it with the `functionArgument` passed to it as a parameter. For programmers familiar with the terminology, this is basically a way to set a callback. It also returns true if the function name given to it exists, otherwise it returns false. Does not work with built-ins"
+  },
+  {
+    "name": "xsGetLocale",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 0,
+    "params": [],
+    "desc": "Gets the current locale of this player. See the Language Constants section of Constants.xs for the returned values."
+  },
+  {
+    "name": "xsGetString",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "stringId",
+        "type": "int",
+        "required": true,
+        "desc": "The string resource id to read from the strings file"
+      },
+      {
+        "name": "localized",
+        "type": "bool",
+        "required": false,
+        "default": "false",
+        "desc": "Whether to return the localized string"
+      }
+    ],
+    "desc": "Gets a string from the strings file."
+  },
+  {
+    "name": "xsGetPlayerAttributeName",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "resourceId",
+        "type": "int",
+        "required": true,
+        "desc": "The player resource id"
+      },
+      {
+        "name": "localized",
+        "type": "bool",
+        "required": false,
+        "default": "false",
+        "desc": "Whether to return the localized name"
+      }
+    ],
+    "desc": "Gets the Editor resource name for a player attribute/resource id."
+  },
+  {
+    "name": "xsGetObjectAttributeName",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "attributeId",
+        "type": "int",
+        "required": true,
+        "desc": "The object attribute id"
+      },
+      {
+        "name": "localized",
+        "type": "bool",
+        "required": false,
+        "default": "false",
+        "desc": "Whether to return the localized name"
+      }
+    ],
+    "desc": "Gets the Object Attribute name."
+  },
+  {
+    "name": "xsGetDamageClassName",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "damageClassId",
+        "type": "int",
+        "required": true,
+        "desc": "The damage or armor class id"
+      },
+      {
+        "name": "localized",
+        "type": "bool",
+        "required": false,
+        "default": "false",
+        "desc": "Whether to return the localized name"
+      }
+    ],
+    "desc": "Gets the UI Damage Class name."
+  },
+  {
+    "name": "xsIsObjectValid",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "objectId",
+        "type": "int",
+        "required": true,
+        "desc": "The object id to check"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "The player whose data objects should be checked"
+      }
+    ],
+    "desc": "Checks whether an object exists in data for the given player."
+  },
+  {
+    "name": "xsGetPlayerNumberOfObjects",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "The player whose data object count should be returned"
+      }
+    ],
+    "desc": "Gets the number of data objects of a player."
+  },
+  {
+    "name": "xsGetLocalPlayerId",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 0,
+    "params": [],
+    "desc": "Gets the local player id for display/chat-oriented logic. This is a local world player id, not a stable lobby slot or network player id. Do not use it for synced gameplay decisions because it can cause desyncs, and coop players sharing one world player are not distinguishable by XS."
+  },
+  {
+    "name": "xsGetPlayerColorTag",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "The player whose color tag should be returned"
+      }
+    ],
+    "desc": "Gets the player color tag like <RED> for the given player. Works when player color has been changed in a scenario from the Players menu. See the Color Constants section of Constants.xs for all values."
+  },
+  {
+    "name": "xsGetMapSeed",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 0,
+    "params": [],
+    "desc": "Gets the RMS/map seed."
+  },
+  {
+    "name": "xsGetTechAttribute",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 4,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "The player whose tech data should be queried"
+      },
+      {
+        "name": "techId",
+        "type": "int",
+        "required": true,
+        "desc": "The technology id"
+      },
+      {
+        "name": "techAttribute",
+        "type": "int",
+        "required": true,
+        "desc": "The tech attribute constant to read"
+      },
+      {
+        "name": "indexOrCostType",
+        "type": "int",
+        "required": true,
+        "desc": "The attribute index or cost type, depending on the tech attribute"
+      }
+    ],
+    "desc": "Gets a specific attribute from a technology. See the Tech Attribute Constants section of Constants.xs for all values."
+  },
+  {
+    "name": "xsPlaySound",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 6,
+    "params": [
+      {
+        "name": "eventOrSoundFileName",
+        "type": "string",
+        "required": true,
+        "desc": "The sound event or sound file name to play"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "The player to play the sound for; -1 applies to all players"
+      },
+      {
+        "name": "position",
+        "type": "vector",
+        "required": true,
+        "desc": "World position for positional playback"
+      },
+      {
+        "name": "angle",
+        "type": "float",
+        "required": true,
+        "desc": "Playback angle"
+      },
+      {
+        "name": "objectId",
+        "type": "int",
+        "required": true,
+        "desc": "Object id used by the sound effect analogue"
+      },
+      {
+        "name": "global",
+        "type": "bool",
+        "required": false,
+        "default": "false",
+        "desc": "Whether to play the sound globally"
+      }
+    ],
+    "desc": "Plays a sound similarly to the trigger effect analogue."
+  },
+  {
+    "name": "xsDisplayInstructions",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 9,
+    "params": [
+      {
+        "name": "msg",
+        "type": "string",
+        "required": true,
+        "desc": "Instruction text to display"
+      },
+      {
+        "name": "time",
+        "type": "int",
+        "required": true,
+        "desc": "Display duration"
+      },
+      {
+        "name": "sourcePlayer",
+        "type": "int",
+        "required": true,
+        "desc": "Corresponds to the editor Source Player option and controls the source-player color behavior"
+      },
+      {
+        "name": "iconObjectId",
+        "type": "int",
+        "required": true,
+        "desc": "Object id for the displayed icon"
+      },
+      {
+        "name": "panelPosition",
+        "type": "int",
+        "required": true,
+        "desc": "Instruction panel position"
+      },
+      {
+        "name": "useTagColorForIcon",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether the icon should use the message tag color"
+      },
+      {
+        "name": "playSound",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to play a sound with the instruction"
+      },
+      {
+        "name": "soundFilename",
+        "type": "string",
+        "required": true,
+        "desc": "Sound file name to play when playSound is true"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "default": "-1",
+        "desc": "Which player should see the instruction; -1 applies to all players"
+      }
+    ],
+    "desc": "Displays instructions similarly to the trigger effect analogue. The sourcePlayer parameter corresponds to the editor Source Player option, while playerId controls who receives the instruction."
+  },
+  {
+    "name": "xsClearInstructions",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "panelPosition",
+        "type": "int",
+        "required": true,
+        "desc": "Instruction panel position to clear"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "default": "-1",
+        "desc": "Which player's instruction text should be cleared; -1 applies to all players"
+      }
+    ],
+    "desc": "Clears instruction text, if any, similarly to the trigger effect analogue."
+  },
+  {
+    "name": "xsDisplayTimer",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 6,
+    "params": [
+      {
+        "name": "timerId",
+        "type": "int",
+        "required": true,
+        "desc": "Timer id"
+      },
+      {
+        "name": "msg",
+        "type": "string",
+        "required": true,
+        "desc": "Timer text to display"
+      },
+      {
+        "name": "time",
+        "type": "int",
+        "required": true,
+        "desc": "Timer duration"
+      },
+      {
+        "name": "timeUnit",
+        "type": "int",
+        "required": true,
+        "desc": "Time unit used by the timer"
+      },
+      {
+        "name": "resetTimer",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to reset the timer"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "default": "-1",
+        "desc": "Which player should see the timer; -1 applies to all players"
+      }
+    ],
+    "desc": "Displays a timer similarly to the trigger effect analogue."
+  },
+  {
+    "name": "xsClearTimer",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "timerId",
+        "type": "int",
+        "required": true,
+        "desc": "Timer id to clear"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "default": "-1",
+        "desc": "Which player's timer should be cleared; -1 applies to all players"
+      }
+    ],
+    "desc": "Clears timer text, if any, similarly to the trigger effect analogue."
+  },
+  {
+    "name": "xsGetTimerTimeRemaining",
+    "category": "general",
+    "return_type": "float",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "timerId",
+        "type": "int",
+        "required": true,
+        "desc": "Timer id to query"
+      },
+      {
+        "name": "timeUnit",
+        "type": "int",
+        "required": true,
+        "desc": "Time unit for the returned value"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "default": "-1",
+        "desc": "Which player's timer should be queried; -1 applies to all players"
+      }
+    ],
+    "desc": "Returns a timer's time remaining."
+  },
+  {
+    "name": "xsSendChat",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "msg",
+        "type": "string",
+        "required": true,
+        "desc": "Chat message to send"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "default": "-1",
+        "desc": "Which player should receive the chat message; -1 applies to all players"
+      },
+      {
+        "name": "silent",
+        "type": "bool",
+        "required": false,
+        "default": "false",
+        "desc": "Whether the chat should be sent silently"
+      }
+    ],
+    "desc": "Sends chat similarly to the trigger effect analogue. It operates on world players, not network players, so coop teammates sharing a world player cannot be targeted separately."
+  },
+  {
+    "name": "xsDeclareVictory",
+    "category": "general",
+    "return_type": "void",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "The player to make win or lose"
+      },
+      {
+        "name": "victory",
+        "type": "bool",
+        "required": false,
+        "default": "true",
+        "desc": "True declares victory; false declares defeat"
+      }
+    ],
+    "desc": "Makes a player win or lose."
+  },
+  {
+    "name": "ln",
+    "category": "maths",
+    "return_type": "float",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "x",
+        "type": "float",
+        "required": true,
+        "desc": "Input value"
+      }
+    ],
+    "desc": "Returns the natural logarithm of x."
+  },
+  {
+    "name": "log2",
+    "category": "maths",
+    "return_type": "float",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "x",
+        "type": "float",
+        "required": true,
+        "desc": "Input value"
+      }
+    ],
+    "desc": "Returns the base-2 logarithm of x."
+  },
+  {
+    "name": "log10",
+    "category": "maths",
+    "return_type": "float",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "x",
+        "type": "float",
+        "required": true,
+        "desc": "Input value"
+      }
+    ],
+    "desc": "Returns the base-10 logarithm of x."
+  },
+  {
+    "name": "round",
+    "category": "maths",
+    "return_type": "float",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "x",
+        "type": "float",
+        "required": true,
+        "desc": "Input value"
+      }
+    ],
+    "desc": "Rounds x to the nearest value."
+  },
+  {
+    "name": "radians",
+    "category": "maths",
+    "return_type": "float",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "x",
+        "type": "float",
+        "required": true,
+        "desc": "Angle in degrees"
+      }
+    ],
+    "desc": "Converts degrees to radians."
+  },
+  {
+    "name": "degrees",
+    "category": "maths",
+    "return_type": "float",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "x",
+        "type": "float",
+        "required": true,
+        "desc": "Angle in radians"
+      }
+    ],
+    "desc": "Converts radians to degrees."
+  },
+  {
+    "name": "dist",
+    "category": "maths",
+    "return_type": "float",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "v1",
+        "type": "vector",
+        "required": true,
+        "desc": "First vector"
+      },
+      {
+        "name": "v2",
+        "type": "vector",
+        "required": true,
+        "desc": "Second vector"
+      }
+    ],
+    "desc": "Returns the distance between two vectors."
+  },
+  {
+    "name": "bitAnd",
+    "category": "maths",
+    "return_type": "int",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "v1",
+        "type": "int",
+        "required": true,
+        "desc": "First integer value"
+      },
+      {
+        "name": "v2",
+        "type": "int",
+        "required": true,
+        "desc": "Second integer value"
+      }
+    ],
+    "desc": "Returns the bitwise AND of v1 and v2."
+  },
+  {
+    "name": "bitOr",
+    "category": "maths",
+    "return_type": "int",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "v1",
+        "type": "int",
+        "required": true,
+        "desc": "First integer value"
+      },
+      {
+        "name": "v2",
+        "type": "int",
+        "required": true,
+        "desc": "Second integer value"
+      }
+    ],
+    "desc": "Returns the bitwise OR of v1 and v2."
+  },
+  {
+    "name": "bitNot",
+    "category": "maths",
+    "return_type": "int",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "v1",
+        "type": "int",
+        "required": true,
+        "desc": "Integer value"
+      }
+    ],
+    "desc": "Returns the bitwise NOT of v1."
+  },
+  {
+    "name": "bitXor",
+    "category": "maths",
+    "return_type": "int",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "v1",
+        "type": "int",
+        "required": true,
+        "desc": "First integer value"
+      },
+      {
+        "name": "v2",
+        "type": "int",
+        "required": true,
+        "desc": "Second integer value"
+      }
+    ],
+    "desc": "Returns the bitwise XOR of v1 and v2."
   }
 ]

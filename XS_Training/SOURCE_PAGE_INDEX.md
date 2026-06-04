@@ -75,6 +75,11 @@ Generated at: 2026-02-08T19:30:19+00:00
 
 - `external_refs/ageofempires.fandom.com/Genie_Editor.md` <- https://ageofempires.fandom.com/wiki/Genie_Editor
 
+## Official patch notes
+- Count: 1
+
+- `patch_notes/update_177723_xs.md` <- https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-177723/
+
 ## Notes
 - `manifest.json` contains full metadata and SHA-256 per saved file.
 - `_sources/` is a local cache clone for reproducible re-fetches.

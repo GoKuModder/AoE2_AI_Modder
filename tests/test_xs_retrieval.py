@@ -96,6 +96,10 @@ class TestPackagedDataLoading(unittest.TestCase):
         # Verify we can find specific known functions
         names = {entry.get("name") for entry in data if isinstance(entry, dict)}
         self.assertIn("xsSetUnitPosition", names)
+        self.assertIn("xsDisplayInstructions", names)
+        self.assertIn("xsGetLocalPlayerId", names)
+        self.assertIn("xsGetTechAttribute", names)
+        self.assertIn("bitAnd", names)
 
     def test_packaged_constants_catalog_loads(self):
         """Verify xs_constants_catalog.json can be loaded from package."""
@@ -251,6 +255,26 @@ class TestXSSymbolLookup(unittest.TestCase):
             "bool xsSetUnitPosition(int unitId, vector position, bool checkCollision=False)",
         )
         self.assertEqual(result["details"]["param_count"], 3)
+
+    def test_lookup_symbol_new_update_177723_xs_function_hit(self):
+        result = self.retriever.lookup_symbol("xsDisplayInstructions")
+
+        self.assertTrue(result["found"])
+        self.assertEqual(result["error_code"], "OK")
+        self.assertEqual(result["symbol_type"], "function")
+        self.assertEqual(result["name"], "xsDisplayInstructions")
+        self.assertEqual(
+            result["signature"],
+            "bool xsDisplayInstructions(string msg, int time, int sourcePlayer, int iconObjectId, int panelPosition, bool useTagColorForIcon, bool playSound, string soundFilename, int playerId=-1)",
+        )
+        self.assertEqual(result["details"]["param_count"], 9)
+
+    def test_lookup_symbol_new_update_177723_local_player_warning(self):
+        result = self.retriever.lookup_symbol("xsGetLocalPlayerId")
+
+        self.assertTrue(result["found"])
+        self.assertIn("desyncs", result["details"]["desc"])
+        self.assertIn("coop", result["details"]["desc"])
 
     def test_lookup_symbol_case_and_alias_style_normalization(self):
         result = self.retriever.lookup_symbol("  XSSETUNITPOSITION  ")

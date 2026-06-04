@@ -245,6 +245,10 @@ class XSScriptKnowledgeRetriever:
             if param.get("required", True):
                 params.append(f"{param_type} {param_name}")
             else:
+                param_default = param.get("default")
+                if param_default is not None:
+                    params.append(f"{param_type} {param_name}={param_default}")
+                    continue
                 params.append(
                     f"{param_type} {param_name}={self._optional_default(param_type)}"
                 )

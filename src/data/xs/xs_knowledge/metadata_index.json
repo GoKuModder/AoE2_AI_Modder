@@ -1,6 +1,6 @@
 {
   "counts": {
-    "source_documents": 58
+    "source_documents": 59
   },
   "dataset": "xs_knowledge",
   "documents": [
@@ -297,6 +297,13 @@
       "relative_path": "github.com/Divy1211/AoE2DE_UGC_Guide/docs/scenarios/useful_tools/parser/index.md",
       "sha256": "71478ea51bee9d395e5200abf4b4bb444c92c06c7c27f71de6c2668505467f25",
       "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/useful_tools/parser/index.md"
+    },
+    {
+      "id": "doc::patch_notes/update_177723_xs.md",
+      "kind": "markdown",
+      "relative_path": "patch_notes/update_177723_xs.md",
+      "sha256": "9e0f3181897e5b08fbd0d5b944c816c5cbd80078f4db34cac26d3f8a36a3cd87",
+      "source_url": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-177723/"
     },
     {
       "id": "doc::ugc.aoe2.rocks/general/xs/beginner/index.md",
