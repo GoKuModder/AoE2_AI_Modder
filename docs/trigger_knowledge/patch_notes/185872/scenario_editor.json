@@ -1,0 +1,256 @@
+{
+  "game_build": 185872,
+  "source": {
+    "title": "Age of Empires II: Definitive Edition - Update 185872",
+    "url": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/"
+  },
+  "editor_only_updates": {
+    "units_tab": [
+      {
+        "field": "Capture Flag",
+        "control": "dropdown",
+        "details": "Added to control whether units are allowed to be auto-converted. The release notes say ‘Never (Gaia Aggressive)’ may be used to let Gaia units act aggressively. Even with ‘Never’ or ‘Never (Gaia Aggressive)’, some units may still convert if they have the Auto-Convert task; sheep and monuments are the examples given."
+      },
+      {
+        "field": "Unit State",
+        "control": "dropdown",
+        "details": "Added to the Units tab to allow changing a unit’s state. The release notes do not enumerate the dropdown values."
+      }
+    ],
+    "condition_fields": [
+      {
+        "condition": "Object is Visible (MP)",
+        "field": "Allow in Fog",
+        "control": "checkbox",
+        "details": "A new checkbox on the multiplayer Object is Visible condition. The release notes do not specify its default or give additional semantics."
+      }
+    ],
+    "effect_fields": [
+      {
+        "effect_family": "Certain Modify Object Attribute effects",
+        "field": "Object Modified State",
+        "previous_field": "Master Filter",
+        "options": [
+          {
+            "label": "All",
+            "details": "Remains unchanged and is the default value."
+          },
+          {
+            "label": "Previously Unmodified",
+            "previous_label": "Shared Master",
+            "details": "Restricts the effect to units on the map that have not previously been modified by a Modify Object Attribute effect."
+          },
+          {
+            "label": "Previously Modified",
+            "previous_label": "Own Master",
+            "details": "Restricts the effect to units on the map that have previously been modified by a Modify Object Attribute effect."
+          }
+        ]
+      }
+    ]
+  },
+  "parser_catalog": {
+    "conditions": {
+      "object_visible_multiplayer": [
+        {
+          "field": "Allow in Fog",
+          "control": "checkbox",
+          "details": "A new Scenario Editor checkbox for Object is Visible (MP). This editor addition is recorded separately; the release notes do not establish a new AoE2ScenarioParser method parameter."
+        }
+      ]
+    },
+    "effects": {
+      "stop_object": [
+        {
+          "field": "Stop action",
+          "details": "Stop Object triggers now correctly clear building production queues."
+        }
+      ],
+      "freeze_object": [
+        {
+          "field": "Freeze action",
+          "details": "Freeze Object triggers now correctly clear building production queues."
+        }
+      ],
+      "task_object": [
+        {
+          "field": "Stop action",
+          "details": "Task Object using the Stop action now correctly clears building production queues."
+        },
+        {
+          "field": "Action",
+          "label": "Unload All",
+          "previous_label": "Unload",
+          "details": "Renamed and now works as intended, the same as the regular Unload effect."
+        },
+        {
+          "field": "Action",
+          "label": "Ungarrison Specific",
+          "previous_label": "Ungarrison",
+          "details": "Renamed; behavior is unchanged. It instructs the selected object to leave the unit it is currently garrisoned inside."
+        }
+      ]
+    }
+  },
+  "records": [
+    {
+      "id": "update_185872::1",
+      "title": "Capture Flag",
+      "display_name": "Capture Flag",
+      "category": "Scenario Editor Units tab",
+      "details": "Added to control whether units are allowed to be auto-converted. The release notes say ‘Never (Gaia Aggressive)’ may be used to let Gaia units act aggressively. Even with ‘Never’ or ‘Never (Gaia Aggressive)’, some units may still convert if they have the Auto-Convert task; sheep and monuments are the examples given.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Capture Flag",
+        "Added to control whether units are allowed to be auto-converted. The release notes say ‘Never (Gaia Aggressive)’ may be used to let Gaia units act aggressively. Even with ‘Never’ or ‘Never (Gaia Aggressive)’, some units may still convert if they have the Auto-Convert task; sheep and monuments are the examples given."
+      ],
+      "field": "Capture Flag"
+    },
+    {
+      "id": "update_185872::2",
+      "title": "Unit State",
+      "display_name": "Unit State",
+      "category": "Scenario Editor Units tab",
+      "details": "Added to the Units tab to allow changing a unit’s state. The release notes do not enumerate the dropdown values.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Unit State",
+        "Added to the Units tab to allow changing a unit’s state. The release notes do not enumerate the dropdown values."
+      ],
+      "field": "Unit State"
+    },
+    {
+      "id": "update_185872::3",
+      "title": "Object is Visible (MP) — Allow in Fog",
+      "display_name": "Object is Visible (MP)",
+      "category": "Scenario Editor condition",
+      "details": "A new checkbox on the multiplayer Object is Visible condition. The release notes do not specify its default or give additional semantics.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Object is Visible (MP)",
+        "Allow in Fog",
+        "A new checkbox on the multiplayer Object is Visible condition. The release notes do not specify its default or give additional semantics."
+      ],
+      "field": "Allow in Fog"
+    },
+    {
+      "id": "update_185872::4",
+      "title": "Object Modified State",
+      "display_name": "Object Modified State",
+      "category": "Scenario Editor effect",
+      "details": "Remains unchanged and is the default value.; Previously Unmodified (previously Shared Master): Restricts the effect to units on the map that have not previously been modified by a Modify Object Attribute effect.; Previously Modified (previously Own Master): Restricts the effect to units on the map that have previously been modified by a Modify Object Attribute effect.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Object Modified State",
+        "Master Filter",
+        "Remains unchanged and is the default value.; Previously Unmodified (previously Shared Master): Restricts the effect to units on the map that have not previously been modified by a Modify Object Attribute effect.; Previously Modified (previously Own Master): Restricts the effect to units on the map that have previously been modified by a Modify Object Attribute effect."
+      ],
+      "field": "Object Modified State",
+      "previous_label": "Master Filter"
+    },
+    {
+      "id": "update_185872::5",
+      "title": "Object is Visible (MP)",
+      "display_name": "Object is Visible (MP)",
+      "category": "Scenario Editor condition",
+      "details": "A new Scenario Editor checkbox for Object is Visible (MP). This editor addition is recorded separately; the release notes do not establish a new AoE2ScenarioParser method parameter.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Object is Visible (MP)",
+        "object_visible_multiplayer",
+        "Allow in Fog",
+        "",
+        "",
+        "A new Scenario Editor checkbox for Object is Visible (MP). This editor addition is recorded separately; the release notes do not establish a new AoE2ScenarioParser method parameter."
+      ],
+      "field": "Allow in Fog"
+    },
+    {
+      "id": "update_185872::6",
+      "title": "Stop Object",
+      "display_name": "Stop Object",
+      "category": "Scenario Editor effect",
+      "details": "Stop Object triggers now correctly clear building production queues.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Stop Object",
+        "stop_object",
+        "Stop action",
+        "",
+        "",
+        "Stop Object triggers now correctly clear building production queues."
+      ],
+      "field": "Stop action"
+    },
+    {
+      "id": "update_185872::7",
+      "title": "Freeze Object",
+      "display_name": "Freeze Object",
+      "category": "Scenario Editor effect",
+      "details": "Freeze Object triggers now correctly clear building production queues.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Freeze Object",
+        "freeze_object",
+        "Freeze action",
+        "",
+        "",
+        "Freeze Object triggers now correctly clear building production queues."
+      ],
+      "field": "Freeze action"
+    },
+    {
+      "id": "update_185872::8",
+      "title": "Task Object",
+      "display_name": "Task Object",
+      "category": "Scenario Editor effect",
+      "details": "Task Object using the Stop action now correctly clears building production queues.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Task Object",
+        "task_object",
+        "Stop action",
+        "",
+        "",
+        "Task Object using the Stop action now correctly clears building production queues."
+      ],
+      "field": "Stop action"
+    },
+    {
+      "id": "update_185872::9",
+      "title": "Task Object: Unload All",
+      "display_name": "Task Object",
+      "category": "Scenario Editor effect",
+      "details": "Renamed and now works as intended, the same as the regular Unload effect.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Task Object",
+        "task_object",
+        "Action",
+        "Unload All",
+        "Unload",
+        "Renamed and now works as intended, the same as the regular Unload effect."
+      ],
+      "field": "Action",
+      "previous_label": "Unload"
+    },
+    {
+      "id": "update_185872::10",
+      "title": "Task Object: Ungarrison Specific",
+      "display_name": "Task Object",
+      "category": "Scenario Editor effect",
+      "details": "Renamed; behavior is unchanged. It instructs the selected object to leave the unit it is currently garrisoned inside.",
+      "source": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/",
+      "query_terms": [
+        "Task Object",
+        "task_object",
+        "Action",
+        "Ungarrison Specific",
+        "Ungarrison",
+        "Renamed; behavior is unchanged. It instructs the selected object to leave the unit it is currently garrisoned inside."
+      ],
+      "field": "Action",
+      "previous_label": "Ungarrison"
+    }
+  ]
+}

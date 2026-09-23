@@ -460,7 +460,7 @@
     "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.TERRAIN_RESTRICTION_ID"
   },
   "54": {
-    "description": "ID: 54 This is a combinable bit field. Controls the following properties: See Also: Trait Piece Property Flag Value Garrison Unit 1 Ship Unit 2 Build Another Building (Serjeants) [See Special Ability: Mode 7] 4 Transform Into Another Unit (Ratha) 8 Auto Scout Unit 16",
+    "description": "ID: 54 This is a combinable bit field. Controls the following properties: Property Flag Value Garrison Unit 1 Ship Unit 2 Build Another Building (Serjeants) [See Special Ability: Mode 7] 4 Transform Into Another Unit (Ratha) 8 Auto Scout Unit 16 Building to Terrain Transform 64 Freeze Creation Time 128",
     "id": 54,
     "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.UNIT_TRAIT",
     "parser_enum_name": "UNIT_TRAIT",
@@ -470,7 +470,7 @@
     "usage_hint": "Use with Modify Attribute effect; object_attributes=ObjectAttribute.UNIT_TRAIT"
   },
   "56": {
-    "description": "ID: 56 This can be set to the ID of a unit that is used along with some of the Unit Traits See Also: Unit Trait Property Flag Value Unused 1 Unused 2 Build Unit 4 Transform Unit 8 Unused 16",
+    "description": "ID: 56 This can be set to the ID of a unit that is used along with some of the Unit Traits. For Builder Unit flag, units can build the Trait Piece when the unit has Unit Trait flag 4 and the Trait Piece is a valid enabled building. For Transformable Unit flag, it is the target unit to transform into. For active transformation and spawn-style abilities, Trait Piece is also used as the target unit definition.",
     "id": 56,
     "parser_doc_url": "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute.TRAIT_PIECE",
     "parser_enum_name": "TRAIT_PIECE",

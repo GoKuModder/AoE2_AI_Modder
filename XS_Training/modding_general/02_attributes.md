@@ -143,3 +143,67 @@ Controls conversion roll duration of all units with conversion ability (previous
 ## Undead Graphic
 
 - Now can be used for assigning the decay graphic to units which don't have Undead Mode attribute set to `1`; for them undead graphic overwrites the standing graphic of the object's dead unit.
+
+## Object Attributes 167–221 (Update 185872)
+
+Update 185872 added the following object attributes. They can be modified through the Modify Attribute family of effects and are supported by `xsEffectAmount`, `xsGetUnitAttribute`, and `xsGetObjectAttribute`.
+
+The release notes provide these names but do not describe the values, flags, or behavior for each attribute. For XS constant names and any available constant details, use the current `Constants.xs` reference.
+
+| ID | Attribute |
+| -: | --- |
+| 167 | Build And Go Away |
+| 168 | Type First Storage |
+| 169 | Type Second Storage |
+| 170 | Type Third Storage |
+| 171 | Store Flag First Storage |
+| 172 | Store Flag Second Storage |
+| 173 | Store Flag Third Storage |
+| 174 | Amount First Cost |
+| 175 | Amount Second Cost |
+| 176 | Amount Third Cost |
+| 177 | Type First Cost |
+| 178 | Type Second Cost |
+| 179 | Type Third Cost |
+| 180 | Deduct Flag First Cost |
+| 181 | Deduct Flag Second Cost |
+| 182 | Deduct Flag Third Cost |
+| 183 | Spawning Graphic |
+| 184 | Upgrade Graphic |
+| 185 | Fly Mode |
+| 186 | Can Be Gathered |
+| 187 | Hill Mode |
+| 188 | Doppelganger |
+| 189 | Gather Group |
+| 190 | Task Swap Group |
+| 191 | Placement Terrain 1 |
+| 192 | Placement Terrain 2 |
+| 193 | Placement Center Terrain 1 |
+| 194 | Placement Center Terrain 2 |
+| 195 | Initiated Tech Id |
+| 196 | Min Size Multiplier |
+| 197 | Selection Outline Size X |
+| 198 | Selection Outline Size Y |
+| 199 | Selection Outline Size Z |
+| 200 | Clearance Size X |
+| 201 | Clearance Size Y |
+| 202 | Stack Unit |
+| 203 | Head Unit |
+| 204 | Transform Unit |
+| 205 | Pile Unit |
+| 206 | Annex Unit 1 |
+| 207 | Annex Unit 2 |
+| 208 | Annex Unit 3 |
+| 209 | Annex Unit 4 |
+| 210 | Annex Unit 1 Offset X |
+| 211 | Annex Unit 1 Offset Y |
+| 212 | Annex Unit 2 Offset X |
+| 213 | Annex Unit 2 Offset Y |
+| 214 | Annex Unit 3 Offset X |
+| 215 | Annex Unit 3 Offset Y |
+| 216 | Annex Unit 4 Offset X |
+| 217 | Annex Unit 4 Offset Y |
+| 218 | Move Algorithm |
+| 219 | Spacing Modifier |
+| 220 | Can Burn |
+| 221 | Gather Flag |

@@ -71,3 +71,12 @@ Best structure references:
 - "Show me real project examples."
   `docs/trigger_knowledge/condition_project_usage.json`
   `docs/trigger_knowledge/effect_project_usage.json`
+
+## If You Need Scenario Editor Field Names or Recent Editor Changes
+
+Open:
+
+1. `docs/trigger_knowledge/patch_notes/185872/scenario_editor.md`
+2. `docs/trigger_knowledge/patch_notes/185872/scenario_editor.json`
+
+Use these for the Build 185872 Units tab fields, the Object is Visible (MP) checkbox, Modify Object Attribute filter labels and meaning, and updated Stop/Freeze/Task Object behavior and action labels. These notes do not imply new parser method parameters.

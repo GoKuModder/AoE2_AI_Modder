@@ -22,6 +22,7 @@
 - When target class/unit is set, requires to attack this unit to generate resources
 - If no target is set, generates resources passively
 - New: Units require Unused Flag `2` for passive generation
+- New (Update 185872): Unused Flag `4` uses the unit's work rate as a multiplier for the generated amount.
 
 ## Task 154: Loot
 
@@ -44,7 +45,25 @@
   - Search Wait Time: Attribute ID to improve
   - Gather Type: Value of the improvement
 
+### Shared class targeting for Tasks 154, 155, and 157 (Update 185872)
+
+For Loot, power-up, and Stinger tasks, a Class value above `1000` selects target classes using the Charge Attack Filter flags. A negative Class targets all classes except the specified class.
+
+| Flag | Target classes |
+| -: | --- |
+| 1 | Infantry (classes 6) |
+| 2 | Cavalry (classes 12, 47) |
+| 4 | Archers (classes 0, 44) |
+| 8 | Cavalry Archers (classes 36, 23) |
+| 16 | Monks (classes 18, 43) |
+| 32 | Villagers, Trade Carts, and Kings (classes 4, 19, 59) |
+| 64 | Ships (classes 21, 20, 22, 2, 53) |
+| 128 | Siege (classes 13, 51, 54, 55, 35) |
+| 256 | Buildings (classes 3, 27, 39, 49, 52, 60) |
+
 ## Task 155: Aura
+
+Update 185872: this task also uses the shared class targeting described under Task `154`.
 
 - Requires Combat Ability `32`
 - Search Wait Time - attribute number which is modified
@@ -73,10 +92,12 @@
 
 ## Task 157: Stingers
 
+Update 185872: this task also uses the shared class targeting described under Task `154`.
+
 - Requires Combat Ability `128`
 - if Productivity Resource is set, the value of the corresponding resource needs to be `>0` for the Task to trigger
 - Search Wait Time indicates which attribute to modify
-- Includes: `5` (Movement Speed), `109` (Regeneration Rate), `10` (reload time), `120` (HP based regeneration)
+- Supported Search Wait Time attribute IDs include `5` (Movement Speed), `109` (Regeneration Rate), `10` (Reload Time), `120` (HP-based regeneration), plus `63` (Combat Ability), `129` (Invulnerability Level), `115` (Area Damage), and `22` (Blast Width).
 - Work Value 1: value add
 - Work Value 2: how long the effect will last (in seconds). If negative, apply permanently.
 - Work Range:
@@ -85,6 +106,10 @@
 - Unused flag: additional flags:
   - `1`: use Work Value 1 as multiplier
   - `2`: don't allow other tasks `156` that modify the same attribute to stack
+  - New (Update 185872) `4`: apply the Stinger only when a charge attack is performed
+  - New (Update 185872) `8`: show a duration bar over the unit, similar to temporary auras
+  - New (Update 185872) `16`: display the Stinger icon and description in unit stats
+- Update 185872 UI fields: Resource Gathering Sound supplies the short tooltip, Resource Deposit Sound supplies the long tooltip, and Gather Type selects the displayed icon (see `icons.json`).
 
 ## Task 158: HP Transformation
 
@@ -98,3 +123,20 @@
   - If the value is negative, the task will trigger when the unit's current HP is lower than this value
 - If Resource Out is set, add it to work value 2
 - Unused Flag: if set to `1`, use work value 2 as a multiplier of max HP.
+
+## Task 161: Unit Refund (Update 185872 additions)
+
+- If Work Range is greater than `0`, check Target Diplomacy before awarding resources.
+- Unused Flag `2`: award the resource in proportion to construction progress.
+
+The update notes describe these additions, but do not give the complete field mapping or baseline behavior for Task `161`.
+
+## Task 164: Drop off bonus (Update 185872)
+
+- While gathering, also generate a secondary resource. This bonus does not count toward carry capacity and should be displayed in the UI; when it is the same resource as the gathered resource, combine the amounts in the UI.
+- If Class or Unit is set, apply the task only when gathering from that target; if neither is set, any target qualifies.
+- Work Value 1: multiplier to apply.
+- Productivity Resource: if set, multiply its value by Work Value 1.
+- Resource Out: resource type generated as the bonus.
+
+The update notes do not specify the full amount formula or additional flag behavior for this task.

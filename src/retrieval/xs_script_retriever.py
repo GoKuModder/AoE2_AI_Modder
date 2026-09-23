@@ -226,17 +226,6 @@ class XSScriptKnowledgeRetriever:
     def _normalize_symbol_key(value: str) -> str:
         return SYMBOL_NORMALIZE_RE.sub("", value.strip().lower())
 
-    @staticmethod
-    def _optional_default(param_type: str) -> str:
-        defaults = {
-            "bool": "False",
-            "int": "0",
-            "float": "0.0",
-            "string": '""',
-            "vector": "cInvalidVector",
-        }
-        return defaults.get(param_type, "None")
-
     def _build_function_signature(self, row: dict[str, Any]) -> str:
         params = []
         for param in row.get("params", []):
@@ -246,12 +235,10 @@ class XSScriptKnowledgeRetriever:
                 params.append(f"{param_type} {param_name}")
             else:
                 param_default = param.get("default")
-                if param_default is not None:
+                if param_default is None:
+                    params.append(f"[optional] {param_type} {param_name}")
+                else:
                     params.append(f"{param_type} {param_name}={param_default}")
-                    continue
-                params.append(
-                    f"{param_type} {param_name}={self._optional_default(param_type)}"
-                )
         return_type = str(row.get("return_type", "void"))
         name = str(row.get("name", ""))
         return f"{return_type} {name}({', '.join(params)})"

@@ -2,6 +2,8 @@
 
 Primary references used for this guide:
 
+- https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/
+
 - https://airef.github.io/index.html
 - https://airef.github.io/commands/commands-index.html
 - https://airef.github.io/resources/res-index.html

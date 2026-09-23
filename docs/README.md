@@ -19,6 +19,8 @@ This folder is split by role so agents do not need to infer which files are onbo
   Generated XS datasets and supporting readme files.
 - `docs/trigger_knowledge/`
   Generated trigger condition, effect, attribute, real-project usage, and genie object knowledge.
+- `docs/patch_notes/`
+  Patch changelogs grouped by game build.
 - `docs/architecture/`
   Internal architectural boundary notes and related metadata.
 - `examples/`

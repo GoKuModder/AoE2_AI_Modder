@@ -984,6 +984,36 @@ class TestTriggerKnowledgeDatasets(unittest.TestCase):
             self.assertIn(name, effect_names)
 
 
+class TestAttributeKnowledgeCorrections(unittest.TestCase):
+    def setUp(self):
+        self.attributes_dataset = json.loads(
+            (
+                ROOT
+                / "docs"
+                / "trigger_knowledge"
+                / "attributes_dataset.json"
+            ).read_text(encoding="utf-8")
+        )
+        self.attributes_markdown = (
+            ROOT
+            / "docs"
+            / "trigger_knowledge"
+            / "attributes_knowledge.md"
+        ).read_text(encoding="utf-8")
+
+    def test_unit_trait_includes_newer_flags(self):
+        unit_trait_description = self.attributes_dataset["54"]["description"]
+        self.assertIn("Building to Terrain Transform 64", unit_trait_description)
+        self.assertIn("Freeze Creation Time 128", unit_trait_description)
+        self.assertIn("Freeze Creation Time 128", self.attributes_markdown)
+
+    def test_trait_piece_documents_relationship_to_unit_trait(self):
+        trait_piece_description = self.attributes_dataset["56"]["description"]
+        self.assertIn("Builder Unit flag", trait_piece_description)
+        self.assertIn("Transformable Unit flag", trait_piece_description)
+        self.assertIn("spawn-style abilities", trait_piece_description)
+
+
 if __name__ == "__main__":
     unittest.main()
 

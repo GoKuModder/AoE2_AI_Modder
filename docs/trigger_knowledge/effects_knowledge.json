@@ -387,6 +387,24 @@
         "description": "",
         "dataset": null
       }
+    ],
+    "editor_update_notes": [
+      {
+        "field": "Stop action",
+        "details": "Task Object using the Stop action now correctly clears building production queues."
+      },
+      {
+        "field": "Action",
+        "label": "Unload All",
+        "previous_label": "Unload",
+        "details": "Renamed and now works as intended, the same as the regular Unload effect."
+      },
+      {
+        "field": "Action",
+        "label": "Ungarrison Specific",
+        "previous_label": "Ungarrison",
+        "details": "Renamed; behavior is unchanged. It instructs the selected object to leave the unit it is currently garrisoned inside."
+      }
     ]
   },
   {
@@ -981,6 +999,12 @@
         "description": "",
         "dataset": null
       }
+    ],
+    "editor_update_notes": [
+      {
+        "field": "Freeze action",
+        "details": "Freeze Object triggers now correctly clear building production queues."
+      }
     ]
   },
   {
@@ -1402,6 +1426,12 @@
         "type": "int | None",
         "description": "",
         "dataset": null
+      }
+    ],
+    "editor_update_notes": [
+      {
+        "field": "Stop action",
+        "details": "Stop Object triggers now correctly clear building production queues."
       }
     ]
   },

@@ -1,6 +1,6 @@
 # XS Training Source Index
 
-Generated at: 2026-02-08T19:30:19+00:00
+Generated at: 2026-09-23T03:00:06+00:00
 
 ## UGC website pages
 - Seed: https://ugc.aoe2.rocks/general/xs/
@@ -17,7 +17,7 @@ Generated at: 2026-02-08T19:30:19+00:00
 - `ugc.aoe2.rocks/general/xs/bugs/Language%20Syntax/index.md` <- https://ugc.aoe2.rocks/general/xs/bugs/Language%20Syntax/
 - `ugc.aoe2.rocks/general/xs/bugs/Task/index.md` <- https://ugc.aoe2.rocks/general/xs/bugs/Task/
 - `ugc.aoe2.rocks/general/xs/bugs/index.md` <- https://ugc.aoe2.rocks/general/xs/bugs/
-- `ugc.aoe2.rocks/general/xs/constants/index.md` <- https://ugc.aoe2.rocks/general/xs/constants/
+- `ugc.aoe2.rocks/general/xs/constants/index.md` <- https://ugc.aoe2.rocks/general/xs/constants/constants/
 - `ugc.aoe2.rocks/general/xs/functions/index.md` <- https://ugc.aoe2.rocks/general/xs/functions/
 - `ugc.aoe2.rocks/general/xs/index.md` <- https://ugc.aoe2.rocks/general/xs/
 - `ugc.aoe2.rocks/general/xs/programmer/index.md` <- https://ugc.aoe2.rocks/general/xs/programmer/
@@ -76,10 +76,16 @@ Generated at: 2026-02-08T19:30:19+00:00
 - `external_refs/ageofempires.fandom.com/Genie_Editor.md` <- https://ageofempires.fandom.com/wiki/Genie_Editor
 
 ## Official patch notes
-- Count: 1
+- Count: 3
 
-- `patch_notes/update_177723_xs.md` <- https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-177723/
+- `patch_notes/177723/xs.md` <- https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-177723/
+- `patch_notes/185872/xs.md` <- https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/
+- `patch_notes/185872/constants.md` <- https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/
 
 ## Notes
 - `manifest.json` contains full metadata and SHA-256 per saved file.
 - `_sources/` is a local cache clone for reproducible re-fetches.
+
+## Local XS essentials
+- Count: 1
+- `xs_essential_knowledge.md` <- local://xs_essential_knowledge

@@ -19,6 +19,8 @@ Open these first:
 - `docs/trigger_knowledge/conditions_knowledge.json`
 - `docs/trigger_knowledge/effects_knowledge.md`
 - `docs/trigger_knowledge/effects_knowledge.json`
+- `docs/trigger_knowledge/patch_notes/185872/scenario_editor.md` (editor-facing trigger changes)
+- `docs/trigger_knowledge/patch_notes/185872/scenario_editor.json` (structured editor update overlay)
 - `docs/trigger_knowledge/attributes_knowledge.md`
 - `docs/trigger_knowledge/attributes_dataset.json`
 - `docs/trigger_knowledge/project_usage_knowledge.md`

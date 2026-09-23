@@ -90,6 +90,14 @@ If the task matches a common implementation workflow, prefer the compact recipe 
 If you need one low-token runtime that can answer both implementation questions and exact symbol lookups, use `src/retrieval/aoe_unified_retriever.py`.
 If the query is `.dat`-only and you want the smallest dedicated context, use `src/retrieval/genie_dat_retriever.py`.
 
+## Project Coding Rules
+
+### Command-Line Arguments
+
+- Do not add command-line arguments with `argparse`, `parser.add_argument`, or an equivalent CLI parser unless the user explicitly requests CLI support.
+- For configuration, use existing constants, function parameters, config files, or data structures already present in the project.
+- If code already uses `parser.add_argument`, do not expand it unless the task specifically requires modifying the CLI.
+
 ## Truth Model
 
 Treat files in this order of authority:

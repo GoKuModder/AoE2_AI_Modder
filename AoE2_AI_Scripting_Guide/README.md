@@ -18,7 +18,8 @@ Out of scope (intentionally excluded):
 2. `05_LLM_SAFE_WORKFLOW.md`
 3. `06_LLM_COMMAND_ALLOWLIST.md`
 4. `07_RETRIEVAL_INDEX.md`
-5. Domain modules:
+5. `patch_notes/185872/ai_scripting.md` when asking about build 185872 AI scheduling or script-visible behavior changes
+6. Domain modules:
    - `02_PLAYER_INTERACTION.md`
    - `03_MILITARY_CONTROL.md`
    - `04_MAP_MOVEMENT_AND_DUC.md`

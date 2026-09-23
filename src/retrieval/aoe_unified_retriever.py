@@ -113,6 +113,9 @@ class AoEUnifiedKnowledgeRetriever:
         if isinstance(data, list):
             return [row for row in data if isinstance(row, dict)]
         if isinstance(data, dict):
+            records = data.get("records")
+            if isinstance(records, list):
+                return [row for row in records if isinstance(row, dict)]
             commands = data.get("commands")
             if isinstance(commands, list):
                 return [row for row in commands if isinstance(row, dict)]

@@ -1,6 +1,6 @@
 {
   "counts": {
-    "source_documents": 59
+    "source_documents": 62
   },
   "dataset": "xs_knowledge",
   "documents": [
@@ -299,11 +299,25 @@
       "source_url": "https://github.com/Divy1211/AoE2DE_UGC_Guide/blob/HEAD/docs/scenarios/useful_tools/parser/index.md"
     },
     {
-      "id": "doc::patch_notes/update_177723_xs.md",
+      "id": "doc::patch_notes/177723/xs.md",
       "kind": "markdown",
-      "relative_path": "patch_notes/update_177723_xs.md",
+      "relative_path": "patch_notes/177723/xs.md",
       "sha256": "9e0f3181897e5b08fbd0d5b944c816c5cbd80078f4db34cac26d3f8a36a3cd87",
       "source_url": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-177723/"
+    },
+    {
+      "id": "doc::patch_notes/185872/constants.md",
+      "kind": "markdown",
+      "relative_path": "patch_notes/185872/constants.md",
+      "sha256": "1eba2a2336c8afe17f5ab3ddf12fe5c6ac9fe52968a52a5592317f7fa1208211",
+      "source_url": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/"
+    },
+    {
+      "id": "doc::patch_notes/185872/xs.md",
+      "kind": "markdown",
+      "relative_path": "patch_notes/185872/xs.md",
+      "sha256": "8eae5a90176a3ca314d69d6bdcac02b96140b5dd56455d01c457a031157676e2",
+      "source_url": "https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/"
     },
     {
       "id": "doc::ugc.aoe2.rocks/general/xs/beginner/index.md",
@@ -379,8 +393,8 @@
       "id": "doc::ugc.aoe2.rocks/general/xs/constants/index.md",
       "kind": "markdown",
       "relative_path": "ugc.aoe2.rocks/general/xs/constants/index.md",
-      "sha256": "f7ad118021b10c5e834a9cb7092ee4e705c31229f85f8fb401ea503a5f263e0d",
-      "source_url": "https://ugc.aoe2.rocks/general/xs/constants/"
+      "sha256": "a086d04db2202e70fd1ec13f845aa0c2d55411f80fd6c0ac8c6a6576c1b33f92",
+      "source_url": "https://ugc.aoe2.rocks/general/xs/constants/constants/"
     },
     {
       "id": "doc::ugc.aoe2.rocks/general/xs/functions/index.md",
@@ -416,6 +430,13 @@
       "relative_path": "ugc.aoe2.rocks/general/xs/useful/index.md",
       "sha256": "66eb9aa913f122df674ff87eefd14449e5b14a32fe381dd54db8f514a65e82f5",
       "source_url": "https://ugc.aoe2.rocks/general/xs/useful/"
+    },
+    {
+      "id": "doc::xs_essential_knowledge.md",
+      "kind": "markdown",
+      "relative_path": "xs_essential_knowledge.md",
+      "sha256": "9e3835e9f8ff213a012b7b367d6429f6a1da5389e82d2b1ba7b8f420b86a0b50",
+      "source_url": "local://xs_essential_knowledge"
     }
   ],
   "schema_version": 1

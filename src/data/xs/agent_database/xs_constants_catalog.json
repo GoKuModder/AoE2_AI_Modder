@@ -1056,6 +1056,42 @@
     }
   },
   {
+    "name": "cSetUnitAttribute",
+    "category": "EffectAmount Effect Type",
+    "value": 10,
+    "type": "int",
+    "desc": "This is the ID of the `Set Unit Attribute` effect for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": {
+      "syntax": "xsEffectAmount(cSetUnitAttribute, unitId, attribute, value)",
+      "example": "xsEffectAmount(cSetUnitAttribute, 0, cHitpoints, 40)",
+      "explanation": "This sets unit 0's HP to 40. This is the same as modify object attribute in the editor"
+    }
+  },
+  {
+    "name": "cAddUnitAttribute",
+    "category": "EffectAmount Effect Type",
+    "value": 11,
+    "type": "int",
+    "desc": "This is the ID of the `Add Unit Attribute` effect for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": {
+      "syntax": "xsEffectAmount(cAddUnitAttribute, unitId, attribute, value)",
+      "example": "xsEffectAmount(cAddUnitAttribute, 0, cHitpoints, 40)",
+      "explanation": "This adds 40 to unit 0's HP. This is the same as modify object attribute in the editor"
+    }
+  },
+  {
+    "name": "cMulUnitAttribute",
+    "category": "EffectAmount Effect Type",
+    "value": 12,
+    "type": "int",
+    "desc": "This is the ID of the `Multiply Unit Attribute` effect for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": {
+      "syntax": "xsEffectAmount(cMulUnitAttribute, unitId, attribute, value)",
+      "example": "xsEffectAmount(cMulUnitAttribute, 0, cHitpoints, 40)",
+      "explanation": "This multiplies unit 0's HP by 40. This is the same as modify object attribute in the editor"
+    }
+  },
+  {
     "name": "cAttributeDisable",
     "category": "EffectAmount Effect Operations",
     "value": 0,
@@ -1082,7 +1118,7 @@
   {
     "name": "cAttributeResearch",
     "category": "EffectAmount Effect Operations",
-    "value": 2,
+    "value": 3,
     "type": "int",
     "desc": "This is the ID of the `Attribute Research` modifier for the xsEffectAmount function",
     "usage": null
@@ -1309,6 +1345,86 @@
     "value": 12,
     "type": "int",
     "desc": "This is the ID of the `Attribute Set State` modifier for the xsEffectAmount function",
+    "usage": null
+  },
+  {
+    "name": "cAttrSetExtendedDescription",
+    "category": "EffectAmount Technology Attribute",
+    "value": 19,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Set Extended Description` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrAmountFirstCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 20,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Set First Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrAmountSecondCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 21,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Set Second Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrAmountThirdCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 22,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Set Third Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrTypeFirstCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 23,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Resource ID of the First Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrTypeSecondCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 24,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Resource ID of the Second Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrTypeThirdCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 25,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Resource ID of the Third Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrDeductFlagFirstCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 26,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Deduct Flag of the First Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrDeductFlagSecondCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 27,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Deduct Flag of the Second Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
+    "usage": null
+  },
+  {
+    "name": "cAttrDeductFlagThirdCost",
+    "category": "EffectAmount Technology Attribute",
+    "value": 28,
+    "type": "int",
+    "desc": "This is the ID of the `Attribute Deduct Flag of the Third Cost` modifier for the [xsEffectAmount](../../functions/functions/#71-xseffectamount \"Jump To: XS > Functions > xsEffectAmount\") function",
     "usage": null
   },
   {
@@ -4020,7 +4136,7 @@
     "category": "resource",
     "value": 217,
     "type": "int",
-    "desc": "ID of the player resource RES_NAME. Check [here](../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "desc": "UGC Guide lists resource ID 217 (Trigger Shared LOS / Shared Line of Sight); this name is not declared in the installed Constants.xs, so verify availability before relying on it.",
     "usage": null
   },
   {
@@ -5184,6 +5300,182 @@
     "usage": null
   },
   {
+    "name": "cAttributeEffectFunctionNumber",
+    "category": "resource",
+    "value": 33,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeSourceMarketOrDockX",
+    "category": "resource",
+    "value": 70,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeSourceMarketOrDockY",
+    "category": "resource",
+    "value": 71,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeHunRelicBonus",
+    "category": "resource",
+    "value": 198,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeMapReveal",
+    "category": "resource",
+    "value": 203,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeUnitReveal",
+    "category": "resource",
+    "value": 204,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeFeitoriaFoodProductivity",
+    "category": "resource",
+    "value": 205,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeFeitoriaWoodProductivity",
+    "category": "resource",
+    "value": 206,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeFeitoriaStoneProductivity",
+    "category": "resource",
+    "value": 207,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeFeitoriaGoldProductivity",
+    "category": "resource",
+    "value": 208,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeExtraForageProductivity",
+    "category": "resource",
+    "value": 215,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeShepherdingProductivity",
+    "category": "resource",
+    "value": 216,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeInfantryFyrdLevel",
+    "category": "resource",
+    "value": 275,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeExtraGoldProductivity",
+    "category": "resource",
+    "value": 276,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeRedCliffTactics",
+    "category": "resource",
+    "value": 277,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeRazingBounty",
+    "category": "resource",
+    "value": 278,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeRazingPillage",
+    "category": "resource",
+    "value": 291,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeUnitCostRefund",
+    "category": "resource",
+    "value": 295,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeForagingProductivity",
+    "category": "resource",
+    "value": 296,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeVarangianGold",
+    "category": "resource",
+    "value": 297,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeButcherGoldProductivity",
+    "category": "resource",
+    "value": 298,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
+    "name": "cAttributeExtraFoodProductivity",
+    "category": "resource",
+    "value": 299,
+    "type": "int",
+    "desc": "ID of the player resource RES_NAME. Check [here](../../../resources/resources/#ID_HERE-RES_HEAD \"Jump to: Game Mecahnicsc > Resources > #ID_HERE-RES_HEAD\") for more info about what this resource does.",
+    "usage": null
+  },
+  {
     "name": "cDamageClassInfantry",
     "category": "damage class",
     "value": 1,
@@ -5433,6 +5725,14 @@
   },
   {
     "name": "cDamageClassRoyalHeirs",
+    "category": "damage class",
+    "value": 39,
+    "type": "int",
+    "desc": "ID of the Damage Class CLASS_NAME",
+    "usage": null
+  },
+  {
+    "name": "cNumDamageClasses",
     "category": "damage class",
     "value": 39,
     "type": "int",
@@ -5724,6 +6024,14 @@
     "value": 30,
     "type": "int",
     "desc": "ID for the task amount Task Attribute ATTR_NAME",
+    "usage": null
+  },
+  {
+    "name": "cNumTaskAttrs",
+    "category": "task attribute",
+    "value": 31,
+    "type": "int",
+    "desc": "This is the number of task attributes in a task",
     "usage": null
   },
   {
@@ -6095,6 +6403,30 @@
     "usage": null
   },
   {
+    "name": "cTaskTypeAmphibious",
+    "category": "task type",
+    "value": 159,
+    "type": "int",
+    "desc": "ID for the task TASK_NAME",
+    "usage": null
+  },
+  {
+    "name": "cTaskTypeRefund",
+    "category": "task type",
+    "value": 161,
+    "type": "int",
+    "desc": "ID for the task TASK_NAME",
+    "usage": null
+  },
+  {
+    "name": "cTaskTypeAdditionalResource",
+    "category": "task type",
+    "value": 164,
+    "type": "int",
+    "desc": "ID for the task TASK_NAME",
+    "usage": null
+  },
+  {
     "name": "cTechStateNotReady",
     "category": "tech state",
     "value": 0,
@@ -6236,6 +6568,2902 @@
     "value": 90,
     "type": "int",
     "desc": "Enum value for the object type TYPE_NAME",
+    "usage": null
+  },
+  {
+    "name": "cTechState",
+    "category": "Tech Attribute",
+    "value": 0,
+    "type": "int",
+    "desc": "Technology attribute ID 0 (Tech state); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechCost",
+    "category": "Tech Attribute",
+    "value": 1,
+    "type": "int",
+    "desc": "Technology attribute ID 1 (Tech cost); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechResearchTime",
+    "category": "Tech Attribute",
+    "value": 2,
+    "type": "int",
+    "desc": "Technology attribute ID 2 (Tech research time); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechResearchLocation",
+    "category": "Tech Attribute",
+    "value": 3,
+    "type": "int",
+    "desc": "Technology attribute ID 3 (Tech research location); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechButtonLocation",
+    "category": "Tech Attribute",
+    "value": 4,
+    "type": "int",
+    "desc": "Technology attribute ID 4 (Tech button location); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechHotkeyId",
+    "category": "Tech Attribute",
+    "value": 5,
+    "type": "int",
+    "desc": "Technology attribute ID 5 (Tech hotkey ID); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechIconId",
+    "category": "Tech Attribute",
+    "value": 6,
+    "type": "int",
+    "desc": "Technology attribute ID 6 (Tech icon ID); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechEffectId",
+    "category": "Tech Attribute",
+    "value": 7,
+    "type": "int",
+    "desc": "Technology attribute ID 7 (Tech effect ID); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechCurrentResearchLocation",
+    "category": "Tech Attribute",
+    "value": 8,
+    "type": "int",
+    "desc": "Technology attribute ID 8 (Current research location); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechTimesResearched",
+    "category": "Tech Attribute",
+    "value": 9,
+    "type": "int",
+    "desc": "Technology attribute ID 9 (Times researched); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechTimesQueued",
+    "category": "Tech Attribute",
+    "value": 10,
+    "type": "int",
+    "desc": "Technology attribute ID 10 (Times queued); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechStackingAllowed",
+    "category": "Tech Attribute",
+    "value": 11,
+    "type": "int",
+    "desc": "Technology attribute ID 11 (Stacking allowed); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechStackingEnabled",
+    "category": "Tech Attribute",
+    "value": 12,
+    "type": "int",
+    "desc": "Technology attribute ID 12 (Stacking enabled); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechStackingCap",
+    "category": "Tech Attribute",
+    "value": 13,
+    "type": "int",
+    "desc": "Technology attribute ID 13 (Stacking cap); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechNumResearchLocations",
+    "category": "Tech Attribute",
+    "value": 14,
+    "type": "int",
+    "desc": "Technology attribute ID 14 (Number of research locations); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechCostType",
+    "category": "Tech Attribute",
+    "value": 15,
+    "type": "int",
+    "desc": "Technology attribute ID 15 (Cost type); read with xsGetTechAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTechCostDeductFlag",
+    "category": "Tech Attribute",
+    "value": 16,
+    "type": "int",
+    "desc": "Installed-game identifier for Technology attribute ID 16 (Cost deduct flag); read with xsGetTechAttribute. The UGC Guide calls the same ID cTechDeductFlag.",
+    "usage": null
+  },
+  {
+    "name": "cTechDeductFlag",
+    "category": "Tech Attribute",
+    "value": 16,
+    "type": "int",
+    "desc": "UGC Guide name for Tech Attribute ID 16. The installed Constants.xs declares this ID as cTechCostDeductFlag = 16; use the installed identifier in code for that build.",
+    "usage": null
+  },
+  {
+    "name": "cTileTerrainId",
+    "category": "Map Tile Attribute",
+    "value": 0,
+    "type": "int",
+    "desc": "Map tile attribute ID 0 (Terrain ID); read with xsGetMapTileAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTileElevation",
+    "category": "Map Tile Attribute",
+    "value": 1,
+    "type": "int",
+    "desc": "Map tile attribute ID 1 (Elevation); read with xsGetMapTileAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTileMaskId",
+    "category": "Map Tile Attribute",
+    "value": 2,
+    "type": "int",
+    "desc": "Map tile attribute ID 2 (Mask ID); read with xsGetMapTileAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cTileLayerId",
+    "category": "Map Tile Attribute",
+    "value": 3,
+    "type": "int",
+    "desc": "Map tile attribute ID 3 (Layer ID); read with xsGetMapTileAttribute.",
+    "usage": null
+  },
+  {
+    "name": "cUnitHitpoints",
+    "category": "Unit Property",
+    "value": 0,
+    "type": "int",
+    "desc": "Get/set unit property ID 0 (Hitpoints), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitBuildpoints",
+    "category": "Unit Property",
+    "value": 1,
+    "type": "int",
+    "desc": "Get/set unit property ID 1 (Build points), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitCharge",
+    "category": "Unit Property",
+    "value": 2,
+    "type": "int",
+    "desc": "Get/set unit property ID 2 (Charge), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitCaptionStringId",
+    "category": "Unit Property",
+    "value": 3,
+    "type": "int",
+    "desc": "Get/set unit property ID 3 (Caption string ID), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitAttributeHeld",
+    "category": "Unit Property",
+    "value": 4,
+    "type": "int",
+    "desc": "Get/set unit property ID 4 (Held attribute), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitGarrisonedInId",
+    "category": "Unit Property",
+    "value": 5,
+    "type": "int",
+    "desc": "Get/set unit property ID 5 (Garrisoned-in unit ID), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitCaptureFlag",
+    "category": "Unit Property",
+    "value": 6,
+    "type": "int",
+    "desc": "Get/set unit property ID 6 (Capture flag), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitDeletable",
+    "category": "Unit Property",
+    "value": 7,
+    "type": "int",
+    "desc": "Get/set unit property ID 7 (Deletable), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitTargetable",
+    "category": "Unit Property",
+    "value": 8,
+    "type": "int",
+    "desc": "Get/set unit property ID 8 (Targetable), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitAttackable",
+    "category": "Unit Property",
+    "value": 9,
+    "type": "int",
+    "desc": "Get/set unit property ID 9 (Attackable), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitSelectable",
+    "category": "Unit Property",
+    "value": 10,
+    "type": "int",
+    "desc": "Get/set unit property ID 10 (Selectable), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitStance",
+    "category": "Unit Property",
+    "value": 11,
+    "type": "int",
+    "desc": "Get/set unit property ID 11 (Stance), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitVisibility",
+    "category": "Unit Property",
+    "value": 12,
+    "type": "int",
+    "desc": "Get/set unit property ID 12 (Visibility), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitColorId",
+    "category": "Unit Property",
+    "value": 13,
+    "type": "int",
+    "desc": "Get/set unit property ID 13 (Color ID), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitLocked",
+    "category": "Unit Property",
+    "value": 14,
+    "type": "int",
+    "desc": "Get/set unit property ID 14 (Locked), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitFacet",
+    "category": "Unit Property",
+    "value": 15,
+    "type": "int",
+    "desc": "Get/set unit property ID 15 (Facet), in the int/float property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitGroupId",
+    "category": "Unit Property",
+    "value": 10000,
+    "type": "int",
+    "desc": "Read-only unit property ID 10000 (Group ID), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitObjectId",
+    "category": "Unit Property",
+    "value": 10001,
+    "type": "int",
+    "desc": "Read-only unit property ID 10001 (Object ID), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitCopyId",
+    "category": "Unit Property",
+    "value": 10002,
+    "type": "int",
+    "desc": "Read-only unit property ID 10002 (Copy ID), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitClassType",
+    "category": "Unit Property",
+    "value": 10003,
+    "type": "int",
+    "desc": "Read-only unit property ID 10003 (Class type), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitObjectType",
+    "category": "Unit Property",
+    "value": 10004,
+    "type": "int",
+    "desc": "Read-only unit property ID 10004 (Object type), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitAttributeTypesHeld",
+    "category": "Unit Property",
+    "value": 10005,
+    "type": "int",
+    "desc": "Read-only unit property ID 10005 (Held attribute types), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitGarrisonedUnitIds",
+    "category": "Unit Property",
+    "value": 10006,
+    "type": "int",
+    "desc": "Read-only unit property ID 10006 (Garrisoned unit IDs), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitTargetId",
+    "category": "Unit Property",
+    "value": 10007,
+    "type": "int",
+    "desc": "Read-only unit property ID 10007 (Target ID), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitTarget2Id",
+    "category": "Unit Property",
+    "value": 10008,
+    "type": "int",
+    "desc": "Read-only unit property ID 10008 (Secondary target ID), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionId",
+    "category": "Unit Property",
+    "value": 10009,
+    "type": "int",
+    "desc": "Read-only unit property ID 10009 (Action ID), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderId",
+    "category": "Unit Property",
+    "value": 10010,
+    "type": "int",
+    "desc": "Read-only unit property ID 10010 (Order ID), in the int property group.",
+    "usage": null
+  },
+  {
+    "name": "cBuildAndGoAway",
+    "category": "EffectAmount Unit Attribute",
+    "value": 167,
+    "type": "int",
+    "desc": "Object attribute ID 167 (Build And Go Away); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cTypeFirstStorage",
+    "category": "EffectAmount Unit Attribute",
+    "value": 168,
+    "type": "int",
+    "desc": "Object attribute ID 168 (Type First Storage); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cTypeSecondStorage",
+    "category": "EffectAmount Unit Attribute",
+    "value": 169,
+    "type": "int",
+    "desc": "Object attribute ID 169 (Type Second Storage); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cTypeThirdStorage",
+    "category": "EffectAmount Unit Attribute",
+    "value": 170,
+    "type": "int",
+    "desc": "Object attribute ID 170 (Type Third Storage); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagFirstStorage",
+    "category": "EffectAmount Unit Attribute",
+    "value": 171,
+    "type": "int",
+    "desc": "Object attribute ID 171 (Store Flag First Storage); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagSecondStorage",
+    "category": "EffectAmount Unit Attribute",
+    "value": 172,
+    "type": "int",
+    "desc": "Object attribute ID 172 (Store Flag Second Storage); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagThirdStorage",
+    "category": "EffectAmount Unit Attribute",
+    "value": 173,
+    "type": "int",
+    "desc": "Object attribute ID 173 (Store Flag Third Storage); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAmountFirstCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 174,
+    "type": "int",
+    "desc": "Object attribute ID 174 (Amount First Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAmountSecondCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 175,
+    "type": "int",
+    "desc": "Object attribute ID 175 (Amount Second Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAmountThirdCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 176,
+    "type": "int",
+    "desc": "Object attribute ID 176 (Amount Third Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cTypeFirstCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 177,
+    "type": "int",
+    "desc": "Object attribute ID 177 (Type First Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cTypeSecondCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 178,
+    "type": "int",
+    "desc": "Object attribute ID 178 (Type Second Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cTypeThirdCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 179,
+    "type": "int",
+    "desc": "Object attribute ID 179 (Type Third Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cDeductFlagFirstCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 180,
+    "type": "int",
+    "desc": "Object attribute ID 180 (Deduct Flag First Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cDeductFlagSecondCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 181,
+    "type": "int",
+    "desc": "Object attribute ID 181 (Deduct Flag Second Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cDeductFlagThirdCost",
+    "category": "EffectAmount Unit Attribute",
+    "value": 182,
+    "type": "int",
+    "desc": "Object attribute ID 182 (Deduct Flag Third Cost); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cSpawningGraphic",
+    "category": "EffectAmount Unit Attribute",
+    "value": 183,
+    "type": "int",
+    "desc": "Object attribute ID 183 (Spawning Graphic); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cUpgradeGraphic",
+    "category": "EffectAmount Unit Attribute",
+    "value": 184,
+    "type": "int",
+    "desc": "Object attribute ID 184 (Upgrade Graphic); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cFlyMode",
+    "category": "EffectAmount Unit Attribute",
+    "value": 185,
+    "type": "int",
+    "desc": "Object attribute ID 185 (Fly Mode); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cCanBeGathered",
+    "category": "EffectAmount Unit Attribute",
+    "value": 186,
+    "type": "int",
+    "desc": "Object attribute ID 186 (Can Be Gathered); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cHillMode",
+    "category": "EffectAmount Unit Attribute",
+    "value": 187,
+    "type": "int",
+    "desc": "Object attribute ID 187 (Hill Mode); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cDoppelganger",
+    "category": "EffectAmount Unit Attribute",
+    "value": 188,
+    "type": "int",
+    "desc": "Object attribute ID 188 (Doppelganger); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cGatherGroup",
+    "category": "EffectAmount Unit Attribute",
+    "value": 189,
+    "type": "int",
+    "desc": "Object attribute ID 189 (Gather Group); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cTaskSwapGroup",
+    "category": "EffectAmount Unit Attribute",
+    "value": 190,
+    "type": "int",
+    "desc": "Object attribute ID 190 (Task Swap Group); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cPlacementTerrain1",
+    "category": "EffectAmount Unit Attribute",
+    "value": 191,
+    "type": "int",
+    "desc": "Object attribute ID 191 (Placement Terrain 1); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cPlacementTerrain2",
+    "category": "EffectAmount Unit Attribute",
+    "value": 192,
+    "type": "int",
+    "desc": "Object attribute ID 192 (Placement Terrain 2); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cPlacementCenterTerrain1",
+    "category": "EffectAmount Unit Attribute",
+    "value": 193,
+    "type": "int",
+    "desc": "Object attribute ID 193 (Placement Center Terrain 1); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cPlacementCenterTerrain2",
+    "category": "EffectAmount Unit Attribute",
+    "value": 194,
+    "type": "int",
+    "desc": "Object attribute ID 194 (Placement Center Terrain 2); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cInitiatedTechId",
+    "category": "EffectAmount Unit Attribute",
+    "value": 195,
+    "type": "int",
+    "desc": "Object attribute ID 195 (Initiated Tech ID); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cMinSizeMultiplier",
+    "category": "EffectAmount Unit Attribute",
+    "value": 196,
+    "type": "int",
+    "desc": "Object attribute ID 196 (Min Size Multiplier); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cSelectionOutlineSizeX",
+    "category": "EffectAmount Unit Attribute",
+    "value": 197,
+    "type": "int",
+    "desc": "Object attribute ID 197 (Selection Outline Size X); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cSelectionOutlineSizeY",
+    "category": "EffectAmount Unit Attribute",
+    "value": 198,
+    "type": "int",
+    "desc": "Object attribute ID 198 (Selection Outline Size Y); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cSelectionOutlineSizeZ",
+    "category": "EffectAmount Unit Attribute",
+    "value": 199,
+    "type": "int",
+    "desc": "Object attribute ID 199 (Selection Outline Size Z); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cClearanceSizeX",
+    "category": "EffectAmount Unit Attribute",
+    "value": 200,
+    "type": "int",
+    "desc": "Object attribute ID 200 (Clearance Size X); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cClearanceSizeY",
+    "category": "EffectAmount Unit Attribute",
+    "value": 201,
+    "type": "int",
+    "desc": "Object attribute ID 201 (Clearance Size Y); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cStackUnit",
+    "category": "EffectAmount Unit Attribute",
+    "value": 202,
+    "type": "int",
+    "desc": "Object attribute ID 202 (Stack Unit); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cHeadUnit",
+    "category": "EffectAmount Unit Attribute",
+    "value": 203,
+    "type": "int",
+    "desc": "Object attribute ID 203 (Head Unit); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cTransformUnit",
+    "category": "EffectAmount Unit Attribute",
+    "value": 204,
+    "type": "int",
+    "desc": "Object attribute ID 204 (Transform Unit); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cPileUnit",
+    "category": "EffectAmount Unit Attribute",
+    "value": 205,
+    "type": "int",
+    "desc": "Object attribute ID 205 (Pile Unit); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit1",
+    "category": "EffectAmount Unit Attribute",
+    "value": 206,
+    "type": "int",
+    "desc": "Object attribute ID 206 (Annex Unit 1); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit2",
+    "category": "EffectAmount Unit Attribute",
+    "value": 207,
+    "type": "int",
+    "desc": "Object attribute ID 207 (Annex Unit 2); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit3",
+    "category": "EffectAmount Unit Attribute",
+    "value": 208,
+    "type": "int",
+    "desc": "Object attribute ID 208 (Annex Unit 3); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit4",
+    "category": "EffectAmount Unit Attribute",
+    "value": 209,
+    "type": "int",
+    "desc": "Object attribute ID 209 (Annex Unit 4); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit1OffsetX",
+    "category": "EffectAmount Unit Attribute",
+    "value": 210,
+    "type": "int",
+    "desc": "Object attribute ID 210 (Annex Unit 1 Offset X); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit1OffsetY",
+    "category": "EffectAmount Unit Attribute",
+    "value": 211,
+    "type": "int",
+    "desc": "Object attribute ID 211 (Annex Unit 1 Offset Y); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit2OffsetX",
+    "category": "EffectAmount Unit Attribute",
+    "value": 212,
+    "type": "int",
+    "desc": "Object attribute ID 212 (Annex Unit 2 Offset X); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit2OffsetY",
+    "category": "EffectAmount Unit Attribute",
+    "value": 213,
+    "type": "int",
+    "desc": "Object attribute ID 213 (Annex Unit 2 Offset Y); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit3OffsetX",
+    "category": "EffectAmount Unit Attribute",
+    "value": 214,
+    "type": "int",
+    "desc": "Object attribute ID 214 (Annex Unit 3 Offset X); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit3OffsetY",
+    "category": "EffectAmount Unit Attribute",
+    "value": 215,
+    "type": "int",
+    "desc": "Object attribute ID 215 (Annex Unit 3 Offset Y); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit4OffsetX",
+    "category": "EffectAmount Unit Attribute",
+    "value": 216,
+    "type": "int",
+    "desc": "Object attribute ID 216 (Annex Unit 4 Offset X); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cAnnexUnit4OffsetY",
+    "category": "EffectAmount Unit Attribute",
+    "value": 217,
+    "type": "int",
+    "desc": "Object attribute ID 217 (Annex Unit 4 Offset Y); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cMoveAlgorithm",
+    "category": "EffectAmount Unit Attribute",
+    "value": 218,
+    "type": "int",
+    "desc": "Object attribute ID 218 (Move Algorithm); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cSpacingModifier",
+    "category": "EffectAmount Unit Attribute",
+    "value": 219,
+    "type": "int",
+    "desc": "Object attribute ID 219 (Spacing Modifier); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cCanBurn",
+    "category": "EffectAmount Unit Attribute",
+    "value": 220,
+    "type": "int",
+    "desc": "Object attribute ID 220 (Can Burn); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cGatherFlag",
+    "category": "EffectAmount Unit Attribute",
+    "value": 221,
+    "type": "int",
+    "desc": "Object attribute ID 221 (Gather Flag); available to xsEffectAmount, xsGetUnitAttribute, and xsGetObjectAttribute in Update 185872.",
+    "usage": null
+  },
+  {
+    "name": "cCaptureFlagNever",
+    "category": "capture flag",
+    "value": 0,
+    "type": "int",
+    "desc": "Capture flag value 0. Prevents conversion.",
+    "usage": null
+  },
+  {
+    "name": "cCaptureFlagOnce",
+    "category": "capture flag",
+    "value": 1,
+    "type": "int",
+    "desc": "Capture flag value 1. Allows one conversion; this is the default for Gaia units.",
+    "usage": null
+  },
+  {
+    "name": "cCaptureFlagMultipleTimes",
+    "category": "capture flag",
+    "value": 2,
+    "type": "int",
+    "desc": "Capture flag value 2. Allows repeated conversion, such as for sheep and monuments.",
+    "usage": null
+  },
+  {
+    "name": "cCaptureFlagNeverGaiaAggressive",
+    "category": "capture flag",
+    "value": 3,
+    "type": "int",
+    "desc": "Capture flag value 3. Prevents conversion; Gaia units with this flag act aggressively toward player units.",
+    "usage": null
+  },
+  {
+    "name": "cStanceAggressive",
+    "category": "unit stance",
+    "value": 0,
+    "type": "int",
+    "desc": "Unit stance enum value 0: Aggressive; used with cUnitStance.",
+    "usage": null
+  },
+  {
+    "name": "cStanceDefensive",
+    "category": "unit stance",
+    "value": 1,
+    "type": "int",
+    "desc": "Unit stance enum value 1: Defensive; used with cUnitStance.",
+    "usage": null
+  },
+  {
+    "name": "cStanceStandGround",
+    "category": "unit stance",
+    "value": 2,
+    "type": "int",
+    "desc": "Unit stance enum value 2: Stand ground; used with cUnitStance.",
+    "usage": null
+  },
+  {
+    "name": "cStanceNoAttack",
+    "category": "unit stance",
+    "value": 3,
+    "type": "int",
+    "desc": "Unit stance enum value 3: No attack; used with cUnitStance.",
+    "usage": null
+  },
+  {
+    "name": "cMuisca",
+    "category": "aoe2 civs",
+    "value": 57,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cMapuche",
+    "category": "aoe2 civs",
+    "value": 58,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cTupi",
+    "category": "aoe2 civs",
+    "value": 59,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cSaxons",
+    "category": "aoe2 civs",
+    "value": 60,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cVarangians",
+    "category": "aoe2 civs",
+    "value": 61,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cDanes",
+    "category": "aoe2 civs",
+    "value": 62,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cNumCivs",
+    "category": "aoe2 civs",
+    "value": 62,
+    "type": "int",
+    "desc": "The number of civilizations for AoE2",
+    "usage": null
+  },
+  {
+    "name": "cMacedonians",
+    "category": "chronicles civs",
+    "value": 54,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cThracians",
+    "category": "chronicles civs",
+    "value": 55,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cPuru",
+    "category": "chronicles civs",
+    "value": 56,
+    "type": "int",
+    "desc": "This is the civilization ID of CIV_NAME",
+    "usage": null
+  },
+  {
+    "name": "cNumAoeCivs",
+    "category": "ror civs",
+    "value": 18,
+    "type": "int",
+    "desc": "The number of civilizations for RoR",
+    "usage": null
+  },
+  {
+    "name": "cTrainLocationsEntryMod",
+    "category": "Object Attribute",
+    "value": 158,
+    "type": "int",
+    "desc": "This is the attribute [Train Locations Entry Mod](../../../attributes/attributes/#158-train-locations-entry-mod).",
+    "usage": null
+  },
+  {
+    "name": "cTrainLocationsTotalNum",
+    "category": "Object Attribute",
+    "value": 159,
+    "type": "int",
+    "desc": "This is the attribute [Train Locations Total Num](../../../attributes/attributes/#159-train-locations-total-num).",
+    "usage": null
+  },
+  {
+    "name": "cAddArmorType",
+    "category": "Object Attribute",
+    "value": 160,
+    "type": "int",
+    "desc": "This is the attribute [Add Armor Type](../../../attributes/attributes/#160-add-armor-type).",
+    "usage": null
+  },
+  {
+    "name": "cAddAttackType",
+    "category": "Object Attribute",
+    "value": 161,
+    "type": "int",
+    "desc": "This is the attribute [Add Attack Type](../../../attributes/attributes/#161-add-attack-type).",
+    "usage": null
+  },
+  {
+    "name": "cChargeTarget",
+    "category": "Object Attribute",
+    "value": 162,
+    "type": "int",
+    "desc": "This is the attribute [Charge Target](../../../attributes/attributes/#162-charge-target).",
+    "usage": null
+  },
+  {
+    "name": "cSizeClass",
+    "category": "Object Attribute",
+    "value": 163,
+    "type": "int",
+    "desc": "This is the attribute [Size Class](../../../attributes/attributes/#163-size-class).",
+    "usage": null
+  },
+  {
+    "name": "cRemoveArmorType",
+    "category": "Object Attribute",
+    "value": 164,
+    "type": "int",
+    "desc": "Object attribute ID 164 (Remove Armor Type). The UGC page links this name to Add Armor Type; the constant name and value are checked against the installed Constants.xs.",
+    "usage": null
+  },
+  {
+    "name": "cRemoveAttackType",
+    "category": "Object Attribute",
+    "value": 165,
+    "type": "int",
+    "desc": "Object attribute ID 165 (Remove Attack Type). The UGC page links this name to Add Attack Type; the constant name and value are checked against the installed Constants.xs.",
+    "usage": null
+  },
+  {
+    "name": "cUndeadFlag",
+    "category": "Object Attribute",
+    "value": 166,
+    "type": "int",
+    "desc": "This is the attribute [Undead Flag](../../../attributes/attributes/#166-undead-flag). See [cUndeadFlag Constants](./#28-undead-flag-constants).",
+    "usage": null
+  },
+  {
+    "name": "cSentinelEndClass",
+    "category": "Object Class",
+    "value": 968,
+    "type": "int",
+    "desc": "This marks the end of the unit class list",
+    "usage": null
+  },
+  {
+    "name": "cPlayerTypeNone",
+    "category": "player type",
+    "value": -1,
+    "type": "int",
+    "desc": "Player type value -1.",
+    "usage": null
+  },
+  {
+    "name": "cPlayerTypeScenarioEditorPhantom",
+    "category": "player type",
+    "value": 0,
+    "type": "int",
+    "desc": "Player type value 0.",
+    "usage": null
+  },
+  {
+    "name": "cPlayerTypeHuman",
+    "category": "player type",
+    "value": 1,
+    "type": "int",
+    "desc": "Player type value 1.",
+    "usage": null
+  },
+  {
+    "name": "cPlayerTypeGaia",
+    "category": "player type",
+    "value": 2,
+    "type": "int",
+    "desc": "Player type value 2.",
+    "usage": null
+  },
+  {
+    "name": "cPlayerTypeComputer",
+    "category": "player type",
+    "value": 3,
+    "type": "int",
+    "desc": "Player type value 3.",
+    "usage": null
+  },
+  {
+    "name": "cDiplomacyInvalid",
+    "category": "diplomacy",
+    "value": -1,
+    "type": "int",
+    "desc": "Diplomacy value -1.",
+    "usage": null
+  },
+  {
+    "name": "cDiplomacyAlly",
+    "category": "diplomacy",
+    "value": 0,
+    "type": "int",
+    "desc": "Diplomacy value 0.",
+    "usage": null
+  },
+  {
+    "name": "cDiplomacyNeutral",
+    "category": "diplomacy",
+    "value": 1,
+    "type": "int",
+    "desc": "Diplomacy value 1.",
+    "usage": null
+  },
+  {
+    "name": "cDiplomacyAny",
+    "category": "diplomacy",
+    "value": 2,
+    "type": "int",
+    "desc": "Diplomacy value 2.",
+    "usage": null
+  },
+  {
+    "name": "cDiplomacyEnemy",
+    "category": "diplomacy",
+    "value": 3,
+    "type": "int",
+    "desc": "Diplomacy value 3.",
+    "usage": null
+  },
+  {
+    "name": "cDiplomacyTreaty",
+    "category": "diplomacy",
+    "value": 4,
+    "type": "int",
+    "desc": "Diplomacy value 4.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodDefault",
+    "category": "color mood",
+    "value": 0,
+    "type": "int",
+    "desc": "Color mood value 0.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodAutumn",
+    "category": "color mood",
+    "value": 1,
+    "type": "int",
+    "desc": "Color mood value 1.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodWinter",
+    "category": "color mood",
+    "value": 2,
+    "type": "int",
+    "desc": "Color mood value 2.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodJungle",
+    "category": "color mood",
+    "value": 3,
+    "type": "int",
+    "desc": "Color mood value 3.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodDesert",
+    "category": "color mood",
+    "value": 4,
+    "type": "int",
+    "desc": "Color mood value 4.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodNight",
+    "category": "color mood",
+    "value": 5,
+    "type": "int",
+    "desc": "Color mood value 5.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodEvening",
+    "category": "color mood",
+    "value": 6,
+    "type": "int",
+    "desc": "Color mood value 6.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodSpring",
+    "category": "color mood",
+    "value": 7,
+    "type": "int",
+    "desc": "Color mood value 7.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodSavannah",
+    "category": "color mood",
+    "value": 8,
+    "type": "int",
+    "desc": "Color mood value 8.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodArctic",
+    "category": "color mood",
+    "value": 9,
+    "type": "int",
+    "desc": "Color mood value 9.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodRainforest",
+    "category": "color mood",
+    "value": 10,
+    "type": "int",
+    "desc": "Color mood value 10.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodSwamp",
+    "category": "color mood",
+    "value": 11,
+    "type": "int",
+    "desc": "Color mood value 11.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodSteppes",
+    "category": "color mood",
+    "value": 12,
+    "type": "int",
+    "desc": "Color mood value 12.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodMisty",
+    "category": "color mood",
+    "value": 13,
+    "type": "int",
+    "desc": "Color mood value 13.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodSummer",
+    "category": "color mood",
+    "value": 14,
+    "type": "int",
+    "desc": "Color mood value 14.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodMurky",
+    "category": "color mood",
+    "value": 15,
+    "type": "int",
+    "desc": "Color mood value 15.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodBrumous",
+    "category": "color mood",
+    "value": 16,
+    "type": "int",
+    "desc": "Color mood value 16.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodTwilight",
+    "category": "color mood",
+    "value": 17,
+    "type": "int",
+    "desc": "Color mood value 17.",
+    "usage": null
+  },
+  {
+    "name": "cColorMoodDarkness",
+    "category": "color mood",
+    "value": 18,
+    "type": "int",
+    "desc": "Color mood value 18.",
+    "usage": null
+  },
+  {
+    "name": "cNumColorMoods",
+    "category": "color mood",
+    "value": 19,
+    "type": "int",
+    "desc": "Color mood value 19.",
+    "usage": null
+  },
+  {
+    "name": "cDifficultyExtreme",
+    "category": "difficulty",
+    "value": -1,
+    "type": "int",
+    "desc": "Difficulty value -1.",
+    "usage": null
+  },
+  {
+    "name": "cDifficultyHardest",
+    "category": "difficulty",
+    "value": 0,
+    "type": "int",
+    "desc": "Difficulty value 0.",
+    "usage": null
+  },
+  {
+    "name": "cDifficultyHard",
+    "category": "difficulty",
+    "value": 1,
+    "type": "int",
+    "desc": "Difficulty value 1.",
+    "usage": null
+  },
+  {
+    "name": "cDifficultyModerate",
+    "category": "difficulty",
+    "value": 2,
+    "type": "int",
+    "desc": "Difficulty value 2.",
+    "usage": null
+  },
+  {
+    "name": "cDifficultyEasy",
+    "category": "difficulty",
+    "value": 3,
+    "type": "int",
+    "desc": "Difficulty value 3.",
+    "usage": null
+  },
+  {
+    "name": "cDifficultyEasiest",
+    "category": "difficulty",
+    "value": 4,
+    "type": "int",
+    "desc": "Difficulty value 4.",
+    "usage": null
+  },
+  {
+    "name": "cPanelTop",
+    "category": "Panel",
+    "value": 0,
+    "type": "int",
+    "desc": "Panel position value 0.",
+    "usage": null
+  },
+  {
+    "name": "cPanelMiddle",
+    "category": "Panel",
+    "value": 1,
+    "type": "int",
+    "desc": "Panel position value 1.",
+    "usage": null
+  },
+  {
+    "name": "cPanelBottom",
+    "category": "Panel",
+    "value": 2,
+    "type": "int",
+    "desc": "Panel position value 2.",
+    "usage": null
+  },
+  {
+    "name": "cLocalePortugese",
+    "category": "Locale",
+    "value": 0,
+    "type": "int",
+    "desc": "Locale identifier 0.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleGerman",
+    "category": "Locale",
+    "value": 1,
+    "type": "int",
+    "desc": "Locale identifier 1.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleEnglish",
+    "category": "Locale",
+    "value": 2,
+    "type": "int",
+    "desc": "Locale identifier 2.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleSpanish",
+    "category": "Locale",
+    "value": 3,
+    "type": "int",
+    "desc": "Locale identifier 3.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleFrench",
+    "category": "Locale",
+    "value": 4,
+    "type": "int",
+    "desc": "Locale identifier 4.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleHindi",
+    "category": "Locale",
+    "value": 5,
+    "type": "int",
+    "desc": "Locale identifier 5.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleItalian",
+    "category": "Locale",
+    "value": 6,
+    "type": "int",
+    "desc": "Locale identifier 6.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleJapanese",
+    "category": "Locale",
+    "value": 7,
+    "type": "int",
+    "desc": "Locale identifier 7.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleKorean",
+    "category": "Locale",
+    "value": 8,
+    "type": "int",
+    "desc": "Locale identifier 8.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleMalay",
+    "category": "Locale",
+    "value": 9,
+    "type": "int",
+    "desc": "Locale identifier 9.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleSpanishLatinAmerican",
+    "category": "Locale",
+    "value": 10,
+    "type": "int",
+    "desc": "Locale identifier 10.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleRussian",
+    "category": "Locale",
+    "value": 11,
+    "type": "int",
+    "desc": "Locale identifier 11.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleTurkish",
+    "category": "Locale",
+    "value": 12,
+    "type": "int",
+    "desc": "Locale identifier 12.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleChineseTraditional",
+    "category": "Locale",
+    "value": 13,
+    "type": "int",
+    "desc": "Locale identifier 13.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleVietnamese",
+    "category": "Locale",
+    "value": 14,
+    "type": "int",
+    "desc": "Locale identifier 14.",
+    "usage": null
+  },
+  {
+    "name": "cLocaleChineseSimplified",
+    "category": "Locale",
+    "value": 15,
+    "type": "int",
+    "desc": "Locale identifier 15.",
+    "usage": null
+  },
+  {
+    "name": "cLocalePolish",
+    "category": "Locale",
+    "value": 16,
+    "type": "int",
+    "desc": "Locale identifier 16.",
+    "usage": null
+  },
+  {
+    "name": "cNumLocales",
+    "category": "Locale",
+    "value": 17,
+    "type": "int",
+    "desc": "Locale identifier 17.",
+    "usage": null
+  },
+  {
+    "name": "cTimerUnitYears",
+    "category": "Timer Unit",
+    "value": 0,
+    "type": "int",
+    "desc": "Timer unit value 0.",
+    "usage": null
+  },
+  {
+    "name": "cTimerUnitMinutes",
+    "category": "Timer Unit",
+    "value": 1,
+    "type": "int",
+    "desc": "Timer unit value 1.",
+    "usage": null
+  },
+  {
+    "name": "cTimerUnitSeconds",
+    "category": "Timer Unit",
+    "value": 2,
+    "type": "int",
+    "desc": "Timer unit value 2.",
+    "usage": null
+  },
+  {
+    "name": "cTimerUnitMinutesAndSeconds",
+    "category": "Timer Unit",
+    "value": 3,
+    "type": "int",
+    "desc": "Timer unit value 3.",
+    "usage": null
+  },
+  {
+    "name": "cColorBlue",
+    "category": "Color",
+    "value": "\"<BLUE>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<BLUE>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorRed",
+    "category": "Color",
+    "value": "\"<RED>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<RED>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorGreen",
+    "category": "Color",
+    "value": "\"<GREEN>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<GREEN>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorYellow",
+    "category": "Color",
+    "value": "\"<YELLOW>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<YELLOW>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorAqua",
+    "category": "Color",
+    "value": "\"<AQUA>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<AQUA>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorPurple",
+    "category": "Color",
+    "value": "\"<PURPLE>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<PURPLE>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorGray",
+    "category": "Color",
+    "value": "\"<GRAY>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<GRAY>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorOrange",
+    "category": "Color",
+    "value": "\"<ORANGE>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<ORANGE>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorWhite",
+    "category": "Color",
+    "value": "\"<WHITE>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<WHITE>\".",
+    "usage": null
+  },
+  {
+    "name": "cColorBlack",
+    "category": "Color",
+    "value": "\"<BLACK>\"",
+    "type": "string",
+    "desc": "XS color markup constant with literal \"<BLACK>\".",
+    "usage": null
+  },
+  {
+    "name": "cUndeadFlagShowUndeadGraphic",
+    "category": "Undead Flag Constants",
+    "value": 1,
+    "type": "int",
+    "desc": "Enum value for the [Undead Flag](../../../attributes/attributes/#166-undead-flag) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cUndeadFlagIgnoreInKillStats",
+    "category": "Undead Flag Constants",
+    "value": 2,
+    "type": "int",
+    "desc": "Enum value for the [Undead Flag](../../../attributes/attributes/#166-undead-flag) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cUndeadFlagGarrisonInvincibility",
+    "category": "Undead Flag Constants",
+    "value": 4,
+    "type": "int",
+    "desc": "Enum value for the [Undead Flag](../../../attributes/attributes/#166-undead-flag) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassRemoval",
+    "category": "Class Flags",
+    "value": -1,
+    "type": "int",
+    "desc": "",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassOffset",
+    "category": "Class Flags",
+    "value": 1000,
+    "type": "int",
+    "desc": "",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassInfantry",
+    "category": "Class Flags",
+    "value": 1,
+    "type": "int",
+    "desc": "Includes the following classes: `cInfantryClass`",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassCavalry",
+    "category": "Class Flags",
+    "value": 2,
+    "type": "int",
+    "desc": "Includes the following classes: `cCavalryClass, cScoutCavalryClass`",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassArchers",
+    "category": "Class Flags",
+    "value": 4,
+    "type": "int",
+    "desc": "Includes the following classes: `cArcherClass, cHandCannoneerClass`",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassCavalryArchers",
+    "category": "Class Flags",
+    "value": 8,
+    "type": "int",
+    "desc": "Includes the following classes: `cCavalryArcherClass`, `cConquistadorClass`",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassMonk",
+    "category": "Class Flags",
+    "value": 16,
+    "type": "int",
+    "desc": "Includes the following classes: `cMonkClass`, `cMonkWithRelicClass`",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassCivilian",
+    "category": "Class Flags",
+    "value": 32,
+    "type": "int",
+    "desc": "Includes the following classes: `cVillagerClass`, `cTradeCartClass`, `cKingClass`",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassShip",
+    "category": "Class Flags",
+    "value": 64,
+    "type": "int",
+    "desc": "Includes the following classes: `cWarshipClass`, `cTransportShipClass`, `cFishingBoatClass`, `cTradeBoatClass`, `cBoardingShipClass`",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassSiege",
+    "category": "Class Flags",
+    "value": 128,
+    "type": "int",
+    "desc": "Includes the following classes: `cSiegeWeaponClass`, `cScorpionClass`, `cPackedUnitClass`, `cUnpackedSiegeUnitClass`, `cPetardClass`",
+    "usage": null
+  },
+  {
+    "name": "cFlagClassBuilding",
+    "category": "Class Flags",
+    "value": 256,
+    "type": "int",
+    "desc": "Includes the following classes: `cBuildingClass`, `cFarmClass`, `cWallClass`, `cGateClass`, `cTowerClass`, `cMiscBuildingClass`",
+    "usage": null
+  },
+  {
+    "name": "cLosVisible",
+    "category": "Unit LoS constants",
+    "value": 0,
+    "type": "int",
+    "desc": "Unit line-of-sight state 0.",
+    "usage": null
+  },
+  {
+    "name": "cLosExplored",
+    "category": "Unit LoS constants",
+    "value": 1,
+    "type": "int",
+    "desc": "Unit line-of-sight state 1.",
+    "usage": null
+  },
+  {
+    "name": "cLosInvisible",
+    "category": "Unit LoS constants",
+    "value": 2,
+    "type": "int",
+    "desc": "Unit line-of-sight state 2.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionAttack",
+    "category": "Unit Action Constants",
+    "value": 600,
+    "type": "int",
+    "desc": "Unit action ID 600.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionDefend",
+    "category": "Unit Action Constants",
+    "value": 601,
+    "type": "int",
+    "desc": "Unit action ID 601.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionBuild",
+    "category": "Unit Action Constants",
+    "value": 602,
+    "type": "int",
+    "desc": "Unit action ID 602.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionHeal",
+    "category": "Unit Action Constants",
+    "value": 603,
+    "type": "int",
+    "desc": "Unit action ID 603.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionConvert",
+    "category": "Unit Action Constants",
+    "value": 604,
+    "type": "int",
+    "desc": "Unit action ID 604.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionExplore",
+    "category": "Unit Action Constants",
+    "value": 605,
+    "type": "int",
+    "desc": "Unit action ID 605.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionStop",
+    "category": "Unit Action Constants",
+    "value": 606,
+    "type": "int",
+    "desc": "Unit action ID 606.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionRunAway",
+    "category": "Unit Action Constants",
+    "value": 607,
+    "type": "int",
+    "desc": "Unit action ID 607.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionRetreat",
+    "category": "Unit Action Constants",
+    "value": 608,
+    "type": "int",
+    "desc": "Unit action ID 608.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionGather",
+    "category": "Unit Action Constants",
+    "value": 609,
+    "type": "int",
+    "desc": "Unit action ID 609.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionMove",
+    "category": "Unit Action Constants",
+    "value": 610,
+    "type": "int",
+    "desc": "Unit action ID 610.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionPatrol",
+    "category": "Unit Action Constants",
+    "value": 611,
+    "type": "int",
+    "desc": "Unit action ID 611.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionFollow",
+    "category": "Unit Action Constants",
+    "value": 612,
+    "type": "int",
+    "desc": "Unit action ID 612.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionHunt",
+    "category": "Unit Action Constants",
+    "value": 613,
+    "type": "int",
+    "desc": "Unit action ID 613.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionTransport",
+    "category": "Unit Action Constants",
+    "value": 614,
+    "type": "int",
+    "desc": "Unit action ID 614.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionTrade",
+    "category": "Unit Action Constants",
+    "value": 615,
+    "type": "int",
+    "desc": "Unit action ID 615.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionEvasiveMove",
+    "category": "Unit Action Constants",
+    "value": 616,
+    "type": "int",
+    "desc": "Unit action ID 616.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionEnter",
+    "category": "Unit Action Constants",
+    "value": 617,
+    "type": "int",
+    "desc": "Unit action ID 617.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionRepair",
+    "category": "Unit Action Constants",
+    "value": 618,
+    "type": "int",
+    "desc": "Unit action ID 618.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionTrain",
+    "category": "Unit Action Constants",
+    "value": 619,
+    "type": "int",
+    "desc": "Unit action ID 619.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionResearch",
+    "category": "Unit Action Constants",
+    "value": 620,
+    "type": "int",
+    "desc": "Unit action ID 620.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionUnload",
+    "category": "Unit Action Constants",
+    "value": 621,
+    "type": "int",
+    "desc": "Unit action ID 621.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionSeekAndDestroy",
+    "category": "Unit Action Constants",
+    "value": 622,
+    "type": "int",
+    "desc": "Unit action ID 622.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionExploreAndDestroy",
+    "category": "Unit Action Constants",
+    "value": 623,
+    "type": "int",
+    "desc": "Unit action ID 623.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionGroupGather",
+    "category": "Unit Action Constants",
+    "value": 624,
+    "type": "int",
+    "desc": "Unit action ID 624.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionWait",
+    "category": "Unit Action Constants",
+    "value": 628,
+    "type": "int",
+    "desc": "Unit action ID 628.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionAttackRoundup",
+    "category": "Unit Action Constants",
+    "value": 629,
+    "type": "int",
+    "desc": "Unit action ID 629.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionScout",
+    "category": "Unit Action Constants",
+    "value": 630,
+    "type": "int",
+    "desc": "Unit action ID 630.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionControl",
+    "category": "Unit Action Constants",
+    "value": 631,
+    "type": "int",
+    "desc": "Unit action ID 631.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionShepherd",
+    "category": "Unit Action Constants",
+    "value": 632,
+    "type": "int",
+    "desc": "Unit action ID 632.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionAttackMove",
+    "category": "Unit Action Constants",
+    "value": 633,
+    "type": "int",
+    "desc": "Unit action ID 633.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionWaitForSolidify",
+    "category": "Unit Action Constants",
+    "value": 634,
+    "type": "int",
+    "desc": "Unit action ID 634.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionReleased",
+    "category": "Unit Action Constants",
+    "value": 699,
+    "type": "int",
+    "desc": "Unit action ID 699.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionUnloadOverWall",
+    "category": "Unit Action Constants",
+    "value": 700,
+    "type": "int",
+    "desc": "Unit action ID 700.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionAutoScout",
+    "category": "Unit Action Constants",
+    "value": 701,
+    "type": "int",
+    "desc": "Unit action ID 701.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionAutoBoarLure",
+    "category": "Unit Action Constants",
+    "value": 702,
+    "type": "int",
+    "desc": "Unit action ID 702.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionEvacuate",
+    "category": "Unit Action Constants",
+    "value": 703,
+    "type": "int",
+    "desc": "Unit action ID 703.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionEvacuateInGroup",
+    "category": "Unit Action Constants",
+    "value": 704,
+    "type": "int",
+    "desc": "Unit action ID 704.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionBackToWork",
+    "category": "Unit Action Constants",
+    "value": 705,
+    "type": "int",
+    "desc": "Unit action ID 705.",
+    "usage": null
+  },
+  {
+    "name": "cUnitActionHeroPower",
+    "category": "Unit Action Constants",
+    "value": 706,
+    "type": "int",
+    "desc": "Unit action ID 706.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderAttack",
+    "category": "Unit Order Constants",
+    "value": 700,
+    "type": "int",
+    "desc": "Unit order ID 700.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderDefend",
+    "category": "Unit Order Constants",
+    "value": 701,
+    "type": "int",
+    "desc": "Unit order ID 701.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderBuild",
+    "category": "Unit Order Constants",
+    "value": 702,
+    "type": "int",
+    "desc": "Unit order ID 702.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderHeal",
+    "category": "Unit Order Constants",
+    "value": 703,
+    "type": "int",
+    "desc": "Unit order ID 703.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderConvert",
+    "category": "Unit Order Constants",
+    "value": 704,
+    "type": "int",
+    "desc": "Unit order ID 704.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderExplore",
+    "category": "Unit Order Constants",
+    "value": 705,
+    "type": "int",
+    "desc": "Unit order ID 705.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderStop",
+    "category": "Unit Order Constants",
+    "value": 706,
+    "type": "int",
+    "desc": "Unit order ID 706.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderRunAway",
+    "category": "Unit Order Constants",
+    "value": 707,
+    "type": "int",
+    "desc": "Unit order ID 707.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderRetreat",
+    "category": "Unit Order Constants",
+    "value": 708,
+    "type": "int",
+    "desc": "Unit order ID 708.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderGather",
+    "category": "Unit Order Constants",
+    "value": 709,
+    "type": "int",
+    "desc": "Unit order ID 709.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderMove",
+    "category": "Unit Order Constants",
+    "value": 710,
+    "type": "int",
+    "desc": "Unit order ID 710.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderPatrol",
+    "category": "Unit Order Constants",
+    "value": 711,
+    "type": "int",
+    "desc": "Unit order ID 711.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderFollow",
+    "category": "Unit Order Constants",
+    "value": 712,
+    "type": "int",
+    "desc": "Unit order ID 712.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderHunt",
+    "category": "Unit Order Constants",
+    "value": 713,
+    "type": "int",
+    "desc": "Unit order ID 713.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderTransport",
+    "category": "Unit Order Constants",
+    "value": 714,
+    "type": "int",
+    "desc": "Unit order ID 714.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderTrade",
+    "category": "Unit Order Constants",
+    "value": 715,
+    "type": "int",
+    "desc": "Unit order ID 715.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderEvasiveMove",
+    "category": "Unit Order Constants",
+    "value": 716,
+    "type": "int",
+    "desc": "Unit order ID 716.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderEnter",
+    "category": "Unit Order Constants",
+    "value": 717,
+    "type": "int",
+    "desc": "Unit order ID 717.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderRepair",
+    "category": "Unit Order Constants",
+    "value": 718,
+    "type": "int",
+    "desc": "Unit order ID 718.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderTrain",
+    "category": "Unit Order Constants",
+    "value": 719,
+    "type": "int",
+    "desc": "Unit order ID 719.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderResearch",
+    "category": "Unit Order Constants",
+    "value": 720,
+    "type": "int",
+    "desc": "Unit order ID 720.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderUnload",
+    "category": "Unit Order Constants",
+    "value": 721,
+    "type": "int",
+    "desc": "Unit order ID 721.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderUnloadOverWall",
+    "category": "Unit Order Constants",
+    "value": 800,
+    "type": "int",
+    "desc": "Unit order ID 800.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderSeekAndDestroy",
+    "category": "Unit Order Constants",
+    "value": 722,
+    "type": "int",
+    "desc": "Unit order ID 722.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderGroupGather",
+    "category": "Unit Order Constants",
+    "value": 724,
+    "type": "int",
+    "desc": "Unit order ID 724.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderExploreAndDestroy",
+    "category": "Unit Order Constants",
+    "value": 723,
+    "type": "int",
+    "desc": "Unit order ID 723.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderWait",
+    "category": "Unit Order Constants",
+    "value": 728,
+    "type": "int",
+    "desc": "Unit order ID 728.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderAttackRoundup",
+    "category": "Unit Order Constants",
+    "value": 729,
+    "type": "int",
+    "desc": "Unit order ID 729.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderScout",
+    "category": "Unit Order Constants",
+    "value": 730,
+    "type": "int",
+    "desc": "Unit order ID 730.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderActionControl",
+    "category": "Unit Order Constants",
+    "value": 731,
+    "type": "int",
+    "desc": "Unit order ID 731.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderShepherd",
+    "category": "Unit Order Constants",
+    "value": 732,
+    "type": "int",
+    "desc": "Unit order ID 732.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderAttackMove",
+    "category": "Unit Order Constants",
+    "value": 733,
+    "type": "int",
+    "desc": "Unit order ID 733.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderAutoScout",
+    "category": "Unit Order Constants",
+    "value": 801,
+    "type": "int",
+    "desc": "Unit order ID 801.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderWaitForSolidify",
+    "category": "Unit Order Constants",
+    "value": 734,
+    "type": "int",
+    "desc": "Unit order ID 734.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderAutoBoarLure",
+    "category": "Unit Order Constants",
+    "value": 802,
+    "type": "int",
+    "desc": "Unit order ID 802.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderEvacuate",
+    "category": "Unit Order Constants",
+    "value": 803,
+    "type": "int",
+    "desc": "Unit order ID 803.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderEvacuateInGroup",
+    "category": "Unit Order Constants",
+    "value": 804,
+    "type": "int",
+    "desc": "Unit order ID 804.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderBackToWork",
+    "category": "Unit Order Constants",
+    "value": 805,
+    "type": "int",
+    "desc": "Unit order ID 805.",
+    "usage": null
+  },
+  {
+    "name": "cUnitOrderHeroPower",
+    "category": "Unit Order Constants",
+    "value": 806,
+    "type": "int",
+    "desc": "Unit order ID 806.",
+    "usage": null
+  },
+  {
+    "name": "cFormationLine",
+    "category": "Unit Formation Constants",
+    "value": 2,
+    "type": "int",
+    "desc": "",
+    "usage": null
+  },
+  {
+    "name": "cFormationBox",
+    "category": "Unit Formation Constants",
+    "value": 4,
+    "type": "int",
+    "desc": "",
+    "usage": null
+  },
+  {
+    "name": "cFormationStaggered",
+    "category": "Unit Formation Constants",
+    "value": 7,
+    "type": "int",
+    "desc": "",
+    "usage": null
+  },
+  {
+    "name": "cFormationFlank",
+    "category": "Unit Formation Constants",
+    "value": 8,
+    "type": "int",
+    "desc": "",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeDefault",
+    "category": "Action Type Constants",
+    "value": 0,
+    "type": "int",
+    "desc": "Unit task/action type value 0; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeMove",
+    "category": "Action Type Constants",
+    "value": 1,
+    "type": "int",
+    "desc": "Unit task/action type value 1; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypePatrol",
+    "category": "Action Type Constants",
+    "value": 2,
+    "type": "int",
+    "desc": "Unit task/action type value 2; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeGuard",
+    "category": "Action Type Constants",
+    "value": 3,
+    "type": "int",
+    "desc": "Unit task/action type value 3; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeFollow",
+    "category": "Action Type Constants",
+    "value": 4,
+    "type": "int",
+    "desc": "Unit task/action type value 4; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeStop",
+    "category": "Action Type Constants",
+    "value": 5,
+    "type": "int",
+    "desc": "Unit task/action type value 5; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeAttackGround",
+    "category": "Action Type Constants",
+    "value": 6,
+    "type": "int",
+    "desc": "Unit task/action type value 6; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeGarrison",
+    "category": "Action Type Constants",
+    "value": 7,
+    "type": "int",
+    "desc": "Unit task/action type value 7; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeKill",
+    "category": "Action Type Constants",
+    "value": 8,
+    "type": "int",
+    "desc": "Unit task/action type value 8; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeLock",
+    "category": "Action Type Constants",
+    "value": 11,
+    "type": "int",
+    "desc": "Unit task/action type value 11; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeWork",
+    "category": "Action Type Constants",
+    "value": 12,
+    "type": "int",
+    "desc": "Unit task/action type value 12; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeUngarrison",
+    "category": "Action Type Constants",
+    "value": 13,
+    "type": "int",
+    "desc": "Unit task/action type value 13; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeDropRelic",
+    "category": "Action Type Constants",
+    "value": 14,
+    "type": "int",
+    "desc": "Unit task/action type value 14; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypePack",
+    "category": "Action Type Constants",
+    "value": 15,
+    "type": "int",
+    "desc": "Unit task/action type value 15; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeUnpack",
+    "category": "Action Type Constants",
+    "value": 16,
+    "type": "int",
+    "desc": "Unit task/action type value 16; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeAttackMove",
+    "category": "Action Type Constants",
+    "value": 17,
+    "type": "int",
+    "desc": "Unit task/action type value 17; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeFormationLine",
+    "category": "Action Type Constants",
+    "value": 18,
+    "type": "int",
+    "desc": "Unit task/action type value 18; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeFormationBox",
+    "category": "Action Type Constants",
+    "value": 19,
+    "type": "int",
+    "desc": "Unit task/action type value 19; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeFormationStaggered",
+    "category": "Action Type Constants",
+    "value": 20,
+    "type": "int",
+    "desc": "Unit task/action type value 20; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeFormationFlank",
+    "category": "Action Type Constants",
+    "value": 21,
+    "type": "int",
+    "desc": "Unit task/action type value 21; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeTransform",
+    "category": "Action Type Constants",
+    "value": 22,
+    "type": "int",
+    "desc": "Unit task/action type value 22; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeSellFood",
+    "category": "Action Type Constants",
+    "value": 23,
+    "type": "int",
+    "desc": "Unit task/action type value 23; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeSellWood",
+    "category": "Action Type Constants",
+    "value": 24,
+    "type": "int",
+    "desc": "Unit task/action type value 24; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeSellStone",
+    "category": "Action Type Constants",
+    "value": 25,
+    "type": "int",
+    "desc": "Unit task/action type value 25; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeBuyFood",
+    "category": "Action Type Constants",
+    "value": 26,
+    "type": "int",
+    "desc": "Unit task/action type value 26; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeBuyWood",
+    "category": "Action Type Constants",
+    "value": 27,
+    "type": "int",
+    "desc": "Unit task/action type value 27; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeBuyStone",
+    "category": "Action Type Constants",
+    "value": 28,
+    "type": "int",
+    "desc": "Unit task/action type value 28; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeRingTownBell",
+    "category": "Action Type Constants",
+    "value": 29,
+    "type": "int",
+    "desc": "Unit task/action type value 29; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeBackToWork",
+    "category": "Action Type Constants",
+    "value": 30,
+    "type": "int",
+    "desc": "Unit task/action type value 30; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeAllBackToWork",
+    "category": "Action Type Constants",
+    "value": 31,
+    "type": "int",
+    "desc": "Unit task/action type value 31; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeForceDropOff",
+    "category": "Action Type Constants",
+    "value": 32,
+    "type": "int",
+    "desc": "Unit task/action type value 32; use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeUnload",
+    "category": "Action Type Constants",
+    "value": 9,
+    "type": "int",
+    "desc": "Unit task/action type value 9 (Unload); use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cActionTypeGatherPoint",
+    "category": "Action Type Constants",
+    "value": 10,
+    "type": "int",
+    "desc": "Unit task/action type value 10 (Gather Point); use with xsTaskUnits.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagKeep",
+    "category": "Store Flag Constants",
+    "value": 0,
+    "type": "int",
+    "desc": "Enum value for the [Store Flag First Storage](../../../attributes/attributes/#171-store-flag-first-storage), [Store Flag Second Storage](../../../attributes/attributes/#171-store-flag-second-storage), and [Store Flag Third Storage](../../../attributes/attributes/#171-store-flag-third-storage) attributes.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagGive",
+    "category": "Store Flag Constants",
+    "value": 1,
+    "type": "int",
+    "desc": "Enum value for the [Store Flag First Storage](../../../attributes/attributes/#171-store-flag-first-storage), [Store Flag Second Storage](../../../attributes/attributes/#171-store-flag-second-storage), and [Store Flag Third Storage](../../../attributes/attributes/#171-store-flag-third-storage) attributes.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagGiveAndTakeOnDeath",
+    "category": "Store Flag Constants",
+    "value": 2,
+    "type": "int",
+    "desc": "Enum value for the [Store Flag First Storage](../../../attributes/attributes/#171-store-flag-first-storage), [Store Flag Second Storage](../../../attributes/attributes/#171-store-flag-second-storage), and [Store Flag Third Storage](../../../attributes/attributes/#171-store-flag-third-storage) attributes.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagGiveOnCompletionAndTakeOnDeath",
+    "category": "Store Flag Constants",
+    "value": 4,
+    "type": "int",
+    "desc": "Enum value for the [Store Flag First Storage](../../../attributes/attributes/#171-store-flag-first-storage), [Store Flag Second Storage](../../../attributes/attributes/#171-store-flag-second-storage), and [Store Flag Third Storage](../../../attributes/attributes/#171-store-flag-third-storage) attributes.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagGiveOnCompletion",
+    "category": "Store Flag Constants",
+    "value": 8,
+    "type": "int",
+    "desc": "Enum value for the [Store Flag First Storage](../../../attributes/attributes/#171-store-flag-first-storage), [Store Flag Second Storage](../../../attributes/attributes/#171-store-flag-second-storage), and [Store Flag Third Storage](../../../attributes/attributes/#171-store-flag-third-storage) attributes.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagTake",
+    "category": "Store Flag Constants",
+    "value": 16,
+    "type": "int",
+    "desc": "Enum value for the [Store Flag First Storage](../../../attributes/attributes/#171-store-flag-first-storage), [Store Flag Second Storage](../../../attributes/attributes/#171-store-flag-second-storage), and [Store Flag Third Storage](../../../attributes/attributes/#171-store-flag-third-storage) attributes.",
+    "usage": null
+  },
+  {
+    "name": "cStoreFlagGiveAndTakeOnDeathAfterAnimation",
+    "category": "Store Flag Constants",
+    "value": 32,
+    "type": "int",
+    "desc": "Enum value for the [Store Flag First Storage](../../../attributes/attributes/#171-store-flag-first-storage), [Store Flag Second Storage](../../../attributes/attributes/#171-store-flag-second-storage), and [Store Flag Third Storage](../../../attributes/attributes/#171-store-flag-third-storage) attributes.",
+    "usage": null
+  },
+  {
+    "name": "cMinimapModeNone",
+    "category": "Minimap Mode Constants",
+    "value": 0,
+    "type": "int",
+    "desc": "Enum value for the [Minimap Mode](../../../attributes/attributes/#144-minimap-mode) attribute",
+    "usage": null
+  },
+  {
+    "name": "cMinimapModeUnit",
+    "category": "Minimap Mode Constants",
+    "value": 1,
+    "type": "int",
+    "desc": "Enum value for the [Minimap Mode](../../../attributes/attributes/#144-minimap-mode) attribute",
+    "usage": null
+  },
+  {
+    "name": "cMinimapModeBuilding",
+    "category": "Minimap Mode Constants",
+    "value": 2,
+    "type": "int",
+    "desc": "Enum value for the [Minimap Mode](../../../attributes/attributes/#144-minimap-mode) attribute",
+    "usage": null
+  },
+  {
+    "name": "cMinimapModeTerrain",
+    "category": "Minimap Mode Constants",
+    "value": 3,
+    "type": "int",
+    "desc": "Enum value for the [Minimap Mode](../../../attributes/attributes/#144-minimap-mode) attribute",
+    "usage": null
+  },
+  {
+    "name": "cMinimapModeTerrainBig",
+    "category": "Minimap Mode Constants",
+    "value": 4,
+    "type": "int",
+    "desc": "Enum value for the [Minimap Mode](../../../attributes/attributes/#144-minimap-mode) attribute",
+    "usage": null
+  },
+  {
+    "name": "cFogFlagNotInFog",
+    "category": "Fog Flag Constants",
+    "value": 0,
+    "type": "int",
+    "desc": "Enum value for the [Fog Visibility](../../../attributes/attributes/#28-fog-visibility) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cFogFlagAlways",
+    "category": "Fog Flag Constants",
+    "value": 1,
+    "type": "int",
+    "desc": "Enum value for the [Fog Visibility](../../../attributes/attributes/#28-fog-visibility) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cFogFlagOnlyIfAlive",
+    "category": "Fog Flag Constants",
+    "value": 2,
+    "type": "int",
+    "desc": "Enum value for the [Fog Visibility](../../../attributes/attributes/#28-fog-visibility) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cFogFlagDoppelganger",
+    "category": "Fog Flag Constants",
+    "value": 3,
+    "type": "int",
+    "desc": "Enum value for the [Fog Visibility](../../../attributes/attributes/#28-fog-visibility) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cFogFlagCheckDoppel",
+    "category": "Fog Flag Constants",
+    "value": 4,
+    "type": "int",
+    "desc": "Enum value for the [Fog Visibility](../../../attributes/attributes/#28-fog-visibility) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cHillModeNoRestriction",
+    "category": "Hill Mode Constants",
+    "value": 0,
+    "type": "int",
+    "desc": "Enum value for the [Hill Mode](../../../attributes/attributes/#187-hill-mode) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cHillModeNoCornersOfHills",
+    "category": "Hill Mode Constants",
+    "value": 1,
+    "type": "int",
+    "desc": "Enum value for the [Hill Mode](../../../attributes/attributes/#187-hill-mode) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cHillModeFlatOnly",
+    "category": "Hill Mode Constants",
+    "value": 2,
+    "type": "int",
+    "desc": "Enum value for the [Hill Mode](../../../attributes/attributes/#187-hill-mode) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cHillModeOneElevationDifference",
+    "category": "Hill Mode Constants",
+    "value": 3,
+    "type": "int",
+    "desc": "Enum value for the [Hill Mode](../../../attributes/attributes/#187-hill-mode) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cMoveAlgorithmNone",
+    "category": "Move Algorithm Constants",
+    "value": 0,
+    "type": "int",
+    "desc": "Enum value for the [Move Algorithm](../../../attributes/attributes/#218-move-algorithm) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cMoveAlgorithmUseStopSprite",
+    "category": "Move Algorithm Constants",
+    "value": 1,
+    "type": "int",
+    "desc": "Enum value for the [Move Algorithm](../../../attributes/attributes/#218-move-algorithm) attribute.",
+    "usage": null
+  },
+  {
+    "name": "cDoubleClickSelectById",
+    "category": "Run Pattern Constants",
+    "value": 255,
+    "type": "int",
+    "desc": "Enum value for the [Run Pattern](../../../attributes/attributes/#140-run-pattern) attribute.",
     "usage": null
   }
 ]

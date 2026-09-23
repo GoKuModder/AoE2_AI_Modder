@@ -1494,7 +1494,7 @@
     "name": "xsEffectAmount",
     "category": "general",
     "return_type": "void",
-    "param_count": 5,
+    "param_count": 6,
     "params": [
       {
         "name": "effectId",
@@ -1525,9 +1525,15 @@
         "type": "int",
         "required": false,
         "desc": "The player to apply the effect to. If unspecified, applies to all players except Gaia."
+      },
+      {
+        "name": "trainLocationEntryMod",
+        "type": "int",
+        "required": false,
+        "desc": "Train Location Entry Mod for unit or technology train-location attributes; optional sixth parameter."
       }
     ],
-    "desc": "Change the specified attribute of the specified object or technology by the value for the specified player. For more information on this, check the [UserPatch](\"Jump to: UserPatch NON EXISTENT\") section of the guide"
+    "desc": "Changes the specified attribute of an object or technology. The optional sixth parameter selects a Train Location Entry Mod for train-location attributes. Set the fifth playerNumber parameter to -1 explicitly to apply to all players."
   },
   {
     "name": "xsResearchTechnology",
@@ -1727,7 +1733,7 @@
         "name": "damageClass",
         "type": "int",
         "required": true,
-        "desc": "For use with armor/attack attributes - specifies which armor/attack class to get"
+        "desc": "Damage class for combat attributes; for train-location attributes, selects a Train Location Entry Mod. When unspecified for that use, the unit's own mod is used."
       }
     ],
     "desc": "Returns the attribute value for an object"
@@ -1789,7 +1795,7 @@
         "name": "damageClass",
         "type": "int",
         "required": true,
-        "desc": "For use with armor/attack attributes - specifies which armor/attack class to get"
+        "desc": "Damage class for combat attributes; for train-location attributes, selects a Train Location Entry Mod. When unspecified for that use, the unit's own mod is used."
       }
     ],
     "desc": "Returns the attribute value for a specific unit on the map."
@@ -3205,14 +3211,6 @@
     "desc": "Gets the number of data objects of a player."
   },
   {
-    "name": "xsGetLocalPlayerId",
-    "category": "general",
-    "return_type": "int",
-    "param_count": 0,
-    "params": [],
-    "desc": "Gets the local player id for display/chat-oriented logic. This is a local world player id, not a stable lobby slot or network player id. Do not use it for synced gameplay decisions because it can cause desyncs, and coop players sharing one world player are not distinguishable by XS."
-  },
-  {
     "name": "xsGetPlayerColorTag",
     "category": "general",
     "return_type": "string",
@@ -3469,34 +3467,6 @@
     "desc": "Clears timer text, if any, similarly to the trigger effect analogue."
   },
   {
-    "name": "xsGetTimerTimeRemaining",
-    "category": "general",
-    "return_type": "float",
-    "param_count": 3,
-    "params": [
-      {
-        "name": "timerId",
-        "type": "int",
-        "required": true,
-        "desc": "Timer id to query"
-      },
-      {
-        "name": "timeUnit",
-        "type": "int",
-        "required": true,
-        "desc": "Time unit for the returned value"
-      },
-      {
-        "name": "playerId",
-        "type": "int",
-        "required": false,
-        "default": "-1",
-        "desc": "Which player's timer should be queried; -1 applies to all players"
-      }
-    ],
-    "desc": "Returns a timer's time remaining."
-  },
-  {
     "name": "xsSendChat",
     "category": "general",
     "return_type": "bool",
@@ -3735,5 +3705,1544 @@
       }
     ],
     "desc": "Returns the bitwise XOR of v1 and v2."
+  },
+  {
+    "name": "xsSetTechDescription",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "techId",
+        "type": "int",
+        "required": true,
+        "desc": "Technology ID."
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": true,
+        "desc": "Description text."
+      }
+    ],
+    "desc": "Sets a technology description for the specified player."
+  },
+  {
+    "name": "xsInitiateResearch",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "buildingUnitId",
+        "type": "int",
+        "required": true,
+        "desc": "Building unit ID."
+      },
+      {
+        "name": "techId",
+        "type": "int",
+        "required": true,
+        "desc": "Technology ID."
+      }
+    ],
+    "desc": "Initiates research for a technology from the specified building."
+  },
+  {
+    "name": "xsHasResearchedLocalTechnology",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "localTechId",
+        "type": "int",
+        "required": true,
+        "desc": "Local technology ID."
+      }
+    ],
+    "desc": "Checks whether a unit has researched the specified local technology."
+  },
+  {
+    "name": "xsResearchLocalTechnology",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "buildingUnitId",
+        "type": "int",
+        "required": true,
+        "desc": "Building unit ID."
+      },
+      {
+        "name": "localTechId",
+        "type": "int",
+        "required": true,
+        "desc": "Local technology ID."
+      }
+    ],
+    "desc": "Researches the specified local technology from the building."
+  },
+  {
+    "name": "xsGetAiSignal",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "signalId",
+        "type": "int",
+        "required": true,
+        "desc": "AI signal ID."
+      },
+      {
+        "name": "useLegacyAi",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to use the legacy AI."
+      }
+    ],
+    "desc": "Gets the value of an AI signal from the selected AI system."
+  },
+  {
+    "name": "xsSetAiSignal",
+    "category": "general",
+    "return_type": "void",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "signalId",
+        "type": "int",
+        "required": true,
+        "desc": "AI signal ID."
+      },
+      {
+        "name": "value",
+        "type": "int",
+        "required": true,
+        "desc": "Value to set."
+      },
+      {
+        "name": "useLegacyAi",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to use the legacy AI."
+      }
+    ],
+    "desc": "Sets the value of an AI signal in the selected AI system."
+  },
+  {
+    "name": "xsGetMapTileAttribute",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "x",
+        "type": "int",
+        "required": true,
+        "desc": "Map tile X coordinate."
+      },
+      {
+        "name": "y",
+        "type": "int",
+        "required": true,
+        "desc": "Map tile Y coordinate."
+      },
+      {
+        "name": "attributeId",
+        "type": "int",
+        "required": true,
+        "desc": "Attribute ID."
+      }
+    ],
+    "desc": "Gets a map tile attribute at the specified tile coordinates. Use the Map Tile Attribute constants for attributeId."
+  },
+  {
+    "name": "xsTrainObject",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "buildingUnitId",
+        "type": "int",
+        "required": true,
+        "desc": "Building unit ID."
+      },
+      {
+        "name": "objectId",
+        "type": "int",
+        "required": true,
+        "desc": "Object ID."
+      },
+      {
+        "name": "count",
+        "type": "int",
+        "required": true,
+        "desc": "Number of objects."
+      }
+    ],
+    "desc": "Queues the specified number of objects for training at a building."
+  },
+  {
+    "name": "xsSetUnitGatherPoint",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "buildingUnitId",
+        "type": "int",
+        "required": true,
+        "desc": "Building unit ID."
+      },
+      {
+        "name": "position",
+        "type": "vector",
+        "required": true,
+        "desc": "Position vector."
+      },
+      {
+        "name": "targetUnitId",
+        "type": "int",
+        "required": true,
+        "desc": "Target unit ID; this target takes priority over position."
+      }
+    ],
+    "desc": "Sets a building's gather point. A targetUnitId takes priority over position."
+  },
+  {
+    "name": "xsGetUnitGatherPoint",
+    "category": "general",
+    "return_type": "vector",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "buildingUnitId",
+        "type": "int",
+        "required": true,
+        "desc": "Building unit ID."
+      }
+    ],
+    "desc": "Gets a building's gather point. If it targets a unit, the returned vector's Z coordinate contains that unit ID."
+  },
+  {
+    "name": "xsGetUnitCaption",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      }
+    ],
+    "desc": "Gets a unit's caption."
+  },
+  {
+    "name": "xsSetUnitCaption",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "caption",
+        "type": "string",
+        "required": true,
+        "desc": "Caption text."
+      }
+    ],
+    "desc": "Sets a unit's caption."
+  },
+  {
+    "name": "xsSetUnitName",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "desc": "Name text."
+      }
+    ],
+    "desc": "Sets a unit's name."
+  },
+  {
+    "name": "xsGetUnitCivName",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "localized",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to return the localized name."
+      }
+    ],
+    "desc": "Gets the civilization name associated with a unit."
+  },
+  {
+    "name": "xsSetUnitCivName",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "desc": "Name text."
+      }
+    ],
+    "desc": "Sets the civilization name associated with a unit."
+  },
+  {
+    "name": "xsGetUnitPlayerName",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      }
+    ],
+    "desc": "Gets the player name associated with a unit."
+  },
+  {
+    "name": "xsSetUnitPlayerName",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "desc": "Name text."
+      }
+    ],
+    "desc": "Sets the player name associated with a unit."
+  },
+  {
+    "name": "xsSetObjectDescription",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "objectId",
+        "type": "int",
+        "required": true,
+        "desc": "Object ID."
+      },
+      {
+        "name": "description",
+        "type": "string",
+        "required": true,
+        "desc": "Description text."
+      }
+    ],
+    "desc": "Sets an object's description for the specified player."
+  },
+  {
+    "name": "xsGetUnitProperty",
+    "category": "general",
+    "return_type": "float",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "property",
+        "type": "int",
+        "required": true,
+        "desc": "Unit property constant."
+      },
+      {
+        "name": "typeOrPlayer",
+        "type": "int",
+        "required": true,
+        "desc": "Type or player selector for the property."
+      }
+    ],
+    "desc": "Gets a unit property. Use the Unit Property constants for property and typeOrPlayer."
+  },
+  {
+    "name": "xsSetUnitProperty",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 4,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "property",
+        "type": "int",
+        "required": true,
+        "desc": "Unit property constant."
+      },
+      {
+        "name": "value",
+        "type": "float",
+        "required": true,
+        "desc": "Value to set."
+      },
+      {
+        "name": "typeOrForce",
+        "type": "int",
+        "required": true,
+        "desc": "Type or force selector for the property."
+      }
+    ],
+    "desc": "Sets a unit property. Use the Unit Property constants for property and typeOrForce."
+  },
+  {
+    "name": "xsSetUnitOwner",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "playerId",
+        "type": "int32",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "flashUnit",
+        "type": "bool",
+        "required": false,
+        "desc": "Whether to flash the unit after changing ownership.",
+        "default": "true"
+      }
+    ],
+    "desc": "Changes a unit's owner. The optional flashUnit parameter defaults to true."
+  },
+  {
+    "name": "xsFlashUnit",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      }
+    ],
+    "desc": "Flashes the specified unit for a player."
+  },
+  {
+    "name": "xsStopUnit",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      }
+    ],
+    "desc": "Stops the specified unit."
+  },
+  {
+    "name": "xsGetAiScriptGoal",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "goalId",
+        "type": "int",
+        "required": true,
+        "desc": "AI script goal ID."
+      }
+    ],
+    "desc": "Gets the value of an AI script goal."
+  },
+  {
+    "name": "xsSetAiScriptGoal",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "goalId",
+        "type": "int",
+        "required": true,
+        "desc": "AI script goal ID."
+      },
+      {
+        "name": "value",
+        "type": "bool",
+        "required": true,
+        "desc": "Value to set."
+      }
+    ],
+    "desc": "Sets the value of an AI script goal."
+  },
+  {
+    "name": "xsGetCivName",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "civId",
+        "type": "int",
+        "required": true,
+        "desc": "Civilization ID."
+      },
+      {
+        "name": "localized",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to return the localized name."
+      }
+    ],
+    "desc": "Gets a civilization's name."
+  },
+  {
+    "name": "xsGetPlayerCivName",
+    "category": "general",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "localized",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to return the localized name."
+      }
+    ],
+    "desc": "Gets a player's civilization name."
+  },
+  {
+    "name": "xsSetPlayerCivName",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "desc": "Name text."
+      }
+    ],
+    "desc": "Sets a player's civilization name."
+  },
+  {
+    "name": "xsSetPlayerName",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "required": true,
+        "desc": "Name text."
+      }
+    ],
+    "desc": "Sets a player's name."
+  },
+  {
+    "name": "xsSetPlayerColor",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "colorId",
+        "type": "int",
+        "required": true,
+        "desc": "Color ID."
+      }
+    ],
+    "desc": "Sets a player's color."
+  },
+  {
+    "name": "xsSetViewPosition",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "position",
+        "type": "vector",
+        "required": true,
+        "desc": "Position vector."
+      },
+      {
+        "name": "duration",
+        "type": "int",
+        "required": true,
+        "desc": "Duration."
+      }
+    ],
+    "desc": "Moves the specified player's view to a position over the given duration."
+  },
+  {
+    "name": "xsSetZoom",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "zoom",
+        "type": "float",
+        "required": true,
+        "desc": "zoom parameter."
+      },
+      {
+        "name": "duration",
+        "type": "float",
+        "required": true,
+        "desc": "Duration."
+      }
+    ],
+    "desc": "Changes the specified player's zoom over the given duration."
+  },
+  {
+    "name": "xsBuildUnit",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 6,
+    "params": [
+      {
+        "name": "unitIds",
+        "type": "int",
+        "required": true,
+        "desc": "Unit IDs passed to the command."
+      },
+      {
+        "name": "objectId",
+        "type": "int",
+        "required": true,
+        "desc": "Object ID."
+      },
+      {
+        "name": "location1",
+        "type": "vector",
+        "required": true,
+        "desc": "First location vector."
+      },
+      {
+        "name": "location2",
+        "type": "vector",
+        "required": true,
+        "desc": "Second location vector."
+      },
+      {
+        "name": "isShiftQueue",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to add the command to the shift queue."
+      },
+      {
+        "name": "isFormationCommand",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to issue the command as a formation command."
+      }
+    ],
+    "desc": "Issues a build-unit command to the specified unit IDs."
+  },
+  {
+    "name": "xsTaskUnits",
+    "category": "general",
+    "return_type": "void",
+    "param_count": 8,
+    "params": [
+      {
+        "name": "unitIds",
+        "type": "int",
+        "required": true,
+        "desc": "Unit IDs passed to the command."
+      },
+      {
+        "name": "actionType",
+        "type": "int",
+        "required": true,
+        "desc": "Action type."
+      },
+      {
+        "name": "location",
+        "type": "vector",
+        "required": true,
+        "desc": "Location vector."
+      },
+      {
+        "name": "locationObjectId",
+        "type": "int",
+        "required": true,
+        "desc": "Location object ID."
+      },
+      {
+        "name": "isShiftQueue",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to add the command to the shift queue."
+      },
+      {
+        "name": "isFormationCommand",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to issue the command as a formation command."
+      },
+      {
+        "name": "shouldPlayUnloadSound",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether to play the unload sound."
+      },
+      {
+        "name": "patrolPoints",
+        "type": "int",
+        "required": true,
+        "desc": "Patrol-points argument."
+      }
+    ],
+    "desc": "Issues the specified action to the unit IDs."
+  },
+  {
+    "name": "xsSetChatToPlayer",
+    "category": "general",
+    "return_type": "void",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": true,
+        "desc": "Player ID."
+      },
+      {
+        "name": "enabled",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether chat to the player is enabled."
+      }
+    ],
+    "desc": "Enables or disables chat to a player; use with diplomacy-related effects."
+  },
+  {
+    "name": "xsUnsyncGetZoom",
+    "category": "general",
+    "return_type": "float",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "desc": "Player ID.",
+        "default": "-1"
+      }
+    ],
+    "desc": "Gets the local player's zoom. The optional playerId defaults to -1; this API is local-only."
+  },
+  {
+    "name": "xsUnsyncGetViewPosition",
+    "category": "general",
+    "return_type": "vector",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "desc": "Player ID.",
+        "default": "-1"
+      }
+    ],
+    "desc": "Gets the local player's view position. The optional playerId defaults to -1; this API is local-only."
+  },
+  {
+    "name": "xsUnsyncGetPlayerSelectedUnitIds",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "arrayId",
+        "type": "int",
+        "required": false,
+        "desc": "Array ID to reuse, or -1 to create a new array where supported.",
+        "default": "-1"
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "desc": "Player ID.",
+        "default": "-1"
+      }
+    ],
+    "desc": "Gets an array ID containing the local player's selected unit IDs. A supplied arrayId is reused; otherwise an array is created. This API is local-only."
+  },
+  {
+    "name": "xsUnsyncIsUnitVisible",
+    "category": "general",
+    "return_type": "bool",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "unitId",
+        "type": "int",
+        "required": true,
+        "desc": "Unit ID."
+      },
+      {
+        "name": "allowInFog",
+        "type": "bool",
+        "required": true,
+        "desc": "Whether visibility through fog is allowed."
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "desc": "Player ID.",
+        "default": "-1"
+      }
+    ],
+    "desc": "Checks whether a unit is visible to the local player, optionally allowing visibility in fog."
+  },
+  {
+    "name": "xsUnsyncGetLocalPlayerId",
+    "category": "general",
+    "return_type": "int",
+    "param_count": 0,
+    "params": [],
+    "desc": "Gets the local world player ID for display and chat logic. It is not a network/lobby slot and must not drive synced gameplay because it can desync. Renamed from xsGetLocalPlayerId in update 185872."
+  },
+  {
+    "name": "xsUnsyncGetTimerTimeRemaining",
+    "category": "general",
+    "return_type": "float",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "timerId",
+        "type": "int",
+        "required": true,
+        "desc": "Timer ID."
+      },
+      {
+        "name": "timeUnit",
+        "type": "int",
+        "required": true,
+        "desc": "Time unit."
+      },
+      {
+        "name": "playerId",
+        "type": "int",
+        "required": false,
+        "desc": "Player ID.",
+        "default": "-1"
+      }
+    ],
+    "desc": "Returns a timer's time remaining for local-only display logic. Renamed from xsGetTimerTimeRemaining in update 185872."
+  },
+  {
+    "name": "ord",
+    "category": "strings",
+    "return_type": "int",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "character",
+        "type": "string",
+        "required": true,
+        "desc": "Character string."
+      }
+    ],
+    "desc": "Returns the character code for a character."
+  },
+  {
+    "name": "chr",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "code",
+        "type": "int",
+        "required": true,
+        "desc": "Character code."
+      }
+    ],
+    "desc": "Returns the character for a character code."
+  },
+  {
+    "name": "strLen",
+    "category": "strings",
+    "return_type": "int",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      }
+    ],
+    "desc": "Returns the length of a string."
+  },
+  {
+    "name": "strCharAt",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "index",
+        "type": "int",
+        "required": true,
+        "desc": "String index."
+      }
+    ],
+    "desc": "Returns the character at the specified string index."
+  },
+  {
+    "name": "strSubstring",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "start",
+        "type": "int",
+        "required": true,
+        "desc": "Start index, inclusive."
+      },
+      {
+        "name": "end",
+        "type": "int",
+        "required": true,
+        "desc": "End index."
+      }
+    ],
+    "desc": "Returns the substring between start and end indices."
+  },
+  {
+    "name": "strContains",
+    "category": "strings",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "substring",
+        "type": "string",
+        "required": true,
+        "desc": "Substring to search for."
+      }
+    ],
+    "desc": "Checks whether a string contains a substring."
+  },
+  {
+    "name": "strStartsWith",
+    "category": "strings",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "required": true,
+        "desc": "Prefix string."
+      }
+    ],
+    "desc": "Checks whether a string starts with a prefix."
+  },
+  {
+    "name": "strEndsWith",
+    "category": "strings",
+    "return_type": "bool",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "suffix",
+        "type": "string",
+        "required": true,
+        "desc": "Suffix string."
+      }
+    ],
+    "desc": "Checks whether a string ends with a suffix."
+  },
+  {
+    "name": "strRemovePrefix",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "prefix",
+        "type": "string",
+        "required": true,
+        "desc": "Prefix string."
+      }
+    ],
+    "desc": "Returns a string with the specified prefix removed."
+  },
+  {
+    "name": "strRemoveSuffix",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "suffix",
+        "type": "string",
+        "required": true,
+        "desc": "Suffix string."
+      }
+    ],
+    "desc": "Returns a string with the specified suffix removed."
+  },
+  {
+    "name": "strIndexOf",
+    "category": "strings",
+    "return_type": "int",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "substring",
+        "type": "string",
+        "required": true,
+        "desc": "Substring to search for."
+      },
+      {
+        "name": "fromIndex",
+        "type": "int",
+        "required": true,
+        "desc": "Index from which to search."
+      }
+    ],
+    "desc": "Returns the first index of a substring at or after fromIndex."
+  },
+  {
+    "name": "strLastIndexOf",
+    "category": "strings",
+    "return_type": "int",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "substring",
+        "type": "string",
+        "required": true,
+        "desc": "Substring to search for."
+      },
+      {
+        "name": "fromIndex",
+        "type": "int",
+        "required": true,
+        "desc": "Index from which to search."
+      }
+    ],
+    "desc": "Returns the last index of a substring at or before fromIndex."
+  },
+  {
+    "name": "strReplace",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 4,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "target",
+        "type": "string",
+        "required": true,
+        "desc": "Target text."
+      },
+      {
+        "name": "replacement",
+        "type": "string",
+        "required": true,
+        "desc": "Replacement text."
+      },
+      {
+        "name": "max",
+        "type": "int",
+        "required": true,
+        "desc": "Maximum count."
+      }
+    ],
+    "desc": "Replaces target with replacement, up to max occurrences."
+  },
+  {
+    "name": "strInsert",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "index",
+        "type": "int",
+        "required": true,
+        "desc": "String index."
+      },
+      {
+        "name": "target",
+        "type": "string",
+        "required": true,
+        "desc": "Target text."
+      }
+    ],
+    "desc": "Returns a string with target inserted at index."
+  },
+  {
+    "name": "strRemove",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "index",
+        "type": "int",
+        "required": true,
+        "desc": "String index."
+      },
+      {
+        "name": "length",
+        "type": "int",
+        "required": true,
+        "desc": "Number of characters."
+      }
+    ],
+    "desc": "Returns a string with length characters removed starting at index."
+  },
+  {
+    "name": "strSplit",
+    "category": "strings",
+    "return_type": "int",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "delimiter",
+        "type": "string",
+        "required": true,
+        "desc": "Delimiter string."
+      },
+      {
+        "name": "max",
+        "type": "int",
+        "required": true,
+        "desc": "Maximum count."
+      }
+    ],
+    "desc": "Splits a string and returns the array ID of the resulting string array."
+  },
+  {
+    "name": "strJoin",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "arrayId",
+        "type": "int",
+        "required": true,
+        "desc": "Array ID to reuse, or -1 to create a new array where supported."
+      },
+      {
+        "name": "delimiter",
+        "type": "string",
+        "required": true,
+        "desc": "Delimiter string."
+      }
+    ],
+    "desc": "Joins the strings in an array using delimiter."
+  },
+  {
+    "name": "strTrim",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      }
+    ],
+    "desc": "Returns a string with leading and trailing whitespace removed."
+  },
+  {
+    "name": "strTrimStart",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      }
+    ],
+    "desc": "Returns a string with leading whitespace removed."
+  },
+  {
+    "name": "strTrimEnd",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      }
+    ],
+    "desc": "Returns a string with trailing whitespace removed."
+  },
+  {
+    "name": "strToUpper",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      }
+    ],
+    "desc": "Returns the string converted to uppercase."
+  },
+  {
+    "name": "strToLower",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      }
+    ],
+    "desc": "Returns the string converted to lowercase."
+  },
+  {
+    "name": "strReverse",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      }
+    ],
+    "desc": "Returns the string with its characters reversed."
+  },
+  {
+    "name": "strToInt",
+    "category": "strings",
+    "return_type": "int",
+    "param_count": 3,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "base",
+        "type": "int",
+        "required": true,
+        "desc": "Integer base."
+      },
+      {
+        "name": "defaultValue",
+        "type": "int",
+        "required": true,
+        "desc": "Fallback value when conversion cannot produce a value."
+      }
+    ],
+    "desc": "Parses a string as an integer using base and defaultValue."
+  },
+  {
+    "name": "strToFloat",
+    "category": "strings",
+    "return_type": "float",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "defaultValue",
+        "type": "float",
+        "required": true,
+        "desc": "Fallback value when conversion cannot produce a value."
+      }
+    ],
+    "desc": "Parses a string as a float using defaultValue."
+  },
+  {
+    "name": "hex",
+    "category": "strings",
+    "return_type": "int",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "defaultValue",
+        "type": "int",
+        "required": true,
+        "desc": "Fallback value when conversion cannot produce a value."
+      }
+    ],
+    "desc": "Parses a hexadecimal string as an integer using defaultValue."
+  },
+  {
+    "name": "bin",
+    "category": "strings",
+    "return_type": "int",
+    "param_count": 2,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      },
+      {
+        "name": "defaultValue",
+        "type": "int",
+        "required": true,
+        "desc": "Fallback value when conversion cannot produce a value."
+      }
+    ],
+    "desc": "Parses a binary string as an integer using defaultValue."
+  },
+  {
+    "name": "fstr",
+    "category": "strings",
+    "return_type": "string",
+    "param_count": 1,
+    "params": [
+      {
+        "name": "str",
+        "type": "string",
+        "required": true,
+        "desc": "Input string."
+      }
+    ],
+    "desc": "Formats a string by replacing in-scope {variableName} placeholders. It does not evaluate expressions; use double braces to emit literal braces."
   }
 ]

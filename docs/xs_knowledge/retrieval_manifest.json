@@ -5,12 +5,12 @@
     "retrieval_manifest": "retrieval_manifest.json"
   },
   "checksums": {
-    "chunk_store_sha256": "86cb38b66f1aa2b5c68c909ef595d32ef5714e1ee5cfcca1589bcefa386df66f",
-    "metadata_index_sha256": "e113d2531cb1af740f579ff1520454c00425d41dc320999f0b98cf5a9c39e3bd"
+    "chunk_store_sha256": "ba3d9dbfef341a5882a8cdcbb7fe960e5425e2c297816ef572201122bb9866cb",
+    "metadata_index_sha256": "62679da98f66905b46645f109ca5f0b906d8f44c6bc06868ef573fdde0e89883"
   },
   "counts": {
-    "chunks_total": 3035,
-    "source_documents": 59
+    "chunks_total": 3485,
+    "source_documents": 62
   },
   "dataset": "xs_knowledge",
   "schema_version": 1,

@@ -2,6 +2,9 @@ from __future__ import annotations
 
 import re
 import math
+import json
+from functools import lru_cache
+from importlib import resources
 from pathlib import Path
 from typing import Any
 
@@ -29,15 +32,43 @@ def _extract_commands(script_text: str) -> list[str]:
     return XS_COMMAND_RE.findall(normalized)
 
 
+@lru_cache(maxsize=1)
+def _packaged_xs_function_names() -> frozenset[str]:
+    """Load builtin function names from the packaged XS symbol catalog."""
+    try:
+        text = resources.files("src.data.xs").joinpath(
+            "agent_database/xs_functions_catalog.json"
+        ).read_text(encoding="utf-8")
+        rows = json.loads(text)
+    except (FileNotFoundError, ModuleNotFoundError, OSError, TypeError, json.JSONDecodeError):
+        return frozenset()
+    if not isinstance(rows, list):
+        return frozenset()
+    return frozenset(
+        row["name"]
+        for row in rows
+        if isinstance(row, dict) and isinstance(row.get("name"), str) and row["name"]
+    )
+
+
 def validate_xs_script(script_text: str, metadata_index: dict[str, Any]) -> dict[str, Any]:
     """Validate generated .xs script against allowlist constraints.
 
-    This is intentionally strict because the project goal is no-error XS script output.
+    Explicit command statuses in metadata_index take precedence. Builtin XS functions
+    from the packaged function catalog are added as allowed entries when they are not
+    listed there, so newly cataloged engine functions are recognized by validation.
 
     API parity with validate_ai_script for consistent validation interface.
     """
     rows = metadata_index.get("commands", [])
-    status_by_cmd = {r["command"]: r["status"] for r in rows if "command" in r}
+    if not isinstance(rows, list):
+        rows = []
+    status_by_cmd = {
+        row["name"]: "allowed" for row in _packaged_xs_function_names()
+    }
+    for row in rows:
+        if isinstance(row, dict) and isinstance(row.get("command"), str):
+            status_by_cmd[row["command"]] = row.get("status", "allowed")
 
     commands = _extract_commands(script_text)
 

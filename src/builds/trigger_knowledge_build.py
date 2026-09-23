@@ -32,6 +32,38 @@ UGC_EFFECTS_JSON_URL = "https://raw.githubusercontent.com/Divy1211/AoE2DE_UGC_Gu
 
 OUT_DIR = PROJECT_ROOT / "docs" / "trigger_knowledge"
 CACHE_DIR = OUT_DIR / "_cache"
+SCENARIO_EDITOR_UPDATE_PATH = OUT_DIR / "patch_notes" / "185872" / "scenario_editor.json"
+
+
+def _apply_scenario_editor_update(entries: List[Dict[str, Any]], collection_name: str) -> List[Dict[str, Any]]:
+    """Attach curated editor-only release notes without changing parser signatures."""
+    if not SCENARIO_EDITOR_UPDATE_PATH.exists():
+        return entries
+
+    update = json.loads(SCENARIO_EDITOR_UPDATE_PATH.read_text(encoding="utf-8"))
+    updates = update.get("parser_catalog", {}).get(collection_name, {})
+    for entry in entries:
+        notes = updates.get(entry.get("internal_name"), [])
+        if notes:
+            entry["editor_update_notes"] = notes
+    return entries
+
+
+def _append_editor_update_markdown(md_lines: List[str], entry: Dict[str, Any]) -> None:
+    notes = entry.get("editor_update_notes", [])
+    if not notes:
+        return
+    md_lines.append("**Scenario Editor updates (Build 185872):**")
+    for note in notes:
+        field = note.get("field", "Editor behavior")
+        previous = note.get("previous_label")
+        label = note.get("label")
+        heading = f"{field}: {label}" if label else field
+        if previous:
+            heading += f" (previously {previous})"
+        md_lines.append(f"- **{heading}.** {note['details']}")
+    md_lines.append("- Source: [Update 185872](https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/)")
+
 REFERENCE_PROJECTS_JSON = (
     PROJECT_ROOT / "docs" / "agent" / "references" / "reference_projects.json"
 )
@@ -50,6 +82,7 @@ def run_conditions_pipeline(force_fail: bool = False) -> bool:
         source_text = Path(aoe2sp_conditions.__file__).read_text(encoding="utf-8")
         condition_methods = introspect_aoe2sp_conditions()
         conditions_list = build_conditions_knowledge(source_text, condition_methods)
+        conditions_list = _apply_scenario_editor_update(conditions_list, "conditions")
 
         legacy_dict = {
             item["internal_name"]: {
@@ -58,6 +91,7 @@ def run_conditions_pipeline(force_fail: bool = False) -> bool:
                 "params": [p["name"] for p in item["parameters"]],
                 "description": item["description"],
                 "notes": item["notes"],
+                **({"editor_update_notes": item["editor_update_notes"]} if item.get("editor_update_notes") else {}),
             }
             for item in conditions_list
         }
@@ -118,7 +152,7 @@ def run_conditions_pipeline(force_fail: bool = False) -> bool:
                 md_lines.append("**Notes:**")
                 for note in notes:
                     md_lines.append(f"- {note}")
-
+            _append_editor_update_markdown(md_lines, entry)
             md_lines.append("")
 
         (OUT_DIR / "conditions_knowledge.md").write_text(
@@ -244,6 +278,7 @@ def run_effects_pipeline(force_fail: bool = False) -> bool:
         
         # Build List of Data
         effects_list = build_effects_knowledge(ugc_json_data, aoe2_methods, dataset_deps)
+        effects_list = _apply_scenario_editor_update(effects_list, "effects")
         
         # 1. Write Python (Legacy format or New?)
         # Legacy writer expects Dict[str, val]. building a dict for it.
@@ -255,6 +290,7 @@ def run_effects_pipeline(force_fail: bool = False) -> bool:
                 "ugc_name": item["display_name"],
                 "ugc_description": item["description"],
                 "ugc_config_fields": [p["name"] for p in item["parameters"]], # Approximately correct
+                **({"editor_update_notes": item["editor_update_notes"]} if item.get("editor_update_notes") else {}),
             } for item in effects_list
         }
         write_python_module(OUT_DIR / "effects_knowledge.py", "EFFECTS", legacy_dict)
@@ -314,6 +350,7 @@ def run_effects_pipeline(force_fail: bool = False) -> bool:
             else:
                  md_lines.append("*No parameters.*")
                  
+            _append_editor_update_markdown(md_lines, entry)
             md_lines.append("") # Spacer
             
         (OUT_DIR / "effects_knowledge.md").write_text("\n".join(md_lines), encoding="utf-8")

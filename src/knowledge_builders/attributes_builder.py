@@ -10,6 +10,27 @@ except ImportError:
 UGC_ATTRIBUTES_URL = "https://ugc.aoe2.rocks/general/attributes/attributes/"
 DOCS_BASE_URL = "https://ksneijders.github.io/AoE2ScenarioParser/api_docs/datasets/trigger_lists/object_attribute/#AoE2ScenarioParser.datasets.trigger_lists.object_attribute.ObjectAttribute"
 
+# Some live-game attribute notes are better documented in downstream community
+# references than in the current UGC snapshot. Keep targeted overrides here so
+# rebuilds preserve corrections that matter for retrieval quality.
+ATTRIBUTE_DESCRIPTION_OVERRIDES: Dict[int, str] = {
+    54: (
+        "ID: 54 This is a combinable bit field. Controls the following properties: "
+        "Property Flag Value Garrison Unit 1 Ship Unit 2 Build Another Building "
+        "(Serjeants) [See Special Ability: Mode 7] 4 Transform Into Another Unit "
+        "(Ratha) 8 Auto Scout Unit 16 Building to Terrain Transform 64 Freeze "
+        "Creation Time 128"
+    ),
+    56: (
+        "ID: 56 This can be set to the ID of a unit that is used along with some "
+        "of the Unit Traits. For Builder Unit flag, units can build the Trait Piece "
+        "when the unit has Unit Trait flag 4 and the Trait Piece is a valid enabled "
+        "building. For Transformable Unit flag, it is the target unit to transform "
+        "into. For active transformation and spawn-style abilities, Trait Piece is "
+        "also used as the target unit definition."
+    ),
+}
+
 
 def build_attributes_knowledge(
     html: str, 
@@ -90,6 +111,9 @@ def build_attributes_knowledge(
                 if enum_name else None
             ),
         }
+
+        if aid in ATTRIBUTE_DESCRIPTION_OVERRIDES:
+            record["description"] = ATTRIBUTE_DESCRIPTION_OVERRIDES[aid]
         
         unified[aid] = record
 

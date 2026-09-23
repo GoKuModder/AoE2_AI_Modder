@@ -15,11 +15,14 @@ Open these first:
 - `docs/agent_database/xs_constants_catalog.json`
 - `docs/xs_knowledge/metadata_index.json`
 - `docs/xs_knowledge/document_store.jsonl`
+- `XS_Training/xs_essential_knowledge.md`
 
 Runtime support:
 
 - `src/retrieval/xs_script_retriever.py`
 - `src/retrieval/xs_script_validator.py`
+
+The XS validator supplements caller-provided command metadata from the packaged function catalog; explicit command statuses supplied by the caller take precedence.
 
 Supporting source material:
 
@@ -32,6 +35,12 @@ Supporting source material:
   Open `docs/agent_database/xs_functions_catalog.json` or `docs/agent_database/xs_constants_catalog.json`
 - conceptual XS question
   Open `docs/xs_knowledge/document_store.jsonl` and `docs/xs_knowledge/README.md`
+- Script Call function definitions, trigger order, or `extern` variable scope
+  Open `XS_Training/xs_essential_knowledge.md`
+- Script Call condition loading-time lag or XS condition performance
+  Open `XS_Training/xs_essential_knowledge.md` for the documented scenario experience and guidance on keeping conditions short and moving repeated logic into reusable functions.
+- DAT/scenario unit ID versus Reference ID, or XS `ObjectId` versus `UnitId`
+  Open `XS_Training/xs_essential_knowledge.md` for the terminology mapping. Treat DAT/scenario unit ID as XS `ObjectId`, and scenario Reference ID as XS `UnitId`.
 - practical XS example question
   Open `examples/xs/README.md` and then the most relevant curated script
 - runtime retrieval / validation question
@@ -48,6 +57,8 @@ Supporting source material:
 - connect XS code to AI or trigger workflows
 - show a practical XS example for a mechanic or pattern
 - explain how to declare XS variables in a scenario project
+- explain why Script Call conditions can slow scenario loading and how to reduce repeated XS condition work
+- explain the difference between DAT/scenario unit IDs and Reference IDs, and how they map to XS `ObjectId` and `UnitId`
 - explain how to generate or assemble a project XS file safely
 - explain where a generated XS file should be written
 

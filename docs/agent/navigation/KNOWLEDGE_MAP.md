@@ -94,6 +94,7 @@ Examples and source documents are supporting material. Generated artifacts and d
 
 - Open first:
   - `docs/agent/domains/XS_AGENT_GUIDE.md`
+  - `XS_Training/xs_essential_knowledge.md`
   - `docs/xs_knowledge/README.md`
   - `docs/agent_database/xs_functions_catalog.json`
 - Canonical generated data:
@@ -105,6 +106,8 @@ Examples and source documents are supporting material. Generated artifacts and d
 - Supporting source material:
   - `XS_Training/`
   - `examples/xs/`
+- For Script Call condition loading-time lag or performance guidance, open `XS_Training/xs_essential_knowledge.md`.
+- For DAT/scenario unit ID versus Reference ID terminology, or the XS `ObjectId` versus `UnitId` mapping (including `xsGetObjectAttribute` and `xsGetUnitAttribute`), open `XS_Training/xs_essential_knowledge.md`.
 - Runtime modules:
   - `src/retrieval/xs_script_retriever.py`
   - `src/retrieval/xs_script_validator.py`

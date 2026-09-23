@@ -284,10 +284,10 @@
         "source_url": "https://ugc.aoe2.rocks/general/xs/functions/"
       },
       {
-        "fetched_at": "2026-02-08T19:30:26+00:00",
+        "fetched_at": "2026-09-23T03:00:06+00:00",
         "output_path": "ugc.aoe2.rocks/general/xs/constants/index.md",
-        "sha256": "f7ad118021b10c5e834a9cb7092ee4e705c31229f85f8fb401ea503a5f263e0d",
-        "source_url": "https://ugc.aoe2.rocks/general/xs/constants/"
+        "sha256": "cf25891283ac5b484000b9b60186df9ad752e28758f8fa45e999ff90ec8bbea8",
+        "source_url": "https://ugc.aoe2.rocks/general/xs/constants/constants/"
       },
       {
         "fetched_at": "2026-02-08T19:30:26+00:00",

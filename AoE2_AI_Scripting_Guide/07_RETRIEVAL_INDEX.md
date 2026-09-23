@@ -22,6 +22,9 @@ Use this file as the first lookup map before generating `.per` code.
 - "safe generation steps", "validation checklist", "anti-loop"
   - `05_LLM_SAFE_WORKFLOW.md`
 
+- "Update 185872", "AI turns per frame", "AI rules per turn", "AI scheduling changes", "up-reset-scouts", "up-update-targets performance"
+  - `patch_notes/185872/ai_scripting.md`
+
 ## Retrieval strategy (recommended)
 
 1. Identify task class: `interaction | military | movement`.

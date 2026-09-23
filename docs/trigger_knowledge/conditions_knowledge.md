@@ -353,6 +353,10 @@ This condition was added in: 1.40
 **Notes:**
 - This condition was added in: 1.40
 
+**Scenario Editor updates (Build 185872):**
+- **Allow in Fog.** A new Scenario Editor checkbox for Object is Visible (MP). This editor addition is recorded separately; the release notes do not establish a new AoE2ScenarioParser method parameter.
+- Source: [Update 185872](https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/)
+
 ## 28. Object Has Action
 `object_has_action(self, unit_object: 'int | None' = None, next_object: 'int | None' = None, object_list: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, inverted: 'int | None' = None, unit_ai_action: 'int | None' = None) -> 'Condition'`
 

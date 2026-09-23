@@ -26,6 +26,8 @@ Open these first:
 - `docs/trigger_knowledge/effect_usage_playbook.json`
 - `docs/trigger_knowledge/conditions_knowledge.json`
 - `docs/trigger_knowledge/effects_knowledge.json`
+- `docs/trigger_knowledge/patch_notes/185872/scenario_editor.md` for Build 185872 editor-field changes
+- `docs/trigger_knowledge/patch_notes/185872/scenario_editor.json` for structured editor notes
 - `docs/trigger_knowledge/condition_project_usage.json`
 - `docs/trigger_knowledge/effect_project_usage.json`
 - `docs/trigger_knowledge/project_usage_knowledge.md`

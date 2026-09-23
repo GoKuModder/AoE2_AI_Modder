@@ -239,6 +239,12 @@ This effect can be used to task certain units of the specified player to (it bas
 - `issue_group_command` (int | None)
 - `queue_action` (int | None)
 
+**Scenario Editor updates (Build 185872):**
+- **Stop action.** Task Object using the Stop action now correctly clears building production queues.
+- **Action: Unload All (previously Unload).** Renamed and now works as intended, the same as the regular Unload effect.
+- **Action: Ungarrison Specific (previously Ungarrison).** Renamed; behavior is unchanged. It instructs the selected object to leave the unit it is currently garrisoned inside.
+- Source: [Update 185872](https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/)
+
 ## 13. Declare Victory
 `declare_victory(self, source_player: 'int | None' = None, enabled: 'int | None' = None) -> 'Effect'`
 
@@ -393,6 +399,10 @@ This effect does not actually freeze the objects but sets them to a no attack st
 - `selected_object_ids` (int | List[int] | None)
 - `max_units_affected` (int | None)
 
+**Scenario Editor updates (Build 185872):**
+- **Freeze action.** Freeze Object triggers now correctly clear building production queues.
+- Source: [Update 185872](https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/)
+
 ## 23. Use Advanced Buttons
 `use_advanced_buttons(self) -> 'Effect'`
 
@@ -501,6 +511,10 @@ This effect can be used to stop units of a given player. The units affected by t
 - `object_type` (int | None)
 - `selected_object_ids` (int | List[int] | None)
 - `max_units_affected` (int | None)
+
+**Scenario Editor updates (Build 185872):**
+- **Stop action.** Stop Object triggers now correctly clear building production queues.
+- Source: [Update 185872](https://www.ageofempires.com/news/age-of-empires-ii-definitive-edition-update-185872/)
 
 ## 30. Attack Move
 `attack_move(self, object_list_unit_id: 'int | None' = None, source_player: 'int | None' = None, location_x: 'int | None' = None, location_y: 'int | None' = None, location_object_reference: 'int | None' = None, area_x1: 'int | None' = None, area_y1: 'int | None' = None, area_x2: 'int | None' = None, area_y2: 'int | None' = None, object_group: 'int | None' = None, object_type: 'int | None' = None, selected_object_ids: 'int | List[int] | None' = None, max_units_affected: 'int | None' = None) -> 'Effect'`

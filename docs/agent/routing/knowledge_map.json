@@ -7,11 +7,13 @@
       "summary": "AoE2DE XS scripting knowledge with the strongest structured retrieval coverage in the repo.",
       "open_first": [
         "docs/agent/domains/XS_AGENT_GUIDE.md",
+        "XS_Training/xs_essential_knowledge.md",
         "docs/xs_knowledge/README.md",
         "docs/agent_database/xs_functions_catalog.json"
       ],
       "canonical_docs": [
         "docs/agent/domains/XS_AGENT_GUIDE.md",
+        "XS_Training/xs_essential_knowledge.md",
         "docs/xs_knowledge/README.md"
       ],
       "canonical_data": [
@@ -27,6 +29,16 @@
         "how do I do arrays in XS",
         "validate generated XS code",
         "how do I declare extern xs variables",
+        "how do I define a function inside a Script Call",
+        "what order should Script Call function definitions appear in",
+        "when does an XS variable need extern",
+        "why do Script Call conditions slow scenario loading",
+        "how can I reduce XS Script Call condition loading time",
+        "what is the loading-screen lag from repeated Script Call conditions",
+        "what is the difference between a DAT unit ID and a scenario Reference ID",
+        "how do scenario unit IDs map to XS ObjectId and UnitId",
+        "does xsGetObjectAttribute take the DAT unit ID or the placed unit Reference ID",
+        "does xsGetUnitAttribute use the scenario Reference ID",
         "where should a generated xs file be written"
       ],
       "source_priority_order": [
